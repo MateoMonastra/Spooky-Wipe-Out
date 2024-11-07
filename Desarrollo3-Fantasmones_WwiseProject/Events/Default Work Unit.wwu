@@ -16,6 +16,17 @@
 				</Event>
 				<Event Name="Start_Lvl1" ID="{EF9172D0-B989-4BBD-9536-222D9384AE63}"/>
 				<Event Name="TrashVacuumed" ID="{EE656B0A-CDFF-48E9-A259-4EC84CA521AF}"/>
+				<Event Name="PlayerAudioStart" ID="{A0E04EF2-5C9F-4DFD-8CD7-C5C3ED3CCFE2}">
+					<ChildrenList>
+						<Action Name="" ID="{9AD9F1C6-0F5A-4C0D-A8B3-31887A084326}" ShortID="16171368">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Aspiradora" ID="{B32BE7B0-2C49-4094-BA64-C91D58073B97}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

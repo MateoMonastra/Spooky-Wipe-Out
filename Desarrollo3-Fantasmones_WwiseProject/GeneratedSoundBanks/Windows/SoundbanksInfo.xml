@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{BAE4F864-49BB-F32A-1760-191D9AEBD7CC}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{D5001C51-CAB5-3C9A-E28D-E2BFF9D6516E}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -21,6 +21,9 @@
 			<Busses>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
+			<GameParameters>
+				<GameParameter Id="1037543273" Name="Ghosts"/>
+			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="4091656514" Name="GameState">
 					<States>
@@ -58,10 +61,14 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{C2B01494-74F2-230B-2C47-42FF4D36CAB3}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{43DB014E-C5CF-8359-177F-57FDC15871D2}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
+				<File Id="266973373" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AspiradoraLoop.wav</ShortName>
+					<CachePath>SFX/AspiradoraLoop_C4CC260C.wem</CachePath>
+				</File>
 				<File Id="414954598" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>Keys.wav</ShortName>
 					<Path>Media/414954598.wem</Path>
@@ -72,6 +79,14 @@
 					<Path>Media/523675216.wem</Path>
 					<CachePath>SFX/1 Tubthumping_8709A909.wem</CachePath>
 				</File>
+				<File Id="616773025" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AspiradoraStart.wav</ShortName>
+					<CachePath>SFX/AspiradoraStart_C4CC260C.wem</CachePath>
+				</File>
+				<File Id="795406639" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AspiradoraEnd.wav</ShortName>
+					<CachePath>SFX/AspiradoraEnd_C4CC260C.wem</CachePath>
+				</File>
 			</Media>
 			<Plugins>
 				<Custom>
@@ -79,6 +94,20 @@
 				</Custom>
 			</Plugins>
 			<Events>
+				<Event Id="748107036" Name="PlayerAudioStart" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="795406639"/>
+					</MediaRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3699816212" Id="2036889338"/>
+							<MediaRefs>
+								<MediaRef Id="266973373"/>
+								<MediaRef Id="616773025"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
 				<Event Id="1281810935" Name="Start" DurationType="Infinite">
 					<SwitchContainers>
 						<SwitchContainer>
@@ -137,7 +166,18 @@
 					</States>
 				</StateGroup>
 			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="3699816212" Name="Vacuum">
+					<Switches>
+						<Switch Id="445047094" Name="HidroWorkingOnGoo"/>
+						<Switch Id="788884573" Name="Stop"/>
+						<Switch Id="2036889338" Name="VacWorking"/>
+						<Switch Id="2909722414" Name="HidroWorking"/>
+						<Switch Id="3149481222" Name="VacWorkingOnGhost"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{50B3A369-7B68-7E01-1280-2205A988B26F}</FileHash>
+	<FileHash>{0F6C2F21-3AAF-E8C3-D58E-B5A1E1FE9413}</FileHash>
 </SoundBanksInfo>

@@ -1,7 +1,18 @@
 Event	ID	Name			Wwise Object Path	Notes
+	748107036	PlayerAudioStart			\Default Work Unit\PlayerAudioStart	
 	1123143573	Start_Lvl1			\Default Work Unit\Start_Lvl1	
 	1281810935	Start			\Default Work Unit\Start	
 	2644656531	TrashVacuumed			\Default Work Unit\TrashVacuumed	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	3699816212	Vacuum			\Default Work Unit\Vacuum	
+
+Switch	ID	Name	Switch Group			Notes
+	445047094	HidroWorkingOnGoo	Vacuum			
+	788884573	Stop	Vacuum			
+	2036889338	VacWorking	Vacuum			
+	2909722414	HidroWorking	Vacuum			
+	3149481222	VacWorkingOnGhost	Vacuum			
 
 State Group	ID	Name			Wwise Object Path	Notes
 	4091656514	GameState			\Default Work Unit\GameState	
@@ -21,6 +32,11 @@ State	ID	Name	State Group			Notes
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	234075148	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Music\mx_waitPlaying\silence\Silence	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	266973373	AspiradoraLoop	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\AspiradoraLoop_C4CC260C.wem		\Interactive Music Hierarchy\Default Work Unit\Aspiradora\AspiradoraWorking\AspiradoraLoop\AspiradoraLoop		1175136
+	616773025	AspiradoraStart	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\AspiradoraStart_C4CC260C.wem		\Interactive Music Hierarchy\Default Work Unit\Aspiradora\AspiradoraWorking\AspiradoraStart\AspiradoraStart		296996
+	795406639	AspiradoraEnd	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\AspiradoraEnd_C4CC260C.wem		\Interactive Music Hierarchy\Default Work Unit\Aspiradora\AspiradoraEnd\AspiradoraEnd		533332
 
 Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
 	414954598	mx_Menu	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\Keys_3CD5CF17.wem	414954598.wem	\Actor-Mixer Hierarchy\Default Work Unit\Music\mx_Menu	

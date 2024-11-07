@@ -3,6 +3,12 @@ State Group	ID	Name			Wwise Object Path	Notes
 
 State	ID	Name	State Group			Notes
 	748895195	None	GameState			
+	1305749800	Playing_04	GameState			
+	1305749801	Playing_05	GameState			
+	1305749802	Playing_06	GameState			
+	1305749805	Playing_01	GameState			
+	1305749806	Playing_02	GameState			
+	1305749807	Playing_03	GameState			
 	1852808225	Playing	GameState			
 	2201105581	Credits	GameState			
 	2607556080	Menu	GameState			

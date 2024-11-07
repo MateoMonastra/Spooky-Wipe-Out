@@ -128,8 +128,8 @@ MonoBehaviour:
         guid: d07291ef89b9bd4b9536222d9384ae63
       Path: Events\Default Work Unit\Start_Lvl1
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: TrashVacuumed
       guid: 0a6b65eeffcde948a2594ec84ca521af
       id: 2644656531
@@ -145,8 +145,8 @@ MonoBehaviour:
         guid: 0a6b65eeffcde948a2594ec84ca521af
       Path: Events\Default Work Unit\TrashVacuumed
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -159,8 +159,22 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: ffb850a494149742a59c4e9bfe96b267
     GuidInternal: 
-    m_lastTime: -8584714462986867074
-    List: []
+    m_lastTime: -8584707026079457637
+    List:
+    - name: Ghosts
+      guid: 94aa3f6947113c44908af3a3d46c05b9
+      id: 1037543273
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ffb850a494149742a59c4e9bfe96b267
+      - ElementName: Ghosts
+        ObjectType: 13
+        guid: 94aa3f6947113c44908af3a3d46c05b9
+      Path: Game Parameters\Default Work Unit\Ghosts
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -577,9 +591,9 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8584714462983173118
     List: []
-  ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedFileSystemItemIds: 060000000700000018000000190000001a000000
+  ExpandedWaapiItemIds: 060000000700000018000000190000001a000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 0
+  currentDataSource: 1
   CurrentPluginConfig: 

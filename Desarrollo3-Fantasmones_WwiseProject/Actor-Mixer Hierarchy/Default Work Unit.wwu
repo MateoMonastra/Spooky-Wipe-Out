@@ -2,6 +2,10 @@
 <WwiseDocument Type="WorkUnit" ID="{3C248A58-6566-4DB4-AD50-76632301869B}" SchemaVersion="119">
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{3C248A58-6566-4DB4-AD50-76632301869B}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="9"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
 			<ChildrenList>
 				<SwitchContainer Name="Music" ID="{9A78FC19-72B3-46C3-8F53-8B5275104874}" ShortID="392384810">
 					<PropertyList>
@@ -249,6 +253,12 @@
 						</GroupingList>
 					</GroupingInfo>
 				</SwitchContainer>
+				<Folder Name="Player" ID="{D9763C3B-5A90-4233-A1F8-D4FC3F402F23}" ShortID="242074839">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="3"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
