@@ -1,8 +1,9 @@
 Event	ID	Name			Wwise Object Path	Notes
-	748107036	PlayerAudioStart			\Default Work Unit\PlayerAudioStart	
 	1123143573	Start_Lvl1			\Default Work Unit\Start_Lvl1	
 	1281810935	Start			\Default Work Unit\Start	
+	1719412607	VacStart			\Default Work Unit\VacStart	
 	2644656531	TrashVacuumed			\Default Work Unit\TrashVacuumed	
+	3149561494	StepsStart			\Default Work Unit\StepsStart	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	3699816212	Vacuum			\Default Work Unit\Vacuum	

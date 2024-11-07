@@ -23,6 +23,8 @@ namespace VacuumCleaner.Modes
 
         [SerializeField] private List<Material> materials = new List<Material>();
 
+        [SerializeField] GameObject PlayerAudio;
+      
         private void Start()
         {
             SKMinigame.OnLose += PowerOff;
@@ -41,6 +43,7 @@ namespace VacuumCleaner.Modes
             vacuumColision.gameObject.SetActive(true);
             trashCollector.gameObject.SetActive(true);
             OnPowerOn?.Invoke();
+            AkSoundEngine.SetSwitch("Vacuum", "VacWorking", PlayerAudio);
         }
 
         private IEnumerator TurnOnVFX()
@@ -74,6 +77,8 @@ namespace VacuumCleaner.Modes
             vacuumColision.gameObject.SetActive(false);
             trashCollector.gameObject.SetActive(false);
             OnPowerOff?.Invoke();
+            AkSoundEngine.SetSwitch("Vacuum", "Stop", PlayerAudio);
+
         }
     }
 }

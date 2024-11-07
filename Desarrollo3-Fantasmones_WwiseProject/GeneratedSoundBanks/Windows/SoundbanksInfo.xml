@@ -61,7 +61,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{43DB014E-C5CF-8359-177F-57FDC15871D2}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{38221826-CC2F-4239-CAEB-17E396D8F803}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -94,20 +94,6 @@
 				</Custom>
 			</Plugins>
 			<Events>
-				<Event Id="748107036" Name="PlayerAudioStart" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="795406639"/>
-					</MediaRefs>
-					<SwitchContainers>
-						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="3699816212" Id="2036889338"/>
-							<MediaRefs>
-								<MediaRef Id="266973373"/>
-								<MediaRef Id="616773025"/>
-							</MediaRefs>
-						</SwitchContainer>
-					</SwitchContainers>
-				</Event>
 				<Event Id="1281810935" Name="Start" DurationType="Infinite">
 					<SwitchContainers>
 						<SwitchContainer>
@@ -147,7 +133,22 @@
 					</SwitchContainers>
 				</Event>
 				<Event Id="1123143573" Name="Start_Lvl1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3149561494" Name="StepsStart" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2644656531" Name="TrashVacuumed" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1719412607" Name="VacStart" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="795406639"/>
+					</MediaRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3699816212" Id="2036889338"/>
+							<MediaRefs>
+								<MediaRef Id="266973373"/>
+								<MediaRef Id="616773025"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
 			</Events>
 			<StateGroups>
 				<StateGroup Id="4091656514" Name="GameState">
@@ -179,5 +180,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{0F6C2F21-3AAF-E8C3-D58E-B5A1E1FE9413}</FileHash>
+	<FileHash>{32E5A631-F506-2BDC-FCE1-26F452CE7976}</FileHash>
 </SoundBanksInfo>

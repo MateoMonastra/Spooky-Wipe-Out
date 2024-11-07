@@ -27,6 +27,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="StepsStart" ID="{14EBD341-1F41-42DE-BB41-BC469D0867EF}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

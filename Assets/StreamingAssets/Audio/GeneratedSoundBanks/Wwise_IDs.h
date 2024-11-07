@@ -13,10 +13,11 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID PLAYERAUDIOSTART = 748107036U;
         static const AkUniqueID START = 1281810935U;
         static const AkUniqueID START_LVL1 = 1123143573U;
+        static const AkUniqueID STEPSSTART = 3149561494U;
         static const AkUniqueID TRASHVACUUMED = 2644656531U;
+        static const AkUniqueID VACSTART = 1719412607U;
     } // namespace EVENTS
 
     namespace STATES

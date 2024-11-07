@@ -6,6 +6,11 @@
 				<MusicSwitchContainer Name="Aspiradora" ID="{B32BE7B0-2C49-4094-BA64-C91D58073B97}" ShortID="647037698">
 					<PropertyList>
 						<Property Name="Color" Type="int16" Value="3"/>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>-3</Value>
+							</ValueList>
+						</Property>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 						<Property Name="Priority" Type="int16">
 							<ValueList>
