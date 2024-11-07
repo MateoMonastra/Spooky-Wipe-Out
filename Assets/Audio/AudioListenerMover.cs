@@ -6,15 +6,20 @@ public class AudioListenerMover : MonoBehaviour
 {
 
     private AkAudioListener listenerToMove;
-    public string placeToMoveName;
+    public string placeToMoveTag;
     private GameObject placeToMove;
     private Transform placeToReturn;
 
     // Start is called before the first frame update
     void Start()
     {
-        placeToMoveName = "Manolo";
+        
         StartCoroutine(DelayInitialization());
+    }
+
+    private void OnDestroy()
+    {
+        ReturnListener();
     }
 
     IEnumerator DelayInitialization()
@@ -22,7 +27,7 @@ public class AudioListenerMover : MonoBehaviour
         // Wait until the end of the frame
         yield return new WaitForEndOfFrame();
 
-        placeToMove = GameObject.Find(placeToMoveName);
+        placeToMove = GameObject.FindGameObjectWithTag(placeToMoveTag);
 
         listenerToMove = FindObjectOfType<AkAudioListener>();
         placeToReturn = listenerToMove.transform.parent;

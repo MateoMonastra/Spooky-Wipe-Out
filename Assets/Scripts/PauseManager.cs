@@ -12,7 +12,7 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private string menuSceneName;
     
     [SerializeField] private EventChannelSceneManager eventChannelSceneManager;
-
+    
     private void Start()
     {
         inputReader.OnPauseStart += InitPauseMenu;
