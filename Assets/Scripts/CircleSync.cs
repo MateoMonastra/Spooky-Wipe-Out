@@ -32,7 +32,7 @@ public class CircleSync : MonoBehaviour
             {
                 
                 alpha += Time.deltaTime * speedAlpha;
-                alpha = Mathf.Clamp01(alpha);
+                alpha = Mathf.Clamp(alpha, 0, 0.8f);
                 material.SetFloat(SizeID, alpha);
             }
         }
@@ -42,7 +42,7 @@ public class CircleSync : MonoBehaviour
         {
             
             alpha -= Time.deltaTime * speedAlpha;
-            alpha = Mathf.Clamp01(alpha);
+            alpha = Mathf.Clamp(alpha, 0, 0.7f);
             foreach (Material material in Materials)
             {
 

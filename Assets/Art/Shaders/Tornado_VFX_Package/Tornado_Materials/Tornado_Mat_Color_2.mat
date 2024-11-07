@@ -188,10 +188,10 @@ Material:
     - _ClearCoatSmoothness: 0
     - _Cull: 2
     - _Cutoff: 0.5
-    - _CuttHeight: 2.2
+    - _CuttHeight: 2.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _Dissolve: 0.983
+    - _Dissolve: 0.9504
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EMISSION_WEIGHT: 1

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementForce: 30
   counterMovementForce: 5
+  counterMovementForceVacuuming: 10
   rotationSpeed: 5
   layerRaycast:
     serializedVersion: 2

@@ -1,0 +1,181 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: LowerBody
+  m_Mask: 01000000000000000000000001000000010000000000000000000000000000000000000001000000010000000000000000000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: ManoloRigV4:Manolo_Rig
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_cadera
+    m_Weight: 1
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_cadera/ManoloRigV4:bn_d_pierna
+    m_Weight: 1
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_cadera/ManoloRigV4:bn_d_pierna/ManoloRigV4:bn_d_rodilla
+    m_Weight: 1
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_cadera/ManoloRigV4:bn_d_pierna/ManoloRigV4:bn_d_rodilla/ManoloRigV4:bn_d_pie
+    m_Weight: 1
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_cadera/ManoloRigV4:bn_d_pierna/ManoloRigV4:bn_d_rodilla/ManoloRigV4:bn_d_pie/ManoloRigV4:bn_d_puntapie
+    m_Weight: 1
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_cadera/ManoloRigV4:bn_d_pierna/ManoloRigV4:bn_d_rodilla/ManoloRigV4:bn_d_pie/ManoloRigV4:bn_d_puntapie/ManoloRigV4:bne_d_pierna
+    m_Weight: 1
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_cadera/ManoloRigV4:bn_i_pierna
+    m_Weight: 1
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_cadera/ManoloRigV4:bn_i_pierna/ManoloRigV4:bn_i_rodilla
+    m_Weight: 1
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_cadera/ManoloRigV4:bn_i_pierna/ManoloRigV4:bn_i_rodilla/ManoloRigV4:bn_i_pie
+    m_Weight: 1
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_cadera/ManoloRigV4:bn_i_pierna/ManoloRigV4:bn_i_rodilla/ManoloRigV4:bn_i_pie/ManoloRigV4:bn_i_puntapie
+    m_Weight: 1
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_cadera/ManoloRigV4:bn_i_pierna/ManoloRigV4:bn_i_rodilla/ManoloRigV4:bn_i_pie/ManoloRigV4:bn_i_puntapie/ManoloRigV4:bne_i_pierna
+    m_Weight: 1
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_d_brazo
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_d_brazo/ManoloRigV4:bn_d_codo
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_d_brazo/ManoloRigV4:bn_d_codo/ManoloRigV4:bn_d_mano
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_d_brazo/ManoloRigV4:bn_d_codo/ManoloRigV4:bn_d_mano/ManoloRigV4:bn_d_anular
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_d_brazo/ManoloRigV4:bn_d_codo/ManoloRigV4:bn_d_mano/ManoloRigV4:bn_d_anular/ManoloRigV4:bn_d_anular1
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_d_brazo/ManoloRigV4:bn_d_codo/ManoloRigV4:bn_d_mano/ManoloRigV4:bn_d_anular/ManoloRigV4:bn_d_anular1/ManoloRigV4:bn_d_anular2
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_d_brazo/ManoloRigV4:bn_d_codo/ManoloRigV4:bn_d_mano/ManoloRigV4:bn_d_anular/ManoloRigV4:bn_d_anular1/ManoloRigV4:bn_d_anular2/ManoloRigV4:bne_d_anular
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_d_brazo/ManoloRigV4:bn_d_codo/ManoloRigV4:bn_d_mano/ManoloRigV4:bn_d_indice
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_d_brazo/ManoloRigV4:bn_d_codo/ManoloRigV4:bn_d_mano/ManoloRigV4:bn_d_indice/ManoloRigV4:bn_d_indice1
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_d_brazo/ManoloRigV4:bn_d_codo/ManoloRigV4:bn_d_mano/ManoloRigV4:bn_d_indice/ManoloRigV4:bn_d_indice1/ManoloRigV4:bn_d_indice2
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_d_brazo/ManoloRigV4:bn_d_codo/ManoloRigV4:bn_d_mano/ManoloRigV4:bn_d_indice/ManoloRigV4:bn_d_indice1/ManoloRigV4:bn_d_indice2/ManoloRigV4:bne_d_indice
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_d_brazo/ManoloRigV4:bn_d_codo/ManoloRigV4:bn_d_mano/ManoloRigV4:bn_d_medio
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_d_brazo/ManoloRigV4:bn_d_codo/ManoloRigV4:bn_d_mano/ManoloRigV4:bn_d_medio/ManoloRigV4:bn_d_medio1
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_d_brazo/ManoloRigV4:bn_d_codo/ManoloRigV4:bn_d_mano/ManoloRigV4:bn_d_medio/ManoloRigV4:bn_d_medio1/ManoloRigV4:bn_d_medio2
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_d_brazo/ManoloRigV4:bn_d_codo/ManoloRigV4:bn_d_mano/ManoloRigV4:bn_d_medio/ManoloRigV4:bn_d_medio1/ManoloRigV4:bn_d_medio2/ManoloRigV4:bne_d_medio
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_d_brazo/ManoloRigV4:bn_d_codo/ManoloRigV4:bn_d_mano/ManoloRigV4:bn_d_pulgar
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_d_brazo/ManoloRigV4:bn_d_codo/ManoloRigV4:bn_d_mano/ManoloRigV4:bn_d_pulgar/ManoloRigV4:bn_d_pulgar1
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_d_brazo/ManoloRigV4:bn_d_codo/ManoloRigV4:bn_d_mano/ManoloRigV4:bn_d_pulgar/ManoloRigV4:bn_d_pulgar1/ManoloRigV4:bn_d_pulgar2
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_d_brazo/ManoloRigV4:bn_d_codo/ManoloRigV4:bn_d_mano/ManoloRigV4:bn_d_pulgar/ManoloRigV4:bn_d_pulgar1/ManoloRigV4:bn_d_pulgar2/ManoloRigV4:bne_d_pulgar
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_i_brazo
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_i_brazo/ManoloRigV4:bn_i_codo
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_i_brazo/ManoloRigV4:bn_i_codo/ManoloRigV4:bn_i_mano
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_i_brazo/ManoloRigV4:bn_i_codo/ManoloRigV4:bn_i_mano/ManoloRigV4:bn_i_anular
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_i_brazo/ManoloRigV4:bn_i_codo/ManoloRigV4:bn_i_mano/ManoloRigV4:bn_i_anular/ManoloRigV4:bn_i_anular1
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_i_brazo/ManoloRigV4:bn_i_codo/ManoloRigV4:bn_i_mano/ManoloRigV4:bn_i_anular/ManoloRigV4:bn_i_anular1/ManoloRigV4:bn_i_anular2
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_i_brazo/ManoloRigV4:bn_i_codo/ManoloRigV4:bn_i_mano/ManoloRigV4:bn_i_anular/ManoloRigV4:bn_i_anular1/ManoloRigV4:bn_i_anular2/ManoloRigV4:bne_i_anular
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_i_brazo/ManoloRigV4:bn_i_codo/ManoloRigV4:bn_i_mano/ManoloRigV4:bn_i_indice
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_i_brazo/ManoloRigV4:bn_i_codo/ManoloRigV4:bn_i_mano/ManoloRigV4:bn_i_indice/ManoloRigV4:bn_i_indice1
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_i_brazo/ManoloRigV4:bn_i_codo/ManoloRigV4:bn_i_mano/ManoloRigV4:bn_i_indice/ManoloRigV4:bn_i_indice1/ManoloRigV4:bn_i_indice2
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_i_brazo/ManoloRigV4:bn_i_codo/ManoloRigV4:bn_i_mano/ManoloRigV4:bn_i_indice/ManoloRigV4:bn_i_indice1/ManoloRigV4:bn_i_indice2/ManoloRigV4:bne_i_indice
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_i_brazo/ManoloRigV4:bn_i_codo/ManoloRigV4:bn_i_mano/ManoloRigV4:bn_i_medio
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_i_brazo/ManoloRigV4:bn_i_codo/ManoloRigV4:bn_i_mano/ManoloRigV4:bn_i_medio/ManoloRigV4:bn_i_medio1
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_i_brazo/ManoloRigV4:bn_i_codo/ManoloRigV4:bn_i_mano/ManoloRigV4:bn_i_medio/ManoloRigV4:bn_i_medio1/ManoloRigV4:bn_i_medio2
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_i_brazo/ManoloRigV4:bn_i_codo/ManoloRigV4:bn_i_mano/ManoloRigV4:bn_i_medio/ManoloRigV4:bn_i_medio1/ManoloRigV4:bn_i_medio2/ManoloRigV4:bne_i_medio
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_i_brazo/ManoloRigV4:bn_i_codo/ManoloRigV4:bn_i_mano/ManoloRigV4:bn_i_pulgar
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_i_brazo/ManoloRigV4:bn_i_codo/ManoloRigV4:bn_i_mano/ManoloRigV4:bn_i_pulgar/ManoloRigV4:bn_i_pulgar1
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_i_brazo/ManoloRigV4:bn_i_codo/ManoloRigV4:bn_i_mano/ManoloRigV4:bn_i_pulgar/ManoloRigV4:bn_i_pulgar1/ManoloRigV4:bn_i_pulgar2
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform5/ManoloRigV4:bn_i_brazo/ManoloRigV4:bn_i_codo/ManoloRigV4:bn_i_mano/ManoloRigV4:bn_i_pulgar/ManoloRigV4:bn_i_pulgar1/ManoloRigV4:bn_i_pulgar2/ManoloRigV4:bne_i_pulgar
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform6
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform7
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform7/ManoloRigV4:bn_cabeza
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bn_m_torso/ManoloRigV4:transform7/ManoloRigV4:bn_cabeza/ManoloRigV4:bne_cabeza
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bna_mochila1
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bna_mochila1/ManoloRigV4:bna_mochila2
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bna_mochila1/ManoloRigV4:bna_mochila2/ManoloRigV4:bna_mochila3
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bna_mochila1/ManoloRigV4:bna_mochila2/ManoloRigV4:bna_mochila3/ManoloRigV4:bna_mochila4
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bna_mochila1/ManoloRigV4:bna_mochila2/ManoloRigV4:bna_mochila3/ManoloRigV4:bna_mochila4/ManoloRigV4:bna_mochila5
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bna_mochila1/ManoloRigV4:bna_mochila2/ManoloRigV4:bna_mochila3/ManoloRigV4:bna_mochila4/ManoloRigV4:bna_mochila5/ManoloRigV4:bna_mochila6
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bna_mochila1/ManoloRigV4:bna_mochila2/ManoloRigV4:bna_mochila3/ManoloRigV4:bna_mochila4/ManoloRigV4:bna_mochila5/ManoloRigV4:bna_mochila6/ManoloRigV4:bna_mochila7
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bna_mochila1/ManoloRigV4:bna_mochila2/ManoloRigV4:bna_mochila3/ManoloRigV4:bna_mochila4/ManoloRigV4:bna_mochila5/ManoloRigV4:bna_mochila6/ManoloRigV4:bna_mochila7/ManoloRigV4:bna_mochila8
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bna_mochila1/ManoloRigV4:bna_mochila2/ManoloRigV4:bna_mochila3/ManoloRigV4:bna_mochila4/ManoloRigV4:bna_mochila5/ManoloRigV4:bna_mochila6/ManoloRigV4:bna_mochila7/ManoloRigV4:bna_mochila8/ManoloRigV4:bna_mochila9
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bna_mochila1/ManoloRigV4:bna_mochila2/ManoloRigV4:bna_mochila3/ManoloRigV4:bna_mochila4/ManoloRigV4:bna_mochila5/ManoloRigV4:bna_mochila6/ManoloRigV4:bna_mochila7/ManoloRigV4:bna_mochila8/ManoloRigV4:bna_mochila9/ManoloRigV4:bna_mochila10
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bna_mochila1/ManoloRigV4:bna_mochila2/ManoloRigV4:bna_mochila3/ManoloRigV4:bna_mochila4/ManoloRigV4:bna_mochila5/ManoloRigV4:bna_mochila6/ManoloRigV4:bna_mochila7/ManoloRigV4:bna_mochila8/ManoloRigV4:bna_mochila9/ManoloRigV4:bna_mochila10/ManoloRigV4:bna_mochila11
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bna_mochila1/ManoloRigV4:bna_mochila2/ManoloRigV4:bna_mochila3/ManoloRigV4:bna_mochila4/ManoloRigV4:bna_mochila5/ManoloRigV4:bna_mochila6/ManoloRigV4:bna_mochila7/ManoloRigV4:bna_mochila8/ManoloRigV4:bna_mochila9/ManoloRigV4:bna_mochila10/ManoloRigV4:bna_mochila11/ManoloRigV4:bna_mochila12
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bna_mochila1/ManoloRigV4:bna_mochila2/ManoloRigV4:bna_mochila3/ManoloRigV4:bna_mochila4/ManoloRigV4:bna_mochila5/ManoloRigV4:bna_mochila6/ManoloRigV4:bna_mochila7/ManoloRigV4:bna_mochila8/ManoloRigV4:bna_mochila9/ManoloRigV4:bna_mochila10/ManoloRigV4:bna_mochila11/ManoloRigV4:bna_mochila12/ManoloRigV4:bna_mochila13
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bna_mochila1/ManoloRigV4:bna_mochila2/ManoloRigV4:bna_mochila3/ManoloRigV4:bna_mochila4/ManoloRigV4:bna_mochila5/ManoloRigV4:bna_mochila6/ManoloRigV4:bna_mochila7/ManoloRigV4:bna_mochila8/ManoloRigV4:bna_mochila9/ManoloRigV4:bna_mochila10/ManoloRigV4:bna_mochila11/ManoloRigV4:bna_mochila12/ManoloRigV4:bna_mochila13/ManoloRigV4:bna_mochila14
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bna_mochila1/ManoloRigV4:bna_mochila2/ManoloRigV4:bna_mochila3/ManoloRigV4:bna_mochila4/ManoloRigV4:bna_mochila5/ManoloRigV4:bna_mochila6/ManoloRigV4:bna_mochila7/ManoloRigV4:bna_mochila8/ManoloRigV4:bna_mochila9/ManoloRigV4:bna_mochila10/ManoloRigV4:bna_mochila11/ManoloRigV4:bna_mochila12/ManoloRigV4:bna_mochila13/ManoloRigV4:bna_mochila14/ManoloRigV4:bne_mochila
+    m_Weight: 0
+  - m_Path: ManoloRigV4:Manolo_Rig/ManoloRigV4:Joints/ManoloRigV4:bnh_m_COG/ManoloRigV4:bn_m_columna1/ManoloRigV4:bn_m_columna2/ManoloRigV4:bna_mochila1/ManoloRigV4:curve1
+    m_Weight: 0
+  - m_Path: ManoloRigV4:ManoloV1RNfosterParent1
+    m_Weight: 0
+  - m_Path: ManoloRigV4:ManoloV1RNfosterParent1/ManoloRigV4:Mesh
+    m_Weight: 0
+  - m_Path: ManoloRigV4:ManoloV1RNfosterParent1/ManoloRigV4:Mesh/ManoloRigV4:ManoloGeo
+    m_Weight: 0
+  - m_Path: ManoloRigV4:ManoloV1RNfosterParent1/ManoloRigV4:Mesh/ManoloRigV4:Mochila
+    m_Weight: 0
+  - m_Path: ManoloRigV4:ManoloV1RNfosterParent1/ManoloRigV4:Mesh/ManoloRigV4:Mochila/ManoloRigV4:Aspiradora
+    m_Weight: 0
+  - m_Path: ManoloRigV4:ManoloV1RNfosterParent1/ManoloRigV4:Mesh/ManoloRigV4:Mochila/ManoloRigV4:GhostVortex
+    m_Weight: 0
+  - m_Path: ManoloRigV4:ManoloV1RNfosterParent1/ManoloRigV4:Mesh/ManoloRigV4:Mochila/ManoloRigV4:Mochila
+    m_Weight: 0
+  - m_Path: ManoloRigV4:ManoloV1RNfosterParent1/ManoloRigV4:Mesh/ManoloRigV4:Mochila/ManoloRigV4:Rociador
+    m_Weight: 0

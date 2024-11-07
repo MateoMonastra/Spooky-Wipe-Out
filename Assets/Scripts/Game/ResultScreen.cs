@@ -5,24 +5,17 @@ using UnityEngine;
 
 public class ResultScreen : MonoBehaviour
 {
-    [SerializeField] private GameObject winScreen;
-    [SerializeField] private GameObject loseScreen;
+    [SerializeField] private GameObject finishScreen;
 
     private void Start()
     {
-        GameManager.GetInstance().OnLose += InitLoseScreen;
-        GameManager.GetInstance().OnWin += InitWinScreen;
+        GameManager.GetInstance().OnFinish += InitFinishScreen;
     }
 
-    private void InitLoseScreen()
+
+    private void InitFinishScreen()
     {
         Time.timeScale = 0f;
-        loseScreen.SetActive(true);
-    } 
-    
-    private void InitWinScreen()
-    {
-        Time.timeScale = 0f;
-        winScreen.SetActive(true);
+        finishScreen.SetActive(true);
     }
 }

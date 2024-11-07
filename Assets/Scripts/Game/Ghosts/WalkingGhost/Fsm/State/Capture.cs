@@ -7,10 +7,10 @@ namespace Ghosts.WalkingGhost
     public class Capture : State
     {
         private GameObject _model;
-        private WalkingGhostAgent _agent;
+        private ChainGhostAgent _agent;
         private Minigame _minigame;
 
-        public Capture(GameObject model, WalkingGhostAgent agent, Minigame minigame)
+        public Capture(GameObject model, ChainGhostAgent agent, Minigame minigame)
         {
             _model = model;
             _agent = agent;
@@ -20,7 +20,7 @@ namespace Ghosts.WalkingGhost
         public override void Enter()
         {
             _agent.OnBeingDestroy?.Invoke(_agent);
-            _model.SetActive(false);
+            _agent.gameObject.SetActive(false);
             _agent.enabled = false;
             _minigame.StopGame();
         }

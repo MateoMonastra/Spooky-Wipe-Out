@@ -8,7 +8,6 @@ namespace VacuumCleaner.Modes
     {
         [SerializeField] private float washSpeed;
         [SerializeField] private float minScale;
-        [SerializeField] private float maxAngle = 45.0f;
         [SerializeField] private float renderDistance = 5.0f;
         [SerializeField] private LayerMask wallLayer;
 
@@ -22,12 +21,6 @@ namespace VacuumCleaner.Modes
         {
             get => minScale;
             set => minScale = value;
-        }
-
-        public float MaxAngle
-        {
-            get => maxAngle;
-            set => maxAngle = value;
         }
 
         public float RenderDistance

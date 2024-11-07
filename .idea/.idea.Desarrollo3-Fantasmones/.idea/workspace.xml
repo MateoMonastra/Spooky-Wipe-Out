@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f284f24a-5000-4fb1-bdf1-e7bc4aff41eb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Desarrollo3-Fantasmones/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Desarrollo3-Fantasmones/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Minigames/SkillCheck/SkillCheckController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Minigames/SkillCheck/SkillCheckController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +18,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/54724222b7684530a2810ae1eac94ec7176000/38/dc3a64fc/Object.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/54724222b7684530a2810ae1eac94ec7176000/93/bd8475c6/Mathf.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/54724222b7684530a2810ae1eac94ec7176000/cc/71ed4340/Debug.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/54724222b7684530a2810ae1eac94ec7176000/fb/79a77f92/UnitySynchronizationContext.cs" root0="FORCE_HIGHLIGHTING" />
@@ -23,6 +26,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8ce0bd04a7a04b4b9395538239d3fdd846ac00/cf/4f53dfe1/Delegate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fd823a7663ea4cdb840e6c898e2256ce958800/09/374f6397/HostView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EventSystem/SceneManager/EventListenerSceneManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SetHandPosition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.10.1/Runtime/Core/CinemachineVirtualCameraBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Editor/Internal/AdvancedDropdown/AdvancedDropdownGUI.cs" root0="SKIP_HIGHLIGHTING" />
@@ -30,10 +34,9 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/NativeInputRuntime.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Plugins/PlayerInput/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Image.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.vikoproductions.fsm_mk2@1.0.4/RunTime/FSM.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.vikoproductions.fsm_mk2@1.0.4/RunTime/State.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.vikoproductions.fsm_mk2@1.0.4/RunTime/Transition.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.vikoproductions.fsm_mk2@1.0.5/RunTime/FSM.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -59,7 +62,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/build/ManoloBusters v0.6.0\Desarrollo3-Fantasmones.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/builds/prueab\Spooky Wipe Out.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\mateo\OneDrive\Documentos\ImageProjects\Desarrollo3-Fantasmones\builds\v0.3.0" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -127,6 +130,17 @@
       <workItem from="1728612380107" duration="1310000" />
       <workItem from="1729065886150" duration="128000" />
       <workItem from="1729066052121" duration="3358000" />
+      <workItem from="1729657872349" duration="431000" />
+      <workItem from="1729662277327" duration="3306000" />
+      <workItem from="1729923986279" duration="203000" />
+      <workItem from="1729948635466" duration="116000" />
+      <workItem from="1729948770566" duration="3196000" />
+      <workItem from="1729953888226" duration="3000" />
+      <workItem from="1729953930619" duration="1279000" />
+      <workItem from="1730221775744" duration="202000" />
+      <workItem from="1730221994057" duration="6265000" />
+      <workItem from="1730377176784" duration="161000" />
+      <workItem from="1730377363063" duration="5515000" />
     </task>
     <servers />
   </component>
@@ -152,6 +166,19 @@
           <line>24</line>
           <properties documentPath="C:\Users\mateo\OneDrive\Documentos\ImageProjects\Desarrollo3-Fantasmones\Assets\Scripts\Ghosts\WalkingGhost\Fsm\State\Capture.cs" containingFunctionPresentation="Method 'Enter'" />
           <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/CleanerSelectionUIControler.cs</url>
+          <line>52</line>
+          <properties documentPath="C:\Users\mateo\OneDrive\Documentos\ImageProjects\Desarrollo3-Fantasmones\Assets\Scripts\Game\CleanerSelectionUIControler.cs" containingFunctionPresentation="Method 'Start'">
+            <startOffsets>
+              <option value="1327" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1328" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

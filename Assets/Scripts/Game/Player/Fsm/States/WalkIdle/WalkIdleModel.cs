@@ -7,9 +7,9 @@ namespace Fsm_Mk2
     {
         [SerializeField] private float movementForce = 30;
         [SerializeField] private float counterMovementForce = 5;
+        [SerializeField] private float counterMovementForceVacuuming = 10;
         [SerializeField] private float rotationSpeed = 5;
         [SerializeField] private LayerMask layerRaycast;
-        
         
         public float MovementForce
         {
@@ -21,6 +21,12 @@ namespace Fsm_Mk2
         {
             get => counterMovementForce;
             set => counterMovementForce = value;
+        }
+
+        public float CounterMovementForceVacuuming
+        {
+            get => counterMovementForceVacuuming;
+            set => counterMovementForceVacuuming = value;
         }
 
         public float RotationSpeed

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Vector2 = System.Numerics.Vector2;
 
@@ -5,6 +6,7 @@ namespace Fsm_Mk2
 {
     public class WalkIdle : State
     {
+        private Action<bool> _OnWalk;
         private GameObject _gameObject;
         private Rigidbody _rigidbody;
         private WalkIdleModel _model;
@@ -17,11 +19,12 @@ namespace Fsm_Mk2
 
         private Vector3 _counterMovement;
 
-        public WalkIdle(GameObject gameObject, WalkIdleModel model, LayerMask layerRaycast)
+        public WalkIdle(GameObject gameObject, WalkIdleModel model, LayerMask layerRaycast, Action<bool> OnWalk)
         {
             _gameObject = gameObject;
             _model = model;
             _layerRaycast = layerRaycast;
+            _OnWalk = OnWalk;
         }
 
         public override void Enter()
@@ -41,25 +44,30 @@ namespace Fsm_Mk2
         public override void Exit()
         {
             _dir = Vector3.zero;
+            //_isClickPressed = false;
         }
 
         private void Move()
         {
+            
             if (_rigidbody)
             {
-                _counterMovement = new Vector3(-_rigidbody.velocity.x * _model.CounterMovementForce, 0,
-                    -_rigidbody.velocity.z * _model.CounterMovementForce);
-
+                _OnWalk?.Invoke(_dir.normalized != Vector3.zero);
+                
                 _rigidbody.AddForce(_dir.normalized * _model.MovementForce + _counterMovement);
 
                 float angle = Vector3.SignedAngle(_gameObject.transform.forward, _dir, _gameObject.transform.up);
 
                 if (!_isClickPressed)
                 {
+                    _counterMovement = new Vector3(-_rigidbody.velocity.x * _model.CounterMovementForce, 0, -_rigidbody.velocity.z * _model.CounterMovementForce);
+
                     RotateByMovementInput(angle);
                 }
                 else
                 {
+                    _counterMovement = new Vector3(-_rigidbody.velocity.x * _model.CounterMovementForceVacuuming, 0, -_rigidbody.velocity.z * _model.CounterMovementForceVacuuming);
+
                     RotateWhileVacuuming();
                 }
             }
@@ -98,7 +106,7 @@ namespace Fsm_Mk2
         public void SetIsClickPressedState(bool isClickPresed)
         {
             _isClickPressed = isClickPresed;
-            Debug.Log($"The button is : {isClickPresed}");
+            //Debug.Log($"The button is : {isClickPresed}");
         }
 
         public void SetMousePosition(Vector3 mousePosition)

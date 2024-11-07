@@ -1,0 +1,5 @@
+{"Kind":1,"ClassType":"Action_Flee","OutcomeClassNames":[],"PositionInEditor":{"x":729.0,"y":0.0}}
+{"Kind":1,"ClassType":"Action_Patrolling","OutcomeClassNames":[],"PositionInEditor":{"x":729.0,"y":199.0}}
+{"Kind":1,"ClassType":"Action_Rest","OutcomeClassNames":[],"PositionInEditor":{"x":557.0,"y":456.0}}
+{"Kind":0,"ClassType":"CanSeeHunter","OutcomeClassNames":["Action_Flee","Action_Patrolling"],"PositionInEditor":{"x":469.0,"y":79.0}}
+{"Kind":0,"ClassType":"IsRested","OutcomeClassNames":["CanSeeHunter","Action_Rest"],"PositionInEditor":{"x":300.0,"y":295.0}}

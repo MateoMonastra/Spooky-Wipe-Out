@@ -5,6 +5,7 @@ using Minigames;
 using Player.FSM;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 enum SkillCheckState
@@ -16,17 +17,32 @@ enum SkillCheckState
 public class SkillCheckController : Minigame
 {
     [SerializeField] private InputReader inputReader;
-    
-    [SerializeField] private float needleSpeed = 600f;
-    [SerializeField] private float skillCheckToWin = 5f;
+
+    [SerializeField] private float needleSpeed = 100f;
+    [SerializeField] private float minNeedleSpeed = 60f;
+    [SerializeField] private float maxNeedleSpeed = 600f;
+
+    [SerializeField] private float decreaseRate = 0.1f;
+    [SerializeField] private float increaseAmount = 0.15f;
+    [SerializeField] private float decreaseAmount = -0.15f;
+
+    [SerializeField] private float maxProgress = 1f;
+    [SerializeField] private float minProgress = 0f;
+
+    [SerializeField] private float maxWidthSafeZone;
+    [SerializeField] private float minWidthSafeZone;
 
     [SerializeField] private SkillCheck skillCheck;
     [SerializeField] private SkillCheckState skillCheckState;
 
-    private float _skillcheckCounter = 0f;
+    [SerializeField] private AnimationCurve decreaseCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
 
-    private readonly float _maxZone = 140.0f;
-    private readonly float _minZone = -140.0f;
+    private float progress { get; set; } = 0.0f;
+
+    private bool HasPlayerWon => progress >= maxProgress;
+    private bool HasPlayerLost;
+
+    private float _needleDir = 1;
 
     protected override void WinGame()
     {
@@ -40,114 +56,121 @@ public class SkillCheckController : Minigame
         OnLose?.Invoke();
     }
 
-    private void Update()
+    private void UpdateProgress(float value)
     {
-        OnTick();
-    }
+        progress = value;
+        if (HasPlayerWon)
+            WinGame();
+        else if (HasPlayerLost)
+            LoseGame();
 
-    private void OnTick()
-    {
-        if (_isActive)
-        {
-            MoveNeedle();
-            CheckSkillCheck();
-        }
+        skillCheck.SetProgressBarFill(progress);
     }
 
     protected override void ResetGame()
     {
-        _skillcheckCounter = 0f;
+        progress = minProgress;
         _isActive = false;
+        StopCoroutine(DecreaseProgressOverTime());
+        StopCoroutine(MoveNeedleOverTime());
         skillCheck.gameObject.SetActive(false);
     }
 
     public override void StartGame()
     {
         OnStart?.Invoke();
-        _isActive = true;
-        UpdateProgressPointsBar();
-        RandomizeSafeZone();
+        HasPlayerLost = false;
+        inputReader.OnSpaceInputStart += HandleInput;
         skillCheck.gameObject.SetActive(true);
+        StartCoroutine(DecreaseProgressOverTime());
+        StartCoroutine(MoveNeedleOverTime());
+        RandomizeSafeZoneWidth();
+        _isActive = true;
     }
 
     private void MoveNeedle()
     {
         var transformLocalPosition = skillCheck.needle.transform.localPosition;
 
-        if (transformLocalPosition.x > _maxZone || transformLocalPosition.x < _minZone)
+        if (transformLocalPosition.x <= skillCheck.bar.offsetMin.x)
         {
-            needleSpeed = -needleSpeed;
+            _needleDir = 1;
+        }
+        else if (transformLocalPosition.x >= skillCheck.bar.offsetMax.x)
+        {
+            _needleDir = -1;
         }
 
-        transformLocalPosition.x += needleSpeed * Time.deltaTime;
+        transformLocalPosition.x += needleSpeed * _needleDir * Time.deltaTime;
 
         skillCheck.needle.transform.localPosition = transformLocalPosition;
     }
 
-    private void CheckSkillCheck()
+    private void HandleInput()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        RectTransform needleRect = skillCheck.needle;
+        RectTransform safeZoneRect = skillCheck.safeZone;
+
+        if (IsColliding(needleRect, safeZoneRect))
         {
-            RectTransform needleRect = skillCheck.needle;
-            RectTransform safeZoneRect = skillCheck.safeZone;
-
-            if (IsOverlapping(needleRect, safeZoneRect))
-            {
-                RandomizeSafeZone();
-                _skillcheckCounter++;
-                UpdateProgressPointsBar();
-
-                if (_skillcheckCounter >= skillCheckToWin)
-                {
-                    WinGame();
-                }
-
-                Debug.Log("acertado");
-            }
-            else
-            {
-                if (skillCheckState == SkillCheckState.CantLose)
-                {
-                    if (_skillcheckCounter != 0)
-                    {
-                        _skillcheckCounter--;
-                        UpdateProgressPointsBar();
-                    }
-
-                    Debug.Log("mal");
-                }
-                else
-                {
-                    _skillcheckCounter--;
-                    UpdateProgressPointsBar();
-
-                    if (_skillcheckCounter < 0)
-                    {
-                        LoseGame();
-                    }
-                    
-                    Debug.Log("mal");
-                }
-            }
+            UpdateProgress(progress + increaseAmount);
+            
+            RandomizeSafeZoneWidth();
+            RandomizeSafeZonePosition();
+            RandomizeNeedleSpeed();
+            
+        }
+        else if( progress <= minProgress)
+        {
+            HasPlayerLost = true;
+        }
+        else
+        {
+            UpdateProgress(progress + decreaseAmount);
         }
     }
 
-    private void RandomizeSafeZone()
+    private void RandomizeSafeZoneWidth()
     {
-        float newX = Random.Range(_minZone, _maxZone);
+        float randomWidth = Random.Range(minWidthSafeZone, maxWidthSafeZone);
+        skillCheck.safeZone.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, randomWidth);
+    }
+
+    private void RandomizeSafeZonePosition()
+    {
+        float newX = Random.Range(skillCheck.bar.offsetMin.x, skillCheck.bar.offsetMax.x);
         skillCheck.safeZone.transform.localPosition = new Vector2(newX, skillCheck.safeZone.transform.localPosition.y);
     }
 
-    private bool IsOverlapping(RectTransform rectA, RectTransform rectB)
+    private void RandomizeNeedleSpeed()
     {
-        Vector3[] cornersA = new Vector3[4];
-        Vector3[] cornersB = new Vector3[4];
+        float newSpeed = Random.Range(minNeedleSpeed, maxNeedleSpeed);
+        needleSpeed = newSpeed;
+    }
 
-        rectA.GetWorldCorners(cornersA);
-        rectB.GetWorldCorners(cornersB);
+    private Rect GetScreenRect(RectTransform rectTransform)
+    {
+        Vector3[] corners = new Vector3[4];
+        rectTransform.GetWorldCorners(corners);
 
-        Rect rect1 = new Rect(cornersA[0], cornersA[2] - cornersA[0]);
-        Rect rect2 = new Rect(cornersB[0], cornersB[2] - cornersB[0]);
+        float xMin = corners[0].x;
+        float xMax = corners[2].x;
+        float yMin = corners[0].y;
+        float yMax = corners[2].y;
+
+        return new Rect(xMin, yMin, xMax - xMin, yMax - yMin);
+    }
+
+    public bool IsColliding(RectTransform rectA, RectTransform rectB)
+    {
+        if (rectA == null || rectB == null)
+        {
+            Debug.LogWarning("RectTransform no asignado");
+            return false;
+        }
+
+        Rect rect1 = GetScreenRect(rectA);
+        Rect rect2 = GetScreenRect(rectB);
 
         return rect1.Overlaps(rect2);
     }
@@ -161,8 +184,32 @@ public class SkillCheckController : Minigame
         }
     }
 
-    private void UpdateProgressPointsBar()
+    private IEnumerator DecreaseProgressOverTime()
     {
-        skillCheck.progressPointsBar.fillAmount = _skillcheckCounter / skillCheckToWin;
+        while (skillCheck.gameObject.activeInHierarchy)
+        {
+            DecreaseProgress();
+            yield return null;
+        }
+    }
+
+    private IEnumerator MoveNeedleOverTime()
+    {
+        while (skillCheck.gameObject.activeInHierarchy)
+        {
+            MoveNeedle();
+            yield return null;
+        }
+    }
+
+    private void DecreaseProgress()
+    {
+        float curveValue = decreaseCurve.Evaluate(progress);
+
+        var decreaseAmount = Mathf.Clamp(
+            progress - decreaseRate * Time.deltaTime * curveValue,
+            minProgress, maxProgress);
+
+        UpdateProgress(decreaseAmount);
     }
 }

@@ -15,7 +15,7 @@ public class TrashCollector : MonoBehaviour
             Trash trash = other.gameObject.transform.parent.GetComponent<Trash>();
             trash?.OnBeingDestroy.Invoke(trash);
             
-            WalkingGhostAgent ghost = other.gameObject.transform.parent.GetComponent<WalkingGhostAgent>();
+            ChainGhostAgent ghost = other.gameObject.transform.parent.GetComponent<ChainGhostAgent>();
             if (trash)
             {
                 other.gameObject.transform.parent.gameObject.SetActive(false);

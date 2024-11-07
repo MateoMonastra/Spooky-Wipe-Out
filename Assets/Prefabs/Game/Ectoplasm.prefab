@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7849212324495562537}
   - component: {fileID: 168106894617861804}
   - component: {fileID: 7315849926411012473}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Ectoplasm
   m_TagString: Untagged
   m_Icon: {fileID: 0}

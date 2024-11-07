@@ -13,8 +13,7 @@ using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
-    public Action OnWin;
-    public Action OnLose;
+    public Action OnFinish;
     //[SerializeField] private PlayerAgent playerAgent;
 
     //[SerializeField] private SkillCheckController SKMinigame;
@@ -63,8 +62,6 @@ public class GameManager : MonoBehaviour
         objectivesUI.SetTrashQnty(garbage.Count);
         objectivesUI.SetGhostQnty(ghosts.Count);
         objectivesUI.SetEctoplasmQnty(ectoplasms.Count);
-
-        timer.OnFinish += LoseGame;
         
         Time.timeScale = 1f;
     }
@@ -143,19 +140,13 @@ public class GameManager : MonoBehaviour
     {
         if (!IsAnyGhost() && !IsAnyGarbage() && !IsAnyEctoplasm())
         {
-            WinGame();
+            FinishGame();
         }
     }
 
-    private void WinGame()
+    private void FinishGame()
     {
         SetPlayerUIState(false);
-        OnWin?.Invoke();
-    }
-    
-    private void LoseGame()
-    {
-        SetPlayerUIState(false);
-        OnLose?.Invoke();
+        OnFinish?.Invoke();
     }
 }

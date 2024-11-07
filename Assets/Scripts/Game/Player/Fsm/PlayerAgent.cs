@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Minigames;
 using Player.FSM;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
 using VacuumCleaner;
@@ -13,13 +14,15 @@ namespace Fsm_Mk2
     public class PlayerAgent : MonoBehaviour
     {
         public Action<Transform> OnHunted;
-        public Action<Transform> OnStruggle;
-
+        
+        public UnityEvent<bool> OnWalk;
+        public UnityEvent<bool> OnStruggle;
+        public UnityEvent<bool> OnCleaning;
+        
         private List<State> _states = new List<State>();
 
         [SerializeField] private InputReader inputReader;
         [SerializeField] private WalkIdleModel walkIdleModel;
-        [SerializeField] private GameObject playerModel;
 
         [SerializeField] private ADController adController;
         [SerializeField] private SkillCheckController skillCheckController;
@@ -60,14 +63,18 @@ namespace Fsm_Mk2
             skillCheckController.OnWin += SetStruggleToWalkIdle;
             skillCheckController.OnLose += SetStruggleToWalkIdle;
             skillCheckController.OnStop += SetStruggleToWalkIdle;
+            
+            skillCheckController.OnWin += SetCleanerIdleMode;
+            skillCheckController.OnLose += SetCleanerIdleMode;
+            skillCheckController.OnStop += SetCleanerIdleMode;
 
-            State _walkIdle = new WalkIdle(playerModel, walkIdleModel, layerRaycast);
+            State _walkIdle = new WalkIdle(this.gameObject, walkIdleModel, layerRaycast, OnWalkAction);
             _states.Add(_walkIdle);
 
-            State _trapped = new Trapped(playerModel);
+            State _trapped = new Trapped(this.gameObject);
             _states.Add(_trapped);
 
-            State _struggle = new Struggle(playerModel, cleanerController);
+            State _struggle = new Struggle(this.gameObject, cleanerController);
             _states.Add(_struggle);
 
             _walkIdleToTrapped = new Transition() { From = _walkIdle, To = _trapped };
@@ -86,6 +93,11 @@ namespace Fsm_Mk2
             _struggle.transitions.Add(_struggleToWalkIdle);
 
             _fsm = new Fsm(_walkIdle);
+        }
+
+        private void OnWalkAction(bool obj)
+        {
+            OnWalk?.Invoke(obj);
         }
 
         private void SetMoveStateDirection(Vector2 direction)
@@ -108,6 +120,7 @@ namespace Fsm_Mk2
                         _fsm.ApplyTransition(_walkIdleToWalkIdle);
                         walkIdle.SetDir(cameraBasedMoveDirection);
                         stateFound = true;
+                       
                         break;
                     }
                 }
@@ -220,36 +233,47 @@ namespace Fsm_Mk2
 
         private void ActiveCleaner()
         {
-            cleanerController.SwitchToTool(currentCleaner);
+            OnCleaning?.Invoke(true);
+            StartCoroutine(cleanerController.SwitchToTool(currentCleaner));
         }
 
         private void SetCleanerIdleMode()
         {
-            cleanerController.SwitchToTool(0);
-        }
-
-        private void SetCleanerVacuumMode()
-        {
-            currentCleaner = 1;
+            OnCleaning?.Invoke(false);
+            StartCoroutine(cleanerController.SwitchToTool(0));
         }
         private void SwitchTool()
         {
             currentCleaner += 1;
-            if (currentCleaner >= 3)
+
+            switch (currentCleaner)
             {
-                currentCleaner = 1;
+                case 1:
+                    CleanerSelectionUIControler.GetInstance().PowerOnVacuum();
+                    break;
+                
+                case 2:
+                    CleanerSelectionUIControler.GetInstance().PowerOnWashFloor();
+                break;
+                
+                default:
+                    currentCleaner = 1;
+                    CleanerSelectionUIControler.GetInstance().PowerOnVacuum();
+                    break;
             }
         }
 
         private void SetStruggleToWalkIdle()
         {
+            OnStruggle?.Invoke(false);
             _fsm.ApplyTransition(_struggleToWalkIdle);
-            inputReader.OnClickStart += SetCleanerVacuumMode;
+            
         }
 
         private void SetWalkIdleToStruggle()
         {
-            inputReader.OnClickStart -= SetCleanerVacuumMode;
+            OnStruggle?.Invoke(true);
+            SetIsClickPressed(false);
             _fsm.ApplyTransition(_walkIdleToStruggle);
         }
 

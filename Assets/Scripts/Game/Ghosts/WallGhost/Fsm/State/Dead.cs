@@ -5,15 +5,13 @@ namespace Ghosts.WallGhost
 {
     public class Dead : State
     {
-        GameObject _gameObject;
-
-        public Dead(GameObject gameObject)
+        public Dead()
         {
-            _gameObject = gameObject;
+            
         }
         public override void Enter()
         {
-            _gameObject.SetActive(false);
+            
         }
 
         public override void Tick(float delta)
