@@ -65,8 +65,8 @@ namespace AK
 
             namespace SWITCH
             {
-                static const AkUniqueID HIDROWORKING = 2909722414U;
-                static const AkUniqueID HIDROWORKINGONGOO = 445047094U;
+                static const AkUniqueID HYDROWORKING = 4234065470U;
+                static const AkUniqueID HYDROWORKINGONGOO = 2143811110U;
                 static const AkUniqueID STOP = 788884573U;
                 static const AkUniqueID VACWORKING = 2036889338U;
                 static const AkUniqueID VACWORKINGONGHOST = 3149481222U;

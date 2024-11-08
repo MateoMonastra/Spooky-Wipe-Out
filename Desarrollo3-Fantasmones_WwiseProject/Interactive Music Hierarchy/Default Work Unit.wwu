@@ -6,6 +6,7 @@
 				<MusicSwitchContainer Name="Aspiradora" ID="{B32BE7B0-2C49-4094-BA64-C91D58073B97}" ShortID="647037698">
 					<PropertyList>
 						<Property Name="Color" Type="int16" Value="3"/>
+						<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 						<Property Name="MakeUpGain" Type="Real64">
 							<ValueList>
 								<Value>-3</Value>
@@ -33,6 +34,9 @@
 									</PropertyList>
 									<ChildrenList>
 										<MusicTransition Name="Transition" ID="{843B99C0-9159-4EB7-B4D2-D97923BA6B0F}">
+											<PropertyList>
+												<Property Name="ExitSourceAt" Type="int16" Value="0"/>
+											</PropertyList>
 											<TransitionInfo/>
 										</MusicTransition>
 										<MusicTransition Name="Transition" ID="{D531ECD3-4421-4439-80EE-714858B34C17}">
@@ -50,11 +54,11 @@
 													<ObjectRef Name="Silence" ID="{6CF9D478-839D-486C-ABF2-30C99695B758}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
 												</Reference>
 												<Reference Name="SourceContextObject">
-													<ObjectRef Name="AspiradoraWorking" ID="{E3DEE54E-ADDF-491F-8E6F-B2978515AC90}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
+													<ObjectRef Name="HydroWorking" ID="{39559AAE-253D-42A7-80BB-BB3A2A1906C8}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
 												</Reference>
 											</ReferenceList>
 											<TransitionInfo>
-												<TransitionObjectRef Name="AspiradoraEnd" ID="{225EC898-998C-4454-95C6-FBD17019058A}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
+												<TransitionObjectRef Name="HydroEnd" ID="{B1E67822-E97D-491B-A52A-987C892EBD23}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
 												<SourceFadeOut>
 													<MusicFade Name="Source Fade-out" ID="{7DA75AAD-31F2-4CCF-8500-BAF024458305}">
 														<PropertyList>
@@ -82,6 +86,53 @@
 												</TransitionFadeIn>
 											</TransitionInfo>
 										</MusicTransition>
+										<MusicTransition Name="Transition" ID="{A5A6515B-C77C-45E2-B863-A66B675AE808}">
+											<PropertyList>
+												<Property Name="DestinationContextType" Type="int16" Value="2"/>
+												<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+												<Property Name="ExitSourceAt" Type="int16" Value="0"/>
+												<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
+												<Property Name="PlayTransitionPostExit" Type="bool" Value="False"/>
+												<Property Name="SourceContextType" Type="int16" Value="2"/>
+												<Property Name="UseTransitionObject" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="DestinationContextObject">
+													<ObjectRef Name="Silence" ID="{6CF9D478-839D-486C-ABF2-30C99695B758}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
+												</Reference>
+												<Reference Name="SourceContextObject">
+													<ObjectRef Name="AspiradoraWorking" ID="{E3DEE54E-ADDF-491F-8E6F-B2978515AC90}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
+												</Reference>
+											</ReferenceList>
+											<TransitionInfo>
+												<TransitionObjectRef Name="AspiradoraEnd" ID="{225EC898-998C-4454-95C6-FBD17019058A}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
+												<SourceFadeOut>
+													<MusicFade Name="Source Fade-out" ID="{D253BB97-77B9-4349-87D6-9C80BF0DFDA0}">
+														<PropertyList>
+															<Property Name="FadeCurve" Type="int16" Value="1"/>
+															<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+															<Property Name="FadeType" Type="int16" Value="1"/>
+														</PropertyList>
+													</MusicFade>
+												</SourceFadeOut>
+												<DestinationFadeIn>
+													<MusicFade Name="Destination Fade-in" ID="{623E5ED0-F77F-402C-B009-E40CD94F189D}">
+														<PropertyList>
+															<Property Name="FadeCurve" Type="int16" Value="1"/>
+															<Property Name="FadeTime" Type="Real64" Value="0.9"/>
+														</PropertyList>
+													</MusicFade>
+												</DestinationFadeIn>
+												<TransitionFadeIn>
+													<MusicFade Name="Transition Fade-in" ID="{078BD297-00FA-4B25-9921-CB4245D92E30}">
+														<PropertyList>
+															<Property Name="FadeCurve" Type="int16" Value="1"/>
+															<Property Name="FadeTime" Type="Real64" Value="1"/>
+														</PropertyList>
+													</MusicFade>
+												</TransitionFadeIn>
+											</TransitionInfo>
+										</MusicTransition>
 										<MusicTransition Name="Transition" ID="{AA28C6BC-8317-4CA2-9535-5B478A7730F4}">
 											<PropertyList>
 												<Property Name="DestinationContextType" Type="int16" Value="2"/>
@@ -93,6 +144,24 @@
 											<ReferenceList>
 												<Reference Name="DestinationContextObject">
 													<ObjectRef Name="AspiradoraWorking" ID="{E3DEE54E-ADDF-491F-8E6F-B2978515AC90}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
+												</Reference>
+												<Reference Name="SourceContextObject">
+													<ObjectRef Name="Silence" ID="{6CF9D478-839D-486C-ABF2-30C99695B758}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
+												</Reference>
+											</ReferenceList>
+											<TransitionInfo/>
+										</MusicTransition>
+										<MusicTransition Name="Transition" ID="{CF291A12-86D2-489E-875A-D6DA4A163EF7}">
+											<PropertyList>
+												<Property Name="DestinationContextType" Type="int16" Value="2"/>
+												<Property Name="ExitSourceAt" Type="int16" Value="0"/>
+												<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
+												<Property Name="PlaySourcePostExit" Type="bool" Value="False"/>
+												<Property Name="SourceContextType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="DestinationContextObject">
+													<ObjectRef Name="HydroWorking" ID="{39559AAE-253D-42A7-80BB-BB3A2A1906C8}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
 												</Reference>
 												<Reference Name="SourceContextObject">
 													<ObjectRef Name="Silence" ID="{6CF9D478-839D-486C-ABF2-30C99695B758}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
@@ -113,6 +182,40 @@
 												</Reference>
 												<Reference Name="SourceContextObject">
 													<ObjectRef Name="AspiradoraEnd" ID="{225EC898-998C-4454-95C6-FBD17019058A}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
+												</Reference>
+											</ReferenceList>
+											<TransitionInfo/>
+										</MusicTransition>
+										<MusicTransition Name="Transition" ID="{C923EF0F-1290-4200-ADB1-21FFF1A8B172}">
+											<PropertyList>
+												<Property Name="DestinationContextType" Type="int16" Value="2"/>
+												<Property Name="ExitSourceAt" Type="int16" Value="0"/>
+												<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
+												<Property Name="SourceContextType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="DestinationContextObject">
+													<ObjectRef Name="HydroWorking" ID="{39559AAE-253D-42A7-80BB-BB3A2A1906C8}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
+												</Reference>
+												<Reference Name="SourceContextObject">
+													<ObjectRef Name="HydroEnd" ID="{B1E67822-E97D-491B-A52A-987C892EBD23}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
+												</Reference>
+											</ReferenceList>
+											<TransitionInfo/>
+										</MusicTransition>
+										<MusicTransition Name="Transition" ID="{B57CCF31-D45E-4D69-B5A6-1BBA5773A813}">
+											<PropertyList>
+												<Property Name="DestinationContextType" Type="int16" Value="2"/>
+												<Property Name="ExitSourceAt" Type="int16" Value="0"/>
+												<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
+												<Property Name="SourceContextType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="DestinationContextObject">
+													<ObjectRef Name="HydroWorking" ID="{39559AAE-253D-42A7-80BB-BB3A2A1906C8}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
+												</Reference>
+												<Reference Name="SourceContextObject">
+													<ObjectRef Name="HydroEnd" ID="{B1E67822-E97D-491B-A52A-987C892EBD23}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
 												</Reference>
 											</ReferenceList>
 											<TransitionInfo/>
@@ -527,7 +630,325 @@
 								</ObjectList>
 							</ObjectLists>
 						</MusicSegment>
+						<MusicPlaylistContainer Name="HydroWorking" ID="{39559AAE-253D-42A7-80BB-BB3A2A1906C8}" ShortID="104538412">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+								</Reference>
+								<Reference Name="PlaylistRoot">
+									<Custom>
+										<MusicPlaylistItem Name="" ID="{C02E85F0-FF65-4A33-9343-573C78DC7902}" ShortID="962626116">
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{414132EC-2E78-4967-BAF2-A4F12D46151B}" ShortID="89653025">
+													<PropertyList>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Segment">
+															<ObjectRef Name="HydroStart" ID="{A6DFB53B-112C-4AB1-AFCD-09556813C3F1}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicPlaylistItem>
+												<MusicPlaylistItem Name="" ID="{479D4EBB-F75C-4455-935D-781BF4CA3191}" ShortID="172468086">
+													<PropertyList>
+														<Property Name="LoopCount" Type="int16" Value="0"/>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Segment">
+															<ObjectRef Name="HydroLoop" ID="{75B74A99-F563-4CE0-95B1-3A6799C3C522}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicPlaylistItem>
+											</ChildrenList>
+										</MusicPlaylistItem>
+									</Custom>
+								</Reference>
+								<Reference Name="TransitionRoot">
+									<Custom>
+										<MusicTransition Name="Root" ID="{11BE558E-94D9-4D9D-AED8-B4D63292BDD1}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{0D37ED42-ED8C-44C0-980E-F56146677D5A}">
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</Custom>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="HydroLoop" ID="{75B74A99-F563-4CE0-95B1-3A6799C3C522}" ShortID="335018392">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="6623.1875"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="HydroLoop" ID="{1459D63F-F543-4435-9455-97740EA0006C}" ShortID="238547669">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{65DB1CC4-F848-45F6-BF72-D51DEC2A0784}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="HydroLoop" ID="{9D275E6F-5F82-424D-A84C-37DEAE69AA33}">
+													<Language>SFX</Language>
+													<AudioFile>HydroLoop.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="382905220"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{6A638E55-9888-464D-B72C-7142C25A6256}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="HydroLoop" ID="{D44DA53E-DAC1-40F5-8259-FA1E7E1602D3}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="6623.1875"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="HydroLoop" ID="{9D275E6F-5F82-424D-A84C-37DEAE69AA33}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{63D152AF-7583-4F83-9FCC-28ED84F6BF6D}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{253672F5-1FBB-4528-951F-E6F13C654D10}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="6120"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+								<MusicSegment Name="HydroStart" ID="{A6DFB53B-112C-4AB1-AFCD-09556813C3F1}" ShortID="356841846">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="HydroStart" ID="{C41E4D7A-D73E-4D0C-8713-205F7AF2E6F7}" ShortID="905719712">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{523F482E-AF74-4257-9EC0-7FF7C23A7319}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="HydroStart" ID="{F92E8317-4E39-440B-B4B7-3F7B95302AC5}">
+													<Language>SFX</Language>
+													<AudioFile>HydroStart.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="883544695"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{1A005F8B-AAFB-4F19-BEF0-E3ABE4ECBB12}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClip Name="HydroStart" ID="{FA378083-30D3-4063-BA7D-3609BA613FBB}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="1545"/>
+																						<Property Name="FadeInMode" Type="int16" Value="0"/>
+																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																					</PropertyList>
+																					<AudioSourceRef Name="HydroStart" ID="{F92E8317-4E39-440B-B4B7-3F7B95302AC5}"/>
+																				</MusicClip>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<Reference>
+												<Local>
+													<MusicCue Name="Entry Cue" ID="{CF570E5A-F685-4339-9975-B9F7C6F76F3E}"/>
+												</Local>
+											</Reference>
+											<Reference>
+												<Local>
+													<MusicCue Name="Exit Cue" ID="{F5E17436-698C-46DE-8DCB-305A5581278D}">
+														<PropertyList>
+															<Property Name="CueType" Type="int16" Value="1"/>
+															<Property Name="TimeMs" Type="Real64" Value="1546.35416666667"/>
+														</PropertyList>
+													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
+							</ChildrenList>
+						</MusicPlaylistContainer>
+						<MusicSegment Name="HydroEnd" ID="{B1E67822-E97D-491B-A52A-987C892EBD23}" ShortID="499911529">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="2777.27083333333"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="HydroEnd" ID="{65AFCA41-D5CD-4AB0-902A-F7C54248FCAD}" ShortID="548705864">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{53C05B40-A327-4CD4-93A7-F2F98183898E}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="HydroEnd" ID="{6AFC8A33-DB2F-4E7D-B2D4-F15D06C6DDB3}">
+											<Language>SFX</Language>
+											<AudioFile>HydroEnd.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1071201929"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{72663CC2-840A-420F-98F9-07C44F5857E8}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="HydroEnd" ID="{1402901B-41EB-435A-94DE-71ABB7BE389A}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="2271.79166666667"/>
+																				<Property Name="FadeInDuration" Type="Real64" Value="133.270922593545"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="HydroEnd" ID="{6AFC8A33-DB2F-4E7D-B2D4-F15D06C6DDB3}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{C48E3CF9-78FC-4D05-9281-6C9E3F11C914}">
+												<PropertyList>
+													<Property Name="TimeMs" Type="Real64" Value="140.35214938589"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{5A32DF76-AC21-4F97-9A2C-45BBEBDBE860}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="2777.27083333333"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
 					</ChildrenList>
+					<PositioningInfo>
+						<Panner Name="" ID="{428BED0E-CC5C-4F09-A8AC-617C465C0877}"/>
+					</PositioningInfo>
 					<ObjectLists>
 						<ObjectList Name="Arguments">
 							<Reference>
@@ -565,6 +986,24 @@
 											<ObjectList Name="EntryPath">
 												<Reference>
 													<ObjectRef Name="Stop" ID="{32DA640B-AF0D-41E2-A8C6-BA7597AA57B6}" WorkUnitID="{17BA2A63-0719-4369-B273-52F3C7434ABC}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{AB6DDD61-127D-4681-8C5D-173888EC393E}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="HydroWorking" ID="{39559AAE-253D-42A7-80BB-BB3A2A1906C8}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="HydroWorking" ID="{D983C13A-B30B-4B8C-9DBE-93885FB42EE3}" WorkUnitID="{17BA2A63-0719-4369-B273-52F3C7434ABC}"/>
 												</Reference>
 											</ObjectList>
 										</ObjectLists>

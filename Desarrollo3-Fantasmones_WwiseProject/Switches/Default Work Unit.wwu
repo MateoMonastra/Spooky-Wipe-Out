@@ -15,8 +15,8 @@
 					<ChildrenList>
 						<Switch Name="VacWorking" ID="{C247058C-C8A7-44F9-AC52-5F5DF66FDFAB}"/>
 						<Switch Name="VacWorkingOnGhost" ID="{D3D8E89D-2604-41F8-B803-AB3C3265C160}"/>
-						<Switch Name="HidroWorking" ID="{D983C13A-B30B-4B8C-9DBE-93885FB42EE3}"/>
-						<Switch Name="HidroWorkingOnGoo" ID="{6CE5E5B8-8802-4B71-BD28-0B04E7895F8A}"/>
+						<Switch Name="HydroWorking" ID="{D983C13A-B30B-4B8C-9DBE-93885FB42EE3}"/>
+						<Switch Name="HydroWorkingOnGoo" ID="{6CE5E5B8-8802-4B71-BD28-0B04E7895F8A}"/>
 						<Switch Name="Stop" ID="{32DA640B-AF0D-41E2-A8C6-BA7597AA57B6}"/>
 					</ChildrenList>
 				</SwitchGroup>

@@ -9,11 +9,11 @@ Switch Group	ID	Name			Wwise Object Path	Notes
 	3699816212	Vacuum			\Default Work Unit\Vacuum	
 
 Switch	ID	Name	Switch Group			Notes
-	445047094	HidroWorkingOnGoo	Vacuum			
 	788884573	Stop	Vacuum			
 	2036889338	VacWorking	Vacuum			
-	2909722414	HidroWorking	Vacuum			
+	2143811110	HydroWorkingOnGoo	Vacuum			
 	3149481222	VacWorkingOnGhost	Vacuum			
+	4234065470	HydroWorking	Vacuum			
 
 State Group	ID	Name			Wwise Object Path	Notes
 	4091656514	GameState			\Default Work Unit\GameState	
@@ -36,8 +36,11 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	266973373	AspiradoraLoop	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\AspiradoraLoop_C4CC260C.wem		\Interactive Music Hierarchy\Default Work Unit\Aspiradora\AspiradoraWorking\AspiradoraLoop\AspiradoraLoop		1175136
+	382905220	HydroLoop	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\HydroLoop_C4CC260C.wem		\Interactive Music Hierarchy\Default Work Unit\Aspiradora\HydroWorking\HydroLoop\HydroLoop		1271748
 	616773025	AspiradoraStart	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\AspiradoraStart_C4CC260C.wem		\Interactive Music Hierarchy\Default Work Unit\Aspiradora\AspiradoraWorking\AspiradoraStart\AspiradoraStart		296996
 	795406639	AspiradoraEnd	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\AspiradoraEnd_C4CC260C.wem		\Interactive Music Hierarchy\Default Work Unit\Aspiradora\AspiradoraEnd\AspiradoraEnd		533332
+	883544695	HydroStart	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\HydroStart_C4CC260C.wem		\Interactive Music Hierarchy\Default Work Unit\Aspiradora\HydroWorking\HydroStart\HydroStart		296736
+	1071201929	HydroEnd	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\HydroEnd_C4CC260C.wem		\Interactive Music Hierarchy\Default Work Unit\Aspiradora\HydroEnd\HydroEnd		436280
 
 Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
 	414954598	mx_Menu	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\Keys_3CD5CF17.wem	414954598.wem	\Actor-Mixer Hierarchy\Default Work Unit\Music\mx_Menu	

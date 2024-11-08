@@ -52,22 +52,26 @@
 				</SwitchGroup>
 				<SwitchGroup Id="3699816212" Name="Vacuum">
 					<Switches>
-						<Switch Id="445047094" Name="HidroWorkingOnGoo"/>
 						<Switch Id="788884573" Name="Stop"/>
 						<Switch Id="2036889338" Name="VacWorking"/>
-						<Switch Id="2909722414" Name="HidroWorking"/>
+						<Switch Id="2143811110" Name="HydroWorkingOnGoo"/>
 						<Switch Id="3149481222" Name="VacWorkingOnGhost"/>
+						<Switch Id="4234065470" Name="HydroWorking"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{38221826-CC2F-4239-CAEB-17E396D8F803}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{21DBE853-B577-EF83-CA95-3C5BB00D5667}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
 				<File Id="266973373" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AspiradoraLoop.wav</ShortName>
 					<CachePath>SFX/AspiradoraLoop_C4CC260C.wem</CachePath>
+				</File>
+				<File Id="382905220" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HydroLoop.wav</ShortName>
+					<CachePath>SFX/HydroLoop_C4CC260C.wem</CachePath>
 				</File>
 				<File Id="414954598" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>Keys.wav</ShortName>
@@ -86,6 +90,14 @@
 				<File Id="795406639" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AspiradoraEnd.wav</ShortName>
 					<CachePath>SFX/AspiradoraEnd_C4CC260C.wem</CachePath>
+				</File>
+				<File Id="883544695" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HydroStart.wav</ShortName>
+					<CachePath>SFX/HydroStart_C4CC260C.wem</CachePath>
+				</File>
+				<File Id="1071201929" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HydroEnd.wav</ShortName>
+					<CachePath>SFX/HydroEnd_C4CC260C.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -138,6 +150,7 @@
 				<Event Id="1719412607" Name="VacStart" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="795406639"/>
+						<MediaRef Id="1071201929"/>
 					</MediaRefs>
 					<SwitchContainers>
 						<SwitchContainer>
@@ -145,6 +158,13 @@
 							<MediaRefs>
 								<MediaRef Id="266973373"/>
 								<MediaRef Id="616773025"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3699816212" Id="4234065470"/>
+							<MediaRefs>
+								<MediaRef Id="382905220"/>
+								<MediaRef Id="883544695"/>
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -170,15 +190,15 @@
 			<SwitchGroups>
 				<SwitchGroup Id="3699816212" Name="Vacuum">
 					<Switches>
-						<Switch Id="445047094" Name="HidroWorkingOnGoo"/>
 						<Switch Id="788884573" Name="Stop"/>
 						<Switch Id="2036889338" Name="VacWorking"/>
-						<Switch Id="2909722414" Name="HidroWorking"/>
+						<Switch Id="2143811110" Name="HydroWorkingOnGoo"/>
 						<Switch Id="3149481222" Name="VacWorkingOnGhost"/>
+						<Switch Id="4234065470" Name="HydroWorking"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{32E5A631-F506-2BDC-FCE1-26F452CE7976}</FileHash>
+	<FileHash>{1B2D057F-DFBB-1843-7E3F-09947401C54E}</FileHash>
 </SoundBanksInfo>
