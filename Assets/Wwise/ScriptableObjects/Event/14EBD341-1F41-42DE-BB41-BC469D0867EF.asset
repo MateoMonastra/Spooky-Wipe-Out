@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4321046b720d0fc43a66d741936aae44, type: 3}
   m_Name: 14EBD341-1F41-42DE-BB41-BC469D0867EF
   m_EditorClassIdentifier: 
-  objectName: StepsStart
-  id: 3149561494
+  objectName: Step
+  id: 621108255
   guid: 14EBD341-1F41-42DE-BB41-BC469D0867EF

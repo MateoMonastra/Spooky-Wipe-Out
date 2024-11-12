@@ -631,6 +631,13 @@
 							</ObjectLists>
 						</MusicSegment>
 						<MusicPlaylistContainer Name="HydroWorking" ID="{39559AAE-253D-42A7-80BB-BB3A2A1906C8}" ShortID="104538412">
+							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
@@ -858,6 +865,11 @@
 						<MusicSegment Name="HydroEnd" ID="{B1E67822-E97D-491B-A52A-987C892EBD23}" ShortID="499911529">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="2777.27083333333"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">

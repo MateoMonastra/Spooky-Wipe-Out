@@ -1,13 +1,12 @@
 Event	ID	Name			Wwise Object Path	Notes
+	621108255	Step			\Default Work Unit\Step	
 	1123143573	Start_Lvl1			\Default Work Unit\Start_Lvl1	
 	1281810935	Start			\Default Work Unit\Start	
 	1719412607	VacStart			\Default Work Unit\VacStart	
 	2644656531	TrashVacuumed			\Default Work Unit\TrashVacuumed	
-	3149561494	StepsStart			\Default Work Unit\StepsStart	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	1718617278	Steps			\Default Work Unit\Steps	
-	3629409974	isWalking			\Default Work Unit\isWalking	
 	3699816212	Vacuum			\Default Work Unit\Vacuum	
 
 Switch	ID	Name	Switch Group			Notes
@@ -15,30 +14,47 @@ Switch	ID	Name	Switch Group			Notes
 	2058049674	Wood	Steps			
 	2412606308	Carpet	Steps			
 	2637588553	Tile	Steps			
-	979470758	Yes	isWalking			
-	1668749452	No	isWalking			
 	788884573	Stop	Vacuum			
 	2036889338	VacWorking	Vacuum			
 	2143811110	HydroWorkingOnGoo	Vacuum			
 	3149481222	VacWorkingOnGhost	Vacuum			
 	4234065470	HydroWorking	Vacuum			
 
+State Group	ID	Name			Wwise Object Path	Notes
+	4091656514	GameState			\Default Work Unit\GameState	
+
+State	ID	Name	State Group			Notes
+	748895195	None	GameState			
+	1305749800	Playing_04	GameState			
+	1305749801	Playing_05	GameState			
+	1305749802	Playing_06	GameState			
+	1305749805	Playing_01	GameState			
+	1305749806	Playing_02	GameState			
+	1305749807	Playing_03	GameState			
+	1852808225	Playing	GameState			
+	2201105581	Credits	GameState			
+	2607556080	Menu	GameState			
+	3092587493	Pause	GameState			
+
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
-	90904694	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Player\Pasos\isWalking\Silence\Silence	
-	351064674	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Player\Pasos\isWalking\PasosSwitch\PasosComunes\SilenceBetweenSteps\Silence	
+	234075148	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Music\mx_waitPlaying\silence\Silence	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	98390411	Pasos-004	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\Pasos-004_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Pasos\isWalking\PasosSwitch\PasosComunes\PasosComunes\Pasos-004		82040
-	99988194	Pasos-005	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\Pasos-005_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Pasos\isWalking\PasosSwitch\PasosComunes\PasosComunes\Pasos-005		82040
-	127916599	Pasos-003	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\Pasos-003_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Pasos\isWalking\PasosSwitch\PasosComunes\PasosComunes\Pasos-003		82040
+	98390411	Pasos-004	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\Pasos-004_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Pasos\PasosSwitch\PasosComunes\Pasos-004		82040
+	99988194	Pasos-005	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\Pasos-005_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Pasos\PasosSwitch\PasosComunes\Pasos-005		82040
+	127916599	Pasos-003	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\Pasos-003_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Pasos\PasosSwitch\PasosComunes\Pasos-003		82040
 	266973373	AspiradoraLoop	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\AspiradoraLoop_C4CC260C.wem		\Interactive Music Hierarchy\Default Work Unit\Aspiradora\AspiradoraWorking\AspiradoraLoop\AspiradoraLoop		1175136
 	382905220	HydroLoop	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\HydroLoop_C4CC260C.wem		\Interactive Music Hierarchy\Default Work Unit\Aspiradora\HydroWorking\HydroLoop\HydroLoop		1271748
-	404368898	Pasos-002	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\Pasos-002_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Pasos\isWalking\PasosSwitch\PasosComunes\PasosComunes\Pasos-002		82040
+	404368898	Pasos-002	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\Pasos-002_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Pasos\PasosSwitch\PasosComunes\Pasos-002		82040
 	616773025	AspiradoraStart	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\AspiradoraStart_C4CC260C.wem		\Interactive Music Hierarchy\Default Work Unit\Aspiradora\AspiradoraWorking\AspiradoraStart\AspiradoraStart		296996
-	727534871	Pasos-007	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\Pasos-007_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Pasos\isWalking\PasosSwitch\PasosComunes\PasosComunes\Pasos-007		82040
+	727534871	Pasos-007	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\Pasos-007_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Pasos\PasosSwitch\PasosComunes\Pasos-007		82040
 	795406639	AspiradoraEnd	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\AspiradoraEnd_C4CC260C.wem		\Interactive Music Hierarchy\Default Work Unit\Aspiradora\AspiradoraEnd\AspiradoraEnd		533332
-	804453530	Pasos-001	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\Pasos-001_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Pasos\isWalking\PasosSwitch\PasosComunes\PasosComunes\Pasos-001		82040
+	804453530	Pasos-001	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\Pasos-001_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Pasos\PasosSwitch\PasosComunes\Pasos-001		82040
 	883544695	HydroStart	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\HydroStart_C4CC260C.wem		\Interactive Music Hierarchy\Default Work Unit\Aspiradora\HydroWorking\HydroStart\HydroStart		296736
-	1005109668	Pasos-006	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\Pasos-006_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Pasos\isWalking\PasosSwitch\PasosComunes\PasosComunes\Pasos-006		82040
+	1005109668	Pasos-006	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\Pasos-006_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Pasos\PasosSwitch\PasosComunes\Pasos-006		82040
 	1071201929	HydroEnd	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\HydroEnd_C4CC260C.wem		\Interactive Music Hierarchy\Default Work Unit\Aspiradora\HydroEnd\HydroEnd		436280
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	414954598	mx_Menu	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\Keys_3CD5CF17.wem	414954598.wem	\Actor-Mixer Hierarchy\Default Work Unit\Music\mx_Menu	
+	523675216	mx_Playing	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\1 Tubthumping_8709A909.wem	523675216.wem	\Actor-Mixer Hierarchy\Default Work Unit\Music\mx_waitPlaying\mx_Playing	
 

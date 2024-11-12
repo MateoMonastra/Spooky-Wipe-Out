@@ -67,7 +67,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{CC730AB6-7B12-5564-71F0-EBB3BCED3DC3}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{10F49BEF-8B91-CBF3-4F53-2F436677D940}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -94,6 +94,16 @@
 				<File Id="404368898" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Pasos-002.wav</ShortName>
 					<CachePath>SFX/Pasos-002_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="414954598" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>Keys.wav</ShortName>
+					<Path>Media/414954598.wem</Path>
+					<CachePath>SFX/Keys_3CD5CF17.wem</CachePath>
+				</File>
+				<File Id="523675216" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>1 Tubthumping.wav</ShortName>
+					<Path>Media/523675216.wem</Path>
+					<CachePath>SFX/1 Tubthumping_8709A909.wem</CachePath>
 				</File>
 				<File Id="616773025" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AspiradoraStart.wav</ShortName>
@@ -126,44 +136,62 @@
 			</Media>
 			<Plugins>
 				<Custom>
-					<Plugin Id="90904694" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
-					<Plugin Id="351064674" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="234075148" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 				</Custom>
 			</Plugins>
 			<Events>
-				<Event Id="1281810935" Name="Start" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1123143573" Name="Start_Lvl1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3149561494" Name="StepsStart" DurationType="Infinite">
+				<Event Id="1281810935" Name="Start" DurationType="Infinite">
 					<SwitchContainers>
 						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="3629409974" Id="1668749452" Default="true"/>
+							<SwitchValue GroupType="State" GroupId="4091656514" Id="2607556080"/>
+							<MediaRefs>
+								<MediaRef Id="414954598"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4091656514" Id="1852808225"/>
+							<MediaRefs>
+								<MediaRef Id="523675216"/>
+							</MediaRefs>
 							<PluginRefs>
 								<Custom>
-									<PluginRef Id="90904694"/>
+									<PluginRef Id="234075148"/>
 								</Custom>
 							</PluginRefs>
 						</SwitchContainer>
 						<SwitchContainer>
-							<SwitchValue GroupType="Switch" GroupId="3629409974" Id="979470758"/>
-							<Children>
-								<SwitchContainer>
-									<SwitchValue GroupType="Switch" GroupId="1718617278" Id="2058049674" Default="true"/>
-									<MediaRefs>
-										<MediaRef Id="98390411"/>
-										<MediaRef Id="99988194"/>
-										<MediaRef Id="127916599"/>
-										<MediaRef Id="404368898"/>
-										<MediaRef Id="727534871"/>
-										<MediaRef Id="804453530"/>
-										<MediaRef Id="1005109668"/>
-									</MediaRefs>
-									<PluginRefs>
-										<Custom>
-											<PluginRef Id="351064674"/>
-										</Custom>
-									</PluginRefs>
-								</SwitchContainer>
-							</Children>
+							<SwitchValue GroupType="State" GroupId="4091656514" Id="2201105581"/>
+							<MediaRefs>
+								<MediaRef Id="414954598"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4091656514" Id="3092587493"/>
+							<MediaRefs>
+								<MediaRef Id="523675216"/>
+							</MediaRefs>
+							<PluginRefs>
+								<Custom>
+									<PluginRef Id="234075148"/>
+								</Custom>
+							</PluginRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="1123143573" Name="Start_Lvl1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="621108255" Name="Step" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1718617278" Id="2058049674" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="98390411"/>
+								<MediaRef Id="99988194"/>
+								<MediaRef Id="127916599"/>
+								<MediaRef Id="404368898"/>
+								<MediaRef Id="727534871"/>
+								<MediaRef Id="804453530"/>
+								<MediaRef Id="1005109668"/>
+							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
@@ -191,6 +219,23 @@
 					</SwitchContainers>
 				</Event>
 			</Events>
+			<StateGroups>
+				<StateGroup Id="4091656514" Name="GameState">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="1305749800" Name="Playing_04"/>
+						<State Id="1305749801" Name="Playing_05"/>
+						<State Id="1305749802" Name="Playing_06"/>
+						<State Id="1305749805" Name="Playing_01"/>
+						<State Id="1305749806" Name="Playing_02"/>
+						<State Id="1305749807" Name="Playing_03"/>
+						<State Id="1852808225" Name="Playing"/>
+						<State Id="2201105581" Name="Credits"/>
+						<State Id="2607556080" Name="Menu"/>
+						<State Id="3092587493" Name="Pause"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 			<SwitchGroups>
 				<SwitchGroup Id="1718617278" Name="Steps">
 					<Switches>
@@ -198,12 +243,6 @@
 						<Switch Id="2058049674" Name="Wood"/>
 						<Switch Id="2412606308" Name="Carpet"/>
 						<Switch Id="2637588553" Name="Tile"/>
-					</Switches>
-				</SwitchGroup>
-				<SwitchGroup Id="3629409974" Name="isWalking">
-					<Switches>
-						<Switch Id="979470758" Name="Yes"/>
-						<Switch Id="1668749452" Name="No"/>
 					</Switches>
 				</SwitchGroup>
 				<SwitchGroup Id="3699816212" Name="Vacuum">
@@ -218,5 +257,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B1CEBBC7-590D-5EB2-B39D-750E8951F8C2}</FileHash>
+	<FileHash>{031481D4-B9E8-1BEE-3FE7-C0DFD94DBC05}</FileHash>
 </SoundBanksInfo>

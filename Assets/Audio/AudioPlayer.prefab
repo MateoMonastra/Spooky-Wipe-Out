@@ -110,8 +110,7 @@ GameObject:
   - component: {fileID: 3810132283959650971}
   - component: {fileID: 5326286636629692294}
   - component: {fileID: 2903391070356734085}
-  - component: {fileID: 4259503105755819024}
-  - component: {fileID: 687682651479823249}
+  - component: {fileID: 1941575990011414747}
   m_Layer: 12
   m_Name: AudioPlayer
   m_TagString: Untagged
@@ -180,7 +179,7 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
---- !u!114 &4259503105755819024
+--- !u!114 &1941575990011414747
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -189,35 +188,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6421636081491891537}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e838e736065265e44a84bdc5b8f8d195, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  enableActionOnEvent: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 4f0faf5e0f6c6e5408325e37f2040abf, type: 2}
-  useCallbacks: 0
-  Callbacks: []
-  playingId: 0
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 0
-  eventIdInternal: 0
-  valueGuidInternal: 
-  m_callbackDataInternal: {fileID: 0}
---- !u!114 &687682651479823249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6421636081491891537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20286a88301d2fd4a97fbf8a9a162451, type: 3}
+  m_Script: {fileID: 11500000, guid: f7f63277923330f46b0dd6f07b18afb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

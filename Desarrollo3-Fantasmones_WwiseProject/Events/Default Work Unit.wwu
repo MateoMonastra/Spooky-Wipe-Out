@@ -27,12 +27,12 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="StepsStart" ID="{14EBD341-1F41-42DE-BB41-BC469D0867EF}">
+				<Event Name="Step" ID="{14EBD341-1F41-42DE-BB41-BC469D0867EF}">
 					<ChildrenList>
-						<Action Name="" ID="{F243DFEC-BB40-4053-B705-B3E1897544E7}" ShortID="342325888">
+						<Action Name="" ID="{F3CDF66D-9F36-4261-BC4E-48E026473B2F}" ShortID="880891634">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="isWalking" ID="{32ED6E72-D5DB-4904-8116-E4DA48EF16B2}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+									<ObjectRef Name="PasosSwitch" ID="{93301D40-FD81-490E-AA22-E639E042199C}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
