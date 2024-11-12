@@ -46,6 +46,17 @@ namespace AK
 
     namespace SWITCHES
     {
+        namespace ISWALKING
+        {
+            static const AkUniqueID GROUP = 3629409974U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID NO = 1668749452U;
+                static const AkUniqueID YES = 979470758U;
+            } // namespace SWITCH
+        } // namespace ISWALKING
+
         namespace STEPS
         {
             static const AkUniqueID GROUP = 1718617278U;

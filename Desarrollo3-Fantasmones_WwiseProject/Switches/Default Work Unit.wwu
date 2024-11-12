@@ -20,6 +20,12 @@
 						<Switch Name="Stop" ID="{32DA640B-AF0D-41E2-A8C6-BA7597AA57B6}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="isWalking" ID="{8B8EF426-86DD-4DD5-B1F5-C85E64D84D46}">
+					<ChildrenList>
+						<Switch Name="Yes" ID="{C973FAEF-8786-424D-B159-43520DEB8BCD}"/>
+						<Switch Name="No" ID="{7DD53568-9883-4C73-9D4B-3941C03DF524}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>
