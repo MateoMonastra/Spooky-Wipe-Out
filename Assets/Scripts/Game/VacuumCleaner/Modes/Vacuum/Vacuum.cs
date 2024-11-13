@@ -23,8 +23,6 @@ namespace VacuumCleaner.Modes
 
         [SerializeField] private List<Material> materials = new List<Material>();
 
-        [SerializeField] GameObject PlayerAudio;
-      
         private void Start()
         {
             SKMinigame.OnLose += PowerOff;
