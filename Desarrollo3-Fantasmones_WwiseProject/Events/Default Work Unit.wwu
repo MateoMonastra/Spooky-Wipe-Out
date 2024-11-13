@@ -38,6 +38,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="DestroyedGhost" ID="{1BF5738A-E3EB-400A-8C1E-93657A902E82}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

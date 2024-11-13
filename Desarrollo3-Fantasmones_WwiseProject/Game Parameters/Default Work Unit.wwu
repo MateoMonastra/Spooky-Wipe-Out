@@ -6,7 +6,7 @@
 				<GameParameter Name="Ghosts" ID="{693FAA94-1147-443C-908A-F3A3D46C05B9}">
 					<PropertyList>
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
-						<Property Name="Max" Type="Real64" Value="6"/>
+						<Property Name="Max" Type="Real64" Value="10"/>
 					</PropertyList>
 				</GameParameter>
 			</ChildrenList>
