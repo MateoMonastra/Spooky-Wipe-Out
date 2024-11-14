@@ -5,21 +5,18 @@ using UnityEngine;
 public class AudioListenerMover : MonoBehaviour
 {
 
+    [SerializeField] private string placeToMoveName = "Manolo";
     private AkAudioListener listenerToMove;
-    public string placeToMoveName;
     private GameObject placeToMove;
     private Transform placeToReturn;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        placeToMoveName = "Manolo";
         StartCoroutine(DelayInitialization());
     }
 
-    IEnumerator DelayInitialization()
+    private IEnumerator DelayInitialization()
     {
-        // Wait until the end of the frame
         yield return new WaitForEndOfFrame();
 
         placeToMove = GameObject.Find(placeToMoveName);

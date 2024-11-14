@@ -242,6 +242,7 @@ namespace Fsm_Mk2
             OnCleaning?.Invoke(false);
             StartCoroutine(cleanerController.SwitchToTool(0));
         }
+
         private void SwitchTool()
         {
             currentCleaner += 1;
@@ -266,6 +267,8 @@ namespace Fsm_Mk2
         private void SetStruggleToWalkIdle()
         {
             OnStruggle?.Invoke(false);
+            inputReader.OnClickEnd += SetCleanerIdleMode;
+            SetIsClickPressed(false);
             _fsm.ApplyTransition(_struggleToWalkIdle);
             
         }
@@ -273,7 +276,8 @@ namespace Fsm_Mk2
         private void SetWalkIdleToStruggle()
         {
             OnStruggle?.Invoke(true);
-            SetIsClickPressed(false);
+            SetIsClickPressed(true);
+            inputReader.OnClickEnd -= SetCleanerIdleMode;
             _fsm.ApplyTransition(_walkIdleToStruggle);
         }
 

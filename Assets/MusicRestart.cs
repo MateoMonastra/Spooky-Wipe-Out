@@ -4,15 +4,33 @@ using UnityEngine;
 
 public class MusicRestart : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] SerializedInterface<IVacuumable> vacuumable;
+}
+[System.Serializable]
+public class SerializedInterface<TInterface> : ISerializationCallbackReceiver
+{
+    [SerializeField] UnityEngine.Object reference;
+    UnityEngine.Object _oldReference;
+    public void OnAfterDeserialize() { }
 
-    // Update is called once per frame
-    void Update()
+    public void OnBeforeSerialize()
     {
-        
+        if(reference == default)
+        {
+            return;
+        }
+        if (reference is GameObject gameObject
+            && gameObject.TryGetComponent(out TInterface newReference))
+        {
+            reference = newReference as UnityEngine.Object;
+        }
+        if (reference is TInterface)
+        {
+            _oldReference = reference;
+        }
+        else
+        {
+            reference = _oldReference;
+        }
     }
 }
