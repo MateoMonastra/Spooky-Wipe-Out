@@ -7,7 +7,7 @@
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
 			<ChildrenList>
-				<SwitchContainer Name="Music" ID="{9A78FC19-72B3-46C3-8F53-8B5275104874}" ShortID="392384810">
+				<SwitchContainer Name="MenuMusic" ID="{9A78FC19-72B3-46C3-8F53-8B5275104874}" ShortID="392384810">
 					<PropertyList>
 						<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 						<Property Name="SwitchBehavior" Type="int16" Value="1"/>
@@ -154,28 +154,12 @@
 						</StateGroupList>
 						<CustomStateList>
 							<CustomState>
-								<StateRef Name="Playing_06" ID="{F2A91BFF-75CE-4001-A1A3-B0E7DF48DD82}"/>
-								<CustomState Name="" ID="{CAA42DE6-BFD8-4FE9-8A81-A6E6571E3CB8}" ShortID="721094128"/>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="Playing_03" ID="{CE26D3CF-ACA1-4231-B9C6-0E8C4D8DBCA2}"/>
-								<CustomState Name="" ID="{40BF6C3E-BCE0-4A46-A3CD-C7A1D0433EC1}" ShortID="569355205"/>
-							</CustomState>
-							<CustomState>
 								<StateRef Name="Pause" ID="{8810489C-E928-428D-8CB5-E093102AF78A}"/>
 								<CustomState Name="" ID="{F05A64C2-CDA1-4CFF-A85C-BD19E9A5845E}" ShortID="192260708">
 									<PropertyList>
 										<Property Name="Lowpass" Type="int16" Value="69"/>
 									</PropertyList>
 								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="Playing_05" ID="{3F241BD0-51B2-42A1-8AA2-5653C6CBD523}"/>
-								<CustomState Name="" ID="{8FDAE49A-EB2F-4C83-A59B-2B60FF619088}" ShortID="178354756"/>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="Playing_04" ID="{9EA73F07-EAF7-4300-A689-36727B742CB7}"/>
-								<CustomState Name="" ID="{B69727E2-7859-4E2B-B1C8-47CDABD220D2}" ShortID="357586052"/>
 							</CustomState>
 							<CustomState>
 								<StateRef Name="Credits" ID="{17D78D59-680B-4843-A047-DD0AAE7477A6}"/>
@@ -192,14 +176,6 @@
 							<CustomState>
 								<StateRef Name="Menu" ID="{A01CBE11-CDCA-496D-BDF1-E522DBD5A871}"/>
 								<CustomState Name="" ID="{6778FE5B-1FF2-4162-B84E-2446909D2BBC}" ShortID="476342109"/>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="Playing_01" ID="{DE2C2292-1DAC-4EC4-B6FF-4CD989FCA22D}"/>
-								<CustomState Name="" ID="{9D9D9480-A821-45D0-8CF4-E2EE1E8724E9}" ShortID="403953336"/>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="Playing_02" ID="{2B9C49CA-E07E-4EF7-9947-FBE7F35DE46E}"/>
-								<CustomState Name="" ID="{C2BEC867-2AA8-4D62-8966-5E60FA51858E}" ShortID="149234955"/>
 							</CustomState>
 						</CustomStateList>
 					</StateInfo>
@@ -230,12 +206,6 @@
 								<SwitchRef Name="Menu" ID="{A01CBE11-CDCA-496D-BDF1-E522DBD5A871}"/>
 								<ItemList>
 									<ItemRef Name="mx_Menu" ID="{5AFCD1CF-085F-4779-A88B-30CBE53B9F0D}"/>
-								</ItemList>
-							</Grouping>
-							<Grouping>
-								<SwitchRef Name="Playing" ID="{48BCD43D-3191-4903-B6E8-1FC018F600F2}"/>
-								<ItemList>
-									<ItemRef Name="mx_waitPlaying" ID="{7684494A-D8D7-4CC4-93DA-356ADE04904E}"/>
 								</ItemList>
 							</Grouping>
 							<Grouping>

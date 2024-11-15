@@ -8,13 +8,23 @@
 						<Action Name="" ID="{A70B06E9-DFD5-4DAC-BE9B-C5305451AC29}" ShortID="1032489432">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Music" ID="{9A78FC19-72B3-46C3-8F53-8B5275104874}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+									<ObjectRef Name="MenuMusic" ID="{9A78FC19-72B3-46C3-8F53-8B5275104874}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Start_Lvl1" ID="{EF9172D0-B989-4BBD-9536-222D9384AE63}"/>
+				<Event Name="Start_Lvl1" ID="{EF9172D0-B989-4BBD-9536-222D9384AE63}">
+					<ChildrenList>
+						<Action Name="" ID="{FCC5DEFD-9665-4709-B356-30485225609C}" ShortID="841686546">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GameMusic" ID="{0398A01D-3569-4017-B01C-41AABAA8CDC5}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="TrashVacuumed" ID="{EE656B0A-CDFF-48E9-A259-4EC84CA521AF}"/>
 				<Event Name="VacStart" ID="{A0E04EF2-5C9F-4DFD-8CD7-C5C3ED3CCFE2}">
 					<ChildrenList>
