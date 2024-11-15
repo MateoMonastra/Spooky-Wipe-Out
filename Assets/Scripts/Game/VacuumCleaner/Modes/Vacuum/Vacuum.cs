@@ -70,7 +70,6 @@ namespace VacuumCleaner.Modes
 
         public void PowerOff()
         {
-            StopCoroutine(_turnOnVFX);
             vacuumColision.gameObject.SetActive(false);
             trashCollector.gameObject.SetActive(false);
             OnPowerOff?.Invoke();

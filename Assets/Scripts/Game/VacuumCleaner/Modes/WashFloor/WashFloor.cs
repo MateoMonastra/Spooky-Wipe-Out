@@ -52,7 +52,6 @@ namespace VacuumCleaner.Modes
 
         public void PowerOff()
         {
-            StopCoroutine(_turnOnVFX);
             washFloorColision.gameObject.SetActive(false);
             OnPowerOff?.Invoke();
         }

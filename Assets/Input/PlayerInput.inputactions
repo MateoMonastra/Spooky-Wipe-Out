@@ -225,7 +225,7 @@
                 {
                     "name": "",
                     "id": "a274acd5-8ad0-4211-bfb5-d9f27c5333f6",
-                    "path": "<Gamepad>/buttonEast",
+                    "path": "<Gamepad>/rightShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -237,6 +237,17 @@
                     "name": "",
                     "id": "b52b1088-59f1-4dba-bfa8-19ab79531ca5",
                     "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AimVaccum",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "302d7d37-4420-46b6-ada1-28ef86acf3f7",
+                    "path": "<Gamepad>/rightStick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -279,6 +290,17 @@
                 },
                 {
                     "name": "",
+                    "id": "88bc9b09-cc82-4b28-9479-2cf2d5d56438",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchTool",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "6490f41e-223f-4982-9310-2b3e4f44461e",
                     "path": "<Keyboard>/escape",
                     "interactions": "",
@@ -312,8 +334,30 @@
                 },
                 {
                     "name": "",
+                    "id": "d7674aa3-110c-4d4c-9d7a-fcacbd22ec31",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenTimer",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "f422f3d4-229a-420f-a603-f64e0750e6b3",
                     "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenTasks",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "68e6de78-e45b-4f10-afd5-807a26210ab8",
+                    "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

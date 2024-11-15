@@ -71,6 +71,7 @@ public class SkillCheckController : Minigame
     {
         progress = minProgress;
         _isActive = false;
+        inputReader.OnSpaceInputStart -= HandleInput;
         StopCoroutine(DecreaseProgressOverTime());
         StopCoroutine(MoveNeedleOverTime());
         skillCheck.gameObject.SetActive(false);

@@ -1,3 +1,4 @@
+using System;
 using Fsm_Mk2;
 using System.Diagnostics;
 using Debug = UnityEngine.Debug;
@@ -9,9 +10,15 @@ namespace Ghosts.WalkingGhost
     {
         private GhostRest _ghostRest;
 
-        public Rest(GhostRest rest)
+        public Rest(GhostRest rest, Action<bool> changeRestState)
         {
             this._ghostRest = rest;
+            changeRestState = ChangeRest;
+            }
+
+        private void ChangeRest(bool obj)
+        {
+            _ghostRest.isRested = obj;
         }
 
         public override void Enter()
@@ -22,7 +29,7 @@ namespace Ghosts.WalkingGhost
 
         public override void Tick(float delta)
         {
-
+      
         }
 
         public override void FixedTick(float delta)

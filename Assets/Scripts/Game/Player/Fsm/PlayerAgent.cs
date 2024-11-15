@@ -14,11 +14,11 @@ namespace Fsm_Mk2
     public class PlayerAgent : MonoBehaviour
     {
         public Action<Transform> OnHunted;
-        
+
         public UnityEvent<bool> OnWalk;
         public UnityEvent<bool> OnStruggle;
         public UnityEvent<bool> OnCleaning;
-        
+
         private List<State> _states = new List<State>();
 
         [SerializeField] private InputReader inputReader;
@@ -45,7 +45,7 @@ namespace Fsm_Mk2
         public void Start()
         {
             currentCleaner = 1;
-            
+
             inputReader.OnMove += SetMoveStateDirection;
             inputReader.OnAimingVacuum += SetAimingVacuumDirection;
             inputReader.OnClick += SetIsClickPressed;
@@ -56,14 +56,14 @@ namespace Fsm_Mk2
 
             inputReader.OnClickStart += ActiveCleaner;
             inputReader.OnClickEnd += SetCleanerIdleMode;
-            
+
             inputReader.OnSwitchTool += SwitchTool;
-            
+
             skillCheckController.OnStart += SetWalkIdleToStruggle;
             skillCheckController.OnWin += SetStruggleToWalkIdle;
             skillCheckController.OnLose += SetStruggleToWalkIdle;
             skillCheckController.OnStop += SetStruggleToWalkIdle;
-            
+
             skillCheckController.OnWin += SetCleanerIdleMode;
             skillCheckController.OnLose += SetCleanerIdleMode;
             skillCheckController.OnStop += SetCleanerIdleMode;
@@ -120,7 +120,7 @@ namespace Fsm_Mk2
                         _fsm.ApplyTransition(_walkIdleToWalkIdle);
                         walkIdle.SetDir(cameraBasedMoveDirection);
                         stateFound = true;
-                       
+
                         break;
                     }
                 }
@@ -134,8 +134,7 @@ namespace Fsm_Mk2
 
         private void SetAimingVacuumDirection(Vector2 position)
         {
-            Vector3 mousePosition = new Vector3(position.x, position.y);
-
+            Vector3 mousePosition = InputReader.isUsingController ? new Vector3(position.x, 0, position.y) : new Vector3(position.x, position.y);
             bool stateFound = false;
 
             foreach (var state in _states)
@@ -251,11 +250,11 @@ namespace Fsm_Mk2
                 case 1:
                     CleanerSelectionUIControler.GetInstance().PowerOnVacuum();
                     break;
-                
+
                 case 2:
                     CleanerSelectionUIControler.GetInstance().PowerOnWashFloor();
-                break;
-                
+                    break;
+
                 default:
                     currentCleaner = 1;
                     CleanerSelectionUIControler.GetInstance().PowerOnVacuum();
@@ -267,7 +266,7 @@ namespace Fsm_Mk2
         {
             OnStruggle?.Invoke(false);
             _fsm.ApplyTransition(_struggleToWalkIdle);
-            
+
         }
 
         private void SetWalkIdleToStruggle()

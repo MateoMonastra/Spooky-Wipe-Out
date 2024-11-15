@@ -14,28 +14,57 @@ public class ObjectivesController : MonoBehaviour
     private bool _activeTimer = false;
     private bool _activeTasks = false;
 
-    private void Start()
+    private void OnEnable()
     {
-        inputReader.OnSeeTimerStart += ShowTimerUI;
-        inputReader.OnSeeTasksStart += ShowTasksUI;
+        inputReader.OnShowTimer += ShowTimerUI;
+        inputReader.OnHideTimer += HideTimerUI;
+        inputReader.OnShowTasks += ShowTasksUI;
+        inputReader.OnHideTasks += HideTasksUI;
+    }
+
+    private void OnDisable()
+    {
+        inputReader.OnShowTimer -= ShowTimerUI;
+        inputReader.OnShowTasks -= ShowTasksUI;
+        inputReader.OnShowTasks -= ShowTasksUI;
+        inputReader.OnHideTasks -= HideTasksUI;
     }
 
     private void ShowTimerUI()
     {
         if (!_activeTasks)
         {
-            _activeTimer = !_activeTimer;
-            timerBackground.SetActive(_activeTimer);
-            timerText.SetActive(_activeTimer);
+            ToggleTimer(true);
         }
     }
 
+    private void HideTimerUI()
+    {
+        ToggleTimer(false);
+    }
+
+    private void ToggleTimer(bool value)
+    {
+        timerBackground.SetActive(value);
+        timerText.SetActive(value);
+        _activeTimer = value;
+    }
     private void ShowTasksUI()
     {
         if (!_activeTimer)
         {
-            _activeTasks = !_activeTasks;
-            tasksUI.SetActive(_activeTasks);
+            ToggleTasks(true);
         }
+    }
+
+    private void HideTasksUI()
+    {
+        ToggleTasks(false);
+    }
+
+    private void ToggleTasks(bool value)
+    {
+        tasksUI.SetActive(value);
+        _activeTasks = value;
     }
 }

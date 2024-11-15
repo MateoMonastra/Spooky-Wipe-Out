@@ -32,8 +32,6 @@ namespace Ghosts
 
             _wallGhostCollision.OnPlayerCollision += minigame.StartGame;
             _wallGhostCollision.OnPlayerCollision += SetCatchState;
-            minigame.OnWin += SetDeadState;
-            minigame.OnLose += SetDeadState;
 
             State _hunt = new Hunt();
             _states.Add(_hunt);
@@ -56,12 +54,16 @@ namespace Ghosts
         private void SetCatchState()
         {
             OnCatch?.Invoke();
+            minigame.OnWin += SetDeadState;
+            minigame.OnLose += SetDeadState;
             _fsm.ApplyTransition(_huntToCatch);
         }
         
         private void SetDeadState()
         {
             OnDeath?.Invoke(true);
+            minigame.OnWin -= SetDeadState;
+            minigame.OnLose -= SetDeadState;
             _fsm.ApplyTransition(_catchToDead);
         }
 

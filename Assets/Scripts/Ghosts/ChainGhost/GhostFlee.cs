@@ -64,6 +64,7 @@ public class GhostFlee : MonoBehaviour, IRest
 
             if (NavMesh.SamplePosition(randomDirection, out navMeshHit, maxScapeDistance, NavMesh.AllAreas))
             {
+                Debug.DrawLine(transform.position, navMeshHit.position, Color.white, 5f);
                 if (attempts < maxAngleAttempts)
                 {
                     Vector3 toEscapePoint = (navMeshHit.position - this.gameObject.transform.position).normalized;
@@ -72,11 +73,13 @@ public class GhostFlee : MonoBehaviour, IRest
 
                     if (angle >= 90.0f)
                     {
+                        Debug.DrawLine(transform.position, navMeshHit.position, Color.green, 5f);
                         return navMeshHit.position;
                     }
                 }
                 else
                 {
+                    Debug.DrawLine(transform.position, navMeshHit.position, new Color(1, .5f, .5f), 5f);
                     return navMeshHit.position;
                 }
             }
@@ -84,6 +87,7 @@ public class GhostFlee : MonoBehaviour, IRest
             attempts++;
         }
 
+        Debug.DrawRay(transform.position, transform.forward, Color.red, 1f);
         return this.gameObject.transform.position;
     }
 }
