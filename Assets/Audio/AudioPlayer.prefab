@@ -131,6 +131,10 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: a7f04146eac5619418943c25cc0456f7, type: 2}
   GameMusic: {fileID: 916227202603576310}
+  StartLevel:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1 &6314408634179912387
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,7 +248,7 @@ GameObject:
   - component: {fileID: 1941575990011414747}
   m_Layer: 12
   m_Name: AudioPlayer
-  m_TagString: Untagged
+  m_TagString: AudioPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

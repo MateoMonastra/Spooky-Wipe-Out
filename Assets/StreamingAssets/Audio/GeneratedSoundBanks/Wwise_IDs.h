@@ -13,7 +13,9 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID AMBPIANO = 895127194U;
         static const AkUniqueID DESTROYEDGHOST = 3087263383U;
+        static const AkUniqueID PIANOHIT = 469357355U;
         static const AkUniqueID START = 1281810935U;
         static const AkUniqueID START_LVL1 = 1123143573U;
         static const AkUniqueID STEP = 621108255U;

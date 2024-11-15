@@ -1,6 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{D7ADC564-5D68-4FCD-8A30-8E0426143E33}" SchemaVersion="119">
 	<Attenuations>
-		<WorkUnit Name="Default Work Unit" ID="{D7ADC564-5D68-4FCD-8A30-8E0426143E33}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{D7ADC564-5D68-4FCD-8A30-8E0426143E33}" PersistMode="Standalone">
+			<ChildrenList>
+				<Attenuation Name="AmbAtt" ID="{66819035-E0A4-44BE-A546-B26A21DB4D74}" ShortID="174338057">
+					<PropertyList>
+						<Property Name="RadiusMax" Type="Real64" Value="27"/>
+					</PropertyList>
+					<CurveUsageInfoList>
+						<VolumeDryUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+								<Curve Name="VolumeDry" ID="{4E3848F8-F287-4EDF-B765-75C724892CE5}">
+									<PropertyList>
+										<Property Name="Flags" Type="int32" Value="3"/>
+									</PropertyList>
+									<PointList>
+										<Point>
+											<XPos>0</XPos>
+											<YPos>0</YPos>
+											<Flags>5</Flags>
+											<SegmentShape>Log2</SegmentShape>
+										</Point>
+										<Point>
+											<XPos>27</XPos>
+											<YPos>-200</YPos>
+											<Flags>37</Flags>
+										</Point>
+									</PointList>
+								</Curve>
+							</CurveUsageInfo>
+						</VolumeDryUsage>
+						<VolumeWetGameUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+						</VolumeWetGameUsage>
+						<VolumeWetUserUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+						</VolumeWetUserUsage>
+						<LowPassFilterUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+								<Curve Name="LowPassFilter" ID="{93CB2F96-9B2C-4824-98C4-48A4C79E4BF7}">
+									<PropertyList>
+										<Property Name="Flags" Type="int32" Value="65537"/>
+									</PropertyList>
+									<PointList>
+										<Point>
+											<XPos>0</XPos>
+											<YPos>0</YPos>
+											<Flags>5</Flags>
+											<SegmentShape>Exp2</SegmentShape>
+										</Point>
+										<Point>
+											<XPos>19.17878</XPos>
+											<YPos>76</YPos>
+											<Flags>0</Flags>
+											<SegmentShape>Log2</SegmentShape>
+										</Point>
+										<Point>
+											<XPos>27</XPos>
+											<YPos>100</YPos>
+											<Flags>37</Flags>
+										</Point>
+									</PointList>
+								</Curve>
+							</CurveUsageInfo>
+						</LowPassFilterUsage>
+						<HighPassFilterUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+						</HighPassFilterUsage>
+						<SpreadUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+						</SpreadUsage>
+						<FocusUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+						</FocusUsage>
+						<ObstructionVolumeUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+						</ObstructionVolumeUsage>
+						<ObstructionLPFUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+						</ObstructionLPFUsage>
+						<ObstructionHPFUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+						</ObstructionHPFUsage>
+						<OcclusionVolumeUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+						</OcclusionVolumeUsage>
+						<OcclusionLPFUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+						</OcclusionLPFUsage>
+						<OcclusionHPFUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+						</OcclusionHPFUsage>
+						<DiffractionVolumeUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+						</DiffractionVolumeUsage>
+						<DiffractionLPFUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+						</DiffractionLPFUsage>
+						<DiffractionHPFUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+						</DiffractionHPFUsage>
+						<TransmissionVolumeUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+						</TransmissionVolumeUsage>
+						<TransmissionLPFUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+						</TransmissionLPFUsage>
+						<TransmissionHPFUsage>
+							<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+						</TransmissionHPFUsage>
+					</CurveUsageInfoList>
+				</Attenuation>
+			</ChildrenList>
+		</WorkUnit>
 	</Attenuations>
 </WwiseDocument>

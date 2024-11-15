@@ -12,6 +12,8 @@ public class AudioGameManager : MonoBehaviour
     [SerializeField] private AK.Wwise.RTPC destroyedGhostRTPC;
     [SerializeField] private AK.Wwise.Event destroyedGhost;
     [SerializeField] GameObject GameMusic;
+    [SerializeField] AK.Wwise.Event StartLevel;
+
 
     // Start is called before the first frame update
     IEnumerator Start()
@@ -25,7 +27,7 @@ public class AudioGameManager : MonoBehaviour
             ghost.OnBeingDestroy += GhostDestroyed;
         }
         destroyedGhostRTPC.SetValue(GameMusic, destroyedGhostCount);
-        AkSoundEngine.PostEvent("Start_Lvl1", GameMusic);
+        StartLevel.Post(GameMusic);
     }
 
     // Update is called once per frame
