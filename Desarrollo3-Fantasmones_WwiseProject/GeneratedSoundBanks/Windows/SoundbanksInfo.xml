@@ -72,7 +72,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{764AB295-4E2C-7934-EDBC-25D047F59D06}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{24D92B4F-76E4-4EE3-296C-535FCA917FF6}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -145,11 +145,6 @@
 					<Path>Media/460469863.wem</Path>
 					<CachePath>SFX/SPOOKY Violines_sul_pont_3CD5CF17.wem</CachePath>
 				</File>
-				<File Id="523675216" Language="SFX" Streaming="true" Location="Loose">
-					<ShortName>1 Tubthumping.wav</ShortName>
-					<Path>Media/523675216.wem</Path>
-					<CachePath>SFX/1 Tubthumping_8709A909.wem</CachePath>
-				</File>
 				<File Id="616773025" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AspiradoraStart.wav</ShortName>
 					<CachePath>SFX/AspiradoraStart_C4CC260C.wem</CachePath>
@@ -204,11 +199,6 @@
 					<CachePath>SFX/HydroEnd_C4CC260C.wem</CachePath>
 				</File>
 			</Media>
-			<Plugins>
-				<Custom>
-					<Plugin Id="234075148" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
-				</Custom>
-			</Plugins>
 			<Events>
 				<Event Id="3087263383" Name="DestroyedGhost" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1281810935" Name="Start" DurationType="Infinite">
@@ -224,17 +214,6 @@
 							<MediaRefs>
 								<MediaRef Id="414954598"/>
 							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4091656514" Id="3092587493"/>
-							<MediaRefs>
-								<MediaRef Id="523675216"/>
-							</MediaRefs>
-							<PluginRefs>
-								<Custom>
-									<PluginRef Id="234075148"/>
-								</Custom>
-							</PluginRefs>
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
@@ -388,5 +367,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D44E2EF2-0A76-78B1-8AB4-00FB9557AC3D}</FileHash>
+	<FileHash>{1A3913B2-D0FA-4504-F449-2FB51ADF34F6}</FileHash>
 </SoundBanksInfo>

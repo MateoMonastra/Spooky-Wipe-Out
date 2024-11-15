@@ -1061,7 +1061,6 @@
 												<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 												<Property Name="SourceContextType" Type="int16" Value="1"/>
 											</PropertyList>
-											<ReferenceList/>
 											<TransitionInfo>
 												<DestinationFadeIn>
 													<MusicFade Name="Destination Fade-in" ID="{8B2AEE0E-2B5E-437E-922D-C1473355F55D}">
@@ -12984,6 +12983,35 @@
 							</ChildrenList>
 						</MusicPlaylistContainer>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="GameState" ID="{C349B599-7156-458A-868B-22FC2BC1E854}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Pause" ID="{8810489C-E928-428D-8CB5-E093102AF78A}"/>
+								<CustomState Name="" ID="{1F21668B-F6E5-4912-AC1B-B64C855070D1}" ShortID="765807051">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="69"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Credits" ID="{17D78D59-680B-4843-A047-DD0AAE7477A6}"/>
+								<CustomState Name="" ID="{A72EC508-2F8E-4E2D-BD60-A248CC9C24F5}" ShortID="574468002"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Playing" ID="{48BCD43D-3191-4903-B6E8-1FC018F600F2}"/>
+								<CustomState Name="" ID="{DE6EAE71-3F64-495E-9E85-7ED7BF6EDE47}" ShortID="784970597"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Menu" ID="{A01CBE11-CDCA-496D-BDF1-E522DBD5A871}"/>
+								<CustomState Name="" ID="{A6478516-1325-422C-A4E1-02A178AC67DF}" ShortID="300746394"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 					<ObjectLists>
 						<ObjectList Name="Arguments">
 							<Reference>

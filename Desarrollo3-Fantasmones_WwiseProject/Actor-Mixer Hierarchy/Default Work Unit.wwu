@@ -214,12 +214,6 @@
 									<ItemRef Name="mx_Menu" ID="{5AFCD1CF-085F-4779-A88B-30CBE53B9F0D}"/>
 								</ItemList>
 							</Grouping>
-							<Grouping>
-								<SwitchRef Name="Pause" ID="{8810489C-E928-428D-8CB5-E093102AF78A}"/>
-								<ItemList>
-									<ItemRef Name="mx_waitPlaying" ID="{7684494A-D8D7-4CC4-93DA-356ADE04904E}"/>
-								</ItemList>
-							</Grouping>
 						</GroupingList>
 					</GroupingInfo>
 				</SwitchContainer>

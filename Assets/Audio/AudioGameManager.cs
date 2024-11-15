@@ -34,6 +34,11 @@ public class AudioGameManager : MonoBehaviour
         
     }
 
+    private void OnDestroy()
+    {
+        AkSoundEngine.StopAll(GameMusic);
+    }
+
     void GhostDestroyed(Ghost ghost)
     {
         destroyedGhostCount++;
