@@ -1,15 +1,11 @@
+using EventSystems.EventSceneManager;
+using Gameplay.Timer;
+using Ghosts;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Gameplay.Timer;
 using UnityEngine;
-using Ghosts;
-using UnityEngine.SceneManagement;
-using System.Collections;
-using EventSystems.EventSceneManager;
-using Minigames;
-using Fsm_Mk2;
-using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,12 +15,15 @@ public class GameManager : MonoBehaviour
     //[SerializeField] private SkillCheckController SKMinigame;
     //[SerializeField] private ADController ADMinigame;
 
-    [SerializeField] private Timer timer;
-    [SerializeField] private ObjectivesUI objectivesUI;
-    [SerializeField] private GameObject playerUI;
+    public Timer timer;
+
     public List<Ghost> ghosts;
     public List<Trash> garbage;
     public List<Ectoplasm> ectoplasms;
+
+    [SerializeField] private ObjectivesUI objectivesUI;
+    [SerializeField] private GameObject playerUI;
+
     [SerializeField] private string nextScene;
     [SerializeField] private EventChannelSceneManager eventChannelSceneManager;
 
@@ -43,7 +42,7 @@ public class GameManager : MonoBehaviour
         {
             trash.OnBeingDestroy += RemoveTrash;
         }
-        
+
         foreach (Ectoplasm ectoplasm in ectoplasms)
         {
             ectoplasm.OnBeingDestroy += RemoveEctoplasm;
@@ -62,7 +61,7 @@ public class GameManager : MonoBehaviour
         objectivesUI.SetTrashQnty(garbage.Count);
         objectivesUI.SetGhostQnty(ghosts.Count);
         objectivesUI.SetEctoplasmQnty(ectoplasms.Count);
-        
+
         Time.timeScale = 1f;
     }
 
@@ -90,7 +89,7 @@ public class GameManager : MonoBehaviour
 
         GameIsOver();
     }
-    
+
     private void RemoveEctoplasm(Ectoplasm ectoplasm)
     {
         ectoplasm.OnBeingDestroy -= RemoveEctoplasm;
@@ -120,15 +119,10 @@ public class GameManager : MonoBehaviour
     {
         return garbage.Any(trash => trash.isActiveAndEnabled);
     }
-    
+
     public bool IsAnyEctoplasm()
     {
         return ectoplasms.Any(ectoplasm => ectoplasm.isActiveAndEnabled);
-    }
-
-    public float GetTimeLeft()
-    {
-        return timer.GetTime();
     }
 
     public void SetPlayerUIState(bool state)

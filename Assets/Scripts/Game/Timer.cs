@@ -42,7 +42,7 @@ namespace Gameplay.Timer
                     break;
             }
 
-            SetTimerText();
+            textTimer.text = SetTimerText();
 
 
             if (Mathf.Abs(_currentTime - objectiveTime) < Tolerance)
@@ -52,19 +52,23 @@ namespace Gameplay.Timer
             }
         }
 
-        private void SetTimerText()
+        public string SetTimerText()
         {
+            string newText;
+
             int minutes = (int)_currentTime / 60;
             int seconds = (int)_currentTime % 60;
 
             if (seconds >= 10)
             {
-                textTimer.text = minutes + ":" + seconds;
+                newText = minutes + ":" + seconds;
             }
             else
             {
-                textTimer.text = minutes + ":0" + seconds;
+                newText = minutes + ":0" + seconds;
             }
+
+            return newText;
         }
 
         public float GetTime()
