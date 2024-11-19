@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using EventSystems.EventSceneManager;
 using Player.FSM;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PauseManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private string menuSceneName;
     
     [SerializeField] private EventChannelSceneManager eventChannelSceneManager;
+    [SerializeField] private UnityEvent OnPauseStarted;
 
     private void Start()
     {
@@ -24,6 +26,7 @@ public class PauseManager : MonoBehaviour
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         AkSoundEngine.SetState("GameState", "Pause");
+        OnPauseStarted?.Invoke();
     }
     
     public void Resume()
