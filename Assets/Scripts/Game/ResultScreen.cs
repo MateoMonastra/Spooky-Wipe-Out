@@ -6,6 +6,8 @@ using UnityEngine;
 public class ResultScreen : MonoBehaviour
 {
     [SerializeField] private GameObject finishScreen;
+    [SerializeField] private PreselectButton preselectButton;
+    [SerializeField] private GameObject button;
 
     private void Start()
     {
@@ -17,5 +19,6 @@ public class ResultScreen : MonoBehaviour
     {
         Time.timeScale = 0f;
         finishScreen.SetActive(true);
+        preselectButton.SetPreselectedButton(button);
     }
 }

@@ -55,6 +55,7 @@ public class GhostRest : MonoBehaviour, IRest
 
     private void OnDisable()
     {
-        StopCoroutine(_resting);
+        if(_resting != null)
+            StopCoroutine(_resting);
     }
 }

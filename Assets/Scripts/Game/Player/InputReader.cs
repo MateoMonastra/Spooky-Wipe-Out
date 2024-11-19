@@ -22,6 +22,7 @@ namespace Player.FSM
         public Action OnHideTasks;
         public Action<InputDevice> OnInputDevice;
         public static bool isUsingController = false;
+        public Action OnNavigate;
 
 
         public void HandleMoveInput(InputAction.CallbackContext context)
@@ -40,8 +41,6 @@ namespace Player.FSM
             { 
                 isUsingController = true;
             }
-
-
         }
 
         public void HandleMouseInput(InputAction.CallbackContext context)
@@ -124,6 +123,12 @@ namespace Player.FSM
                 OnHideTasks?.Invoke();
             }
             OnInputDevice?.Invoke(context.control.device);
+        }
+
+        public void HandleNavigate(InputAction.CallbackContext context)
+        {
+            OnNavigate?.Invoke();
+            Debug.Log("se invoca evento ui");
         }
     }
 }
