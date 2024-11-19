@@ -133,7 +133,7 @@ Transform:
   m_GameObject: {fileID: 3682512791674879740}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -40.48, y: 0.93, z: 21.39}
+  m_LocalPosition: {x: -39.891163, y: 0.75715405, z: 22.421661}
   m_LocalScale: {x: 4.703648, y: 2.2145174, z: 4.5749364}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -160,8 +160,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.0135609, y: 0.97746354, z: 0.99897695}
-  m_Center: {x: 0.017328087, y: -0.3134675, z: -0.0005102669}
+  m_Size: {x: 1.0135609, y: 0.97746354, z: 1.2172617}
+  m_Center: {x: 0.017328087, y: -0.3134675, z: 0.10863278}
 --- !u!114 &7861526125995645859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,8 +275,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vacuumColision: {fileID: 7861526125995645859}
   trashCollector: {fileID: 8743409242914982531}
+  maxTimeVFX: 0.5
+  maxVFXPower: 2.5
   SKMinigame: {fileID: 0}
   ADMinigame: {fileID: 0}
+  materials:
+  - {fileID: 2100000, guid: 122ec9938443a2446b3e1d78c40bb6df, type: 2}
+  - {fileID: 2100000, guid: e0a54cb088c346349829f6ee7e68505f, type: 2}
 --- !u!114 &4783788652762081125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -414,6 +419,8 @@ MonoBehaviour:
   Materials:
   - {fileID: 2100000, guid: fef9870bbc3e8cf4698291549b58ba61, type: 2}
   - {fileID: 2100000, guid: fcb6a0ed79e9bd4409a49f9185a67766, type: 2}
+  - {fileID: 2100000, guid: 6fcfeae0983493c42ba6fd7cb22539b6, type: 2}
+  - {fileID: 2100000, guid: 7e5ba6274920b5a42bd4a9ac3db9be71, type: 2}
   Camera: {fileID: 0}
   Mask:
     serializedVersion: 2
@@ -449,7 +456,7 @@ Transform:
   m_GameObject: {fileID: 6136936489199683965}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -40.48, y: 0.93, z: 21.39}
+  m_LocalPosition: {x: -39.891163, y: 0.75715405, z: 22.421661}
   m_LocalScale: {x: 4.703648, y: 2.2145174, z: 4.5749364}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -476,8 +483,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.6610452, y: 0.45089647, z: 0.9591204}
-  m_Center: {x: -0.0125292, y: -0.9189492, z: -0.134088}
+  m_Size: {x: 0.6084712, y: 0.45089647, z: 0.64793396}
+  m_Center: {x: -0.0013466319, y: -0.9189492, z: -0.14251179}
 --- !u!33 &5652448454066391655
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -561,7 +568,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7756029660301950289
 Transform:
   m_ObjectHideFlags: 0
@@ -646,8 +653,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1.0609632, z: 0.9964404}
+  m_Center: {x: 0, y: -0.3499958, z: -0.0017797977}
 --- !u!114 &8743409242914982531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -711,6 +718,7 @@ MonoBehaviour:
   - {fileID: 4275126563322455167}
   - {fileID: 4833060452451161524}
   - {fileID: 5511469210541101115}
+  weaponDelay: 0.3
 --- !u!1 &7833236631645349790
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,9 +862,26 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnStruggle:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCleaning:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7942130064371100389}
+        m_TargetAssemblyTypeName: PlayerAnimation, Assembly-CSharp
+        m_MethodName: SetCleaning
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   inputReader: {fileID: 0}
   walkIdleModel: {fileID: 11400000, guid: f6225c811a45c4a4bba52eb64f59c1ea, type: 2}
-  playerModel: {fileID: 0}
   adController: {fileID: 0}
   skillCheckController: {fileID: 0}
   cleanerController: {fileID: 7452878416173193616}
@@ -985,6 +1010,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   washFloorColision: {fileID: 6934002694911782564}
+  maxTimeVFX: 0.5
+  maxVFXPower: 23
+  material: {fileID: 2100000, guid: 851c70e7c2da453458d207e4a191f6f0, type: 2}
 --- !u!1001 &6658525527047167812
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1184,6 +1212,10 @@ PrefabInstance:
     - target: {fileID: 6130364928457682043, guid: 83a8a97f0d5079f40ae98de0f8cc49e4, type: 3}
       propertyPath: m_Name
       value: PlayerModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7535132428627304682, guid: 83a8a97f0d5079f40ae98de0f8cc49e4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
