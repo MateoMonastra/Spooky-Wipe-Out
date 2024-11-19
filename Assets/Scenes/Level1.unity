@@ -3054,7 +3054,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7090365597876866152, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7452878416173193616, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: weaponDelay
