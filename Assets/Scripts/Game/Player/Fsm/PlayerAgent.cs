@@ -198,6 +198,9 @@ namespace Fsm_Mk2
                 }
             }
 
+            inputReader.OnClickStart -= ActiveCleaner;
+            SetCleanerIdleMode();
+
             if (!stateFound)
             {
                 Debug.Log("Current state not found in the list of states.");
@@ -223,6 +226,8 @@ namespace Fsm_Mk2
                     }
                 }
             }
+
+            inputReader.OnClickStart += ActiveCleaner;
 
             if (!stateFound)
             {
