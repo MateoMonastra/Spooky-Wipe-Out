@@ -3409,6 +3409,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1911315130079129012, guid: 0e114f93386c6584fb412aaf40e12cc9, type: 3}
+      propertyPath: eventSystem
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2086324881517798603, guid: 0e114f93386c6584fb412aaf40e12cc9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.979671
@@ -3452,6 +3456,10 @@ PrefabInstance:
     - target: {fileID: 2935691085672996378, guid: 0e114f93386c6584fb412aaf40e12cc9, type: 3}
       propertyPath: m_Name
       value: InputReader
+      objectReference: {fileID: 0}
+    - target: {fileID: 5570601895139665493, guid: 0e114f93386c6584fb412aaf40e12cc9, type: 3}
+      propertyPath: m_UIInputModule
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
