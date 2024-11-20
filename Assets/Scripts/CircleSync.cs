@@ -32,7 +32,7 @@ public class CircleSync : MonoBehaviour
             {
                 
                 alpha += Time.deltaTime * speedAlpha;
-                alpha = Mathf.Clamp(alpha, 0, 0.8f);
+                alpha = Mathf.Clamp(alpha, 0, 0.9f);
                 material.SetFloat(SizeID, alpha);
             }
         }

@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c232f8f881e3c94f833a742dd790479, type: 3}
   m_Name: WashFloorModel
   m_EditorClassIdentifier: 
-  washSpeed: 0.3
-  minScale: 0.08
-  maxAngle: 49
+  washSpeed: 1.1
+  minScale: 0.15
   renderDistance: 1.62
   wallLayer:
     serializedVersion: 2
