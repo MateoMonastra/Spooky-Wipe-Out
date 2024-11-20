@@ -3164,6 +3164,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 613b6ba06ae74b6409013525dbbc641a, type: 3}
+--- !u!1 &1838688704 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6421636081491891537, guid: 613b6ba06ae74b6409013525dbbc641a, type: 3}
+  m_PrefabInstance: {fileID: 1838688703}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1876919276 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7639597927388392621, guid: b467e462884d30144b5bfca22943e075, type: 3}
@@ -3402,6 +3407,10 @@ PrefabInstance:
       propertyPath: Materials.Array.data[3]
       value: 
       objectReference: {fileID: 2100000, guid: 7e5ba6274920b5a42bd4a9ac3db9be71, type: 2}
+    - target: {fileID: 1682782364746242816, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: AudioPlayer
+      value: 
+      objectReference: {fileID: 1838688704}
     - target: {fileID: 2432974729119047995, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: m_LocalPosition.x
       value: -39.891163
