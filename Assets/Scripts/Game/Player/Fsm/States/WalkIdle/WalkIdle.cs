@@ -71,7 +71,7 @@ namespace Fsm_Mk2
                     _counterMovement = new Vector3(-_rigidbody.velocity.x * _model.CounterMovementForceVacuuming, 0, -_rigidbody.velocity.z * _model.CounterMovementForceVacuuming);
                     if(InputReader.isUsingController)
                     {
-                        RotateWhileVacuumingStick();
+                        RotateWhileVacuumingStick(angle);
                     }
                     else
                     {
@@ -106,12 +106,15 @@ namespace Fsm_Mk2
             }
         }
 
-        private void RotateWhileVacuumingStick()
+        private void RotateWhileVacuumingStick(float angle)
         {
             if (!Camera.main) return;
             if (mousePosition == Vector3.zero) return;
 
-            Quaternion targetRotation = Quaternion.LookRotation(mousePosition);
+            var cameraTransform = Camera.main.transform;
+            var cameraBasedRotateDirection = cameraTransform.TransformDirection(mousePosition);
+            
+            Quaternion targetRotation = Quaternion.LookRotation(cameraBasedRotateDirection.IgnoreY());
             _gameObject.transform.rotation = Quaternion.Slerp(_gameObject.transform.rotation, targetRotation, _stickRotatingSpeed * Time.deltaTime);
         }
 
