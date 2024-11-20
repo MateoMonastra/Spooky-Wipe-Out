@@ -3519,7 +3519,7 @@ PrefabInstance:
       objectReference: {fileID: 4608617271482847058}
     - target: {fileID: 5241632648519282260, guid: b467e462884d30144b5bfca22943e075, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5967209845230814926, guid: b467e462884d30144b5bfca22943e075, type: 3}
       propertyPath: inputReader
