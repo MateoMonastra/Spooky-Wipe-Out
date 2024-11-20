@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 2547842409434445170}
   - component: {fileID: 1440331096994477257}
   - component: {fileID: 6137382736417369045}
+  - component: {fileID: 4579764715654614576}
   m_Layer: 5
   m_Name: RetryButton
   m_TagString: Untagged
@@ -224,6 +225,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonHandler: {fileID: 11400000, guid: b0f14e1bb18ed484ca33199b6bfa634f, type: 2}
+--- !u!114 &4579764715654614576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401132751781549032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68c7d057bde9d4748999560b87165ebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1472290220130214409
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,8 +332,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6344a04d6104dde49a8f68a91734cb1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winScreen: {fileID: 5057761380377103206}
-  loseScreen: {fileID: 1472290220130214409}
+  finishScreen: {fileID: 0}
+  preselectButton: {fileID: 0}
+  button: {fileID: 0}
 --- !u!1 &2342357123778312143
 GameObject:
   m_ObjectHideFlags: 0
@@ -1017,6 +1031,7 @@ GameObject:
   - component: {fileID: 1385105321023429998}
   - component: {fileID: 3486200732227561598}
   - component: {fileID: 8902627219793710728}
+  - component: {fileID: 7146631836795636125}
   m_Layer: 5
   m_Name: MenuButton
   m_TagString: Untagged
@@ -1150,3 +1165,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonHandler: {fileID: 11400000, guid: 0833e327f151a7047851f45f42896a47, type: 2}
+--- !u!114 &7146631836795636125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7971831629541202291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68c7d057bde9d4748999560b87165ebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
