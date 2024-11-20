@@ -10,12 +10,6 @@
 						<State Name="Playing" ID="{48BCD43D-3191-4903-B6E8-1FC018F600F2}"/>
 						<State Name="Pause" ID="{8810489C-E928-428D-8CB5-E093102AF78A}"/>
 						<State Name="Credits" ID="{17D78D59-680B-4843-A047-DD0AAE7477A6}"/>
-						<State Name="Playing_01" ID="{DE2C2292-1DAC-4EC4-B6FF-4CD989FCA22D}"/>
-						<State Name="Playing_02" ID="{2B9C49CA-E07E-4EF7-9947-FBE7F35DE46E}"/>
-						<State Name="Playing_03" ID="{CE26D3CF-ACA1-4231-B9C6-0E8C4D8DBCA2}"/>
-						<State Name="Playing_04" ID="{9EA73F07-EAF7-4300-A689-36727B742CB7}"/>
-						<State Name="Playing_05" ID="{3F241BD0-51B2-42A1-8AA2-5653C6CBD523}"/>
-						<State Name="Playing_06" ID="{F2A91BFF-75CE-4001-A1A3-B0E7DF48DD82}"/>
 					</ChildrenList>
 					<TransitionList>
 						<Transition>

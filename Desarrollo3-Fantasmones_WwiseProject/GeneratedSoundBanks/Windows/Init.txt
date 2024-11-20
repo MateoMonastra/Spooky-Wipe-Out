@@ -1,3 +1,17 @@
+Switch Group	ID	Name			Wwise Object Path	Notes
+	1533192012	GameMusic			\Default Work Unit\GameMusic	
+	3629409974	isWalking			\Default Work Unit\isWalking	
+
+Switch	ID	Name	Switch Group			Notes
+	1375774704	GameMusic_03	GameMusic			
+	1375774705	GameMusic_02	GameMusic			
+	1375774706	GameMusic_01	GameMusic			
+	1375774709	GameMusic_06	GameMusic			
+	1375774710	GameMusic_05	GameMusic			
+	1375774711	GameMusic_04	GameMusic			
+	979470758	Yes	isWalking			
+	1668749452	No	isWalking			
+
 State Group	ID	Name			Wwise Object Path	Notes
 	4091656514	GameState			\Default Work Unit\GameState	
 

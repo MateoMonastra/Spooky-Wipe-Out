@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{A450B8FF-1494-4297-A59C-4E9BFE96B267}" SchemaVersion="119">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{A450B8FF-1494-4297-A59C-4E9BFE96B267}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{A450B8FF-1494-4297-A59C-4E9BFE96B267}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="Ghosts" ID="{693FAA94-1147-443C-908A-F3A3D46C05B9}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="10"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>

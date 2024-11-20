@@ -8,14 +8,69 @@
 						<Action Name="" ID="{A70B06E9-DFD5-4DAC-BE9B-C5305451AC29}" ShortID="1032489432">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Music" ID="{9A78FC19-72B3-46C3-8F53-8B5275104874}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+									<ObjectRef Name="MenuMusic" ID="{9A78FC19-72B3-46C3-8F53-8B5275104874}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Start_Lvl1" ID="{EF9172D0-B989-4BBD-9536-222D9384AE63}"/>
+				<Event Name="Start_Lvl1" ID="{EF9172D0-B989-4BBD-9536-222D9384AE63}">
+					<ChildrenList>
+						<Action Name="" ID="{FCC5DEFD-9665-4709-B356-30485225609C}" ShortID="841686546">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GameMusic" ID="{0398A01D-3569-4017-B01C-41AABAA8CDC5}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="TrashVacuumed" ID="{EE656B0A-CDFF-48E9-A259-4EC84CA521AF}"/>
+				<Event Name="VacStart" ID="{A0E04EF2-5C9F-4DFD-8CD7-C5C3ED3CCFE2}">
+					<ChildrenList>
+						<Action Name="" ID="{9AD9F1C6-0F5A-4C0D-A8B3-31887A084326}" ShortID="16171368">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Aspiradora" ID="{B32BE7B0-2C49-4094-BA64-C91D58073B97}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Step" ID="{14EBD341-1F41-42DE-BB41-BC469D0867EF}">
+					<ChildrenList>
+						<Action Name="" ID="{F3CDF66D-9F36-4261-BC4E-48E026473B2F}" ShortID="880891634">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PasosSwitch" ID="{93301D40-FD81-490E-AA22-E639E042199C}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="DestroyedGhost" ID="{1BF5738A-E3EB-400A-8C1E-93657A902E82}"/>
+				<Event Name="AmbPiano" ID="{D5E4B068-753A-4CB6-86AC-641F833C9A07}">
+					<ChildrenList>
+						<Action Name="" ID="{7AF4B776-9F0D-46BA-8174-DDD1C69DCCEF}" ShortID="71703405">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AmbPiano" ID="{8CEE6B2B-F85A-4DC8-8554-CE26561E2310}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="PianoHit" ID="{4C1C351B-7BE8-4AE5-99DE-3EF340FB66B3}">
+					<ChildrenList>
+						<Action Name="" ID="{2BF9FF73-201B-4A71-A63E-35837A4C7A22}" ShortID="270361832">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PianoHit" ID="{7CFD9D2C-0E1B-4F64-92A8-02653799043D}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

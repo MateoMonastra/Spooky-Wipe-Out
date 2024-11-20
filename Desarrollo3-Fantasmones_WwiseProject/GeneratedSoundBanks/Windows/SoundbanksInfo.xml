@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{BAE4F864-49BB-F32A-1760-191D9AEBD7CC}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{EBD15F84-1061-7D64-535F-29062BB17132}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -21,16 +21,13 @@
 			<Busses>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
+			<GameParameters>
+				<GameParameter Id="1037543273" Name="Ghosts"/>
+			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="4091656514" Name="GameState">
 					<States>
 						<State Id="748895195" Name="None"/>
-						<State Id="1305749800" Name="Playing_04"/>
-						<State Id="1305749801" Name="Playing_05"/>
-						<State Id="1305749802" Name="Playing_06"/>
-						<State Id="1305749805" Name="Playing_01"/>
-						<State Id="1305749806" Name="Playing_02"/>
-						<State Id="1305749807" Name="Playing_03"/>
 						<State Id="1852808225" Name="Playing"/>
 						<State Id="2201105581" Name="Credits"/>
 						<State Id="2607556080" Name="Menu"/>
@@ -39,6 +36,463 @@
 				</StateGroup>
 			</StateGroups>
 			<SwitchGroups>
+				<SwitchGroup Id="1533192012" Name="GameMusic">
+					<GameParameterRef Id="1037543273"/>
+					<Switches>
+						<Switch Id="1375774704" Name="GameMusic_03"/>
+						<Switch Id="1375774705" Name="GameMusic_02"/>
+						<Switch Id="1375774706" Name="GameMusic_01"/>
+						<Switch Id="1375774709" Name="GameMusic_06"/>
+						<Switch Id="1375774710" Name="GameMusic_05"/>
+						<Switch Id="1375774711" Name="GameMusic_04"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="1718617278" Name="Steps">
+					<Switches>
+						<Switch Id="788884573" Name="Stop"/>
+						<Switch Id="2058049674" Name="Wood"/>
+						<Switch Id="2412606308" Name="Carpet"/>
+						<Switch Id="2637588553" Name="Tile"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="3629409974" Name="isWalking">
+					<Switches>
+						<Switch Id="979470758" Name="Yes"/>
+						<Switch Id="1668749452" Name="No"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="3699816212" Name="Vacuum">
+					<Switches>
+						<Switch Id="788884573" Name="Stop"/>
+						<Switch Id="2036889338" Name="VacWorking"/>
+						<Switch Id="2143811110" Name="HydroWorkingOnGoo"/>
+						<Switch Id="3149481222" Name="VacWorkingOnGhost"/>
+						<Switch Id="4234065470" Name="HydroWorking"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{FE842F6B-2B7A-A132-9975-9B139626A164}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="5949212" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>SPOOKY VIBRAPH.wav</ShortName>
+					<Path>Media/5949212.wem</Path>
+					<CachePath>SFX/SPOOKY VIBRAPH_3CD5CF17.wem</CachePath>
+				</File>
+				<File Id="15927765" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_Piano-007.wav</ShortName>
+					<CachePath>SFX/SFX_Piano-007_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="22653582" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>SPOOKY 23-060-Basic-Ride B 1 [2024-11-12 182352].wav</ShortName>
+					<Path>Media/22653582.wem</Path>
+					<CachePath>SFX/SPOOKY 23-060-Basic-Ride B 1 [2024-11-12 182352]_3CD5CF17.wem</CachePath>
+				</File>
+				<File Id="23883909" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>SPOOKY bAJO.wav</ShortName>
+					<Path>Media/23883909.wem</Path>
+					<CachePath>SFX/SPOOKY bAJO_3CD5CF17.wem</CachePath>
+				</File>
+				<File Id="61946966" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_Piano-010.wav</ShortName>
+					<CachePath>SFX/SFX_Piano-010_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="98390411" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Pasos-004.wav</ShortName>
+					<CachePath>SFX/Pasos-004_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="99988194" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Pasos-005.wav</ShortName>
+					<CachePath>SFX/Pasos-005_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="123799640" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_Piano-014.wav</ShortName>
+					<CachePath>SFX/SFX_Piano-014_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="127916599" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Pasos-003.wav</ShortName>
+					<CachePath>SFX/Pasos-003_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="134852080" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_Piano-013.wav</ShortName>
+					<CachePath>SFX/SFX_Piano-013_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="204114406" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>SPOOKY Violines-3.wav</ShortName>
+					<Path>Media/204114406.wem</Path>
+					<CachePath>SFX/SPOOKY Violines-3_3CD5CF17.wem</CachePath>
+				</File>
+				<File Id="266973373" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AspiradoraLoop.wav</ShortName>
+					<CachePath>SFX/AspiradoraLoop_C4CC260C.wem</CachePath>
+				</File>
+				<File Id="312507416" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>SPOOKY Violines_sultasto.wav</ShortName>
+					<Path>Media/312507416.wem</Path>
+					<CachePath>SFX/SPOOKY Violines_sultasto_3CD5CF17.wem</CachePath>
+				</File>
+				<File Id="319038758" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>SPOOKY 22-060-Basic-Brush 1 [2024-11-12 182352].wav</ShortName>
+					<Path>Media/319038758.wem</Path>
+					<CachePath>SFX/SPOOKY 22-060-Basic-Brush 1 [2024-11-12 182352]_3CD5CF17.wem</CachePath>
+				</File>
+				<File Id="363842715" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_Piano-003.wav</ShortName>
+					<CachePath>SFX/SFX_Piano-003_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="382905220" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HydroLoop.wav</ShortName>
+					<CachePath>SFX/HydroLoop_C4CC260C.wem</CachePath>
+				</File>
+				<File Id="392410031" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>SPOOKY Violines.wav</ShortName>
+					<Path>Media/392410031.wem</Path>
+					<CachePath>SFX/SPOOKY Violines_3CD5CF17.wem</CachePath>
+				</File>
+				<File Id="404368898" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Pasos-002.wav</ShortName>
+					<CachePath>SFX/Pasos-002_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="414954598" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>Keys.wav</ShortName>
+					<Path>Media/414954598.wem</Path>
+					<CachePath>SFX/Keys_3CD5CF17.wem</CachePath>
+				</File>
+				<File Id="433427925" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_Piano-012.wav</ShortName>
+					<CachePath>SFX/SFX_Piano-012_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="460469863" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>SPOOKY Violines_sul_pont.wav</ShortName>
+					<Path>Media/460469863.wem</Path>
+					<CachePath>SFX/SPOOKY Violines_sul_pont_3CD5CF17.wem</CachePath>
+				</File>
+				<File Id="487752815" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_Piano-002.wav</ShortName>
+					<CachePath>SFX/SFX_Piano-002_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="502920663" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_Piano-018.wav</ShortName>
+					<CachePath>SFX/SFX_Piano-018_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="557733357" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_Piano-016.wav</ShortName>
+					<CachePath>SFX/SFX_Piano-016_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="578776812" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_Piano-001.wav</ShortName>
+					<CachePath>SFX/SFX_Piano-001_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="592711847" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_Piano-011.wav</ShortName>
+					<CachePath>SFX/SFX_Piano-011_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="616773025" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AspiradoraStart.wav</ShortName>
+					<CachePath>SFX/AspiradoraStart_C4CC260C.wem</CachePath>
+				</File>
+				<File Id="632934482" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_Piano-008.wav</ShortName>
+					<CachePath>SFX/SFX_Piano-008_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="723507422" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_Piano-006.wav</ShortName>
+					<CachePath>SFX/SFX_Piano-006_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="727534871" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Pasos-007.wav</ShortName>
+					<CachePath>SFX/Pasos-007_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="737582803" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>SPOOKY Violines-1.wav</ShortName>
+					<Path>Media/737582803.wem</Path>
+					<CachePath>SFX/SPOOKY Violines-1_3CD5CF17.wem</CachePath>
+				</File>
+				<File Id="738044038" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>SPOOKY STICK.wav</ShortName>
+					<Path>Media/738044038.wem</Path>
+					<CachePath>SFX/SPOOKY STICK_3CD5CF17.wem</CachePath>
+				</File>
+				<File Id="795406639" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AspiradoraEnd.wav</ShortName>
+					<CachePath>SFX/AspiradoraEnd_C4CC260C.wem</CachePath>
+				</File>
+				<File Id="797249411" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_Piano-015.wav</ShortName>
+					<CachePath>SFX/SFX_Piano-015_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="804453530" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Pasos-001.wav</ShortName>
+					<CachePath>SFX/Pasos-001_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="869779343" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_Piano-004.wav</ShortName>
+					<CachePath>SFX/SFX_Piano-004_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="883544695" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HydroStart.wav</ShortName>
+					<CachePath>SFX/HydroStart_C4CC260C.wem</CachePath>
+				</File>
+				<File Id="889975198" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_Piano-017.wav</ShortName>
+					<CachePath>SFX/SFX_Piano-017_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="900404297" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>SPOOKY Violines-2.wav</ShortName>
+					<Path>Media/900404297.wem</Path>
+					<CachePath>SFX/SPOOKY Violines-2_3CD5CF17.wem</CachePath>
+				</File>
+				<File Id="1005109668" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Pasos-006.wav</ShortName>
+					<CachePath>SFX/Pasos-006_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="1033471057" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>SPOOKY KALIMBA2.wav</ShortName>
+					<Path>Media/1033471057.wem</Path>
+					<CachePath>SFX/SPOOKY KALIMBA2_3CD5CF17.wem</CachePath>
+				</File>
+				<File Id="1035390792" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_Piano-009.wav</ShortName>
+					<CachePath>SFX/SFX_Piano-009_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="1040908074" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFX_Piano-005.wav</ShortName>
+					<CachePath>SFX/SFX_Piano-005_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="1066619132" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>SPOOKY KALIMBA1.wav</ShortName>
+					<Path>Media/1066619132.wem</Path>
+					<CachePath>SFX/SPOOKY KALIMBA1_3CD5CF17.wem</CachePath>
+				</File>
+				<File Id="1071201929" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>HydroEnd.wav</ShortName>
+					<CachePath>SFX/HydroEnd_C4CC260C.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="66754729" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="127524652" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="186624115" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="669261569" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="730053830" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="854333555" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="854376344" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="856823274" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="978075550" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+				</Custom>
+			</Plugins>
+			<Events>
+				<Event Id="895127194" Name="AmbPiano" MaxAttenuation="27" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="15927765"/>
+						<MediaRef Id="61946966"/>
+						<MediaRef Id="123799640"/>
+						<MediaRef Id="134852080"/>
+						<MediaRef Id="363842715"/>
+						<MediaRef Id="433427925"/>
+						<MediaRef Id="487752815"/>
+						<MediaRef Id="502920663"/>
+						<MediaRef Id="557733357"/>
+						<MediaRef Id="578776812"/>
+						<MediaRef Id="592711847"/>
+						<MediaRef Id="632934482"/>
+						<MediaRef Id="723507422"/>
+						<MediaRef Id="797249411"/>
+						<MediaRef Id="869779343"/>
+						<MediaRef Id="889975198"/>
+						<MediaRef Id="1035390792"/>
+						<MediaRef Id="1040908074"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="127524652"/>
+							<PluginRef Id="856823274"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="3087263383" Name="DestroyedGhost" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="469357355" Name="PianoHit" DurationType="OneShot" DurationMin="1.0738958" DurationMax="9">
+					<MediaRefs>
+						<MediaRef Id="15927765"/>
+						<MediaRef Id="61946966"/>
+						<MediaRef Id="123799640"/>
+						<MediaRef Id="134852080"/>
+						<MediaRef Id="363842715"/>
+						<MediaRef Id="433427925"/>
+						<MediaRef Id="487752815"/>
+						<MediaRef Id="502920663"/>
+						<MediaRef Id="557733357"/>
+						<MediaRef Id="578776812"/>
+						<MediaRef Id="592711847"/>
+						<MediaRef Id="632934482"/>
+						<MediaRef Id="723507422"/>
+						<MediaRef Id="797249411"/>
+						<MediaRef Id="869779343"/>
+						<MediaRef Id="889975198"/>
+						<MediaRef Id="1035390792"/>
+						<MediaRef Id="1040908074"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="66754729"/>
+							<PluginRef Id="186624115"/>
+							<PluginRef Id="669261569"/>
+							<PluginRef Id="730053830"/>
+							<PluginRef Id="854333555"/>
+							<PluginRef Id="854376344"/>
+							<PluginRef Id="978075550"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="1281810935" Name="Start" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4091656514" Id="2607556080"/>
+							<MediaRefs>
+								<MediaRef Id="414954598"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="4091656514" Id="2201105581"/>
+							<MediaRefs>
+								<MediaRef Id="414954598"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="1123143573" Name="Start_Lvl1" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1533192012" Id="1375774704"/>
+							<MediaRefs>
+								<MediaRef Id="5949212"/>
+								<MediaRef Id="204114406"/>
+								<MediaRef Id="392410031"/>
+								<MediaRef Id="738044038"/>
+								<MediaRef Id="1066619132"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1533192012" Id="1375774711"/>
+							<MediaRefs>
+								<MediaRef Id="5949212"/>
+								<MediaRef Id="204114406"/>
+								<MediaRef Id="312507416"/>
+								<MediaRef Id="319038758"/>
+								<MediaRef Id="392410031"/>
+								<MediaRef Id="460469863"/>
+								<MediaRef Id="737582803"/>
+								<MediaRef Id="738044038"/>
+								<MediaRef Id="1033471057"/>
+								<MediaRef Id="1066619132"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1533192012" Id="1375774710"/>
+							<MediaRefs>
+								<MediaRef Id="5949212"/>
+								<MediaRef Id="22653582"/>
+								<MediaRef Id="23883909"/>
+								<MediaRef Id="204114406"/>
+								<MediaRef Id="312507416"/>
+								<MediaRef Id="319038758"/>
+								<MediaRef Id="392410031"/>
+								<MediaRef Id="460469863"/>
+								<MediaRef Id="737582803"/>
+								<MediaRef Id="738044038"/>
+								<MediaRef Id="900404297"/>
+								<MediaRef Id="1033471057"/>
+								<MediaRef Id="1066619132"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1533192012" Id="1375774706"/>
+							<MediaRefs>
+								<MediaRef Id="204114406"/>
+								<MediaRef Id="1066619132"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1533192012" Id="1375774705"/>
+							<MediaRefs>
+								<MediaRef Id="5949212"/>
+								<MediaRef Id="204114406"/>
+								<MediaRef Id="392410031"/>
+								<MediaRef Id="738044038"/>
+								<MediaRef Id="1066619132"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="621108255" Name="Step" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1718617278" Id="2058049674" Default="true"/>
+							<MediaRefs>
+								<MediaRef Id="98390411"/>
+								<MediaRef Id="99988194"/>
+								<MediaRef Id="127916599"/>
+								<MediaRef Id="404368898"/>
+								<MediaRef Id="727534871"/>
+								<MediaRef Id="804453530"/>
+								<MediaRef Id="1005109668"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="2644656531" Name="TrashVacuumed" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1719412607" Name="VacStart" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="795406639"/>
+						<MediaRef Id="1071201929"/>
+					</MediaRefs>
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3699816212" Id="2036889338"/>
+							<MediaRefs>
+								<MediaRef Id="266973373"/>
+								<MediaRef Id="616773025"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="3699816212" Id="4234065470"/>
+							<MediaRefs>
+								<MediaRef Id="382905220"/>
+								<MediaRef Id="883544695"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</Events>
+			<GameParameters>
+				<GameParameter Id="1037543273" Name="Ghosts"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="4091656514" Name="GameState">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="1852808225" Name="Playing"/>
+						<State Id="2201105581" Name="Credits"/>
+						<State Id="2607556080" Name="Menu"/>
+						<State Id="3092587493" Name="Pause"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="1533192012" Name="GameMusic">
+					<GameParameterRef Id="1037543273"/>
+					<Switches>
+						<Switch Id="1375774704" Name="GameMusic_03"/>
+						<Switch Id="1375774705" Name="GameMusic_02"/>
+						<Switch Id="1375774706" Name="GameMusic_01"/>
+						<Switch Id="1375774709" Name="GameMusic_06"/>
+						<Switch Id="1375774710" Name="GameMusic_05"/>
+						<Switch Id="1375774711" Name="GameMusic_04"/>
+					</Switches>
+				</SwitchGroup>
 				<SwitchGroup Id="1718617278" Name="Steps">
 					<Switches>
 						<Switch Id="788884573" Name="Stop"/>
@@ -49,95 +503,15 @@
 				</SwitchGroup>
 				<SwitchGroup Id="3699816212" Name="Vacuum">
 					<Switches>
-						<Switch Id="445047094" Name="HidroWorkingOnGoo"/>
 						<Switch Id="788884573" Name="Stop"/>
 						<Switch Id="2036889338" Name="VacWorking"/>
-						<Switch Id="2909722414" Name="HidroWorking"/>
+						<Switch Id="2143811110" Name="HydroWorkingOnGoo"/>
 						<Switch Id="3149481222" Name="VacWorkingOnGhost"/>
+						<Switch Id="4234065470" Name="HydroWorking"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{C2B01494-74F2-230B-2C47-42FF4D36CAB3}">
-			<ShortName>Main</ShortName>
-			<Path>Main.bnk</Path>
-			<Media>
-				<File Id="414954598" Language="SFX" Streaming="true" Location="Loose">
-					<ShortName>Keys.wav</ShortName>
-					<Path>Media/414954598.wem</Path>
-					<CachePath>SFX/Keys_3CD5CF17.wem</CachePath>
-				</File>
-				<File Id="523675216" Language="SFX" Streaming="true" Location="Loose">
-					<ShortName>1 Tubthumping.wav</ShortName>
-					<Path>Media/523675216.wem</Path>
-					<CachePath>SFX/1 Tubthumping_8709A909.wem</CachePath>
-				</File>
-			</Media>
-			<Plugins>
-				<Custom>
-					<Plugin Id="234075148" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
-				</Custom>
-			</Plugins>
-			<Events>
-				<Event Id="1281810935" Name="Start" DurationType="Infinite">
-					<SwitchContainers>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4091656514" Id="2607556080"/>
-							<MediaRefs>
-								<MediaRef Id="414954598"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4091656514" Id="1852808225"/>
-							<MediaRefs>
-								<MediaRef Id="523675216"/>
-							</MediaRefs>
-							<PluginRefs>
-								<Custom>
-									<PluginRef Id="234075148"/>
-								</Custom>
-							</PluginRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4091656514" Id="2201105581"/>
-							<MediaRefs>
-								<MediaRef Id="414954598"/>
-							</MediaRefs>
-						</SwitchContainer>
-						<SwitchContainer>
-							<SwitchValue GroupType="State" GroupId="4091656514" Id="3092587493"/>
-							<MediaRefs>
-								<MediaRef Id="523675216"/>
-							</MediaRefs>
-							<PluginRefs>
-								<Custom>
-									<PluginRef Id="234075148"/>
-								</Custom>
-							</PluginRefs>
-						</SwitchContainer>
-					</SwitchContainers>
-				</Event>
-				<Event Id="1123143573" Name="Start_Lvl1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="2644656531" Name="TrashVacuumed" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-			</Events>
-			<StateGroups>
-				<StateGroup Id="4091656514" Name="GameState">
-					<States>
-						<State Id="748895195" Name="None"/>
-						<State Id="1305749800" Name="Playing_04"/>
-						<State Id="1305749801" Name="Playing_05"/>
-						<State Id="1305749802" Name="Playing_06"/>
-						<State Id="1305749805" Name="Playing_01"/>
-						<State Id="1305749806" Name="Playing_02"/>
-						<State Id="1305749807" Name="Playing_03"/>
-						<State Id="1852808225" Name="Playing"/>
-						<State Id="2201105581" Name="Credits"/>
-						<State Id="2607556080" Name="Menu"/>
-						<State Id="3092587493" Name="Pause"/>
-					</States>
-				</StateGroup>
-			</StateGroups>
-		</SoundBank>
 	</SoundBanks>
-	<FileHash>{50B3A369-7B68-7E01-1280-2205A988B26F}</FileHash>
+	<FileHash>{894BB6BA-A7A3-7786-FEFB-2A9A157DB261}</FileHash>
 </SoundBanksInfo>

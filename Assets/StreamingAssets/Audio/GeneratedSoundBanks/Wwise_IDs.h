@@ -13,9 +13,14 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID AMBPIANO = 895127194U;
+        static const AkUniqueID DESTROYEDGHOST = 3087263383U;
+        static const AkUniqueID PIANOHIT = 469357355U;
         static const AkUniqueID START = 1281810935U;
         static const AkUniqueID START_LVL1 = 1123143573U;
+        static const AkUniqueID STEP = 621108255U;
         static const AkUniqueID TRASHVACUUMED = 2644656531U;
+        static const AkUniqueID VACSTART = 1719412607U;
     } // namespace EVENTS
 
     namespace STATES
@@ -31,12 +36,6 @@ namespace AK
                 static const AkUniqueID NONE = 748895195U;
                 static const AkUniqueID PAUSE = 3092587493U;
                 static const AkUniqueID PLAYING = 1852808225U;
-                static const AkUniqueID PLAYING_01 = 1305749805U;
-                static const AkUniqueID PLAYING_02 = 1305749806U;
-                static const AkUniqueID PLAYING_03 = 1305749807U;
-                static const AkUniqueID PLAYING_04 = 1305749800U;
-                static const AkUniqueID PLAYING_05 = 1305749801U;
-                static const AkUniqueID PLAYING_06 = 1305749802U;
             } // namespace STATE
         } // namespace GAMESTATE
 
@@ -44,6 +43,32 @@ namespace AK
 
     namespace SWITCHES
     {
+        namespace GAMEMUSIC
+        {
+            static const AkUniqueID GROUP = 1533192012U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID GAMEMUSIC_01 = 1375774706U;
+                static const AkUniqueID GAMEMUSIC_02 = 1375774705U;
+                static const AkUniqueID GAMEMUSIC_03 = 1375774704U;
+                static const AkUniqueID GAMEMUSIC_04 = 1375774711U;
+                static const AkUniqueID GAMEMUSIC_05 = 1375774710U;
+                static const AkUniqueID GAMEMUSIC_06 = 1375774709U;
+            } // namespace SWITCH
+        } // namespace GAMEMUSIC
+
+        namespace ISWALKING
+        {
+            static const AkUniqueID GROUP = 3629409974U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID NO = 1668749452U;
+                static const AkUniqueID YES = 979470758U;
+            } // namespace SWITCH
+        } // namespace ISWALKING
+
         namespace STEPS
         {
             static const AkUniqueID GROUP = 1718617278U;
@@ -63,8 +88,8 @@ namespace AK
 
             namespace SWITCH
             {
-                static const AkUniqueID HIDROWORKING = 2909722414U;
-                static const AkUniqueID HIDROWORKINGONGOO = 445047094U;
+                static const AkUniqueID HYDROWORKING = 4234065470U;
+                static const AkUniqueID HYDROWORKINGONGOO = 2143811110U;
                 static const AkUniqueID STOP = 788884573U;
                 static const AkUniqueID VACWORKING = 2036889338U;
                 static const AkUniqueID VACWORKINGONGHOST = 3149481222U;
@@ -72,6 +97,11 @@ namespace AK
         } // namespace VACUUM
 
     } // namespace SWITCHES
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID GHOSTS = 1037543273U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {
