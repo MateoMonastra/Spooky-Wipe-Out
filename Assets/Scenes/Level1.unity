@@ -3517,10 +3517,18 @@ PrefabInstance:
       propertyPath: OnPauseStarted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 4608617271482847058}
+    - target: {fileID: 5241632648519282260, guid: b467e462884d30144b5bfca22943e075, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5967209845230814926, guid: b467e462884d30144b5bfca22943e075, type: 3}
       propertyPath: inputReader
       value: 
       objectReference: {fileID: 2139917822}
+    - target: {fileID: 6227966761120271006, guid: b467e462884d30144b5bfca22943e075, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 467.69
+      objectReference: {fileID: 0}
     - target: {fileID: 8234350597308253754, guid: b467e462884d30144b5bfca22943e075, type: 3}
       propertyPath: m_Name
       value: Canvas
