@@ -24,4 +24,9 @@ public class ResultScreen : MonoBehaviour
         preselectButton.SetPreselectedButton(button);
         timeText.text = GameManager.GetInstance().timer.SetTimerText();
     }
+
+    public void GoMenu()
+    {
+        Time.timeScale = 1f;
+    }
 }

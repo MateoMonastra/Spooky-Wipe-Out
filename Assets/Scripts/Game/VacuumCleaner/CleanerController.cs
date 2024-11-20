@@ -14,6 +14,7 @@ namespace VacuumCleaner
         [SerializeField] private float weaponDelay;
         private WaitForSeconds _waitForSeconds;
         private ITool _currentTool;
+        private int _currentToolID;
         
 
         private void Start()
@@ -43,10 +44,17 @@ namespace VacuumCleaner
             _currentTool?.PowerOff();
 
             _currentTool = nextTool;
+            _currentToolID = toolById.Id;
 
             yield return _waitForSeconds;
             
             _currentTool?.PowerOn();
+        }
+
+
+        public int GetCurrentToolID()
+        {
+            return _currentToolID;
         }
     }
 }

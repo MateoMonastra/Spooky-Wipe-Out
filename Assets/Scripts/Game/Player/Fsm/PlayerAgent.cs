@@ -239,17 +239,20 @@ namespace Fsm_Mk2
         {
             OnCleaning?.Invoke(true);
             StartCoroutine(cleanerController.SwitchToTool(currentCleaner));
-            inputReader.OnSwitchTool -= SwitchTool;
         }
 
         private void SetCleanerIdleMode()
         {
             OnCleaning?.Invoke(false);
             StartCoroutine(cleanerController.SwitchToTool(0));
-            inputReader.OnSwitchTool += SwitchTool;
         }
         private void SwitchTool()
         {
+            if (cleanerController.GetCurrentToolID() != 0)
+            {
+                return;
+            }
+
             currentCleaner += 1;
 
             switch (currentCleaner)
