@@ -4924,6 +4924,61 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!1 &6381465152971527005
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 906860494760728025}
+  - component: {fileID: 1658051968956715261}
+  m_Layer: 7
+  m_Name: AlphaTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &906860494760728025
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6381465152971527005}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.07352032, z: -0, w: -0.9972937}
+  m_LocalPosition: {x: -28.94457, y: 1.2750001, z: -41.643173}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 161826005871552228}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1658051968956715261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6381465152971527005}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77fa97f03bcdd544c873874f021bc38b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Materials:
+  - {fileID: 2100000, guid: fef9870bbc3e8cf4698291549b58ba61, type: 2}
+  - {fileID: 2100000, guid: fcb6a0ed79e9bd4409a49f9185a67766, type: 2}
+  - {fileID: 2100000, guid: 6fcfeae0983493c42ba6fd7cb22539b6, type: 2}
+  - {fileID: 2100000, guid: 7e5ba6274920b5a42bd4a9ac3db9be71, type: 2}
+  Camera: {fileID: 0}
+  Mask:
+    serializedVersion: 2
+    m_Bits: 8
+  raycastDistance: 5
+  speedAlpha: 3.5
 --- !u!1 &7534280635867931546
 GameObject:
   m_ObjectHideFlags: 0
@@ -4961,6 +5016,7 @@ Transform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 906860494760728025}
   - {fileID: 4198057532393807538}
   - {fileID: 604629959543454990}
   m_Father: {fileID: 0}
@@ -4995,6 +5051,7 @@ MonoBehaviour:
   minigame: {fileID: 0}
   model: {fileID: 7241681532952809860}
   treeAsset: {fileID: 4900000, guid: c8a5fb8aedb139b4c9766fdb78a3d73c, type: 3}
+  alphaTarget: {fileID: 1658051968956715261}
   <viewHunterDistance>k__BackingField: 8
   <awareHunterDistance>k__BackingField: 16
   <currentHunterDistance>k__BackingField: 0
@@ -5084,6 +5141,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isRested: 0
   restDuration: 6
 --- !u!54 &2861774883517133326
 Rigidbody:

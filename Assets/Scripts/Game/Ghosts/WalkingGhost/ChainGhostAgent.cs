@@ -21,6 +21,7 @@ namespace Ghosts
         [SerializeField] private Minigame minigame;
         [SerializeField] private GameObject model;
         [SerializeField] private TextAsset treeAsset;
+        [SerializeField] private CircleSync alphaTarget;
 
         private GhostPatrolling _patrollingGhost;
         private GhostFlee _fleeGhost;
@@ -189,24 +190,28 @@ namespace Ghosts
             gameObject.transform.forward = hunter.forward;
             _fsm.ApplyTransition(_fleeToStruggle);
             _fsm.ApplyTransition(_restToStruggle);
+            alphaTarget.enabled = true;
 
             minigame.StartGame();
         }
 
         private void SetCaptureState()
         {
+            alphaTarget.enabled = false;
             _fsm.ApplyTransition(_struggleToCapture);
         }
 
         private void SetFleeState()
         {
             OnVacuumed?.Invoke(false);
+            alphaTarget.enabled = false;
             _fsm.ApplyTransition(_struggleToFlee);
         }
 
         private void SetWalkState()
         {
             OnVacuumed?.Invoke(false);
+            alphaTarget.enabled = false;
             _fsm.ApplyTransition(_struggleToWalk);
         }
 
@@ -225,6 +230,7 @@ namespace Ghosts
         private void SetWalkingFleeState()
         {
             OnVacuumed?.Invoke(false);
+            alphaTarget.enabled = false;
             currentHunterDistance = awareHunterDistance;
             _fsm.ApplyTransition(_walkToFlee);
             _fsm.ApplyTransition(_struggleToFlee);
