@@ -7,7 +7,7 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Boot.unity
-    guid: d139694e9d2e5f7469ee99b2ed7eda70
+    guid: bd3ac778e08ec994f8e0510acc7ae267
   - enabled: 1
     path: Assets/Scenes/MySceneManager.unity
     guid: e93bfd70e0ea6e94792d62248b234f8e
@@ -15,7 +15,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 68801740804ee724e83eec311c897968
   - enabled: 1
+    path: Assets/Scenes/AnimaticIntro.unity
+    guid: ba64e02d0fbc4dd46a0d75f5581a4698
+  - enabled: 1
     path: Assets/Scenes/Level1.unity
-    guid: 77ffc69ddc9d3c1409ec35784d0be566
+    guid: 55f804d8c021d9948b06d23bae7777a4
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: c40554a70a14b7147b48a3215cbef364, type: 2}
