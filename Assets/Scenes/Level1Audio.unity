@@ -1665,18 +1665,6 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 112671403817669793}
-    - target: {fileID: 3183103626456932670, guid: 613b6ba06ae74b6409013525dbbc641a, type: 3}
-      propertyPath: StartLevel.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 11400000, guid: 1ba98c383c46eae49a41c00b75e1bfdb, type: 2}
-    - target: {fileID: 3183103626456932670, guid: 613b6ba06ae74b6409013525dbbc641a, type: 3}
-      propertyPath: destroyedGhost.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 11400000, guid: a7f04146eac5619418943c25cc0456f7, type: 2}
-    - target: {fileID: 3183103626456932670, guid: 613b6ba06ae74b6409013525dbbc641a, type: 3}
-      propertyPath: destroyedGhostRTPC.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 11400000, guid: b3f29047f674d8843a24bd36cde01c33, type: 2}
     - target: {fileID: 3810132283959650971, guid: 613b6ba06ae74b6409013525dbbc641a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1719,10 +1707,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6421636081491891537, guid: 613b6ba06ae74b6409013525dbbc641a, type: 3}
       propertyPath: m_Name
-      value: AudioPlayer
-      objectReference: {fileID: 0}
-    - target: {fileID: 6421636081491891537, guid: 613b6ba06ae74b6409013525dbbc641a, type: 3}
-      propertyPath: m_TagString
       value: AudioPlayer
       objectReference: {fileID: 0}
     - target: {fileID: 7250306485256762197, guid: 613b6ba06ae74b6409013525dbbc641a, type: 3}
@@ -11160,10 +11144,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1228824031268626625, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
-      propertyPath: placeToMoveTag
-      value: AudioPlayer
-      objectReference: {fileID: 0}
     - target: {fileID: 2472514338396502382, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

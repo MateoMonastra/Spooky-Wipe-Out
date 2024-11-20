@@ -134,7 +134,7 @@ MonoBehaviour:
   StartLevel:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 1ba98c383c46eae49a41c00b75e1bfdb, type: 2}
 --- !u!1 &6314408634179912387
 GameObject:
   m_ObjectHideFlags: 0

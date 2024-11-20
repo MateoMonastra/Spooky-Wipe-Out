@@ -101,6 +101,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioListenerMover
       objectReference: {fileID: 0}
+    - target: {fileID: 5846409818462984061, guid: 0d3ca2f5662a4a742806b4c193d62310, type: 3}
+      propertyPath: placeToMoveTag
+      value: AudioPlayer
+      objectReference: {fileID: 0}
     - target: {fileID: 7950048476054922316, guid: 0d3ca2f5662a4a742806b4c193d62310, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
