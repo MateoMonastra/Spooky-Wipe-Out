@@ -17,20 +17,19 @@ namespace Ghosts
     {
         public UnityEvent<bool> OnVacuumed;
         private Action<bool> OnRested = delegate { };
-        
+
         [SerializeField] private Minigame minigame;
         [SerializeField] private GameObject model;
         [SerializeField] private TextAsset treeAsset;
-        [SerializeField] private CircleSync alphaTarget;
 
         private GhostPatrolling _patrollingGhost;
         private GhostFlee _fleeGhost;
         private GhostRest _restGhost;
 
-        [field:SerializeField] public float viewHunterDistance { get; private set; } = 8.0f;
-        [field:SerializeField] public float awareHunterDistance { get; private set; } = 16.0f;
-        [field:SerializeField] public float currentHunterDistance { get; private set; }
-        [field:SerializeField] public bool isRested { get; set; }
+        [field: SerializeField] public float viewHunterDistance { get; private set; } = 8.0f;
+        [field: SerializeField] public float awareHunterDistance { get; private set; } = 16.0f;
+        [field: SerializeField] public float currentHunterDistance { get; private set; }
+        [field: SerializeField] public bool isRested { get; set; }
 
         [SerializeField] private Transform hunter;
         [SerializeField] private ParticleSystem surprisedVfx;
@@ -107,7 +106,11 @@ namespace Ghosts
             _struggle.transitions.Add(_struggleToCapture);
 
             _struggleToFlee = new Transition() { From = _struggle, To = _flee };
-            _struggleToFlee.TransitionAction += () => { isRested = true; OnRested(isRested = true); };
+            _struggleToFlee.TransitionAction += () =>
+            {
+                isRested = true;
+                OnRested(isRested = true);
+            };
             _struggle.transitions.Add(_struggleToFlee);
 
             _struggleToWalk = new Transition() { From = _struggle, To = _walk };
@@ -190,28 +193,28 @@ namespace Ghosts
             gameObject.transform.forward = hunter.forward;
             _fsm.ApplyTransition(_fleeToStruggle);
             _fsm.ApplyTransition(_restToStruggle);
-            alphaTarget.enabled = true;
+
 
             minigame.StartGame();
         }
 
         private void SetCaptureState()
         {
-            alphaTarget.enabled = false;
             _fsm.ApplyTransition(_struggleToCapture);
         }
 
         private void SetFleeState()
         {
             OnVacuumed?.Invoke(false);
-            alphaTarget.enabled = false;
+
             _fsm.ApplyTransition(_struggleToFlee);
         }
 
         private void SetWalkState()
         {
             OnVacuumed?.Invoke(false);
-            alphaTarget.enabled = false;
+
+
             _fsm.ApplyTransition(_struggleToWalk);
         }
 
@@ -230,7 +233,6 @@ namespace Ghosts
         private void SetWalkingFleeState()
         {
             OnVacuumed?.Invoke(false);
-            alphaTarget.enabled = false;
             currentHunterDistance = awareHunterDistance;
             _fsm.ApplyTransition(_walkToFlee);
             _fsm.ApplyTransition(_struggleToFlee);
