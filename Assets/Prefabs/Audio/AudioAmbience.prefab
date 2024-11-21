@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 815356553078150896}
   m_Layer: 12
-  m_Name: AudioAmbienceLvl1
+  m_Name: AudioAmbience
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

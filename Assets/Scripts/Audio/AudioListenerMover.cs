@@ -1,51 +1,40 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioListenerMover : MonoBehaviour
+namespace Audio
 {
-
-    private AkAudioListener listenerToMove;
-    public string placeToMoveTag;
-    private GameObject placeToMove;
-    private Transform placeToReturn;
-
-    // Start is called before the first frame update
-    void Start()
+    public class AudioListenerMover : MonoBehaviour
     {
-        
-        StartCoroutine(DelayInitialization());
-    }
+        [SerializeField] private Transform placeToMove;
+        [SerializeField] private AkAudioListener listenerToMove;
+    
+        private Transform _placeToReturn;
 
-    private void OnDestroy()
-    {
-        ReturnListener();
-    }
-
-    IEnumerator DelayInitialization()
-    {
-        // Wait until the end of the frame
-        yield return new WaitForEndOfFrame();
-
-        placeToMove = GameObject.FindGameObjectWithTag(placeToMoveTag);
-
-        listenerToMove = FindObjectOfType<AkAudioListener>();
-        placeToReturn = listenerToMove.transform.parent;
-
-        if (listenerToMove != null && placeToMove != null)
+        private IEnumerator Start()
         {
-            listenerToMove.transform.SetParent(placeToMove.transform, false);
-            
+            yield return null;
+
+            listenerToMove = FindObjectOfType<AkAudioListener>();
+        
+            _placeToReturn = listenerToMove.transform.parent;
+
+            if (listenerToMove != null && placeToMove != null)
+            {
+                listenerToMove.transform.SetParent(placeToMove, false);
+            }
+
+        }
+        private void OnDestroy()
+        {
+            ReturnListener();
         }
 
-
-    }
-
-    public void ReturnListener()
-    {
-        if (placeToReturn != null)
+        private void ReturnListener()
         {
-            listenerToMove.transform.SetParent(placeToReturn, false);
+            if (_placeToReturn != null)
+            {
+                listenerToMove.transform.SetParent(_placeToReturn, false);
+            }
         }
     }
 }

@@ -4,24 +4,25 @@ using UnityEngine;
 using Ghosts;
 using Unity.VisualScripting;
 using Minigames;
+using UnityEngine.Serialization;
 
 
 public class AudioGameManager : MonoBehaviour
 {
-    private List<Ghost> _ghosts;
     [SerializeField] private int destroyedGhostCount = 0;
-    [SerializeField] private AK.Wwise.RTPC destroyedGhostRTPC;
+    [SerializeField] private AK.Wwise.RTPC destroyedGhostRtpc;
     [SerializeField] private AK.Wwise.Event destroyedGhost;
-    [SerializeField] GameObject GameMusic;
-    [SerializeField] AK.Wwise.Event StartLevel;
+    [SerializeField] private GameObject gameMusic;
+    [SerializeField] private AK.Wwise.Event startLevel;
 
-    [SerializeField] Minigame _skillCheckController;
-    [SerializeField] Minigame _ADController;
+    [SerializeField] private Minigame skillCheckController;
+    [SerializeField] private Minigame adController;
 
+    private List<Ghost> _ghosts;
 
 
     // Start is called before the first frame update
-    IEnumerator Start()
+    private IEnumerator Start()
     {
         yield return null;
 
@@ -32,28 +33,22 @@ public class AudioGameManager : MonoBehaviour
             ghost.OnBeingDestroy += GhostDestroyed;
         }
 
-        _skillCheckController.OnStart += GhostBeingCaptured;
+        skillCheckController.OnStart += GhostBeingCaptured;
         
 
-        destroyedGhostRTPC.SetValue(GameMusic, destroyedGhostCount);
-        StartLevel.Post(GameMusic);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        destroyedGhostRtpc.SetValue(gameMusic, destroyedGhostCount);
+        startLevel.Post(gameMusic);
     }
 
     private void OnDestroy()
     {
-        AkSoundEngine.StopAll(GameMusic);
+        AkSoundEngine.StopAll(gameMusic);
     }
 
     void GhostDestroyed(Ghost ghost)
     {
         destroyedGhostCount++;
-        destroyedGhostRTPC.SetValue(GameMusic, destroyedGhostCount);
+        destroyedGhostRtpc.SetValue(gameMusic, destroyedGhostCount);
         destroyedGhost.Post(gameObject);
     }
 
