@@ -71,6 +71,50 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="PaintCatch" ID="{A658062B-94C0-46E4-AE8D-1507A091C4A3}">
+					<ChildrenList>
+						<Action Name="" ID="{75D0D1EB-321B-4C9D-AE5C-27C8323AABD4}" ShortID="503505829">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFXCuadroStart" ID="{D03E3042-4DA7-4033-B42C-4D743B677607}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0A12D0B1-07E7-48A8-BCB3-ED1FB53CDE1D}" ShortID="561211714">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.67"/>
+								<Property Name="FadeInCurve" Type="int16" Value="6"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.06"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFXCuadroLoop" ID="{0E3287A7-5413-48BE-B6C4-C9D9E7437224}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="PaintRelease" ID="{CF256068-2B55-461D-A36C-8BDD81E90926}">
+					<ChildrenList>
+						<Action Name="" ID="{FA840BA7-962B-4313-AC09-3C6394176818}" ShortID="23486885">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="34"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFXCuadroLoop" ID="{0E3287A7-5413-48BE-B6C4-C9D9E7437224}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{EA0A041C-594C-4200-92A1-661A0FEDDC0A}" ShortID="575953932">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFXCuadroEnd" ID="{01A2FCAC-F1BC-4947-944F-588B4767DE09}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

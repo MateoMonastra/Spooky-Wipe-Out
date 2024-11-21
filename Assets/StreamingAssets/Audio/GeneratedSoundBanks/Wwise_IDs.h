@@ -15,6 +15,8 @@ namespace AK
     {
         static const AkUniqueID AMBPIANO = 895127194U;
         static const AkUniqueID DESTROYEDGHOST = 3087263383U;
+        static const AkUniqueID PAINTCATCH = 2553231580U;
+        static const AkUniqueID PAINTRELEASE = 3571119522U;
         static const AkUniqueID PIANOHIT = 469357355U;
         static const AkUniqueID START = 1281810935U;
         static const AkUniqueID START_LVL1 = 1123143573U;

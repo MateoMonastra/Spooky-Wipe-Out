@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ghosts;
 using Unity.VisualScripting;
+using Minigames;
 
 
 public class AudioGameManager : MonoBehaviour
@@ -13,6 +14,10 @@ public class AudioGameManager : MonoBehaviour
     [SerializeField] private AK.Wwise.Event destroyedGhost;
     [SerializeField] GameObject GameMusic;
     [SerializeField] AK.Wwise.Event StartLevel;
+
+    [SerializeField] Minigame _skillCheckController;
+    [SerializeField] Minigame _ADController;
+
 
 
     // Start is called before the first frame update
@@ -26,6 +31,10 @@ public class AudioGameManager : MonoBehaviour
         {
             ghost.OnBeingDestroy += GhostDestroyed;
         }
+
+        _skillCheckController.OnStart += GhostBeingCaptured;
+        
+
         destroyedGhostRTPC.SetValue(GameMusic, destroyedGhostCount);
         StartLevel.Post(GameMusic);
     }
@@ -46,5 +55,10 @@ public class AudioGameManager : MonoBehaviour
         destroyedGhostCount++;
         destroyedGhostRTPC.SetValue(GameMusic, destroyedGhostCount);
         destroyedGhost.Post(gameObject);
+    }
+
+    void GhostBeingCaptured()
+    {
+
     }
 }

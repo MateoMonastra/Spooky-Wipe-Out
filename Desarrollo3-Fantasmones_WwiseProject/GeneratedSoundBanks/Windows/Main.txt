@@ -5,8 +5,10 @@ Event	ID	Name			Wwise Object Path	Notes
 	1123143573	Start_Lvl1			\Default Work Unit\Start_Lvl1	
 	1281810935	Start			\Default Work Unit\Start	
 	1719412607	VacStart			\Default Work Unit\VacStart	
+	2553231580	PaintCatch			\Default Work Unit\PaintCatch	
 	2644656531	TrashVacuumed			\Default Work Unit\TrashVacuumed	
 	3087263383	DestroyedGhost			\Default Work Unit\DestroyedGhost	
+	3571119522	PaintRelease			\Default Work Unit\PaintRelease	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	1533192012	GameMusic			\Default Work Unit\GameMusic	
@@ -66,6 +68,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	363842715	SFXPiano-003	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\SFX_Piano-003_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\PianoHit\SFXPiano-003		319996
 	382905220	HydroLoop	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\HydroLoop_C4CC260C.wem		\Interactive Music Hierarchy\Default Work Unit\Aspiradora\HydroWorking\HydroLoop\HydroLoop		1271748
 	404368898	Pasos-002	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\Pasos-002_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Pasos\PasosSwitch\PasosComunes\Pasos-002		82040
+	415121418	SFXCuadroEnd	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\CuadroEnd_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ghosts\FrameGhost\SFXCuadroEnd		421136
 	433427925	SFXPiano-012	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\SFX_Piano-012_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\PianoHit\SFXPiano-012		297180
 	487752815	SFXPiano-002	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\SFX_Piano-002_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\PianoHit\SFXPiano-002		312136
 	502920663	SFXPiano-018	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\SFX_Piano-018_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\PianoHit\SFXPiano-018		359556
@@ -82,8 +85,10 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	869779343	SFXPiano-004	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\SFX_Piano-004_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\AmbPiano\PianoSound\SFXPiano-004		270612
 	883544695	HydroStart	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\HydroStart_C4CC260C.wem		\Interactive Music Hierarchy\Default Work Unit\Aspiradora\HydroWorking\HydroStart\HydroStart		296736
 	889975198	SFXPiano-017	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\SFX_Piano-017_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\AmbPiano\PianoSound\SFXPiano-017		332600
+	948364101	SFXCuadroLoop	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\CuadroLoop_C4CC260C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ghosts\FrameGhost\SFXCuadroLoop		999516
 	1005109668	Pasos-006	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\Pasos-006_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Pasos\PasosSwitch\PasosComunes\Pasos-006		82040
 	1035390792	SFXPiano-009	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\SFX_Piano-009_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\PianoHit\SFXPiano-009		264936
+	1039771655	SFXCuadroStart	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\CuadroStart_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ghosts\FrameGhost\SFXCuadroStart		622572
 	1040908074	SFXPiano-005	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\SFX_Piano-005_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\PianoHit\SFXPiano-005		287552
 	1071201929	HydroEnd	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\HydroEnd_C4CC260C.wem		\Interactive Music Hierarchy\Default Work Unit\Aspiradora\HydroEnd\HydroEnd		436280
 

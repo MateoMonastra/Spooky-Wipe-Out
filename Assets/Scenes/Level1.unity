@@ -3107,6 +3107,14 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 112671403817669793}
+    - target: {fileID: 3183103626456932670, guid: 613b6ba06ae74b6409013525dbbc641a, type: 3}
+      propertyPath: ADController
+      value: 
+      objectReference: {fileID: 470426147}
+    - target: {fileID: 3183103626456932670, guid: 613b6ba06ae74b6409013525dbbc641a, type: 3}
+      propertyPath: SkillCheckController
+      value: 
+      objectReference: {fileID: 1963394716}
     - target: {fileID: 3810132283959650971, guid: 613b6ba06ae74b6409013525dbbc641a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
