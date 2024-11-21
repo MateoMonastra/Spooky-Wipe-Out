@@ -621,7 +621,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2472514338396502382, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1218809190}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
 --- !u!1 &291002593 stripped
@@ -2302,6 +2305,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 226660447}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1218809189
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1218809190}
+  - component: {fileID: 1218809191}
+  m_Layer: 0
+  m_Name: MinigamesAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1218809190
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218809189}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1302818951}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1218809191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218809189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ccad31b1aff2574dbc0d0ae7ae18206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillCheckController: {fileID: 1963394716}
+  adController: {fileID: 470426147}
 --- !u!43 &1262471420
 Mesh:
   m_ObjectHideFlags: 0
@@ -2498,6 +2547,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 742996208}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1302818951 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2472514338396502382, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
+  m_PrefabInstance: {fileID: 291002592}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1320797030
 GameObject:
   m_ObjectHideFlags: 0
@@ -5371,7 +5425,7 @@ PrefabInstance:
       objectReference: {fileID: 1262471420}
     - target: {fileID: 1373168026354425179, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_VersionIndex
-      value: 1961
+      value: 1976
       objectReference: {fileID: 0}
     - target: {fileID: 2210938879325693374, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_Mesh
@@ -5383,7 +5437,7 @@ PrefabInstance:
       objectReference: {fileID: 1095122607}
     - target: {fileID: 2385916544845131369, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_VersionIndex
-      value: 2693
+      value: 2708
       objectReference: {fileID: 0}
     - target: {fileID: 2417973772894651386, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_Mesh
@@ -5391,7 +5445,7 @@ PrefabInstance:
       objectReference: {fileID: 24015683}
     - target: {fileID: 2417973772894651386, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_VersionIndex
-      value: 2179
+      value: 2194
       objectReference: {fileID: 0}
     - target: {fileID: 2566602770262080685, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5403,7 +5457,7 @@ PrefabInstance:
       objectReference: {fileID: 639579318}
     - target: {fileID: 3400200247452739115, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_VersionIndex
-      value: 2399
+      value: 2414
       objectReference: {fileID: 0}
     - target: {fileID: 3435022052005123855, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_Mesh

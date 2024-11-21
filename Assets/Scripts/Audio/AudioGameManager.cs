@@ -15,9 +15,6 @@ public class AudioGameManager : MonoBehaviour
     [SerializeField] private GameObject gameMusic;
     [SerializeField] private AK.Wwise.Event startLevel;
 
-    [SerializeField] private Minigame skillCheckController;
-    [SerializeField] private Minigame adController;
-
     private List<Ghost> _ghosts;
 
 
@@ -32,10 +29,7 @@ public class AudioGameManager : MonoBehaviour
         {
             ghost.OnBeingDestroy += GhostDestroyed;
         }
-
-        skillCheckController.OnStart += GhostBeingCaptured;
         
-
         destroyedGhostRtpc.SetValue(gameMusic, destroyedGhostCount);
         startLevel.Post(gameMusic);
     }
