@@ -53,7 +53,7 @@ namespace VacuumCleaner.Modes
 
             _ray = new Ray(target.position, other.transform.position - target.position);
 
-            if (Physics.Raycast(_ray, out var hit, model.RenderDistance, model.WallLayer))
+            if (Physics.Raycast(_ray, model.RenderDistance, model.WallLayer))
             {
                 return false;
             }

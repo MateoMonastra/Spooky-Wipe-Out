@@ -16,13 +16,15 @@ namespace Player.FSM
         public Action OnSwitchTool;
         public Action OnSpaceInputStart;
         public Action OnPauseStart;
+        public Action OnWinCheat;
         public Action OnShowTimer;
         public Action OnHideTimer;
         public Action OnShowTasks;
         public Action OnHideTasks;
         public Action<InputDevice> OnInputDevice;
-        public static bool isUsingController = false;
         public Action OnNavigate;
+
+        public static bool isUsingController = false;
 
 
         public void HandleMoveInput(InputAction.CallbackContext context)
@@ -97,6 +99,14 @@ namespace Player.FSM
                 OnPauseStart?.Invoke();
             }
             OnInputDevice?.Invoke(context.control.device);
+        }
+
+        public void HandleWinCheat(InputAction.CallbackContext context)
+        {
+            if (context.started)
+            {
+                OnWinCheat?.Invoke();
+            }
         }
 
         public void HandleTimerUI(InputAction.CallbackContext context)

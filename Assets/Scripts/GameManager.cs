@@ -1,6 +1,7 @@
 using EventSystems.EventSceneManager;
 using Gameplay.Timer;
 using Ghosts;
+using Player.FSM;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,7 +11,6 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public Action OnFinish;
-    //[SerializeField] private PlayerAgent playerAgent;
 
     //[SerializeField] private SkillCheckController SKMinigame;
     //[SerializeField] private ADController ADMinigame;
@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private ObjectivesUI objectivesUI;
     [SerializeField] private GameObject playerUI;
+    [SerializeField] private InputReader inputReader;
 
     [SerializeField] private string nextScene;
     [SerializeField] private EventChannelSceneManager eventChannelSceneManager;
@@ -62,12 +63,15 @@ public class GameManager : MonoBehaviour
         objectivesUI.SetGhostQnty(ghosts.Count);
         objectivesUI.SetEctoplasmQnty(ectoplasms.Count);
 
+        inputReader.OnWinCheat += FinishGame;
+
         Time.timeScale = 1f;
     }
 
     private void OnDestroy()
     {
-        _instance = null;
+        if (_instance == this)
+            _instance = null;
     }
 
     private void RemoveTrash(Trash trash)

@@ -18,6 +18,7 @@ public class PauseManager : MonoBehaviour
     private void Start()
     {
         inputReader.OnPauseStart += InitPauseMenu;
+        GameManager.GetInstance().OnFinish += () => inputReader.OnPauseStart -= InitPauseMenu;
     }
 
     private void InitPauseMenu()
@@ -51,7 +52,7 @@ public class PauseManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         pauseMenu.SetActive(false);
-        eventChannelSceneManager.OnAddScene(menuSceneName);
         eventChannelSceneManager.OnRemoveScene(gameObject.scene.name);
+        eventChannelSceneManager.OnAddScene(menuSceneName);
     }
 }

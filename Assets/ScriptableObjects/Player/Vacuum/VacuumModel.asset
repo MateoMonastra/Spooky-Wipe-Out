@@ -17,4 +17,4 @@ MonoBehaviour:
   renderDistance: 2.07
   wallLayer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 8
