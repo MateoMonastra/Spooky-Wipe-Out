@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1082354812174768656}
   - component: {fileID: 794007034125621628}
   - component: {fileID: 8631054398572458701}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: AudioListener
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ GameObject:
   - component: {fileID: 8351735120227642364}
   - component: {fileID: 6090011784714310919}
   - component: {fileID: 8713999089368105386}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7153221125113279697}
   - component: {fileID: 3170828876155440665}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: AudioSingleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1874109975551378248}
   - component: {fileID: 1778178430895942213}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: GlobalAkBank
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -966,15 +966,10 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
-						<RandomSequenceContainer Name="PianoHit" ID="{7CFD9D2C-0E1B-4F64-92A8-02653799043D}" ShortID="941846147">
+						<RandomSequenceContainer Name="PianoHit" ID="{4508CD6F-D801-4AB7-9520-D2E47DE742CD}" ShortID="556503400">
 							<PropertyList>
-								<Property Name="MakeUpGain" Type="Real64">
-									<ValueList>
-										<Value>-5</Value>
-									</ValueList>
-								</Property>
-								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -985,409 +980,15 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="SFXPiano-001" ID="{53056111-284C-4F90-BCDB-0FC1000B3F29}" ShortID="1036618708">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Piano-001" ID="{B06E2A1B-8482-4525-9E4B-569DBCCE4775}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Piano-001.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="578776812"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Piano-001" ID="{B06E2A1B-8482-4525-9E4B-569DBCCE4775}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFXPiano-002" ID="{7EB1DCB3-3AFC-4AB0-B279-6E711D30CE3F}" ShortID="658688510">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Piano-002" ID="{CC2A3C41-55F2-4B17-AADC-1CF9BF734676}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Piano-002.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="487752815"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Piano-002" ID="{CC2A3C41-55F2-4B17-AADC-1CF9BF734676}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFXPiano-003" ID="{EB0778A7-3407-40BA-BE8E-D2A2CA281AB9}" ShortID="9582050">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Piano-003" ID="{C56AF9D7-170B-4700-B2BB-599B562D7678}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Piano-003.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="363842715"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Piano-003" ID="{C56AF9D7-170B-4700-B2BB-599B562D7678}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFXPiano-004" ID="{25BF2183-6E7A-43C8-B1DD-97DEF48F5F5D}" ShortID="102908520">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Piano-004" ID="{CEE3E5A5-F555-4EC4-A421-2BBDE4CAFE3F}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Piano-004.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="869779343"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Piano-004" ID="{CEE3E5A5-F555-4EC4-A421-2BBDE4CAFE3F}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFXPiano-005" ID="{D9A2F66C-825B-46D3-BA30-5CB51C87F68E}" ShortID="1006912236">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Piano-005" ID="{2104F41F-2323-44D0-B457-E003F803F869}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Piano-005.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="1040908074"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Piano-005" ID="{2104F41F-2323-44D0-B457-E003F803F869}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFXPiano-006" ID="{3CABA7C8-9C4A-47A3-AB67-AFA9B9ABFA04}" ShortID="300678692">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Piano-006" ID="{6B44A53F-1042-4184-8458-27A07052CD3C}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Piano-006.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="723507422"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Piano-006" ID="{6B44A53F-1042-4184-8458-27A07052CD3C}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFXPiano-007" ID="{B05FEB2D-46A5-4F50-B482-3E61D55AB897}" ShortID="641011032">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Piano-007" ID="{BD6D27F5-4802-4520-A383-C55C684940AC}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Piano-007.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="15927765"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Piano-007" ID="{BD6D27F5-4802-4520-A383-C55C684940AC}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFXPiano-008" ID="{B93A1BFC-36FC-4A31-8300-ABC5461268D2}" ShortID="497171469">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Piano-008" ID="{2C0C0E98-0180-4C57-B9BF-8AFACABB9450}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Piano-008.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="632934482"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Piano-008" ID="{2C0C0E98-0180-4C57-B9BF-8AFACABB9450}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFXPiano-009" ID="{E85097A0-F138-463B-B1AD-36DEB16C95EE}" ShortID="636441876">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Piano-009" ID="{E80F72E9-D49D-4B9C-BC23-9412B9ACA78F}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Piano-009.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="1035390792"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Piano-009" ID="{E80F72E9-D49D-4B9C-BC23-9412B9ACA78F}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFXPiano-010" ID="{9B5717C9-9941-4FEA-A67D-44D303D0403B}" ShortID="253137036">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Piano-010" ID="{2FF6767C-01E8-43EF-9E78-639EBC548A58}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Piano-010.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="61946966"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Piano-010" ID="{2FF6767C-01E8-43EF-9E78-639EBC548A58}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFXPiano-011" ID="{4C0FF8E5-7740-4DEC-A9F9-0B82EB7721C3}" ShortID="360790532">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Piano-011" ID="{FCA0150F-401A-453A-80E4-70A8411996AE}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Piano-011.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="592711847"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Piano-011" ID="{FCA0150F-401A-453A-80E4-70A8411996AE}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFXPiano-012" ID="{EBB139B1-5895-4492-BE5E-B17E603B1952}" ShortID="194693386">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Piano-012" ID="{3FCAEB3F-6384-4602-B565-1D1A73ED5E88}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Piano-012.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="433427925"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Piano-012" ID="{3FCAEB3F-6384-4602-B565-1D1A73ED5E88}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFXPiano-013" ID="{15AB702C-5C61-4094-9639-CC58FE1ECBDD}" ShortID="666535954">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Piano-013" ID="{F55530E7-DBEE-443C-A5D4-D81227FE7F3F}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Piano-013.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="134852080"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Piano-013" ID="{F55530E7-DBEE-443C-A5D4-D81227FE7F3F}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFXPiano-014" ID="{6A4B9389-0213-4166-867A-57A42E1E83F9}" ShortID="442633688">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Piano-014" ID="{35C02F5A-9E14-4AF8-99AE-5BF9B34BD593}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Piano-014.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="123799640"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Piano-014" ID="{35C02F5A-9E14-4AF8-99AE-5BF9B34BD593}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFXPiano-015" ID="{2E0FB9AC-18D9-4401-852F-B8FBF9464D4C}" ShortID="186551079">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Piano-015" ID="{8AD81EEA-227A-4B6E-9917-3208ABD541C6}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Piano-015.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="797249411"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Piano-015" ID="{8AD81EEA-227A-4B6E-9917-3208ABD541C6}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFXPiano-016" ID="{5BBDEEC4-C405-43BC-9AE6-DBCE75B3D7E0}" ShortID="440728257">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Piano-016" ID="{2A40E2A6-ABF3-4DD8-8A09-B8CE4ECC97EB}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Piano-016.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="557733357"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Piano-016" ID="{2A40E2A6-ABF3-4DD8-8A09-B8CE4ECC97EB}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFXPiano-017" ID="{FF78B480-3205-4B5A-B6C9-81BEB429C4C5}" ShortID="787914448">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Piano-017" ID="{FC4493FA-5785-4871-B99E-B405EFCDF78D}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Piano-017.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="889975198"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Piano-017" ID="{FC4493FA-5785-4871-B99E-B405EFCDF78D}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SFXPiano-018" ID="{55427CF9-40A2-4A04-8DA2-091DC059366B}" ShortID="321137042">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SFX_Piano-018" ID="{F1B491BC-C9A2-4135-A7EA-999D77C0C5BB}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_Piano-018.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="502920663"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="SFX_Piano-018" ID="{F1B491BC-C9A2-4135-A7EA-999D77C0C5BB}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Silence" ID="{2F9F5641-AA7C-484C-B78F-052E63BF8398}" ShortID="446231417">
+								<RandomSequenceContainer Name="PianoHit" ID="{7CFD9D2C-0E1B-4F64-92A8-02653799043D}" ShortID="941846147">
 									<PropertyList>
-										<Property Name="Weight" Type="Real64">
+										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>82</Value>
+												<Value>-5</Value>
 											</ValueList>
 										</Property>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1398,25 +999,405 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<SourcePlugin Name="Silence" ID="{0368F704-E83A-4415-BC41-D02B7F36F03D}" ShortID="186624115" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-											<PropertyList>
-												<Property Name="Length" Type="Real32" Value="9"/>
-											</PropertyList>
-											<Language>SFX</Language>
-										</SourcePlugin>
+										<Sound Name="SFXPiano-001" ID="{53056111-284C-4F90-BCDB-0FC1000B3F29}" ShortID="1036618708">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Piano-001" ID="{B06E2A1B-8482-4525-9E4B-569DBCCE4775}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Piano-001.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="578776812"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Piano-001" ID="{B06E2A1B-8482-4525-9E4B-569DBCCE4775}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFXPiano-002" ID="{7EB1DCB3-3AFC-4AB0-B279-6E711D30CE3F}" ShortID="658688510">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Piano-002" ID="{CC2A3C41-55F2-4B17-AADC-1CF9BF734676}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Piano-002.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="487752815"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Piano-002" ID="{CC2A3C41-55F2-4B17-AADC-1CF9BF734676}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFXPiano-003" ID="{EB0778A7-3407-40BA-BE8E-D2A2CA281AB9}" ShortID="9582050">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Piano-003" ID="{C56AF9D7-170B-4700-B2BB-599B562D7678}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Piano-003.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="363842715"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Piano-003" ID="{C56AF9D7-170B-4700-B2BB-599B562D7678}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFXPiano-004" ID="{25BF2183-6E7A-43C8-B1DD-97DEF48F5F5D}" ShortID="102908520">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Piano-004" ID="{CEE3E5A5-F555-4EC4-A421-2BBDE4CAFE3F}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Piano-004.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="869779343"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Piano-004" ID="{CEE3E5A5-F555-4EC4-A421-2BBDE4CAFE3F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFXPiano-005" ID="{D9A2F66C-825B-46D3-BA30-5CB51C87F68E}" ShortID="1006912236">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Piano-005" ID="{2104F41F-2323-44D0-B457-E003F803F869}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Piano-005.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1040908074"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Piano-005" ID="{2104F41F-2323-44D0-B457-E003F803F869}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFXPiano-006" ID="{3CABA7C8-9C4A-47A3-AB67-AFA9B9ABFA04}" ShortID="300678692">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Piano-006" ID="{6B44A53F-1042-4184-8458-27A07052CD3C}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Piano-006.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="723507422"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Piano-006" ID="{6B44A53F-1042-4184-8458-27A07052CD3C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFXPiano-007" ID="{B05FEB2D-46A5-4F50-B482-3E61D55AB897}" ShortID="641011032">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Piano-007" ID="{BD6D27F5-4802-4520-A383-C55C684940AC}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Piano-007.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="15927765"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Piano-007" ID="{BD6D27F5-4802-4520-A383-C55C684940AC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFXPiano-008" ID="{B93A1BFC-36FC-4A31-8300-ABC5461268D2}" ShortID="497171469">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Piano-008" ID="{2C0C0E98-0180-4C57-B9BF-8AFACABB9450}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Piano-008.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="632934482"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Piano-008" ID="{2C0C0E98-0180-4C57-B9BF-8AFACABB9450}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFXPiano-009" ID="{E85097A0-F138-463B-B1AD-36DEB16C95EE}" ShortID="636441876">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Piano-009" ID="{E80F72E9-D49D-4B9C-BC23-9412B9ACA78F}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Piano-009.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1035390792"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Piano-009" ID="{E80F72E9-D49D-4B9C-BC23-9412B9ACA78F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFXPiano-010" ID="{9B5717C9-9941-4FEA-A67D-44D303D0403B}" ShortID="253137036">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Piano-010" ID="{2FF6767C-01E8-43EF-9E78-639EBC548A58}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Piano-010.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="61946966"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Piano-010" ID="{2FF6767C-01E8-43EF-9E78-639EBC548A58}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFXPiano-011" ID="{4C0FF8E5-7740-4DEC-A9F9-0B82EB7721C3}" ShortID="360790532">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Piano-011" ID="{FCA0150F-401A-453A-80E4-70A8411996AE}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Piano-011.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="592711847"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Piano-011" ID="{FCA0150F-401A-453A-80E4-70A8411996AE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFXPiano-012" ID="{EBB139B1-5895-4492-BE5E-B17E603B1952}" ShortID="194693386">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Piano-012" ID="{3FCAEB3F-6384-4602-B565-1D1A73ED5E88}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Piano-012.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="433427925"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Piano-012" ID="{3FCAEB3F-6384-4602-B565-1D1A73ED5E88}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFXPiano-013" ID="{15AB702C-5C61-4094-9639-CC58FE1ECBDD}" ShortID="666535954">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Piano-013" ID="{F55530E7-DBEE-443C-A5D4-D81227FE7F3F}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Piano-013.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="134852080"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Piano-013" ID="{F55530E7-DBEE-443C-A5D4-D81227FE7F3F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFXPiano-014" ID="{6A4B9389-0213-4166-867A-57A42E1E83F9}" ShortID="442633688">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Piano-014" ID="{35C02F5A-9E14-4AF8-99AE-5BF9B34BD593}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Piano-014.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="123799640"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Piano-014" ID="{35C02F5A-9E14-4AF8-99AE-5BF9B34BD593}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFXPiano-015" ID="{2E0FB9AC-18D9-4401-852F-B8FBF9464D4C}" ShortID="186551079">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Piano-015" ID="{8AD81EEA-227A-4B6E-9917-3208ABD541C6}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Piano-015.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="797249411"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Piano-015" ID="{8AD81EEA-227A-4B6E-9917-3208ABD541C6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFXPiano-016" ID="{5BBDEEC4-C405-43BC-9AE6-DBCE75B3D7E0}" ShortID="440728257">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Piano-016" ID="{2A40E2A6-ABF3-4DD8-8A09-B8CE4ECC97EB}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Piano-016.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="557733357"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Piano-016" ID="{2A40E2A6-ABF3-4DD8-8A09-B8CE4ECC97EB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFXPiano-017" ID="{FF78B480-3205-4B5A-B6C9-81BEB429C4C5}" ShortID="787914448">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Piano-017" ID="{FC4493FA-5785-4871-B99E-B405EFCDF78D}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Piano-017.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="889975198"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Piano-017" ID="{FC4493FA-5785-4871-B99E-B405EFCDF78D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFXPiano-018" ID="{55427CF9-40A2-4A04-8DA2-091DC059366B}" ShortID="321137042">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SFX_Piano-018" ID="{F1B491BC-C9A2-4135-A7EA-999D77C0C5BB}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_Piano-018.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="502920663"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SFX_Piano-018" ID="{F1B491BC-C9A2-4135-A7EA-999D77C0C5BB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Silence" ID="{0368F704-E83A-4415-BC41-D02B7F36F03D}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Silence_01" ID="{2B671917-587A-4420-B488-E723EFF41A54}" ShortID="535504325">
-									<PropertyList>
-										<Property Name="Weight" Type="Real64">
-											<ValueList>
-												<Value>83</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
+								</RandomSequenceContainer>
+								<Sound Name="Silence" ID="{1653E7F1-52A6-4CCD-984B-72919FBC3E0A}" ShortID="463697891">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
@@ -1426,158 +1407,25 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<SourcePlugin Name="Silence" ID="{AC1CA08B-2D3B-49B9-A42A-E055E656EB14}" ShortID="730053830" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-											<PropertyList>
-												<Property Name="Length" Type="Real32" Value="4"/>
-											</PropertyList>
+										<SourcePlugin Name="Silence" ID="{D5A55860-83B9-44B4-B252-D926254BEAD0}" ShortID="389027544" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
 											<Language>SFX</Language>
 										</SourcePlugin>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Silence" ID="{AC1CA08B-2D3B-49B9-A42A-E055E656EB14}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Silence_02" ID="{72BCFA94-0C3E-472A-B943-AE1343D5EEF4}" ShortID="85001613">
-									<PropertyList>
-										<Property Name="Weight" Type="Real64">
-											<ValueList>
-												<Value>83</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<SourcePlugin Name="Silence" ID="{C91E5BC2-5E91-461C-9B93-AF9EABC26D0F}" ShortID="854333555" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-											<PropertyList>
-												<Property Name="Length" Type="Real32" Value="3.5"/>
-											</PropertyList>
-											<Language>SFX</Language>
-										</SourcePlugin>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Silence" ID="{C91E5BC2-5E91-461C-9B93-AF9EABC26D0F}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Silence_03" ID="{89AD3B53-3E5B-4870-B15B-E93442E0A7AB}" ShortID="1020008202">
-									<PropertyList>
-										<Property Name="Weight" Type="Real64">
-											<ValueList>
-												<Value>85</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<SourcePlugin Name="Silence" ID="{85E15716-3FDE-48DD-BDCD-E76DD57C1B78}" ShortID="669261569" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-											<PropertyList>
-												<Property Name="Length" Type="Real32" Value="6"/>
-											</PropertyList>
-											<Language>SFX</Language>
-										</SourcePlugin>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Silence" ID="{85E15716-3FDE-48DD-BDCD-E76DD57C1B78}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Silence_04" ID="{25D3E6F3-14FA-4FF5-9DED-F191DE3DC3DC}" ShortID="966550584">
-									<PropertyList>
-										<Property Name="Weight" Type="Real64">
-											<ValueList>
-												<Value>86</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<SourcePlugin Name="Silence" ID="{A1E453D9-4AD7-4D31-878E-04BA1091B2FB}" ShortID="854376344" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-											<PropertyList>
-												<Property Name="Length" Type="Real32" Value="3.5"/>
-											</PropertyList>
-											<Language>SFX</Language>
-										</SourcePlugin>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Silence" ID="{A1E453D9-4AD7-4D31-878E-04BA1091B2FB}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Silence_05" ID="{40A348F6-6F9A-4B6E-AF8B-A2339849099A}" ShortID="609933357">
-									<PropertyList>
-										<Property Name="Weight" Type="Real64">
-											<ValueList>
-												<Value>80</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<SourcePlugin Name="Silence" ID="{6896A531-BBA6-4D27-B7D6-70DFAED259DC}" ShortID="978075550" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-											<PropertyList>
-												<Property Name="Length" Type="Real32" Value="4.5"/>
-											</PropertyList>
-											<Language>SFX</Language>
-										</SourcePlugin>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Silence" ID="{6896A531-BBA6-4D27-B7D6-70DFAED259DC}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Silence_06" ID="{42659C57-1676-47D6-A6B4-BFA6992D31AA}" ShortID="207273658">
-									<PropertyList>
-										<Property Name="Weight" Type="Real64">
-											<ValueList>
-												<Value>81</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<SourcePlugin Name="Silence" ID="{6A13B7EF-0352-451D-B9D6-47657E5DFB84}" ShortID="66754729" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-											<PropertyList>
-												<Property Name="Length" Type="Real32" Value="4.5"/>
-											</PropertyList>
-											<Language>SFX</Language>
-										</SourcePlugin>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Silence" ID="{6A13B7EF-0352-451D-B9D6-47657E5DFB84}" Platform="Linked"/>
+										<ActiveSource Name="Silence" ID="{D5A55860-83B9-44B4-B252-D926254BEAD0}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Playlist">
+									<Reference>
+										<ObjectRef Name="PianoHit" ID="{7CFD9D2C-0E1B-4F64-92A8-02653799043D}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="Silence" ID="{1653E7F1-52A6-4CCD-984B-72919FBC3E0A}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>

@@ -547,6 +547,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 34178020801821278, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 396433777714708880, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 396433777714708880, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -615,9 +623,33 @@ PrefabInstance:
       propertyPath: skillCheckController
       value: 
       objectReference: {fileID: 1963394716}
+    - target: {fileID: 5205121041414287515, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936232867240940952, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.517842
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936232867240940952, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.688322
+      objectReference: {fileID: 0}
+    - target: {fileID: 7936232867240940952, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -12.76
+      objectReference: {fileID: 0}
     - target: {fileID: 8256526463127946821, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
       propertyPath: m_Name
       value: AudioLevel1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8256526463127946821, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8892264715352362803, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3212,6 +3244,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3810132283959650971, guid: 613b6ba06ae74b6409013525dbbc641a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5326286636629692294, guid: 613b6ba06ae74b6409013525dbbc641a, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6421636081491891537, guid: 613b6ba06ae74b6409013525dbbc641a, type: 3}

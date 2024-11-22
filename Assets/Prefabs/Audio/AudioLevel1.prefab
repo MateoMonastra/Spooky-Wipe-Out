@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3954811300427212247}
   - component: {fileID: 5835986324881608879}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: MusicState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,7 +66,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4129785507602566241}
   - component: {fileID: 2811679228247775147}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PauseMenuMusicController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e702c56de6db0498250647e73b48f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseManager: {fileID: 0}
 --- !u!1 &2927193102865294411
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,7 +245,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2472514338396502382}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: AudioLevel1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -283,7 +284,7 @@ GameObject:
   m_Component:
   - component: {fileID: 211310309975515495}
   - component: {fileID: 4398705322590383978}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: MinigamesAudio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -392,6 +393,10 @@ PrefabInstance:
     - target: {fileID: 581940930412906279, guid: 0d3ca2f5662a4a742806b4c193d62310, type: 3}
       propertyPath: m_Name
       value: AudioListenerMover
+      objectReference: {fileID: 0}
+    - target: {fileID: 581940930412906279, guid: 0d3ca2f5662a4a742806b4c193d62310, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5846409818462984061, guid: 0d3ca2f5662a4a742806b4c193d62310, type: 3}
       propertyPath: placeToMoveTag

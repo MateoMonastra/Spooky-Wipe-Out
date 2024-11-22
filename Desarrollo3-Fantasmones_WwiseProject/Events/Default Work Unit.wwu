@@ -98,7 +98,9 @@
 					<ChildrenList>
 						<Action Name="" ID="{FA840BA7-962B-4313-AC09-3C6394176818}" ShortID="23486885">
 							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="34"/>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="6"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.06"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -107,6 +109,10 @@
 							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{EA0A041C-594C-4200-92A1-661A0FEDDC0A}" ShortID="575953932">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="6"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.06"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SFXCuadroEnd" ID="{01A2FCAC-F1BC-4947-944F-588B4767DE09}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
@@ -115,6 +121,10 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="GhostCatch" ID="{E3607B7E-AD39-45CF-B279-F5D7AE419B68}"/>
+				<Event Name="GhostRelease" ID="{09331732-00DD-42CF-9B9D-08BFF8143F34}"/>
+				<Event Name="GhostSkillCheckPass" ID="{44095A88-4024-45CE-BCD4-4D0A1F46BEF0}"/>
+				<Event Name="GhostSkillCheckFail" ID="{81C67A8B-4679-4FD3-B571-DAFB77E29F96}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

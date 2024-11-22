@@ -72,7 +72,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{11DC742F-7385-50A6-211B-E158781E59E1}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{2F288E89-D904-3200-8ECB-F2B307CF960D}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -285,15 +285,8 @@
 			</Media>
 			<Plugins>
 				<Custom>
-					<Plugin Id="66754729" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="127524652" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
-					<Plugin Id="186624115" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
-					<Plugin Id="669261569" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
-					<Plugin Id="730053830" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
-					<Plugin Id="854333555" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
-					<Plugin Id="854376344" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="856823274" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
-					<Plugin Id="978075550" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 				</Custom>
 			</Plugins>
 			<Events>
@@ -337,7 +330,7 @@
 						<MediaRef Id="415121418"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="469357355" Name="PianoHit" DurationType="OneShot" DurationMin="1.0738958" DurationMax="9">
+				<Event Id="469357355" Name="PianoHit" DurationType="OneShot" DurationMin="1.0738958" DurationMax="1.8721875">
 					<MediaRefs>
 						<MediaRef Id="15927765"/>
 						<MediaRef Id="61946966"/>
@@ -358,17 +351,6 @@
 						<MediaRef Id="1035390792"/>
 						<MediaRef Id="1040908074"/>
 					</MediaRefs>
-					<PluginRefs>
-						<Custom>
-							<PluginRef Id="66754729"/>
-							<PluginRef Id="186624115"/>
-							<PluginRef Id="669261569"/>
-							<PluginRef Id="730053830"/>
-							<PluginRef Id="854333555"/>
-							<PluginRef Id="854376344"/>
-							<PluginRef Id="978075550"/>
-						</Custom>
-					</PluginRefs>
 				</Event>
 				<Event Id="1281810935" Name="Start" DurationType="Infinite">
 					<SwitchContainers>
@@ -536,5 +518,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A605D9AC-A6D4-2BF2-9E94-B0B76B739969}</FileHash>
+	<FileHash>{69F1729C-6668-637A-E04B-DAF538E27145}</FileHash>
 </SoundBanksInfo>
