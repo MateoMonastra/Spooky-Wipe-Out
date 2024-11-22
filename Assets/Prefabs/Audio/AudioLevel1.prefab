@@ -56,6 +56,50 @@ MonoBehaviour:
   groupIdInternal: 0
   valueGuidInternal: 
   groupGuidInternal: 
+--- !u!1 &396433777714708880
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4129785507602566241}
+  - component: {fileID: 2811679228247775147}
+  m_Layer: 0
+  m_Name: PauseMenuMusicController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4129785507602566241
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396433777714708880}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2472514338396502382}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2811679228247775147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396433777714708880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1e702c56de6db0498250647e73b48f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2927193102865294411
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,18 +225,16 @@ MonoBehaviour:
   destroyedGhostRtpc:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: b3f29047f674d8843a24bd36cde01c33, type: 2}
   destroyedGhost:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: a7f04146eac5619418943c25cc0456f7, type: 2}
-  gameMusic: {fileID: 0}
+  gameMusic: {fileID: 2927193102865294411}
   startLevel:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
-  skillCheckController: {fileID: 0}
-  adController: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 1ba98c383c46eae49a41c00b75e1bfdb, type: 2}
 --- !u!1 &8256526463127946821
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,12 +265,60 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8263176686542880798}
+  - {fileID: 4129785507602566241}
   - {fileID: 3546254651427474622}
   - {fileID: 3954811300427212247}
+  - {fileID: 211310309975515495}
   - {fileID: 3349280389973595120}
   - {fileID: 857653307387546555}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8892264715352362803
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 211310309975515495}
+  - component: {fileID: 4398705322590383978}
+  m_Layer: 0
+  m_Name: MinigamesAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &211310309975515495
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8892264715352362803}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2472514338396502382}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4398705322590383978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8892264715352362803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ccad31b1aff2574dbc0d0ae7ae18206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillCheckController: {fileID: 0}
+  adController: {fileID: 0}
 --- !u!1001 &51304675403930955
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -36,7 +36,6 @@ public class PauseManager : MonoBehaviour
         onPauseResume?.Invoke();
         GameManager.GetInstance().SetPlayerUIState(true);
         pauseMenu.SetActive(false);
-        AkSoundEngine.SetState("GameState", "Playing");
     }
     
     public void Restart()
@@ -44,8 +43,6 @@ public class PauseManager : MonoBehaviour
         Time.timeScale = 1f;
         pauseMenu.SetActive(false);
         onPauseRestart?.Invoke();
-        AkSoundEngine.SetState("GameState", "None");
-        AkSoundEngine.SetState("GameState", "Playing");
         eventChannelSceneManager.OnRemoveScene(gameObject.scene.name);
         eventChannelSceneManager.OnAddScene(gameObject.scene.name);
     }

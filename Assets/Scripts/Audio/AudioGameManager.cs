@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ghosts;
 using Unity.VisualScripting;
-using Minigames;
 using UnityEngine.Serialization;
 
 
@@ -44,10 +43,5 @@ public class AudioGameManager : MonoBehaviour
         destroyedGhostCount++;
         destroyedGhostRtpc.SetValue(gameMusic, destroyedGhostCount);
         destroyedGhost.Post(gameObject);
-    }
-
-    void GhostBeingCaptured()
-    {
-
     }
 }
