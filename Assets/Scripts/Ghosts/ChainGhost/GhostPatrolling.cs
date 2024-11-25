@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 public class GhostPatrolling : MonoBehaviour
 {
     [SerializeField] private List<Transform> _waypoints;
     [SerializeField] private float _patrolingSpeed = 3f;
+
+    public UnityEvent<bool> stopTired;
 
     private NavMeshAgent _agent;
 
@@ -22,6 +25,8 @@ public class GhostPatrolling : MonoBehaviour
     void FixedUpdate()
     {
         _patrolingSpeedDeltaTimed = _patrolingSpeed * Time.deltaTime;
+
+        stopTired?.Invoke(false);
 
         Walk();
     }

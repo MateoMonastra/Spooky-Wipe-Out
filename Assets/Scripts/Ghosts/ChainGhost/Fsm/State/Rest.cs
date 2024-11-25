@@ -10,14 +10,14 @@ namespace Ghosts.WalkingGhost
     {
         private GhostRest _ghostRest;
 
-        public Rest(GhostRest rest, Action<bool> changeRestState)
+        public Rest(GhostRest rest)
         {
             this._ghostRest = rest;
-            changeRestState = ChangeRest;
-            }
+        }
 
-        private void ChangeRest(bool obj)
+        public void ChangeRest(bool obj)
         {
+            Debug.Log($"se cambia el rest a: {obj}");
             _ghostRest.isRested = obj;
         }
 

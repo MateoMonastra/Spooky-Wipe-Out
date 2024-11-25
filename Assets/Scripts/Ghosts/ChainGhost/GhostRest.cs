@@ -25,6 +25,8 @@ public class GhostRest : MonoBehaviour, IRest
 
     private void OnEnable()
     {
+        Debug.Log("enter rest state");
+
         if(_resting != null)
         {
             StopCoroutine(_resting);
@@ -38,6 +40,7 @@ public class GhostRest : MonoBehaviour, IRest
         _agent.isStopped = true;
         OnTired?.Invoke(true);
         float timer = 0.0f;
+
         while(!isRested && timer < restDuration) 
         {
             timer += Time.deltaTime;

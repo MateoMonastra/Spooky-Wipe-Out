@@ -6,6 +6,8 @@ using UnityEngine.Events;
 
 public class GhostFlee : MonoBehaviour, IRest
 {
+    public UnityEvent<bool> stopTired;
+
     [SerializeField] private Transform _player;
     [SerializeField] private float _fleeSpeed = 5f;
 
@@ -28,6 +30,7 @@ public class GhostFlee : MonoBehaviour, IRest
     private void OnEnable()
     {
         _agent.ResetPath();
+        stopTired?.Invoke(false);
     }
 
     private void FixedUpdate()

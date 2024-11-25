@@ -4995,7 +4995,6 @@ MonoBehaviour:
   minigame: {fileID: 0}
   model: {fileID: 7241681532952809860}
   treeAsset: {fileID: 4900000, guid: c8a5fb8aedb139b4c9766fdb78a3d73c, type: 3}
-  alphaTarget: {fileID: 0}
   <viewHunterDistance>k__BackingField: 8
   <awareHunterDistance>k__BackingField: 16
   <currentHunterDistance>k__BackingField: 0
@@ -5044,6 +5043,21 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   _patrolingSpeed: 100
+  stopTired:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 705575695356465264}
+        m_TargetAssemblyTypeName: ChainGhostAnimation, Assembly-CSharp
+        m_MethodName: SetIsTiredState
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6564748177361532084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5056,6 +5070,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ac5fe8f119b4dd499029d4e32bd98f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stopTired:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 705575695356465264}
+        m_TargetAssemblyTypeName: ChainGhostAnimation, Assembly-CSharp
+        m_MethodName: SetIsTiredState
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _player: {fileID: 0}
   _fleeSpeed: 800
 --- !u!114 &6523121535161372763
