@@ -14,6 +14,7 @@ Switch	ID	Name	Switch Group			Notes
 
 State Group	ID	Name			Wwise Object Path	Notes
 	4091656514	GameState			\Default Work Unit\GameState	
+	4231158115	GameMusicControl			\Default Work Unit\GameMusicControl	
 
 State	ID	Name	State Group			Notes
 	748895195	None	GameState			
@@ -21,9 +22,14 @@ State	ID	Name	State Group			Notes
 	2201105581	Credits	GameState			
 	2607556080	Menu	GameState			
 	3092587493	Pause	GameState			
+	748895195	None	GameMusicControl			
+	1160234136	Normal	GameMusicControl			
+	1210588850	Catching	GameMusicControl			
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

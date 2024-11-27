@@ -9,6 +9,20 @@
 							<ObjectRef Name="System" ID="{82BFBA53-78B8-4469-83EC-A386806524DE}" WorkUnitID="{72557394-38F6-48DD-8569-BB9812193012}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="Music" ID="{23705A55-A2E8-43D5-935E-A8003B79F77E}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="9"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Bus>
+						<Bus Name="SFX" ID="{AD513494-A3DA-4040-B662-A49B6E6397EB}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="26"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Bus>
+					</ChildrenList>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

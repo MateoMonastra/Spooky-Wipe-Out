@@ -44,6 +44,13 @@
 						</Transition>
 					</TransitionList>
 				</StateGroup>
+				<StateGroup Name="GameMusicControl" ID="{AC5DCD8F-64C2-40A6-B6D6-4CF10830CB2F}">
+					<ChildrenList>
+						<State Name="None" ID="{BB498481-9DC5-44B0-B18C-D982338B3B01}"/>
+						<State Name="Catching" ID="{A176CAF3-5DBC-41BC-8C69-0AC16A92F0F5}"/>
+						<State Name="Normal" ID="{E2550AEF-03D6-4FB7-BD5B-3C21B9969686}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

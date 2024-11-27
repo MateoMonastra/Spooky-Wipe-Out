@@ -17,6 +17,10 @@
 				<Event Name="Start_Lvl1" ID="{EF9172D0-B989-4BBD-9536-222D9384AE63}">
 					<ChildrenList>
 						<Action Name="" ID="{FCC5DEFD-9665-4709-B356-30485225609C}" ShortID="841686546">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="8"/>
+								<Property Name="FadeTime" Type="Real64" Value="6"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="GameMusic" ID="{0398A01D-3569-4017-B01C-41AABAA8CDC5}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
@@ -121,8 +125,55 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="GhostCatch" ID="{E3607B7E-AD39-45CF-B279-F5D7AE419B68}"/>
-				<Event Name="GhostRelease" ID="{09331732-00DD-42CF-9B9D-08BFF8143F34}"/>
+				<Event Name="GhostCatch" ID="{E3607B7E-AD39-45CF-B279-F5D7AE419B68}">
+					<ChildrenList>
+						<Action Name="" ID="{5DF3A2EA-84F0-4C37-A4CD-980CA3065B83}" ShortID="880086474">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GameMusicCatchGhost" ID="{5A9920EF-6D77-49FE-B265-75CCB7535C71}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{44FBA500-E0CC-48B1-ADC0-F9D39B4F1DEC}" ShortID="122792965">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Catching" ID="{A176CAF3-5DBC-41BC-8C69-0AC16A92F0F5}" WorkUnitID="{58280D57-A644-4038-8713-1B41B403A5F4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="GhostRelease" ID="{09331732-00DD-42CF-9B9D-08BFF8143F34}">
+					<ChildrenList>
+						<Action Name="" ID="{E8875416-9D8A-4CC7-8054-4EF4C1553132}" ShortID="599716468">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GameMusicCatchGhost" ID="{5A9920EF-6D77-49FE-B265-75CCB7535C71}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7CF65531-F79D-4305-9AE0-D130CCBFCCDB}" ShortID="29022404">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Normal" ID="{E2550AEF-03D6-4FB7-BD5B-3C21B9969686}" WorkUnitID="{58280D57-A644-4038-8713-1B41B403A5F4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="GhostSkillCheckPass" ID="{44095A88-4024-45CE-BCD4-4D0A1F46BEF0}"/>
 				<Event Name="GhostSkillCheckFail" ID="{81C67A8B-4679-4FD3-B571-DAFB77E29F96}"/>
 			</ChildrenList>

@@ -24,7 +24,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+							<ObjectRef Name="SFX" ID="{AD513494-A3DA-4040-B662-A49B6E6397EB}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
 						</Reference>
 						<Reference Name="TransitionRoot">
 							<Custom>
@@ -1041,7 +1041,7 @@
 							<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+							<ObjectRef Name="Music" ID="{23705A55-A2E8-43D5-935E-A8003B79F77E}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
 						</Reference>
 						<Reference Name="TransitionRoot">
 							<Custom>
@@ -1058,9 +1058,9 @@
 										</MusicTransition>
 										<MusicTransition Name="Transition" ID="{5724E3A1-E469-4982-9B61-4AC9E75F4FA6}">
 											<PropertyList>
-												<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
 												<Property Name="SourceContextType" Type="int16" Value="1"/>
 											</PropertyList>
+											<ReferenceList/>
 											<TransitionInfo>
 												<DestinationFadeIn>
 													<MusicFade Name="Destination Fade-in" ID="{8B2AEE0E-2B5E-437E-922D-C1473355F55D}">
@@ -1149,11 +1149,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1279,11 +1274,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -1407,11 +1397,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -1528,11 +1513,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1658,11 +1638,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -1784,11 +1759,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1914,11 +1884,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -2040,11 +2005,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -2170,11 +2130,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -2291,11 +2246,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -2421,11 +2371,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -2549,11 +2494,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -2675,11 +2615,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -2900,11 +2835,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -3026,11 +2956,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -3156,11 +3081,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -3277,11 +3197,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -3407,11 +3322,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -3533,11 +3443,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -3663,11 +3568,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -3789,11 +3689,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -3919,11 +3814,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -4042,11 +3932,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -4163,11 +4048,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -4293,11 +4173,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -4419,11 +4294,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -4584,11 +4454,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -4710,11 +4575,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -4840,11 +4700,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -4961,11 +4816,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -5091,11 +4941,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -5214,11 +5059,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -5335,11 +5175,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -5465,11 +5300,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -5593,11 +5423,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -5714,11 +5539,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -5844,11 +5664,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -5972,11 +5787,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -6098,11 +5908,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -6265,11 +6070,6 @@
 												<Value>True</Value>
 											</ValueList>
 										</Property>
-										<Property Name="LookAheadTime" Type="int16">
-											<ValueList>
-												<Value>400</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
@@ -6386,11 +6186,6 @@
 										<Property Name="IsStreamingEnabled" Type="bool">
 											<ValueList>
 												<Value>True</Value>
-											</ValueList>
-										</Property>
-										<Property Name="LookAheadTime" Type="int16">
-											<ValueList>
-												<Value>400</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -6511,11 +6306,6 @@
 												<Value>True</Value>
 											</ValueList>
 										</Property>
-										<Property Name="LookAheadTime" Type="int16">
-											<ValueList>
-												<Value>400</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
@@ -6632,11 +6422,6 @@
 										<Property Name="IsStreamingEnabled" Type="bool">
 											<ValueList>
 												<Value>True</Value>
-											</ValueList>
-										</Property>
-										<Property Name="LookAheadTime" Type="int16">
-											<ValueList>
-												<Value>400</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -6757,11 +6542,6 @@
 												<Value>True</Value>
 											</ValueList>
 										</Property>
-										<Property Name="LookAheadTime" Type="int16">
-											<ValueList>
-												<Value>400</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
@@ -6878,11 +6658,6 @@
 										<Property Name="IsStreamingEnabled" Type="bool">
 											<ValueList>
 												<Value>True</Value>
-											</ValueList>
-										</Property>
-										<Property Name="LookAheadTime" Type="int16">
-											<ValueList>
-												<Value>400</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -7003,11 +6778,6 @@
 												<Value>True</Value>
 											</ValueList>
 										</Property>
-										<Property Name="LookAheadTime" Type="int16">
-											<ValueList>
-												<Value>400</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
@@ -7124,11 +6894,6 @@
 										<Property Name="IsStreamingEnabled" Type="bool">
 											<ValueList>
 												<Value>True</Value>
-											</ValueList>
-										</Property>
-										<Property Name="LookAheadTime" Type="int16">
-											<ValueList>
-												<Value>400</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -7249,11 +7014,6 @@
 												<Value>True</Value>
 											</ValueList>
 										</Property>
-										<Property Name="LookAheadTime" Type="int16">
-											<ValueList>
-												<Value>400</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
@@ -7370,11 +7130,6 @@
 										<Property Name="IsStreamingEnabled" Type="bool">
 											<ValueList>
 												<Value>True</Value>
-											</ValueList>
-										</Property>
-										<Property Name="LookAheadTime" Type="int16">
-											<ValueList>
-												<Value>400</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -7495,11 +7250,6 @@
 												<Value>True</Value>
 											</ValueList>
 										</Property>
-										<Property Name="LookAheadTime" Type="int16">
-											<ValueList>
-												<Value>400</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
@@ -7618,11 +7368,6 @@
 												<Value>True</Value>
 											</ValueList>
 										</Property>
-										<Property Name="LookAheadTime" Type="int16">
-											<ValueList>
-												<Value>400</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
@@ -7739,11 +7484,6 @@
 										<Property Name="IsStreamingEnabled" Type="bool">
 											<ValueList>
 												<Value>True</Value>
-											</ValueList>
-										</Property>
-										<Property Name="LookAheadTime" Type="int16">
-											<ValueList>
-												<Value>400</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -7951,11 +7691,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -8077,11 +7812,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -8207,11 +7937,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -8328,11 +8053,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -8458,11 +8178,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -8581,11 +8296,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -8702,11 +8412,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -8832,11 +8537,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -8960,11 +8660,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -9083,11 +8778,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -9204,11 +8894,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -9334,11 +9019,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -9460,11 +9140,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -9669,11 +9344,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -9795,11 +9465,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -9925,11 +9590,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -10046,11 +9706,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -10171,11 +9826,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -10292,11 +9942,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -10417,11 +10062,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -10538,11 +10178,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -10668,11 +10303,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -10789,11 +10419,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -10914,11 +10539,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -11037,11 +10657,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -11158,11 +10773,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -11367,11 +10977,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -11488,11 +11093,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -11613,11 +11213,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -11734,11 +11329,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -11859,11 +11449,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -11980,11 +11565,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -12105,11 +11685,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -12226,11 +11801,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -12351,11 +11921,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -12472,11 +12037,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -12597,11 +12157,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -12720,11 +12275,6 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
-													</ValueList>
-												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -12841,11 +12391,6 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="LookAheadTime" Type="int16">
-													<ValueList>
-														<Value>400</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -12988,13 +12533,24 @@
 							<StateGroupInfo>
 								<StateGroupRef Name="GameState" ID="{C349B599-7156-458A-868B-22FC2BC1E854}"/>
 							</StateGroupInfo>
+							<StateGroupInfo>
+								<StateGroupRef Name="GameMusicControl" ID="{AC5DCD8F-64C2-40A6-B6D6-4CF10830CB2F}"/>
+							</StateGroupInfo>
 						</StateGroupList>
 						<CustomStateList>
+							<CustomState>
+								<StateRef Name="Catching" ID="{A176CAF3-5DBC-41BC-8C69-0AC16A92F0F5}"/>
+								<CustomState Name="" ID="{50AF561E-D38B-4210-831D-0A2E5250404B}" ShortID="387443995">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-108"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
 							<CustomState>
 								<StateRef Name="Pause" ID="{8810489C-E928-428D-8CB5-E093102AF78A}"/>
 								<CustomState Name="" ID="{1F21668B-F6E5-4912-AC1B-B64C855070D1}" ShortID="765807051">
 									<PropertyList>
-										<Property Name="Lowpass" Type="int16" Value="69"/>
+										<Property Name="Lowpass" Type="int16" Value="56"/>
 									</PropertyList>
 								</CustomState>
 							</CustomState>
@@ -13009,6 +12565,10 @@
 							<CustomState>
 								<StateRef Name="Menu" ID="{A01CBE11-CDCA-496D-BDF1-E522DBD5A871}"/>
 								<CustomState Name="" ID="{A6478516-1325-422C-A4E1-02A178AC67DF}" ShortID="300746394"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Normal" ID="{E2550AEF-03D6-4FB7-BD5B-3C21B9969686}"/>
+								<CustomState Name="" ID="{A567FD7A-4974-44D2-8533-6364E0F5124A}" ShortID="638658063"/>
 							</CustomState>
 						</CustomStateList>
 					</StateInfo>
@@ -13125,6 +12685,161 @@
 						</ObjectList>
 					</ObjectLists>
 				</MusicSwitchContainer>
+				<MusicPlaylistContainer Name="GameMusicCatchGhost" ID="{5A9920EF-6D77-49FE-B265-75CCB7535C71}" ShortID="813574221">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="9"/>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>-8</Value>
+							</ValueList>
+						</Property>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+						<Property Name="Tempo" Type="Real64" Value="60"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Music" ID="{23705A55-A2E8-43D5-935E-A8003B79F77E}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+						</Reference>
+						<Reference Name="PlaylistRoot">
+							<Custom>
+								<MusicPlaylistItem Name="" ID="{03CCC786-A675-4F7F-B4A8-4359C73A19F6}" ShortID="549068675">
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{AB97EBA4-3E7C-4A66-A84A-FE1A1A371D05}" ShortID="1011380951">
+											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0"/>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Segment">
+													<ObjectRef Name="GameMusicCatchGhost" ID="{5AF5B5F2-830D-462D-B8BF-0A439E68B681}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
+												</Reference>
+											</ReferenceList>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Custom>
+						</Reference>
+						<Reference Name="TransitionRoot">
+							<Custom>
+								<MusicTransition Name="Root" ID="{755F3290-E3B4-47B4-BD0D-E8220C168C7D}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{ACBFAE1C-10B2-41B4-93FA-047124549CB8}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</Custom>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="GameMusicCatchGhost" ID="{5AF5B5F2-830D-462D-B8BF-0A439E68B681}" ShortID="139739017">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="82250"/>
+								<Property Name="Tempo" Type="Real64" Value="60"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="SpookyMX_CazaFantasma" ID="{992D8FD2-908C-4391-9212-C917147DEBB9}" ShortID="965168758">
+									<PropertyList>
+										<Property Name="IsStreamingEnabled" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsZeroLatency" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{AFB31BCF-794D-483B-A9CE-5F7607715DC3}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SpookyMX_CazaFantasma" ID="{CC558A83-0A74-4944-95D6-EB458AADE993}">
+											<Language>SFX</Language>
+											<AudioFile>SpookyMX_CazaFantasma.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="667309658"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{6115D161-964C-4559-8A68-F1FC63C9688B}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="SpookyMX_CazaFantasma" ID="{23E08569-78A3-49A8-846B-7D2A037D5CA5}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="82250"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="SpookyMX_CazaFantasma" ID="{CC558A83-0A74-4944-95D6-EB458AADE993}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{030EB1FA-CD1C-465B-9EA1-9A395AF67310}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{23579624-F82C-4DBF-8C18-A463C751370F}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="28000"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+					</ChildrenList>
+				</MusicPlaylistContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</InteractiveMusic>
