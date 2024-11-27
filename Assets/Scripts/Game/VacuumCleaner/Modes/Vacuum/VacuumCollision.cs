@@ -1,11 +1,9 @@
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
+using VacuumCleaner.Modes;
 
-namespace VacuumCleaner.Modes
+namespace Game.VacuumCleaner.Modes.Vacuum
 {
-    public class VacuumColision : MonoBehaviour
+    public class VacuumCollision : MonoBehaviour
     {
         [SerializeField] private Transform target;
         [SerializeField] private VacuumModel model;
@@ -47,7 +45,17 @@ namespace VacuumCleaner.Modes
 
         private bool CanVacuum(Collider other)
         {
-            var angleToObject = Vector3.Angle(target.forward, other.transform.position - target.position);
+            Vector3 toOther = other.transform.position - target.position;
+            
+            toOther.y = 0;
+            
+            Vector3 targetForward = target.forward;
+            targetForward.y = 0;
+            
+            toOther.Normalize();
+            targetForward.Normalize();
+
+            float angleToObject = Vector3.Angle(targetForward, toOther);
 
             if (!(angleToObject <= model.MaxAngle)) return false;
 

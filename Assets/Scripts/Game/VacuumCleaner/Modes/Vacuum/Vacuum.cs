@@ -2,7 +2,9 @@ using Minigames;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Game.VacuumCleaner.Modes.Vacuum;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace VacuumCleaner.Modes
 {
@@ -13,7 +15,7 @@ namespace VacuumCleaner.Modes
         public event Action OnPowerOn;
         public event Action OnPowerOff;
 
-        [SerializeField] private VacuumColision vacuumColision;
+        [FormerlySerializedAs("vacuumColision")] [SerializeField] private VacuumCollision vacuumCollision;
         [SerializeField] private TrashCollector trashCollector;
         [SerializeField] private float maxTimeVFX = 0.5f;
         [SerializeField] private float maxVFXPower = 2.5f;
@@ -38,7 +40,7 @@ namespace VacuumCleaner.Modes
 
             _turnOnVFX = StartCoroutine(TurnOnVFX());
             
-            vacuumColision.gameObject.SetActive(true);
+            vacuumCollision.gameObject.SetActive(true);
             trashCollector.gameObject.SetActive(true);
             OnPowerOn?.Invoke();
         }
@@ -70,7 +72,7 @@ namespace VacuumCleaner.Modes
 
         public void PowerOff()
         {
-            vacuumColision.gameObject.SetActive(false);
+            vacuumCollision.gameObject.SetActive(false);
             trashCollector.gameObject.SetActive(false);
             OnPowerOff?.Invoke();
         }
