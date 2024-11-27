@@ -134,6 +134,12 @@ namespace AK
         static const AkUniqueID SFX = 393239870U;
     } // namespace BUSSES
 
+    namespace AUX_BUSSES
+    {
+        static const AkUniqueID REVMUSIC = 1352299025U;
+        static const AkUniqueID REVSFX = 15780165U;
+    } // namespace AUX_BUSSES
+
     namespace AUDIO_DEVICES
     {
         static const AkUniqueID NO_OUTPUT = 2317455096U;

@@ -9,10 +9,13 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{530A9C48-0143-96D8-5D8A-3F966EB234DB}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{87EC5D50-F124-49C8-3C35-893248FF0363}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
+				<ShareSets>
+					<Plugin Id="2150138123" Name="SpookyHall" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
 					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
@@ -23,6 +26,22 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
+			<AuxBusses>
+				<AuxBus Id="15780165" Name="RevSFX">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2150138123"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+				<AuxBus Id="1352299025" Name="RevMusic">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2150138123"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+			</AuxBusses>
 			<GameParameters>
 				<GameParameter Id="1037543273" Name="Ghosts"/>
 			</GameParameters>
@@ -81,7 +100,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{2C6DBB35-C645-2122-7E89-86F1228DF235}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{7A488E1A-65E0-49E8-D89F-1A70A6F4C671}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -123,6 +142,12 @@
 				<File Id="127916599" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Pasos-003.wav</ShortName>
 					<CachePath>SFX/Pasos-003_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="132242664" Language="SFX" Streaming="true" Location="Memory">
+					<ShortName>SookyMX_CazaFantasmaStinger.wav</ShortName>
+					<Path>Media/132242664.wem</Path>
+					<CachePath>SFX/SookyMX_CazaFantasmaStinger_C4CC260C.wem</CachePath>
+					<PrefetchSize>19296</PrefetchSize>
 				</File>
 				<File Id="134852080" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Piano-013.wav</ShortName>
@@ -336,8 +361,12 @@
 				<Event Id="3087263383" Name="DestroyedGhost" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="387592991" Name="GhostCatch" DurationType="Infinite">
 					<MediaRefs>
+						<MediaRef Id="132242664"/>
 						<MediaRef Id="667309658"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="1352299025" Name="RevMusic"/>
+					</AuxBusRefs>
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="4231158115" Id="1210588850" Name="Catching"/>
 					</ActionSetState>
@@ -399,6 +428,9 @@
 					</SwitchContainers>
 				</Event>
 				<Event Id="1123143573" Name="Start_Lvl1" DurationType="Infinite">
+					<AuxBusRefs>
+						<AuxBusRef Id="1352299025" Name="RevMusic"/>
+					</AuxBusRefs>
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="1533192012" Id="1375774704"/>
@@ -463,6 +495,9 @@
 					</SwitchContainers>
 				</Event>
 				<Event Id="621108255" Name="Step" DurationType="Infinite">
+					<AuxBusRefs>
+						<AuxBusRef Id="15780165" Name="RevSFX"/>
+					</AuxBusRefs>
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="1718617278" Id="2058049674" Default="true"/>
@@ -484,6 +519,9 @@
 						<MediaRef Id="795406639"/>
 						<MediaRef Id="1071201929"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="15780165" Name="RevSFX"/>
+					</AuxBusRefs>
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="3699816212" Id="2036889338"/>
@@ -555,5 +593,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{CE3C9F4A-91EC-AC26-9627-BA3857E34D33}</FileHash>
+	<FileHash>{E43E0645-BC83-1650-C966-6822A7852ECF}</FileHash>
 </SoundBanksInfo>

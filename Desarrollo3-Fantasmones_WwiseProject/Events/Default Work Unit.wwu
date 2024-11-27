@@ -23,7 +23,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="GameMusic" ID="{0398A01D-3569-4017-B01C-41AABAA8CDC5}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
+									<ObjectRef Name="GameMusicSwitchs" ID="{0398A01D-3569-4017-B01C-41AABAA8CDC5}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -129,8 +129,8 @@
 					<ChildrenList>
 						<Action Name="" ID="{5DF3A2EA-84F0-4C37-A4CD-980CA3065B83}" ShortID="880086474">
 							<PropertyList>
-								<Property Name="FadeInCurve" Type="int16" Value="2"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+								<Property Name="FadeInCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -145,6 +145,13 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Catching" ID="{A176CAF3-5DBC-41BC-8C69-0AC16A92F0F5}" WorkUnitID="{58280D57-A644-4038-8713-1B41B403A5F4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{830EA527-3A35-46B0-94B8-DF60EACB6557}" ShortID="532333459">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GameMusicStinger" ID="{FE765BAE-73FA-4C51-93EC-E80F747525CC}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
