@@ -1,52 +1,88 @@
-using Player.FSM;
 using System.Collections.Generic;
+using Player.FSM;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class HudController : MonoBehaviour
+namespace Game
 {
-    [SerializeField] private InputReader inputReader;
+    public class HudController : MonoBehaviour
+    {
+        [SerializeField] private InputReader inputReader;
     
-    [SerializeField] private List<GameObject> pcHUD;
-    [SerializeField] private List<GameObject> gamePadHUD;
-
-    private void OnEnable()
-    {
-        inputReader.OnInputDevice += OnAnyButtonPress;
-    }
-
-    private void OnDisable()
-    {
-        inputReader.OnInputDevice -= OnAnyButtonPress;
-    }
-    
-    private void OnAnyButtonPress(InputDevice control)
-    {
-        var device = control.device;
+        [SerializeField] private List<GameObject> pcHUD;
+        [SerializeField] private List<GameObject> gamePadHUD;
         
-        if (device is Mouse || device is Keyboard)
+        [SerializeField] private List<GameObject> instructionsToShow;
+        [SerializeField] private List<GameObject> instructionsToHide;
+
+        private void OnEnable()
         {
-            foreach (var sprite in pcHUD)
+            inputReader.OnInputDevice += OnAnyButtonPress;
+            inputReader.OnIntructionsStart += ShowInstructions;
+            inputReader.OnIntructionsEnd += HideInstructions;
+        }
+
+        private void OnDisable()
+        {
+            inputReader.OnInputDevice -= OnAnyButtonPress;
+            inputReader.OnIntructionsStart -= ShowInstructions;
+            inputReader.OnIntructionsEnd -= HideInstructions;
+        }
+    
+        private void OnAnyButtonPress(InputDevice control)
+        {
+            var device = control.device;
+        
+            if (device is Mouse || device is Keyboard)
             {
-                sprite.GameObject().gameObject.SetActive(true);
+                foreach (var sprite in pcHUD)
+                {
+                    sprite.GameObject().gameObject.SetActive(true);
+                }
+                foreach (var sprite in gamePadHUD)
+                {
+                    sprite.GameObject().gameObject.SetActive(false);
+                }
             }
-            foreach (var sprite in gamePadHUD)
+            else if (device is Gamepad)
             {
-                sprite.GameObject().gameObject.SetActive(false);
+                foreach (var sprite in gamePadHUD)
+                {
+                    sprite.GameObject().gameObject.SetActive(true);
+                }
+                foreach (var sprite in pcHUD)
+                {
+                    sprite.GameObject().gameObject.SetActive(false);
+                }
+            }
+        
+        }
+
+        private void ShowInstructions()
+        {
+            foreach (var instruction in instructionsToShow)
+            {
+                instruction.GameObject().gameObject.SetActive(true);
+            }
+
+            foreach (var instructions in instructionsToHide)
+            {
+                instructions.GameObject().gameObject.SetActive(false);
             }
         }
-        else if (device is Gamepad)
+
+        private void HideInstructions()
         {
-            foreach (var sprite in gamePadHUD)
+            foreach (var instruction in instructionsToShow)
             {
-                sprite.GameObject().gameObject.SetActive(true);
+                instruction.GameObject().gameObject.SetActive(false);
             }
-            foreach (var sprite in pcHUD)
+
+            foreach (var instructions in instructionsToHide)
             {
-                sprite.GameObject().gameObject.SetActive(false);
+                instructions.GameObject().gameObject.SetActive(true);
             }
         }
-        
     }
 }

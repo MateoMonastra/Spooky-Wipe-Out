@@ -23,6 +23,8 @@ namespace Player.FSM
         public Action OnHideTasks;
         public Action<InputDevice> OnInputDevice;
         public Action OnNavigate;
+        public Action OnIntructionsStart;
+        public Action OnIntructionsEnd;
 
         public static bool isUsingController = false;
 
@@ -32,15 +34,15 @@ namespace Player.FSM
             OnMove?.Invoke(context.ReadValue<Vector2>());
             OnInputDevice?.Invoke(context.control.device);
         }
-        
+
         public void HandleInputChange(PlayerInput context)
         {
             if (context.devices[0] is Mouse || context.devices[0] is Keyboard)
             {
                 isUsingController = false;
             }
-            else if (context.devices[0] is Gamepad) 
-            { 
+            else if (context.devices[0] is Gamepad)
+            {
                 isUsingController = true;
             }
         }
@@ -49,7 +51,6 @@ namespace Player.FSM
         {
             OnAimingVacuum?.Invoke(context.ReadValue<Vector2>());
             OnInputDevice?.Invoke(context.control.device);
-            
         }
 
         public void HandleClickInput(InputAction.CallbackContext context)
@@ -70,7 +71,7 @@ namespace Player.FSM
             {
                 OnClickEnd?.Invoke();
             }
-            
+
             OnInputDevice?.Invoke(context.control.device);
         }
 
@@ -80,6 +81,7 @@ namespace Player.FSM
             {
                 OnSwitchTool?.Invoke();
             }
+
             OnInputDevice?.Invoke(context.control.device);
         }
 
@@ -89,15 +91,17 @@ namespace Player.FSM
             {
                 OnSpaceInputStart?.Invoke();
             }
+
             OnInputDevice?.Invoke(context.control.device);
         }
-        
+
         public void HandlePause(InputAction.CallbackContext context)
         {
             if (context.started)
             {
                 OnPauseStart?.Invoke();
             }
+
             OnInputDevice?.Invoke(context.control.device);
         }
 
@@ -119,6 +123,7 @@ namespace Player.FSM
             {
                 OnHideTimer?.Invoke();
             }
+
             OnInputDevice?.Invoke(context.control.device);
         }
 
@@ -132,6 +137,7 @@ namespace Player.FSM
             {
                 OnHideTasks?.Invoke();
             }
+
             OnInputDevice?.Invoke(context.control.device);
         }
 
@@ -139,6 +145,18 @@ namespace Player.FSM
         {
             OnNavigate?.Invoke();
             Debug.Log("se invoca evento ui");
+        }
+
+        public void HandleShowIntructions(InputAction.CallbackContext context)
+        {
+            if (context.started)
+            {
+                OnIntructionsStart?.Invoke();
+            }
+            else if (context.canceled)
+            {
+                OnIntructionsEnd?.Invoke();
+            }
         }
     }
 }
