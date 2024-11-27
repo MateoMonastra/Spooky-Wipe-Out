@@ -6,20 +6,23 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Minigames;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
     public Action OnFinish;
-
-    //[SerializeField] private SkillCheckController SKMinigame;
-    //[SerializeField] private ADController ADMinigame;
 
     public Timer timer;
 
     public List<Ghost> ghosts;
     public List<Trash> garbage;
     public List<Ectoplasm> ectoplasms;
+
+    [SerializeField] private SkillCheckController skMinigame;
+    [SerializeField] private ADController adMinigame;
+
 
     [SerializeField] private ObjectivesUI objectivesUI;
     [SerializeField] private GameObject playerUI;
@@ -146,5 +149,15 @@ public class GameManager : MonoBehaviour
     {
         SetPlayerUIState(false);
         OnFinish?.Invoke();
+    }
+
+    public ADController GetMinigameADController()
+    {
+        return adMinigame;
+    }
+    
+    public SkillCheckController GetMinigameSkillCheckController()
+    {
+        return skMinigame;
     }
 }

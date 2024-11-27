@@ -71,6 +71,7 @@ namespace Ghosts
         private void SetCatchState()
         {
             OnCatch?.Invoke(true);
+            GameManager.GetInstance().GetMinigameSkillCheckController().StopGame();
             minigame.OnWin += SetDeadState;
             minigame.OnLose += SetDeadState;
             _fsm.ApplyTransition(_huntToCatch);
