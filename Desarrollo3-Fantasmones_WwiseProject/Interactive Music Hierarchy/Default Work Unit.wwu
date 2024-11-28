@@ -12741,7 +12741,7 @@
 								<Property Name="Color" Type="int16" Value="9"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-7</Value>
+										<Value>-8</Value>
 									</ValueList>
 								</Property>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
@@ -12904,7 +12904,7 @@
 								<Property Name="EndPosition" Type="Real64" Value="5284.49014567266"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-9</Value>
+										<Value>-10</Value>
 									</ValueList>
 								</Property>
 								<Property Name="UserAuxSendVolume0" Type="Real64">

@@ -52,7 +52,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="DestroyedGhost" ID="{1BF5738A-E3EB-400A-8C1E-93657A902E82}"/>
+				<Event Name="DestroyedGhost" ID="{1BF5738A-E3EB-400A-8C1E-93657A902E82}">
+					<ChildrenList>
+						<Action Name="" ID="{B8940818-2DAE-4889-8583-4AFFFDCE49BA}" ShortID="611722925">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FinalScream" ID="{C9600DE7-F242-4D58-874D-BB3E2FE43BD2}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="AmbPiano" ID="{D5E4B068-753A-4CB6-86AC-641F833C9A07}">
 					<ChildrenList>
 						<Action Name="" ID="{7AF4B776-9F0D-46BA-8174-DDD1C69DCCEF}" ShortID="71703405">
@@ -200,13 +210,6 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{B735EF5C-370C-4325-8759-0FAF5FF69BFA}" ShortID="927841475">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="FinalScream" ID="{C9600DE7-F242-4D58-874D-BB3E2FE43BD2}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="GhostSkillCheckPass" ID="{44095A88-4024-45CE-BCD4-4D0A1F46BEF0}"/>
@@ -217,13 +220,6 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SFXGhostLoop" ID="{754E6CA4-E958-4BA7-B3D5-8C079AC8034E}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{578B364D-0139-484E-892F-4459037D1DF4}" ShortID="71405359">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Steps" ID="{2C2770EA-B986-42B2-82F7-B41CC26350DF}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -242,6 +238,17 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SFXAmbFireB" ID="{CB87E155-0F96-44A5-8F15-B2B2BEB21E50}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ChainGhostOnFlee" ID="{814F4F7B-C683-4080-9655-FD8826426D83}">
+					<ChildrenList>
+						<Action Name="" ID="{5DA7C524-A4B9-4D3E-9C4C-092EC92A7BDF}" ShortID="196669191">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="OnFlee" ID="{6101D454-293C-48D3-99F5-C3594F851AC6}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

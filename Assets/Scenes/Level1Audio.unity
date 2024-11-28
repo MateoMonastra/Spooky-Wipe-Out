@@ -3659,6 +3659,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1688402449}
     m_Modifications:
+    - target: {fileID: 416756993311283653, guid: d6c20553ad13fe741860b5fd6775d231, type: 3}
+      propertyPath: ChainGhostOnFlee.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 196bf000ec1b32646bb16312fb6dfff1, type: 2}
     - target: {fileID: 3697175068515729083, guid: d6c20553ad13fe741860b5fd6775d231, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3702,10 +3706,6 @@ PrefabInstance:
     - target: {fileID: 4723919434994701786, guid: d6c20553ad13fe741860b5fd6775d231, type: 3}
       propertyPath: m_Name
       value: AudioChainGhost
-      objectReference: {fileID: 0}
-    - target: {fileID: 4723919434994701786, guid: d6c20553ad13fe741860b5fd6775d231, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -102,7 +102,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{E65049CD-8BE5-AE4B-7F52-5D5BF030CD02}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{408C911A-52FC-9661-81D1-D778F84C8556}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -391,7 +391,6 @@
 			</Media>
 			<Plugins>
 				<Custom>
-					<Plugin Id="22012828" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="127524652" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="856823274" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 				</Custom>
@@ -408,19 +407,8 @@
 				</Event>
 				<Event Id="3755821248" Name="AmbGhost" MaxAttenuation="27" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="310227621"/>
 						<MediaRef Id="316292136"/>
-						<MediaRef Id="360029543"/>
-						<MediaRef Id="379917419"/>
-						<MediaRef Id="449042588"/>
-						<MediaRef Id="628697046"/>
-						<MediaRef Id="748120472"/>
 					</MediaRefs>
-					<PluginRefs>
-						<Custom>
-							<PluginRef Id="22012828"/>
-						</Custom>
-					</PluginRefs>
 					<AuxBusRefs>
 						<AuxBusRef Id="15780165" Name="RevSFX"/>
 					</AuxBusRefs>
@@ -456,7 +444,30 @@
 						<AuxBusRef Id="15780165" Name="RevSFX"/>
 					</AuxBusRefs>
 				</Event>
-				<Event Id="3087263383" Name="DestroyedGhost" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="660301166" Name="ChainGhostOnFlee" MaxAttenuation="27" DurationType="OneShot" DurationMin="6.629979" DurationMax="7.9599376">
+					<MediaRefs>
+						<MediaRef Id="310227621"/>
+						<MediaRef Id="360029543"/>
+						<MediaRef Id="379917419"/>
+						<MediaRef Id="449042588"/>
+						<MediaRef Id="628697046"/>
+						<MediaRef Id="748120472"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="15780165" Name="RevSFX"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="3087263383" Name="DestroyedGhost" DurationType="OneShot" DurationMin="6.629979" DurationMax="7.2517915">
+					<MediaRefs>
+						<MediaRef Id="310227621"/>
+						<MediaRef Id="379917419"/>
+						<MediaRef Id="449042588"/>
+						<MediaRef Id="628697046"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="15780165" Name="RevSFX"/>
+					</AuxBusRefs>
+				</Event>
 				<Event Id="387592991" Name="GhostCatch" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="132242664"/>
@@ -471,16 +482,7 @@
 						<ActionSetStateEntry GroupId="4231158115" Id="1210588850" Name="Catching"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="1202154233" Name="GhostRelease" DurationType="OneShot" DurationMin="6.629979" DurationMax="7.2517915">
-					<MediaRefs>
-						<MediaRef Id="310227621"/>
-						<MediaRef Id="379917419"/>
-						<MediaRef Id="449042588"/>
-						<MediaRef Id="628697046"/>
-					</MediaRefs>
-					<AuxBusRefs>
-						<AuxBusRef Id="15780165" Name="RevSFX"/>
-					</AuxBusRefs>
+				<Event Id="1202154233" Name="GhostRelease" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="4231158115" Id="1160234136" Name="Normal"/>
 					</ActionSetState>
@@ -716,5 +718,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{ADD90ADE-98A1-3158-5C76-DA31570A348C}</FileHash>
+	<FileHash>{4D4A9655-73BF-A7CC-97C1-6C070D1530F2}</FileHash>
 </SoundBanksInfo>

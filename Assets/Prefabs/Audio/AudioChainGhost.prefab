@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3697175068515729083}
   - component: {fileID: 5992068764187117553}
   - component: {fileID: 7249411254391739822}
+  - component: {fileID: 416756993311283653}
   m_Layer: 10
   m_Name: AudioChainGhost
   m_TagString: Untagged
@@ -84,3 +85,23 @@ MonoBehaviour:
   eventIdInternal: 0
   valueGuidInternal: 
   m_callbackDataInternal: {fileID: 0}
+--- !u!114 &416756993311283653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4723919434994701786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fb1b93b311fb0442850dcef9f3826af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chainGhostOnFlee:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 196bf000ec1b32646bb16312fb6dfff1, type: 2}
+  destroyedGhost:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a7f04146eac5619418943c25cc0456f7, type: 2}

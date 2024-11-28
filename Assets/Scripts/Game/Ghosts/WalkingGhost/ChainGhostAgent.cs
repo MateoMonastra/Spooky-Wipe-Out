@@ -15,6 +15,7 @@ namespace Ghosts
 {
     public class ChainGhostAgent : Ghost, IVacuumable
     {
+        public Action OnFlee;
         public UnityEvent<bool> OnVacuumed;
         private Action<bool> OnRested = delegate { };
 
@@ -121,8 +122,9 @@ namespace Ghosts
 
             _walkToFlee = new Transition() { From = _walk, To = _flee };
             _walkToFlee.TransitionAction += surprisedVfx.Play;
+            _walkToFlee.TransitionAction += () => OnFlee?.Invoke();
             _walk.transitions.Add(_walkToFlee);
-
+            
             _startWalk = new Transition() { From = _walk, To = _walk };
             _walk.transitions.Add(_startWalk);
 
@@ -137,6 +139,7 @@ namespace Ghosts
 
             _restToFlee = new Transition() { From = _rest, To = _flee };
             _restToFlee.TransitionAction += surprisedVfx.Play;
+            _restToFlee.TransitionAction += () => OnFlee?.Invoke();
             _rest.transitions.Add(_restToFlee);
 
             _restToStruggle = new Transition() { From = _rest, To = _struggle };
