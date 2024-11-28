@@ -102,7 +102,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{287A7579-48D2-A922-4F4D-35871EEBF7E0}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{95A55E05-2512-C8E2-E3EB-737F31D4F9C1}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -160,6 +160,11 @@
 					<Path>Media/204114406.wem</Path>
 					<CachePath>SFX/SPOOKY Violines-3_3CD5CF17.wem</CachePath>
 				</File>
+				<File Id="218681037" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>SpookyMusicaMenu.wav</ShortName>
+					<Path>Media/218681037.wem</Path>
+					<CachePath>SFX/SpookyMusicaMenu_3CD5CF17.wem</CachePath>
+				</File>
 				<File Id="266973373" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AspiradoraLoop.wav</ShortName>
 					<CachePath>SFX/AspiradoraLoop_C4CC260C.wem</CachePath>
@@ -206,11 +211,6 @@
 				<File Id="404368898" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Pasos-002.wav</ShortName>
 					<CachePath>SFX/Pasos-002_8F8B27E2.wem</CachePath>
-				</File>
-				<File Id="414954598" Language="SFX" Streaming="true" Location="Loose">
-					<ShortName>Keys.wav</ShortName>
-					<Path>Media/414954598.wem</Path>
-					<CachePath>SFX/Keys_3CD5CF17.wem</CachePath>
 				</File>
 				<File Id="415121418" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>CuadroEnd.wav</ShortName>
@@ -481,13 +481,13 @@
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4091656514" Id="2607556080"/>
 							<MediaRefs>
-								<MediaRef Id="414954598"/>
+								<MediaRef Id="218681037"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4091656514" Id="2201105581"/>
 							<MediaRefs>
-								<MediaRef Id="414954598"/>
+								<MediaRef Id="218681037"/>
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -658,5 +658,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8EB88BC0-2333-CB8E-4318-77B40CFB8821}</FileHash>
+	<FileHash>{D93B83E3-7AEA-B638-CB82-7166A572134E}</FileHash>
 </SoundBanksInfo>

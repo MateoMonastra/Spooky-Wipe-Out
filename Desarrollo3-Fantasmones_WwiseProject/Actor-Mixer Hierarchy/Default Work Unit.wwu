@@ -37,7 +37,7 @@
 								</Property>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-20</Value>
+										<Value>-11</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -57,9 +57,16 @@
 										<MediaID ID="414954598"/>
 									</MediaIDList>
 								</AudioFileSource>
+								<AudioFileSource Name="SpookyMusicaMenu" ID="{ECA6F4A1-A5E1-4C5A-BA5B-E6A7EC7F13B0}">
+									<Language>SFX</Language>
+									<AudioFile>SpookyMusicaMenu.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="218681037"/>
+									</MediaIDList>
+								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="Keys" ID="{1405E60B-D58B-4A1A-BC66-30AA5E63D727}" Platform="Linked"/>
+								<ActiveSource Name="SpookyMusicaMenu" ID="{ECA6F4A1-A5E1-4C5A-BA5B-E6A7EC7F13B0}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<RandomSequenceContainer Name="mx_waitPlaying" ID="{7684494A-D8D7-4CC4-93DA-356ADE04904E}" ShortID="903954639">
@@ -157,7 +164,7 @@
 								<StateRef Name="Pause" ID="{8810489C-E928-428D-8CB5-E093102AF78A}"/>
 								<CustomState Name="" ID="{F05A64C2-CDA1-4CFF-A85C-BD19E9A5845E}" ShortID="192260708">
 									<PropertyList>
-										<Property Name="Lowpass" Type="int16" Value="69"/>
+										<Property Name="Lowpass" Type="int16" Value="62"/>
 									</PropertyList>
 								</CustomState>
 							</CustomState>
@@ -165,7 +172,7 @@
 								<StateRef Name="Credits" ID="{17D78D59-680B-4843-A047-DD0AAE7477A6}"/>
 								<CustomState Name="" ID="{62BD5F0E-C8A0-4ABE-98B7-FB65DF25DFDE}" ShortID="728526304">
 									<PropertyList>
-										<Property Name="Lowpass" Type="int16" Value="73"/>
+										<Property Name="Lowpass" Type="int16" Value="61"/>
 									</PropertyList>
 								</CustomState>
 							</CustomState>
@@ -1194,7 +1201,7 @@
 							<PropertyList>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-1</Value>
+										<Value>-3</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1410,17 +1417,12 @@
 										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="MakeUpGain" Type="Real64">
 											<ValueList>
-												<Value>-17</Value>
+												<Value>-3</Value>
 											</ValueList>
 										</Property>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
-										<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="75"/>
-										<Property Name="UserAuxSendVolume0" Type="Real64">
-											<ValueList>
-												<Value>-9</Value>
-											</ValueList>
-										</Property>
+										<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="66"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -1679,11 +1681,6 @@
 											</ValueList>
 										</Property>
 										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
-										<Property Name="UserAuxSendVolume0" Type="Real64">
-											<ValueList>
-												<Value>-8</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
