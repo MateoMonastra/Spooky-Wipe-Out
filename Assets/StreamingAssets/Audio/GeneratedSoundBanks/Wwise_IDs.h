@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID AMBGHOST = 3755821248U;
         static const AkUniqueID AMBPIANO = 895127194U;
         static const AkUniqueID DESTROYEDGHOST = 3087263383U;
         static const AkUniqueID GHOSTCATCH = 387592991U;
@@ -119,6 +120,8 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID GHOSTS = 1037543273U;
+        static const AkUniqueID MUSICLEVEL = 543979504U;
+        static const AkUniqueID SFXLEVEL = 1873490184U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS

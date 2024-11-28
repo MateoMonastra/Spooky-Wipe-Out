@@ -11,6 +11,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2644656531	TrashVacuumed			\Default Work Unit\TrashVacuumed	
 	3087263383	DestroyedGhost			\Default Work Unit\DestroyedGhost	
 	3571119522	PaintRelease			\Default Work Unit\PaintRelease	
+	3755821248	AmbGhost			\Default Work Unit\AmbGhost	
 	3864087751	GhostSkillCheckFail			\Default Work Unit\GhostSkillCheckFail	
 	4233241136	GhostSkillCheckPass			\Default Work Unit\GhostSkillCheckPass	
 
@@ -54,6 +55,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	1037543273	Ghosts			\Default Work Unit\Ghosts	
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	22012828	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ghosts\ChainGhost\AmbChainGhost\Steps\Silence\Silence	
 	127524652	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\AmbPiano\Silence_01\Silence	
 	856823274	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\AmbPiano\Silence\Silence	
 
@@ -67,27 +69,35 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	132242664	SookyMX_CazaFantasmaStinger	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\SookyMX_CazaFantasmaStinger_C4CC260C.wem		\Interactive Music Hierarchy\Default Work Unit\GameMusic\GameMusicStinger\SookyMX_CazaFantasmaStinger		19296
 	134852080	SFXPiano-013	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\SFX_Piano-013_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\PianoHit\PianoHit\SFXPiano-013		277028
 	266973373	AspiradoraLoop	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\AspiradoraLoop_C4CC260C.wem		\Interactive Music Hierarchy\Default Work Unit\Aspiradora\AspiradoraWorking\AspiradoraLoop\AspiradoraLoop		1175136
+	310227621	SFXGhostStep-004	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\GhostStep-004_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ghosts\ChainGhost\FinalScream\SFXGhostStep-004		1323688
+	316292136	SFXGhostLoop	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\GhostLoop_C4CC260C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ghosts\ChainGhost\AmbChainGhost\SFXGhostLoop		9915496
+	360029543	SFXGhostStep-002	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\GhostStep-002_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ghosts\ChainGhost\AmbChainGhost\Steps\Steps\SFXGhostStep-002		1351556
 	363842715	SFXPiano-003	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\SFX_Piano-003_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\PianoHit\PianoHit\SFXPiano-003		319996
+	379917419	SFXGhostStep-003	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\GhostStep-003_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ghosts\ChainGhost\FinalScream\SFXGhostStep-003		1298868
 	382905220	HydroLoop	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\HydroLoop_C4CC260C.wem		\Interactive Music Hierarchy\Default Work Unit\Aspiradora\HydroWorking\HydroLoop\HydroLoop		1271748
 	404368898	Pasos-002	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\Pasos-002_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Pasos\PasosSwitch\PasosComunes\Pasos-002		82040
 	415121418	SFXCuadroEnd	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\CuadroEnd_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ghosts\FrameGhost\SFXCuadroEnd		421136
 	433427925	SFXPiano-012	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\SFX_Piano-012_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\PianoHit\PianoHit\SFXPiano-012		297180
+	449042588	SFXGhostStep-001	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\GhostStep-001_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ghosts\ChainGhost\AmbChainGhost\Steps\Steps\SFXGhostStep-001		1273052
 	487752815	SFXPiano-002	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\SFX_Piano-002_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\PianoHit\PianoHit\SFXPiano-002		312136
 	502920663	SFXPiano-018	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\SFX_Piano-018_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\PianoHit\PianoHit\SFXPiano-018		359556
 	557733357	SFXPiano-016	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\SFX_Piano-016_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\PianoHit\PianoHit\SFXPiano-016		298548
 	578776812	SFXPiano-001	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\SFX_Piano-001_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\PianoHit\PianoHit\SFXPiano-001		275976
 	592711847	SFXPiano-011	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\SFX_Piano-011_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\PianoHit\PianoHit\SFXPiano-011		206284
 	616773025	AspiradoraStart	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\AspiradoraStart_C4CC260C.wem		\Interactive Music Hierarchy\Default Work Unit\Aspiradora\AspiradoraWorking\AspiradoraStart\AspiradoraStart		296996
+	628697046	SFXGhostStep-005	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\GhostStep-005_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ghosts\ChainGhost\FinalScream\SFXGhostStep-005		1392440
 	632934482	SFXPiano-008	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\SFX_Piano-008_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\AmbPiano\PianoSound\SFXPiano-008		245880
 	667309658	SpookyMX_CazaFantasma	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\SpookyMX_CazaFantasma_3CD5CF17.wem		\Interactive Music Hierarchy\Default Work Unit\GameMusic\GameMusicCatchGhost\GameMusicCatchGhost\SpookyMX_CazaFantasma		3495
 	723507422	SFXPiano-006	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\SFX_Piano-006_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\PianoHit\PianoHit\SFXPiano-006		249820
 	727534871	Pasos-007	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\Pasos-007_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Pasos\PasosSwitch\PasosComunes\Pasos-007		82040
+	748120472	SFXGhostStep-006	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\GhostStep-006_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ghosts\ChainGhost\AmbChainGhost\Steps\Steps\SFXGhostStep-006		1528404
 	795406639	AspiradoraEnd	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\AspiradoraEnd_C4CC260C.wem		\Interactive Music Hierarchy\Default Work Unit\Aspiradora\AspiradoraEnd\AspiradoraEnd		533332
 	797249411	SFXPiano-015	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\SFX_Piano-015_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\AmbPiano\PianoSound\SFXPiano-015		308296
 	804453530	Pasos-001	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\Pasos-001_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Pasos\PasosSwitch\PasosComunes\Pasos-001		82040
 	869779343	SFXPiano-004	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\SFX_Piano-004_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\AmbPiano\PianoSound\SFXPiano-004		270612
 	883544695	HydroStart	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\HydroStart_C4CC260C.wem		\Interactive Music Hierarchy\Default Work Unit\Aspiradora\HydroWorking\HydroStart\HydroStart		296736
 	889975198	SFXPiano-017	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\SFX_Piano-017_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\AmbPiano\PianoSound\SFXPiano-017		332600
+	917263309	SFXGhostScreamLoop	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\GhostScreamLoop_C4CC260C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ghosts\ChainGhost\SFXGhostScreamLoop		9915496
 	948364101	SFXCuadroLoop	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\CuadroLoop_C4CC260C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ghosts\FrameGhost\SFXCuadroLoop		999516
 	1005109668	Pasos-006	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\Pasos-006_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Pasos\PasosSwitch\PasosComunes\Pasos-006		82040
 	1035390792	SFXPiano-009	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\SFX_Piano-009_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\PianoHit\PianoHit\SFXPiano-009		264936

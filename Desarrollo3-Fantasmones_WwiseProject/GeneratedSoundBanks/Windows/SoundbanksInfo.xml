@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{87EC5D50-F124-49C8-3C35-893248FF0363}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{C05C5158-57C2-3E58-6A6B-9BBF62103C1F}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -43,7 +43,9 @@
 				</AuxBus>
 			</AuxBusses>
 			<GameParameters>
+				<GameParameter Id="543979504" Name="MusicLevel"/>
 				<GameParameter Id="1037543273" Name="Ghosts"/>
+				<GameParameter Id="1873490184" Name="SFXLevel"/>
 			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="4091656514" Name="GameState">
@@ -100,7 +102,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{7A488E1A-65E0-49E8-D89F-1A70A6F4C671}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{287A7579-48D2-A922-4F4D-35871EEBF7E0}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -162,19 +164,35 @@
 					<ShortName>AspiradoraLoop.wav</ShortName>
 					<CachePath>SFX/AspiradoraLoop_C4CC260C.wem</CachePath>
 				</File>
+				<File Id="310227621" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>GhostStep-004.wav</ShortName>
+					<CachePath>SFX/GhostStep-004_8F8B27E2.wem</CachePath>
+				</File>
 				<File Id="312507416" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>SPOOKY Violines_sultasto.wav</ShortName>
 					<Path>Media/312507416.wem</Path>
 					<CachePath>SFX/SPOOKY Violines_sultasto_3CD5CF17.wem</CachePath>
+				</File>
+				<File Id="316292136" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>GhostLoop.wav</ShortName>
+					<CachePath>SFX/GhostLoop_C4CC260C.wem</CachePath>
 				</File>
 				<File Id="319038758" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>SPOOKY 22-060-Basic-Brush 1 [2024-11-12 182352].wav</ShortName>
 					<Path>Media/319038758.wem</Path>
 					<CachePath>SFX/SPOOKY 22-060-Basic-Brush 1 [2024-11-12 182352]_3CD5CF17.wem</CachePath>
 				</File>
+				<File Id="360029543" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>GhostStep-002.wav</ShortName>
+					<CachePath>SFX/GhostStep-002_8F8B27E2.wem</CachePath>
+				</File>
 				<File Id="363842715" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Piano-003.wav</ShortName>
 					<CachePath>SFX/SFX_Piano-003_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="379917419" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>GhostStep-003.wav</ShortName>
+					<CachePath>SFX/GhostStep-003_8F8B27E2.wem</CachePath>
 				</File>
 				<File Id="382905220" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HydroLoop.wav</ShortName>
@@ -201,6 +219,10 @@
 				<File Id="433427925" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Piano-012.wav</ShortName>
 					<CachePath>SFX/SFX_Piano-012_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="449042588" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>GhostStep-001.wav</ShortName>
+					<CachePath>SFX/GhostStep-001_8F8B27E2.wem</CachePath>
 				</File>
 				<File Id="460469863" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>SPOOKY Violines_sul_pont.wav</ShortName>
@@ -231,6 +253,10 @@
 					<ShortName>AspiradoraStart.wav</ShortName>
 					<CachePath>SFX/AspiradoraStart_C4CC260C.wem</CachePath>
 				</File>
+				<File Id="628697046" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>GhostStep-005.wav</ShortName>
+					<CachePath>SFX/GhostStep-005_8F8B27E2.wem</CachePath>
+				</File>
 				<File Id="632934482" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Piano-008.wav</ShortName>
 					<CachePath>SFX/SFX_Piano-008_8F8B27E2.wem</CachePath>
@@ -258,6 +284,10 @@
 					<ShortName>SPOOKY STICK.wav</ShortName>
 					<Path>Media/738044038.wem</Path>
 					<CachePath>SFX/SPOOKY STICK_3CD5CF17.wem</CachePath>
+				</File>
+				<File Id="748120472" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>GhostStep-006.wav</ShortName>
+					<CachePath>SFX/GhostStep-006_8F8B27E2.wem</CachePath>
 				</File>
 				<File Id="795406639" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AspiradoraEnd.wav</ShortName>
@@ -287,6 +317,10 @@
 					<ShortName>SPOOKY Violines-2.wav</ShortName>
 					<Path>Media/900404297.wem</Path>
 					<CachePath>SFX/SPOOKY Violines-2_3CD5CF17.wem</CachePath>
+				</File>
+				<File Id="917263309" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>GhostScreamLoop.wav</ShortName>
+					<CachePath>SFX/GhostScreamLoop_C4CC260C.wem</CachePath>
 				</File>
 				<File Id="948364101" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>CuadroLoop.wav</ShortName>
@@ -325,11 +359,31 @@
 			</Media>
 			<Plugins>
 				<Custom>
+					<Plugin Id="22012828" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="127524652" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="856823274" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 				</Custom>
 			</Plugins>
 			<Events>
+				<Event Id="3755821248" Name="AmbGhost" MaxAttenuation="27" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="310227621"/>
+						<MediaRef Id="316292136"/>
+						<MediaRef Id="360029543"/>
+						<MediaRef Id="379917419"/>
+						<MediaRef Id="449042588"/>
+						<MediaRef Id="628697046"/>
+						<MediaRef Id="748120472"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="22012828"/>
+						</Custom>
+					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="15780165" Name="RevSFX"/>
+					</AuxBusRefs>
+				</Event>
 				<Event Id="895127194" Name="AmbPiano" MaxAttenuation="27" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="15927765"/>
@@ -363,15 +417,26 @@
 					<MediaRefs>
 						<MediaRef Id="132242664"/>
 						<MediaRef Id="667309658"/>
+						<MediaRef Id="917263309"/>
 					</MediaRefs>
 					<AuxBusRefs>
+						<AuxBusRef Id="15780165" Name="RevSFX"/>
 						<AuxBusRef Id="1352299025" Name="RevMusic"/>
 					</AuxBusRefs>
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="4231158115" Id="1210588850" Name="Catching"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="1202154233" Name="GhostRelease" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+				<Event Id="1202154233" Name="GhostRelease" DurationType="OneShot" DurationMin="6.629979" DurationMax="7.2517915">
+					<MediaRefs>
+						<MediaRef Id="310227621"/>
+						<MediaRef Id="379917419"/>
+						<MediaRef Id="449042588"/>
+						<MediaRef Id="628697046"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="15780165" Name="RevSFX"/>
+					</AuxBusRefs>
 					<ActionSetState>
 						<ActionSetStateEntry GroupId="4231158115" Id="1160234136" Name="Normal"/>
 					</ActionSetState>
@@ -593,5 +658,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E43E0645-BC83-1650-C966-6822A7852ECF}</FileHash>
+	<FileHash>{8EB88BC0-2333-CB8E-4318-77B40CFB8821}</FileHash>
 </SoundBanksInfo>

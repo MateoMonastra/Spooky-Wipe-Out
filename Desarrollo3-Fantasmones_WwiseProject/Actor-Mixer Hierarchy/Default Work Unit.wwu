@@ -1278,6 +1278,439 @@
 								</Sound>
 							</ChildrenList>
 						</ActorMixer>
+						<ActorMixer Name="ChainGhost" ID="{B10A1B93-C7B9-49C2-BBF7-DDD1A5680257}" ShortID="1018439136">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{AD513494-A3DA-4040-B662-A49B6E6397EB}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="FinalScream" ID="{C9600DE7-F242-4D58-874D-BB3E2FE43BD2}" ShortID="336187227">
+									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-13</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{AD513494-A3DA-4040-B662-A49B6E6397EB}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="RevSFX" ID="{655F4B56-E4FF-4C81-A914-5EE7170E6DC4}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="SFXGhostStep-001" ID="{11A8EC67-0AE1-436B-97AD-DB733931C883}" ShortID="899255080">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GhostStep-001" ID="{2827E47A-4BAF-441B-BC05-96C7D6B4CDB0}">
+													<Language>SFX</Language>
+													<AudioFile>GhostStep-001.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="449042588"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GhostStep-001" ID="{2827E47A-4BAF-441B-BC05-96C7D6B4CDB0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFXGhostStep-003" ID="{01A833C5-95D2-485C-B418-5E1BDF5FFEB9}" ShortID="693943134">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GhostStep-003" ID="{00C51C85-6A0D-43EB-8A04-6D9A6B7CAAAB}">
+													<Language>SFX</Language>
+													<AudioFile>GhostStep-003.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="379917419"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GhostStep-003" ID="{00C51C85-6A0D-43EB-8A04-6D9A6B7CAAAB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFXGhostStep-004" ID="{6743572F-F399-4E58-9E3C-6F5E4728D26E}" ShortID="480172771">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GhostStep-004" ID="{0988B69B-976B-4B50-97D2-742850908DEE}">
+													<Language>SFX</Language>
+													<AudioFile>GhostStep-004.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="310227621"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GhostStep-004" ID="{0988B69B-976B-4B50-97D2-742850908DEE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="SFXGhostStep-005" ID="{C5837966-A8A5-4160-B707-16768FA3E325}" ShortID="1052894089">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GhostStep-005" ID="{E48F6268-D4E6-4658-B0D7-48CE2040C3BD}">
+													<Language>SFX</Language>
+													<AudioFile>GhostStep-005.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="628697046"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GhostStep-005" ID="{E48F6268-D4E6-4658-B0D7-48CE2040C3BD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<ActorMixer Name="AmbChainGhost" ID="{210A008A-C005-4D06-B4B1-A94C6BF1F2CF}" ShortID="460081090">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>-17</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+										<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="75"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-9</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="AmbAtt" ID="{66819035-E0A4-44BE-A546-B26A21DB4D74}" WorkUnitID="{D7ADC564-5D68-4FCD-8A30-8E0426143E33}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="RevSFX" ID="{655F4B56-E4FF-4C81-A914-5EE7170E6DC4}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="Steps" ID="{2C2770EA-B986-42B2-82F7-B41CC26350DF}" ShortID="287112566">
+											<PropertyList>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>-7</Value>
+													</ValueList>
+												</Property>
+												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{AD513494-A3DA-4040-B662-A49B6E6397EB}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="Steps" ID="{6101D454-293C-48D3-99F5-C3594F851AC6}" ShortID="554329521">
+													<PropertyList>
+														<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="SFXGhostStep-001" ID="{C5E4E52B-280D-4299-AA28-9B322C1C0F6A}" ShortID="410561723">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="GhostStep-001" ID="{88C714CC-5580-42A3-BEDD-7EEE8D7DA357}">
+																	<Language>SFX</Language>
+																	<AudioFile>GhostStep-001.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="449042588"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="GhostStep-001" ID="{88C714CC-5580-42A3-BEDD-7EEE8D7DA357}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SFXGhostStep-002" ID="{3ABA64A4-653E-4162-838B-36E774E5233E}" ShortID="14093106">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="GhostStep-002" ID="{E7C6447D-A322-4015-8578-55FA46422F85}">
+																	<Language>SFX</Language>
+																	<AudioFile>GhostStep-002.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="360029543"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="GhostStep-002" ID="{E7C6447D-A322-4015-8578-55FA46422F85}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SFXGhostStep-003" ID="{57ADDCBA-ADE6-45B7-A637-D47C6C2A570F}" ShortID="272513159">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="GhostStep-003" ID="{A38F9878-022F-4F59-99B2-406F2B76C7B5}">
+																	<Language>SFX</Language>
+																	<AudioFile>GhostStep-003.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="379917419"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="GhostStep-003" ID="{A38F9878-022F-4F59-99B2-406F2B76C7B5}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SFXGhostStep-004" ID="{0D04CF8B-8063-4393-BD0E-F9EEEC5EDB9D}" ShortID="689102810">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="GhostStep-004" ID="{44E8D381-7B16-4D81-946F-BD746B3485FA}">
+																	<Language>SFX</Language>
+																	<AudioFile>GhostStep-004.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="310227621"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="GhostStep-004" ID="{44E8D381-7B16-4D81-946F-BD746B3485FA}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SFXGhostStep-005" ID="{E5697460-F2A9-4F4D-8B43-D6AC8E22C688}" ShortID="194529628">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="GhostStep-005" ID="{236CCC20-7047-4B95-9000-E65ED838B29E}">
+																	<Language>SFX</Language>
+																	<AudioFile>GhostStep-005.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="628697046"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="GhostStep-005" ID="{236CCC20-7047-4B95-9000-E65ED838B29E}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SFXGhostStep-006" ID="{66D65280-7B13-48F7-A91B-51217BA0B82A}" ShortID="1011566265">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="GhostStep-006" ID="{BD80F9A7-65AB-444F-B4FE-5649461FDBF2}">
+																	<Language>SFX</Language>
+																	<AudioFile>GhostStep-006.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="748120472"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="GhostStep-006" ID="{BD80F9A7-65AB-444F-B4FE-5649461FDBF2}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<Sound Name="Silence" ID="{2966404D-D77D-4AB7-8A80-081A419B0D6E}" ShortID="560912801">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<SourcePlugin Name="Silence" ID="{9A1D47CB-677D-4BBB-89AF-E7B396F61D2D}" ShortID="22012828" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+															<PropertyList>
+																<Property Name="Length" Type="Real32" Value="0.001"/>
+																<Property Name="LengthMax" Type="Real32" Value="0.5"/>
+															</PropertyList>
+															<Language>SFX</Language>
+														</SourcePlugin>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Silence" ID="{9A1D47CB-677D-4BBB-89AF-E7B396F61D2D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Playlist">
+													<Reference>
+														<ObjectRef Name="Steps" ID="{6101D454-293C-48D3-99F5-C3594F851AC6}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+													</Reference>
+													<Reference>
+														<ObjectRef Name="Silence" ID="{2966404D-D77D-4AB7-8A80-081A419B0D6E}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</RandomSequenceContainer>
+										<Sound Name="SFXGhostLoop" ID="{754E6CA4-E958-4BA7-B3D5-8C079AC8034E}" ShortID="683937139">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{AD513494-A3DA-4040-B662-A49B6E6397EB}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="GhostLoop" ID="{88E416F5-15D8-4CF9-8881-1E6A634551B7}">
+													<Language>SFX</Language>
+													<AudioFile>GhostLoop.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="316292136"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="GhostLoop" ID="{88E416F5-15D8-4CF9-8881-1E6A634551B7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</ActorMixer>
+								<Sound Name="SFXGhostScreamLoop" ID="{B1D48803-5401-459F-8E5A-D0A3D0EE2BF0}" ShortID="1017018342">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>-15</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="RevSFX" ID="{655F4B56-E4FF-4C81-A914-5EE7170E6DC4}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="GhostScreamLoop" ID="{0734DA8A-1A33-411F-877B-E0A680F1FB5C}">
+											<Language>SFX</Language>
+											<AudioFile>GhostScreamLoop.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="917263309"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="GhostScreamLoop" ID="{0734DA8A-1A33-411F-877B-E0A680F1FB5C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</ActorMixer>
 					</ChildrenList>
 				</Folder>
 				<ActorMixer Name="Player" ID="{26B6A6F5-6430-46EB-A32B-60BD7BC84D9E}" ShortID="144970499">

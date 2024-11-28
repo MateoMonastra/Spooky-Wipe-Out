@@ -155,6 +155,13 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{A004CDE6-572E-4B44-8122-CD1F044F64C1}" ShortID="805791322">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFXGhostScreamLoop" ID="{B1D48803-5401-459F-8E5A-D0A3D0EE2BF0}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="GhostRelease" ID="{09331732-00DD-42CF-9B9D-08BFF8143F34}">
@@ -162,6 +169,8 @@
 						<Action Name="" ID="{E8875416-9D8A-4CC7-8054-4EF4C1553132}" ShortID="599716468">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -179,10 +188,47 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{201476F0-02D5-4AA6-BC71-6EE7920588F6}" ShortID="996544874">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="7"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFXGhostScreamLoop" ID="{B1D48803-5401-459F-8E5A-D0A3D0EE2BF0}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B735EF5C-370C-4325-8759-0FAF5FF69BFA}" ShortID="927841475">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FinalScream" ID="{C9600DE7-F242-4D58-874D-BB3E2FE43BD2}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="GhostSkillCheckPass" ID="{44095A88-4024-45CE-BCD4-4D0A1F46BEF0}"/>
 				<Event Name="GhostSkillCheckFail" ID="{81C67A8B-4679-4FD3-B571-DAFB77E29F96}"/>
+				<Event Name="AmbGhost" ID="{212909CA-C12E-4715-99C4-5D3CCBED0B2A}">
+					<ChildrenList>
+						<Action Name="" ID="{D854B169-44E4-4647-8ED4-B2DDCBE888BC}" ShortID="156865705">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFXGhostLoop" ID="{754E6CA4-E958-4BA7-B3D5-8C079AC8034E}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{578B364D-0139-484E-892F-4459037D1DF4}" ShortID="71405359">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Steps" ID="{2C2770EA-B986-42B2-82F7-B41CC26350DF}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
