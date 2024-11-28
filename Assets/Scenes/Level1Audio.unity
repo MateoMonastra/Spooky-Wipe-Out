@@ -547,17 +547,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 34178020801821278, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 396433777714708880, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 396433777714708880, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 114339851255034039, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
+      propertyPath: m_Name
+      value: Bathroom
       objectReference: {fileID: 0}
     - target: {fileID: 1228824031268626625, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
       propertyPath: placeToMove
@@ -608,10 +600,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2811679228247775147, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2811679228247775147, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
       propertyPath: pauseManager
       value: 
       objectReference: {fileID: 1894116715244930166}
@@ -623,38 +611,38 @@ PrefabInstance:
       propertyPath: skillCheckController
       value: 
       objectReference: {fileID: 1963394716}
-    - target: {fileID: 5205121041414287515, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
+    - target: {fileID: 7099494880108724263, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
-    - target: {fileID: 7936232867240940952, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3.517842
+    - target: {fileID: 7099494880108724263, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7936232867240940952, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 4.688322
+    - target: {fileID: 7474023009169119312, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
+      propertyPath: m_Name
+      value: Bathroom
       objectReference: {fileID: 0}
-    - target: {fileID: 7936232867240940952, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -12.76
+    - target: {fileID: 8213359626168358384, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213359626168358384, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 4096
       objectReference: {fileID: 0}
     - target: {fileID: 8256526463127946821, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
       propertyPath: m_Name
       value: AudioLevel1
       objectReference: {fileID: 0}
-    - target: {fileID: 8256526463127946821, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 8892264715352362803, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2623759813924812473, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1742772505977130948, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 640585742}
   m_SourcePrefab: {fileID: 100100000, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
 --- !u!1001 &314562487
 PrefabInstance:
@@ -1249,6 +1237,33 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &640585737 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1742772505977130948, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
+  m_PrefabInstance: {fileID: 291002592}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &640585742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640585737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f101cac16a8348e4283c699cbdd648ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1001 &643466265
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3330,6 +3345,18 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 112671403817669793}
+    - target: {fileID: 1941575990011414747, guid: 613b6ba06ae74b6409013525dbbc641a, type: 3}
+      propertyPath: stepTile.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: aafcb203a2a1e6549ab25567a978e119, type: 2}
+    - target: {fileID: 1941575990011414747, guid: 613b6ba06ae74b6409013525dbbc641a, type: 3}
+      propertyPath: stepWood.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 876272236bed6ab41a47516f165a45f2, type: 2}
+    - target: {fileID: 1941575990011414747, guid: 613b6ba06ae74b6409013525dbbc641a, type: 3}
+      propertyPath: stepSwitch.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: aafcb203a2a1e6549ab25567a978e119, type: 2}
     - target: {fileID: 3183103626456932670, guid: 613b6ba06ae74b6409013525dbbc641a, type: 3}
       propertyPath: ADController
       value: 
@@ -3392,7 +3419,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5326286636629692294, guid: 613b6ba06ae74b6409013525dbbc641a, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
-      value: 0
+      value: 4095
+      objectReference: {fileID: 0}
+    - target: {fileID: 5326286636629692294, guid: 613b6ba06ae74b6409013525dbbc641a, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 4096
       objectReference: {fileID: 0}
     - target: {fileID: 6421636081491891537, guid: 613b6ba06ae74b6409013525dbbc641a, type: 3}
       propertyPath: m_Name

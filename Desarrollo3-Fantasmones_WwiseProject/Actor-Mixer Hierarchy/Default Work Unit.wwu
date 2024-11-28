@@ -238,6 +238,11 @@
 										<Value>11.5</Value>
 									</ValueList>
 								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 							</PropertyList>
@@ -250,6 +255,9 @@
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="SFX" ID="{AD513494-A3DA-4040-B662-A49B6E6397EB}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="RevSFX" ID="{655F4B56-E4FF-4C81-A914-5EE7170E6DC4}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -730,8 +738,18 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="PianoHit" ID="{4508CD6F-D801-4AB7-9520-D2E47DE742CD}" ShortID="556503400">
 							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -739,6 +757,9 @@
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="SFX" ID="{AD513494-A3DA-4040-B662-A49B6E6397EB}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="RevSFX" ID="{655F4B56-E4FF-4C81-A914-5EE7170E6DC4}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1189,6 +1210,83 @@
 								</ObjectList>
 							</ObjectLists>
 						</RandomSequenceContainer>
+						<ActorMixer Name="AmbFire" ID="{A93AE2E5-08A1-4F36-9B70-7868B4681ACA}" ShortID="787427220">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="59"/>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="AmbAtt" ID="{66819035-E0A4-44BE-A546-B26A21DB4D74}" WorkUnitID="{D7ADC564-5D68-4FCD-8A30-8E0426143E33}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{AD513494-A3DA-4040-B662-A49B6E6397EB}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="RevSFX" ID="{655F4B56-E4FF-4C81-A914-5EE7170E6DC4}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFXAmbFireA" ID="{29ED17C6-144F-47E4-A663-581FD58D24A8}" ShortID="929651272">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="AmbFireA" ID="{38E19FBD-B742-41B8-A3B2-DB8FABBAD382}">
+											<Language>SFX</Language>
+											<AudioFile>AmbFireA.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="507955851"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="AmbFireA" ID="{38E19FBD-B742-41B8-A3B2-DB8FABBAD382}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFXAmbFireB" ID="{CB87E155-0F96-44A5-8F15-B2B2BEB21E50}" ShortID="421371571">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="AmbFireB" ID="{EF1C1906-2086-4FAE-84A8-F2ECD2F0A6D0}">
+											<Language>SFX</Language>
+											<AudioFile>AmbFireB.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="438595445"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="AmbFireB" ID="{EF1C1906-2086-4FAE-84A8-F2ECD2F0A6D0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</ActorMixer>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Ghosts" ID="{C5BDACAD-60F5-4FC5-A10B-8AB0144198E1}" ShortID="1011314444">
@@ -1422,7 +1520,7 @@
 										</Property>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
-										<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="66"/>
+										<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="69"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -1443,7 +1541,7 @@
 											<PropertyList>
 												<Property Name="MakeUpGain" Type="Real64">
 													<ValueList>
-														<Value>-7</Value>
+														<Value>-10</Value>
 													</ValueList>
 												</Property>
 												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
@@ -1771,6 +1869,11 @@
 									<ChildrenList>
 										<RandomSequenceContainer Name="PasosComunes" ID="{098912E1-69E0-4447-8A48-92AD6E7C941D}" ShortID="776396099">
 											<PropertyList>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
 												<Property Name="Pitch" Type="int32">
 													<ModifierList>
 														<ModifierInfo>
@@ -1785,6 +1888,11 @@
 													</ModifierList>
 												</Property>
 												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -1951,14 +2059,205 @@
 												</Sound>
 											</ChildrenList>
 										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="PasosTile" ID="{24FF6AB1-BAD4-4B7B-B0F9-7AF47C0E1F10}" ShortID="237611492">
+											<PropertyList>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>-8</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+												<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{69655A3D-C821-4E14-8C71-8845A9AD5C86}">
+																<PropertyList>
+																	<Property Name="Min" Type="Real64" Value="-25"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="RevSFX" ID="{655F4B56-E4FF-4C81-A914-5EE7170E6DC4}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="SFXPasosTile-001" ID="{2A9DCA1C-5B9B-4686-A19E-73902B5C83ED}" ShortID="967702472">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="PasosTile-001" ID="{67A236C5-BE65-4A7F-BF8A-17AC09CF1627}">
+															<Language>SFX</Language>
+															<AudioFile>PasosTile-001.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="201389145"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="PasosTile-001" ID="{67A236C5-BE65-4A7F-BF8A-17AC09CF1627}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFXPasosTile-002" ID="{AE817B10-333D-4F70-A829-49782FCBC4C0}" ShortID="498514092">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="PasosTile-002" ID="{9895A654-7CBA-4307-9786-D8F82A232E52}">
+															<Language>SFX</Language>
+															<AudioFile>PasosTile-002.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="446835699"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="PasosTile-002" ID="{9895A654-7CBA-4307-9786-D8F82A232E52}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFXPasosTile-003" ID="{47DE6A5B-FBBF-4F10-870D-5511B301DFB3}" ShortID="730328615">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="PasosTile-003" ID="{35FBA6C8-2DDF-48B7-8196-26DC10A98EEF}">
+															<Language>SFX</Language>
+															<AudioFile>PasosTile-003.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="862821522"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="PasosTile-003" ID="{35FBA6C8-2DDF-48B7-8196-26DC10A98EEF}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFXPasosTile-004" ID="{137095C9-013B-439E-8CA4-B0DF479C0A09}" ShortID="461498719">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="PasosTile-004" ID="{DB7F8CA8-60C7-45FD-B0E3-0D55D1207DA0}">
+															<Language>SFX</Language>
+															<AudioFile>PasosTile-004.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="20876364"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="PasosTile-004" ID="{DB7F8CA8-60C7-45FD-B0E3-0D55D1207DA0}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFXPasosTile-005" ID="{8467460D-8BC5-4A8A-A79B-31ECAB4183B9}" ShortID="876277707">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="PasosTile-005" ID="{4DFA9240-D4A4-44E7-85FF-E0C8AC99A241}">
+															<Language>SFX</Language>
+															<AudioFile>PasosTile-005.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="761940623"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="PasosTile-005" ID="{4DFA9240-D4A4-44E7-85FF-E0C8AC99A241}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="SFXPasosTile-006" ID="{86FED282-BF7E-49FA-B9EF-B3B3B4B3B2D1}" ShortID="512903272">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="PasosTile-006" ID="{A2132027-F32F-4FCA-B96C-D39666F438F9}">
+															<Language>SFX</Language>
+															<AudioFile>PasosTile-006.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="736467420"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="PasosTile-006" ID="{A2132027-F32F-4FCA-B96C-D39666F438F9}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
 									</ChildrenList>
 									<GroupingInfo>
 										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="PasosTile" ID="{24FF6AB1-BAD4-4B7B-B0F9-7AF47C0E1F10}"/>
+											</GroupingBehavior>
 											<GroupingBehavior>
 												<ItemRef Name="PasosComunes" ID="{098912E1-69E0-4447-8A48-92AD6E7C941D}"/>
 											</GroupingBehavior>
 										</GroupingBehaviorList>
 										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="Tile" ID="{A64FA257-F5CD-4616-9055-826E390F9EAA}"/>
+												<ItemList>
+													<ItemRef Name="PasosTile" ID="{24FF6AB1-BAD4-4B7B-B0F9-7AF47C0E1F10}"/>
+												</ItemList>
+											</Grouping>
 											<Grouping>
 												<SwitchRef Name="Wood" ID="{7A301372-327D-4F6F-81B7-B50F8BCB7541}"/>
 												<ItemList>

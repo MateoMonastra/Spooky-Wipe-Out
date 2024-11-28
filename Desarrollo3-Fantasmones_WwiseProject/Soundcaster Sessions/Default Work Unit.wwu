@@ -33,12 +33,12 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Normal" ID="{E2550AEF-03D6-4FB7-BD5B-3C21B9969686}"/>
+						<CurrentStateRef Name="None" ID="{BB498481-9DC5-44B0-B18C-D982338B3B01}"/>
 						<CurrentStateRef Name="Playing" ID="{48BCD43D-3191-4903-B6E8-1FC018F600F2}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="GameMusic_01" ID="{2EAEBE20-1D5D-4663-BD04-0E8DC12C211E}"/>
-						<CurrentSwitchRef Name="Carpet" ID="{E50277A9-D642-468D-80DC-8D8B076525F7}"/>
+						<CurrentSwitchRef Name="Tile" ID="{A64FA257-F5CD-4616-9055-826E390F9EAA}"/>
 						<CurrentSwitchRef Name="HydroWorking" ID="{D983C13A-B30B-4B8C-9DBE-93885FB42EE3}"/>
 						<CurrentSwitchRef Name="No" ID="{7DD53568-9883-4C73-9D4B-3941C03DF524}"/>
 					</CurrentSwitchList>

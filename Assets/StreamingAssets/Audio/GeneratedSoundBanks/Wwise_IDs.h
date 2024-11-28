@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID AMBFIRE = 857272499U;
         static const AkUniqueID AMBGHOST = 3755821248U;
         static const AkUniqueID AMBPIANO = 895127194U;
         static const AkUniqueID DESTROYEDGHOST = 3087263383U;

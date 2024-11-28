@@ -229,6 +229,24 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="AmbFire" ID="{9FB8795E-A69D-48B5-8FA7-005043F71FB1}">
+					<ChildrenList>
+						<Action Name="" ID="{C506F2A1-D8BC-4A33-91FF-BB6950E895F5}" ShortID="436048586">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFXAmbFireA" ID="{29ED17C6-144F-47E4-A663-581FD58D24A8}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F75EC48B-7413-4919-B759-D2C6D8165D87}" ShortID="735647325">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFXAmbFireB" ID="{CB87E155-0F96-44A5-8F15-B2B2BEB21E50}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
