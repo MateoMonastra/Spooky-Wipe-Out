@@ -1,43 +1,45 @@
-using System.Collections;
-using System.Collections.Generic;
-using Fsm_Mk2;
 using Ghosts;
-using Ghosts.WalkingGhost;
 using UnityEngine;
+using UnityEngine.Events;
 
-
-public class TrashCollector : MonoBehaviour
+namespace Game.Player
 {
-    private void OnTriggerEnter(Collider other)
+    public class TrashCollector : MonoBehaviour
     {
-        if (IsVacuumable(other))
+        public UnityEvent OnTrashCollected;
+        public UnityEvent OnGhostCollected;
+    
+        private void OnTriggerEnter(Collider other)
         {
-            Trash trash = other.gameObject.transform.parent.GetComponent<Trash>();
-            trash?.OnBeingDestroy.Invoke(trash);
+            if (IsVacuumable(other))
+            {
+                Trash trash = other.gameObject.transform.parent.GetComponent<Trash>();
+                trash?.OnBeingDestroy.Invoke(trash);
             
-            ChainGhostAgent ghost = other.gameObject.transform.parent.GetComponent<ChainGhostAgent>();
-            if (trash)
-            {
-                other.gameObject.transform.parent.gameObject.SetActive(false);
-            }
-            else if (ghost)
-            {
-                if (ghost.GetCurrentState().ToString() == "Capture")
+                ChainGhostAgent ghost = other.gameObject.transform.parent.GetComponent<ChainGhostAgent>();
+                if (trash)
                 {
                     other.gameObject.transform.parent.gameObject.SetActive(false);
+                    OnTrashCollected?.Invoke();
                 }
+                else if (ghost)
+                {
+                    if (ghost.GetCurrentState().ToString() == "Capture")
+                    {
+                        other.gameObject.transform.parent.gameObject.SetActive(false);
+                        OnGhostCollected?.Invoke();
+                    }
+                }
+            
+                Debug.Log("Trash was Collected");
             }
-
-            //GameManager.GetInstance().garbage.Remove();
-            //other.gameObject.SetActive(false);
-            Debug.Log("Trash was Collected");
         }
-    }
 
-    private bool IsVacuumable(Collider other)
-    {
-        IVacuumable vacuumable = other.GetComponentInParent<IVacuumable>();
+        private bool IsVacuumable(Collider other)
+        {
+            IVacuumable vacuumable = other.GetComponentInParent<IVacuumable>();
 
-        return vacuumable != null;
+            return vacuumable != null;
+        }
     }
 }

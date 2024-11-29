@@ -1,38 +1,47 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using VacuumCleaner.Modes;
 
-public class AudioVacuum : MonoBehaviour
+namespace Audio
 {
-    [SerializeField] private Vacuum _vacuum;
-    [SerializeField] private WashFloor _washFloor;
-
-
-    // Start is called before the first frame update
-    void Start()
+    public class AudioVacuum : MonoBehaviour
     {
-        _vacuum.OnPowerOn += setSwitchVacWorking;
-        _vacuum.OnPowerOff += setSwitchVacuumStop;
-        _washFloor.OnPowerOn += setSwitchHydroWorking;
-        _washFloor.OnPowerOff += setSwitchVacuumStop;
-    }
+        [SerializeField] private Vacuum vacuum;
+        [SerializeField] private WashFloor washFloor;
 
-    // Update is called once per frame
-    void Update()
-    {
+        [SerializeField] private AK.Wwise.Event audioVacuumEvent;
         
-    }
-    private void setSwitchVacWorking()
-    {
-        AkSoundEngine.SetSwitch("Vacuum", "VacWorking", gameObject);
-    }
-    private void setSwitchVacuumStop()
-    {
-        AkSoundEngine.SetSwitch("Vacuum", "Stop", gameObject);
-    }
-    private void setSwitchHydroWorking()
-    {
-        AkSoundEngine.SetSwitch("Vacuum", "HydroWorking", gameObject);
+        private void OnEnable()
+        {
+            vacuum.OnPowerOn += SetSwitchVacWorking;
+            vacuum.OnPowerOff += SetSwitchVacuumStop;
+            washFloor.OnPowerOn += SetSwitchHydroWorking;
+            washFloor.OnPowerOff += SetSwitchVacuumStop;
+        }
+
+        private void OnDisable()
+        {
+            vacuum.OnPowerOn -= SetSwitchVacWorking;
+            vacuum.OnPowerOff -= SetSwitchVacuumStop;
+            washFloor.OnPowerOn -= SetSwitchHydroWorking;
+            washFloor.OnPowerOff -= SetSwitchVacuumStop;
+        }
+        
+        private void SetSwitchVacWorking()
+        {
+            AkSoundEngine.SetSwitch("Vacuum", "VacWorking", gameObject);
+        }
+        private void SetSwitchVacuumStop()
+        {
+            AkSoundEngine.SetSwitch("Vacuum", "Stop", gameObject);
+        }
+        private void SetSwitchHydroWorking()
+        {
+            AkSoundEngine.SetSwitch("Vacuum", "HydroWorking", gameObject);
+        }
+
+        public void PlayOnTrashCollected()
+        {
+            audioVacuumEvent.Post(gameObject);
+        }
     }
 }
