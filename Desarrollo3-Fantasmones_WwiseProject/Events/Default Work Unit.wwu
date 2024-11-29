@@ -140,7 +140,7 @@
 						<Action Name="" ID="{5DF3A2EA-84F0-4C37-A4CD-980CA3065B83}" ShortID="880086474">
 							<PropertyList>
 								<Property Name="FadeInCurve" Type="int16" Value="5"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.3"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.2"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -212,8 +212,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="GhostSkillCheckPass" ID="{44095A88-4024-45CE-BCD4-4D0A1F46BEF0}"/>
-				<Event Name="GhostSkillCheckFail" ID="{81C67A8B-4679-4FD3-B571-DAFB77E29F96}"/>
+				<Event Name="GhostSkillCheckPass" ID="{44095A88-4024-45CE-BCD4-4D0A1F46BEF0}">
+					<ChildrenList>
+						<Action Name="" ID="{E2A6DB80-9810-4166-ABCD-C4AED136BE45}" ShortID="565935802">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFXSkillCheckPass" ID="{D08F1E9A-1C56-453A-B42F-01F515E00808}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="GhostSkillCheckFail" ID="{81C67A8B-4679-4FD3-B571-DAFB77E29F96}">
+					<ChildrenList>
+						<Action Name="" ID="{B37529F2-67CA-4AAB-A585-DDE23F5F25B7}" ShortID="947919114">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFXSkillCheckFail" ID="{3F72BDD1-828C-4CE9-AC92-E348A50502C1}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="AmbGhost" ID="{212909CA-C12E-4715-99C4-5D3CCBED0B2A}">
 					<ChildrenList>
 						<Action Name="" ID="{D854B169-44E4-4647-8ED4-B2DDCBE888BC}" ShortID="156865705">

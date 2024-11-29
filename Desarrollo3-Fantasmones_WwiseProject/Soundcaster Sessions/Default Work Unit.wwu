@@ -14,6 +14,10 @@
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="GhostSkillCheckFail" ID="{81C67A8B-4679-4FD3-B571-DAFB77E29F96}" WorkUnitID="{98BDD040-7692-4B34-AFDB-3EAAC48D1F00}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="GhostCatch" ID="{E3607B7E-AD39-45CF-B279-F5D7AE419B68}" WorkUnitID="{98BDD040-7692-4B34-AFDB-3EAAC48D1F00}"/>
 							<Position X="1" Y="0"/>
 						</Module>
@@ -24,6 +28,10 @@
 						<Module>
 							<ObjectRef Name="GhostRelease" ID="{09331732-00DD-42CF-9B9D-08BFF8143F34}" WorkUnitID="{98BDD040-7692-4B34-AFDB-3EAAC48D1F00}"/>
 							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="GhostSkillCheckPass" ID="{44095A88-4024-45CE-BCD4-4D0A1F46BEF0}" WorkUnitID="{98BDD040-7692-4B34-AFDB-3EAAC48D1F00}"/>
+							<Position X="2" Y="1"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
@@ -41,7 +49,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Normal" ID="{E2550AEF-03D6-4FB7-BD5B-3C21B9969686}"/>
+						<CurrentStateRef Name="Catching" ID="{A176CAF3-5DBC-41BC-8C69-0AC16A92F0F5}"/>
 						<CurrentStateRef Name="Playing" ID="{48BCD43D-3191-4903-B6E8-1FC018F600F2}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">

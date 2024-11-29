@@ -40,6 +40,7 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	1352299025	RevMusic			\Default Work Unit\Master Audio Bus\Music\RevMusic	
 
 Effect plug-ins	ID	Name	Type				Notes
+	418265525	Gentle_Program_Compressor_Minus_14dB_RMS	Wwise Compressor			
 	2150138123	SpookyHall	Wwise RoomVerb			
 
 Audio Devices	ID	Name	Type				Notes

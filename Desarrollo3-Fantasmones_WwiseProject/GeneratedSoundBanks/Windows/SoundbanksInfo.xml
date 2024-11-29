@@ -9,11 +9,12 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{C05C5158-57C2-3E58-6A6B-9BBF62103C1F}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B262543E-0E63-66D3-2CDA-A4D357C87C1C}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<ShareSets>
+					<Plugin Id="418265525" Name="Gentle_Program_Compressor_Minus_14dB_RMS" LibName="Wwise Compressor" LibId="7077891"/>
 					<Plugin Id="2150138123" Name="SpookyHall" LibName="Wwise RoomVerb" LibId="7733251"/>
 				</ShareSets>
 				<AudioDevices>
@@ -23,7 +24,13 @@
 			</Plugins>
 			<Busses>
 				<Bus Id="393239870" Name="SFX"/>
-				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3803692087" Name="Master Audio Bus">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="418265525"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
 				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
 			<AuxBusses>
@@ -102,7 +109,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{4C3A590E-5EB1-4E3C-4053-835D2C2E8249}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{BA4759FE-62D3-6AEB-53CA-7E7490442C6D}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -158,6 +165,10 @@
 				<File Id="134852080" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Piano-013.wav</ShortName>
 					<CachePath>SFX/SFX_Piano-013_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="152160976" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFXSkillCheckPass-003.wav</ShortName>
+					<CachePath>SFX/SFXSkillCheckPass-003_8F8B27E2.wem</CachePath>
 				</File>
 				<File Id="201389145" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PasosTile-001.wav</ShortName>
@@ -265,6 +276,10 @@
 					<ShortName>SFX_Piano-016.wav</ShortName>
 					<CachePath>SFX/SFX_Piano-016_8F8B27E2.wem</CachePath>
 				</File>
+				<File Id="571846358" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFXSkillCheckPass-001.wav</ShortName>
+					<CachePath>SFX/SFXSkillCheckPass-001_8F8B27E2.wem</CachePath>
+				</File>
 				<File Id="578776812" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Piano-001.wav</ShortName>
 					<CachePath>SFX/SFX_Piano-001_8F8B27E2.wem</CachePath>
@@ -277,6 +292,10 @@
 					<ShortName>AspiradoraStart.wav</ShortName>
 					<CachePath>SFX/AspiradoraStart_C4CC260C.wem</CachePath>
 				</File>
+				<File Id="626786861" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFXSkillCheckFail.wav</ShortName>
+					<CachePath>SFX/SFXSkillCheckFail_8F8B27E2.wem</CachePath>
+				</File>
 				<File Id="628697046" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>GhostStep-005.wav</ShortName>
 					<CachePath>SFX/GhostStep-005_8F8B27E2.wem</CachePath>
@@ -284,6 +303,10 @@
 				<File Id="632934482" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Piano-008.wav</ShortName>
 					<CachePath>SFX/SFX_Piano-008_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="656157741" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFXSkillCheckPass-004.wav</ShortName>
+					<CachePath>SFX/SFXSkillCheckPass-004_8F8B27E2.wem</CachePath>
 				</File>
 				<File Id="667309658" Language="SFX" Streaming="true" Location="Memory">
 					<ShortName>SpookyMX_CazaFantasma.wav</ShortName>
@@ -348,6 +371,10 @@
 				<File Id="889975198" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Piano-017.wav</ShortName>
 					<CachePath>SFX/SFX_Piano-017_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="898858006" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFXSkillCheckPass-002.wav</ShortName>
+					<CachePath>SFX/SFXSkillCheckPass-002_8F8B27E2.wem</CachePath>
 				</File>
 				<File Id="900404297" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>SPOOKY Violines-2.wav</ShortName>
@@ -496,8 +523,22 @@
 						<ActionSetStateEntry GroupId="4231158115" Id="1160234136" Name="Normal"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="3864087751" Name="GhostSkillCheckFail" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="4233241136" Name="GhostSkillCheckPass" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3864087751" Name="GhostSkillCheckFail" DurationType="OneShot" DurationMin="1.8825697" DurationMax="2.0648494">
+					<MediaRefs>
+						<MediaRef Id="626786861"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4233241136" Name="GhostSkillCheckPass" DurationType="OneShot" DurationMin="1.6392539" DurationMax="1.8400447">
+					<MediaRefs>
+						<MediaRef Id="152160976"/>
+						<MediaRef Id="571846358"/>
+						<MediaRef Id="656157741"/>
+						<MediaRef Id="898858006"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="15780165" Name="RevSFX"/>
+					</AuxBusRefs>
+				</Event>
 				<Event Id="2553231580" Name="PaintCatch" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="948364101"/>
@@ -727,5 +768,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A39E41F6-E009-F3D0-65EC-81B10C075F79}</FileHash>
+	<FileHash>{9A3229D4-D088-07DE-6A54-F545148E597D}</FileHash>
 </SoundBanksInfo>

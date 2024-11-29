@@ -69,89 +69,6 @@
 								<ActiveSource Name="SpookyMusicaMenu" ID="{ECA6F4A1-A5E1-4C5A-BA5B-E6A7EC7F13B0}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<RandomSequenceContainer Name="mx_waitPlaying" ID="{7684494A-D8D7-4CC4-93DA-356ADE04904E}" ShortID="903954639">
-							<PropertyList>
-								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<Sound Name="mx_Playing" ID="{8EE84EE7-3242-4028-A72D-8D6C6A82522A}" ShortID="821583325">
-									<PropertyList>
-										<Property Name="EnableAttenuation" Type="bool" Value="False"/>
-										<Property Name="IsStreamingEnabled" Type="bool">
-											<ValueList>
-												<Value>True</Value>
-											</ValueList>
-										</Property>
-										<Property Name="MakeUpGain" Type="Real64">
-											<ValueList>
-												<Value>-15</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="1 Tubthumping" ID="{048F7D58-F087-4091-87EA-323A945C546D}">
-											<Language>SFX</Language>
-											<AudioFile>1 Tubthumping.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="523675216"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="1 Tubthumping" ID="{048F7D58-F087-4091-87EA-323A945C546D}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="silence" ID="{B9D9F4C5-B213-476E-9265-D66569D5E646}" ShortID="917442290">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<SourcePlugin Name="Silence" ID="{AAAE41CE-A512-4549-B275-F54A0A2AF095}" ShortID="234075148" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-											<PropertyList>
-												<Property Name="Length" Type="Real32" Value="2"/>
-											</PropertyList>
-											<Language>SFX</Language>
-										</SourcePlugin>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Silence" ID="{AAAE41CE-A512-4549-B275-F54A0A2AF095}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-							<ObjectLists>
-								<ObjectList Name="Playlist">
-									<Reference>
-										<ObjectRef Name="silence" ID="{B9D9F4C5-B213-476E-9265-D66569D5E646}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
-									</Reference>
-									<Reference>
-										<ObjectRef Name="mx_Playing" ID="{8EE84EE7-3242-4028-A72D-8D6C6A82522A}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
-									</Reference>
-								</ObjectList>
-							</ObjectLists>
-						</RandomSequenceContainer>
 					</ChildrenList>
 					<StateInfo>
 						<StateGroupList>
@@ -188,13 +105,6 @@
 					</StateInfo>
 					<GroupingInfo>
 						<GroupingBehaviorList>
-							<GroupingBehavior>
-								<ItemRef Name="mx_waitPlaying" ID="{7684494A-D8D7-4CC4-93DA-356ADE04904E}"/>
-								<PropertyList>
-									<Property Name="ContinuePlay" Type="bool" Value="True"/>
-									<Property Name="FirstOccurenceOnly" Type="bool" Value="True"/>
-								</PropertyList>
-							</GroupingBehavior>
 							<GroupingBehavior>
 								<ItemRef Name="mx_Menu" ID="{5AFCD1CF-085F-4779-A88B-30CBE53B9F0D}"/>
 								<PropertyList>
@@ -1304,7 +1214,7 @@
 							<PropertyList>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-3</Value>
+										<Value>-2</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1526,6 +1436,11 @@
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 										<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="69"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -1776,6 +1691,13 @@
 					<PropertyList>
 						<Property Name="Color" Type="int16" Value="3"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{ECEDC271-510C-4177-A188-9E6530AEDDF8}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -1794,6 +1716,13 @@
 									</ValueList>
 								</Property>
 								<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{14071E06-626A-4D89-ACD3-F58DFEC18CFA}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 								<Property Name="UserAuxSendVolume0" Type="Real64">
 									<ValueList>
 										<Value>-5</Value>
@@ -1814,6 +1743,13 @@
 							<ChildrenList>
 								<SwitchContainer Name="PasosSwitch" ID="{93301D40-FD81-490E-AA22-E639E042199C}" ShortID="42452633">
 									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{A9374CB5-6F3D-4DAE-A7D8-3634E6DB8664}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 										<Property Name="SwitchBehavior" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
@@ -2233,6 +2169,178 @@
 								</SwitchContainer>
 							</ChildrenList>
 						</ActorMixer>
+						<RandomSequenceContainer Name="SFXSkillCheckPass" ID="{D08F1E9A-1C56-453A-B42F-01F515E00808}" ShortID="786610397">
+							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{DAF57BDB-3C08-4240-8EAA-FEE380BEE4CF}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-11</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="RevSFX" ID="{655F4B56-E4FF-4C81-A914-5EE7170E6DC4}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SFXSkillCheckPass-001" ID="{8104E1CE-0227-4C82-B2C3-2E534F1A092E}" ShortID="11757126">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFXSkillCheckPass-001" ID="{ABCC3797-65FC-423E-BBB6-77F8BB2B03D1}">
+											<Language>SFX</Language>
+											<AudioFile>SFXSkillCheckPass-001.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="571846358"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFXSkillCheckPass-001" ID="{ABCC3797-65FC-423E-BBB6-77F8BB2B03D1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFXSkillCheckPass-002" ID="{FC57E443-8D85-4BD0-A579-73738B257308}" ShortID="765433528">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFXSkillCheckPass-002" ID="{BC36DB7A-0F33-4DD9-BB01-C3C120379E27}">
+											<Language>SFX</Language>
+											<AudioFile>SFXSkillCheckPass-002.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="898858006"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFXSkillCheckPass-002" ID="{BC36DB7A-0F33-4DD9-BB01-C3C120379E27}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFXSkillCheckPass-003" ID="{9D1616FB-0086-4480-BD4E-4819FE8FC725}" ShortID="511880800">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFXSkillCheckPass-003" ID="{140C09C1-77C6-4E08-9768-EE04A15FC174}">
+											<Language>SFX</Language>
+											<AudioFile>SFXSkillCheckPass-003.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="152160976"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFXSkillCheckPass-003" ID="{140C09C1-77C6-4E08-9768-EE04A15FC174}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFXSkillCheckPass-004" ID="{6B1B18D7-1EA2-4BB9-840C-799AA90B029D}" ShortID="395357183">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFXSkillCheckPass-004" ID="{41F5C3FB-ECFF-48F6-AEB5-C33AAFB4415A}">
+											<Language>SFX</Language>
+											<AudioFile>SFXSkillCheckPass-004.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="656157741"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFXSkillCheckPass-004" ID="{41F5C3FB-ECFF-48F6-AEB5-C33AAFB4415A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<Sound Name="SFXSkillCheckFail" ID="{3F72BDD1-828C-4CE9-AC92-E348A50502C1}" ShortID="428293867">
+							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{847DA4BD-0DF6-4BA5-AC91-919328AC8B97}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="80"/>
+													<Property Name="Min" Type="Real64" Value="-80"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFXSkillCheckFail" ID="{256AE495-05FE-422A-86AF-806DDDA534FD}">
+									<Language>SFX</Language>
+									<AudioFile>SFXSkillCheckFail.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="626786861"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFXSkillCheckFail" ID="{256AE495-05FE-422A-86AF-806DDDA534FD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>
