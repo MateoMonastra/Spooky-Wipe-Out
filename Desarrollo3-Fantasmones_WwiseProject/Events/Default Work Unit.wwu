@@ -140,7 +140,7 @@
 						<Action Name="" ID="{5DF3A2EA-84F0-4C37-A4CD-980CA3065B83}" ShortID="880086474">
 							<PropertyList>
 								<Property Name="FadeInCurve" Type="int16" Value="5"/>
-								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.3"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -249,6 +249,29 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="OnFlee" ID="{6101D454-293C-48D3-99F5-C3594F851AC6}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="EndLevel" ID="{A01DB3E2-5CB1-46F2-A56D-FFB5849FA84C}">
+					<ChildrenList>
+						<Action Name="" ID="{31A9373C-01F1-4CF1-951B-575028843B8F}" ShortID="602736484">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GameMusicSwitchs" ID="{0398A01D-3569-4017-B01C-41AABAA8CDC5}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{665B52E9-019C-4186-A5B7-1C8561E086E5}" ShortID="863112751">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SpookyMusicaFinal" ID="{882801DD-8BBE-488E-A3AD-34F211B9E486}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

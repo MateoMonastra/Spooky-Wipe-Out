@@ -12741,7 +12741,7 @@
 								<Property Name="Color" Type="int16" Value="9"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-8</Value>
+										<Value>-9</Value>
 									</ValueList>
 								</Property>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
@@ -12904,7 +12904,7 @@
 								<Property Name="EndPosition" Type="Real64" Value="5284.49014567266"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-10</Value>
+										<Value>-7</Value>
 									</ValueList>
 								</Property>
 								<Property Name="UserAuxSendVolume0" Type="Real64">
@@ -13003,6 +13003,92 @@
 												<PropertyList>
 													<Property Name="CueType" Type="int16" Value="1"/>
 													<Property Name="TimeMs" Type="Real64" Value="4500"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+						<MusicSegment Name="SpookyMusicaFinal" ID="{882801DD-8BBE-488E-A3AD-34F211B9E486}" ShortID="825294094">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="45193.2291666667"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="SpookyMusicaFinal" ID="{5DB169C7-4C70-4BB4-A87D-3AC30930E023}" ShortID="170829">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{CFD4A900-35B9-4556-8FEB-F4EE35C49DA3}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SpookyMusicaFinal" ID="{BC3D98AE-EEB6-43FA-A8B0-CFF616850A30}">
+											<Language>SFX</Language>
+											<AudioFile>SpookyMusicaFinal.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="474414559"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{680DCF94-BEB8-456C-AAF1-2D5060F9534A}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="SpookyMusicaFinal" ID="{3FB3078E-F680-4171-8A21-FC6B83CD98D0}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="45193.2291666667"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="SpookyMusicaFinal" ID="{BC3D98AE-EEB6-43FA-A8B0-CFF616850A30}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{5371ADA6-85EC-4A92-AA29-0F8F5145AF1C}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{E46C0DEC-24EA-44C9-B96B-664514320B6C}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="45193.2291666667"/>
 												</PropertyList>
 											</MusicCue>
 										</Local>

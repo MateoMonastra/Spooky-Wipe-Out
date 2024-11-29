@@ -13,6 +13,7 @@ public class AudioGameManager : MonoBehaviour
     [SerializeField] private AK.Wwise.Event destroyedGhost;
     [SerializeField] private GameObject gameMusic;
     [SerializeField] private AK.Wwise.Event startLevel;
+    [SerializeField] private AK.Wwise.Event endLevel;
 
     private List<Ghost> _ghosts;
 
@@ -22,7 +23,11 @@ public class AudioGameManager : MonoBehaviour
     {
         yield return null;
 
-        _ghosts = GameManager.GetInstance().ghosts;
+        GameManager gameManager = GameManager.GetInstance();
+
+        gameManager.OnFinish += Finish;
+
+        _ghosts = gameManager.ghosts;
 
         foreach (Ghost ghost in _ghosts)
         {
@@ -43,5 +48,10 @@ public class AudioGameManager : MonoBehaviour
         destroyedGhostCount++;
         destroyedGhostRtpc.SetValue(gameMusic, destroyedGhostCount);
         destroyedGhost.Post(gameObject);
+    }
+
+    void Finish()
+    {
+        endLevel.Post(gameMusic);
     }
 }

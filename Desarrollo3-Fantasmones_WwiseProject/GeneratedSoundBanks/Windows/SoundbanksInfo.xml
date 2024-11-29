@@ -102,7 +102,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{408C911A-52FC-9661-81D1-D778F84C8556}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{4C3A590E-5EB1-4E3C-4053-835D2C2E8249}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -244,6 +244,10 @@
 					<ShortName>SPOOKY Violines_sul_pont.wav</ShortName>
 					<Path>Media/460469863.wem</Path>
 					<CachePath>SFX/SPOOKY Violines_sul_pont_3CD5CF17.wem</CachePath>
+				</File>
+				<File Id="474414559" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SpookyMusicaFinal.wav</ShortName>
+					<CachePath>SFX/SpookyMusicaFinal_C4CC260C.wem</CachePath>
 				</File>
 				<File Id="487752815" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Piano-002.wav</ShortName>
@@ -467,6 +471,11 @@
 					<AuxBusRefs>
 						<AuxBusRef Id="15780165" Name="RevSFX"/>
 					</AuxBusRefs>
+				</Event>
+				<Event Id="1054659462" Name="EndLevel" DurationType="OneShot" DurationMin="45.19323" DurationMax="45.19323">
+					<MediaRefs>
+						<MediaRef Id="474414559"/>
+					</MediaRefs>
 				</Event>
 				<Event Id="387592991" Name="GhostCatch" DurationType="Infinite">
 					<MediaRefs>
@@ -718,5 +727,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4D4A9655-73BF-A7CC-97C1-6C070D1530F2}</FileHash>
+	<FileHash>{A39E41F6-E009-F3D0-65EC-81B10C075F79}</FileHash>
 </SoundBanksInfo>

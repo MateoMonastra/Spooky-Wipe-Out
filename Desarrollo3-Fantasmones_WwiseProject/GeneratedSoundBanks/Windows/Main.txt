@@ -5,6 +5,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	660301166	ChainGhostOnFlee			\Default Work Unit\ChainGhostOnFlee	
 	857272499	AmbFire			\Default Work Unit\AmbFire	
 	895127194	AmbPiano			\Default Work Unit\AmbPiano	
+	1054659462	EndLevel			\Default Work Unit\EndLevel	
 	1123143573	Start_Lvl1			\Default Work Unit\Start_Lvl1	
 	1202154233	GhostRelease			\Default Work Unit\GhostRelease	
 	1281810935	Start			\Default Work Unit\Start	
@@ -84,6 +85,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	438595445	SFXAmbFireB	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\AmbFireB_C4CC260C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\AmbFire\SFXAmbFireB		4833100
 	446835699	SFXPasosTile-002	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\PasosTile-002_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Pasos\PasosSwitch\PasosTile\SFXPasosTile-002		117876
 	449042588	SFXGhostStep-001	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\GhostStep-001_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ghosts\ChainGhost\AmbChainGhost\OnFlee\SFXGhostStep-001		1273052
+	474414559	SpookyMusicaFinal	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\SpookyMusicaFinal_C4CC260C.wem		\Interactive Music Hierarchy\Default Work Unit\GameMusic\SpookyMusicaFinal\SpookyMusicaFinal		8677196
 	487752815	SFXPiano-002	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\SFX_Piano-002_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\PianoHit\PianoHit\SFXPiano-002		312136
 	502920663	SFXPiano-018	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\SFX_Piano-018_8F8B27E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\PianoHit\PianoHit\SFXPiano-018		359556
 	507955851	SFXAmbFireA	E:\Unity\Spooky-Wipe-Out\Desarrollo3-Fantasmones_WwiseProject\.cache\Windows\SFX\AmbFireA_C4CC260C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\AmbFire\SFXAmbFireA		6031760

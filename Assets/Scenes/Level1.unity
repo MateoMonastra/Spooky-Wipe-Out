@@ -623,6 +623,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bathroom
       objectReference: {fileID: 0}
+    - target: {fileID: 7554905425818462720, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
+      propertyPath: endLevel.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 224a9a6b464d2334ea714e8cb38032ed, type: 2}
     - target: {fileID: 8213359626168358384, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
       value: 0

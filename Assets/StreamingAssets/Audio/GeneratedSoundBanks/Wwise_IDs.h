@@ -18,6 +18,7 @@ namespace AK
         static const AkUniqueID AMBPIANO = 895127194U;
         static const AkUniqueID CHAINGHOSTONFLEE = 660301166U;
         static const AkUniqueID DESTROYEDGHOST = 3087263383U;
+        static const AkUniqueID ENDLEVEL = 1054659462U;
         static const AkUniqueID GHOSTCATCH = 387592991U;
         static const AkUniqueID GHOSTRELEASE = 1202154233U;
         static const AkUniqueID GHOSTSKILLCHECKFAIL = 3864087751U;
