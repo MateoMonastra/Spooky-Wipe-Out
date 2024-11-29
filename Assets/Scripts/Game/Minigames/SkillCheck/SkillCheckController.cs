@@ -1,11 +1,9 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using Minigames;
 using Player.FSM;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 enum SkillCheckState
@@ -16,6 +14,9 @@ enum SkillCheckState
 
 public class SkillCheckController : Minigame
 {
+    public Action OnCheckPass;
+    public Action OnCheckFail;
+    
     [SerializeField] private InputReader inputReader;
 
     [SerializeField] private float needleSpeed = 100f;
@@ -114,6 +115,7 @@ public class SkillCheckController : Minigame
 
         if (IsColliding(needleRect, safeZoneRect))
         {
+            OnCheckPass?.Invoke();
             UpdateProgress(progress + increaseAmount);
             
             RandomizeSafeZoneWidth();
@@ -123,10 +125,12 @@ public class SkillCheckController : Minigame
         }
         else if( progress <= minProgress)
         {
+            OnCheckFail?.Invoke();
             HasPlayerLost = true;
         }
         else
         {
+            OnCheckFail?.Invoke();
             UpdateProgress(progress + decreaseAmount);
         }
     }

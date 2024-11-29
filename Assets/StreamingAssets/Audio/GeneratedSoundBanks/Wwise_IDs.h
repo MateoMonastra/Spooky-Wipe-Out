@@ -13,8 +13,18 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID AMBFIRE = 857272499U;
+        static const AkUniqueID AMBGHOST = 3755821248U;
         static const AkUniqueID AMBPIANO = 895127194U;
+        static const AkUniqueID CHAINGHOSTONFLEE = 660301166U;
         static const AkUniqueID DESTROYEDGHOST = 3087263383U;
+        static const AkUniqueID ENDLEVEL = 1054659462U;
+        static const AkUniqueID GHOSTCATCH = 387592991U;
+        static const AkUniqueID GHOSTRELEASE = 1202154233U;
+        static const AkUniqueID GHOSTSKILLCHECKFAIL = 3864087751U;
+        static const AkUniqueID GHOSTSKILLCHECKPASS = 4233241136U;
+        static const AkUniqueID PAINTCATCH = 2553231580U;
+        static const AkUniqueID PAINTRELEASE = 3571119522U;
         static const AkUniqueID PIANOHIT = 469357355U;
         static const AkUniqueID START = 1281810935U;
         static const AkUniqueID START_LVL1 = 1123143573U;
@@ -25,6 +35,18 @@ namespace AK
 
     namespace STATES
     {
+        namespace GAMEMUSICCONTROL
+        {
+            static const AkUniqueID GROUP = 4231158115U;
+
+            namespace STATE
+            {
+                static const AkUniqueID CATCHING = 1210588850U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID NORMAL = 1160234136U;
+            } // namespace STATE
+        } // namespace GAMEMUSICCONTROL
+
         namespace GAMESTATE
         {
             static const AkUniqueID GROUP = 4091656514U;
@@ -101,6 +123,8 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID GHOSTS = 1037543273U;
+        static const AkUniqueID MUSICLEVEL = 543979504U;
+        static const AkUniqueID SFXLEVEL = 1873490184U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS
@@ -112,7 +136,15 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID SFX = 393239870U;
     } // namespace BUSSES
+
+    namespace AUX_BUSSES
+    {
+        static const AkUniqueID REVMUSIC = 1352299025U;
+        static const AkUniqueID REVSFX = 15780165U;
+    } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
     {

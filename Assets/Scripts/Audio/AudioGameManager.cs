@@ -3,48 +3,55 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ghosts;
 using Unity.VisualScripting;
+using UnityEngine.Serialization;
 
 
 public class AudioGameManager : MonoBehaviour
 {
-    private List<Ghost> _ghosts;
     [SerializeField] private int destroyedGhostCount = 0;
-    [SerializeField] private AK.Wwise.RTPC destroyedGhostRTPC;
+    [SerializeField] private AK.Wwise.RTPC destroyedGhostRtpc;
     [SerializeField] private AK.Wwise.Event destroyedGhost;
-    [SerializeField] GameObject GameMusic;
-    [SerializeField] AK.Wwise.Event StartLevel;
+    [SerializeField] private GameObject gameMusic;
+    [SerializeField] private AK.Wwise.Event startLevel;
+    [SerializeField] private AK.Wwise.Event endLevel;
+
+    private List<Ghost> _ghosts;
 
 
     // Start is called before the first frame update
-    IEnumerator Start()
+    private IEnumerator Start()
     {
         yield return null;
 
-        _ghosts = GameManager.GetInstance().ghosts;
+        GameManager gameManager = GameManager.GetInstance();
+
+        gameManager.OnFinish += Finish;
+
+        _ghosts = gameManager.ghosts;
 
         foreach (Ghost ghost in _ghosts)
         {
             ghost.OnBeingDestroy += GhostDestroyed;
         }
-        destroyedGhostRTPC.SetValue(GameMusic, destroyedGhostCount);
-        StartLevel.Post(GameMusic);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         
+        destroyedGhostRtpc.SetValue(gameMusic, destroyedGhostCount);
+        startLevel.Post(gameMusic);
     }
 
     private void OnDestroy()
     {
-        AkSoundEngine.StopAll(GameMusic);
+        AkSoundEngine.StopAll(gameMusic);
     }
 
     void GhostDestroyed(Ghost ghost)
     {
         destroyedGhostCount++;
-        destroyedGhostRTPC.SetValue(GameMusic, destroyedGhostCount);
+        destroyedGhostRtpc.SetValue(gameMusic, destroyedGhostCount);
         destroyedGhost.Post(gameObject);
+    }
+
+    void Finish()
+    {
+        endLevel.Post(gameMusic);
     }
 }

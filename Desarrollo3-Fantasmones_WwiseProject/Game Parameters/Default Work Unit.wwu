@@ -9,6 +9,19 @@
 						<Property Name="Max" Type="Real64" Value="10"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="MusicLevel" ID="{B2E594B9-F7C6-484B-8701-660858434356}">
+					<PropertyList>
+						<Property Name="FilterTimeUp" Type="Real64" Value="0.1"/>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="2"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="2"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="SFXLevel" ID="{C5AA4A5C-477A-49A7-8B34-726340E4B4A0}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

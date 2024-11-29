@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{56997920-C245-4F56-B9BF-022D72E94A7B}" SchemaVersion="119">
 	<Effects>
-		<WorkUnit Name="Default Work Unit" ID="{56997920-C245-4F56-B9BF-022D72E94A7B}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{56997920-C245-4F56-B9BF-022D72E94A7B}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="New_Mastering_Suite" ID="{1DCB4FF3-6CFC-4097-AA8E-CA8798A27D5F}" PluginName="Mastering Suite" CompanyID="0" PluginID="186" PluginType="3">					<PluginData/>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
 	</Effects>
 </WwiseDocument>

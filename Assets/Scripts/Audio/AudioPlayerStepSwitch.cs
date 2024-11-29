@@ -1,26 +1,39 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class AudioPlayerStepSwitch : MonoBehaviour
+namespace Audio
 {
-    [SerializeField] GameObject Player;
-    
-    
-    // Start is called before the first frame update
-    void Start()
+    public class AudioPlayerStepSwitch : MonoBehaviour
     {
-        setRotationAsCamera();
-    }
+        [SerializeField] GameObject player;
+        [SerializeField] AK.Wwise.Switch stepTile;
+        [SerializeField] AK.Wwise.Switch stepWood;
 
-    // Update is called once per frame
-    void Update()
-    {
-        gameObject.transform.position = Player.transform.position;
-    }
 
-    void setRotationAsCamera()
-    {
-        gameObject.transform.Rotate(0, -45, 0);
+        private void Start()
+        {
+            SetRotationAsCamera();
+        }
+
+        private void Update()
+        {
+            gameObject.transform.position = player.transform.position;
+        }
+
+        private void SetRotationAsCamera()
+        {
+            gameObject.transform.Rotate(0, -45, 0);
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            Debug.Log("StepsTile");
+            stepTile.SetValue(this.gameObject);
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            stepWood.SetValue(this.gameObject);
+        }
     }
 }

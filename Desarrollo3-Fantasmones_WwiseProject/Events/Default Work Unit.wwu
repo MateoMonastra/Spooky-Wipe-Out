@@ -17,9 +17,13 @@
 				<Event Name="Start_Lvl1" ID="{EF9172D0-B989-4BBD-9536-222D9384AE63}">
 					<ChildrenList>
 						<Action Name="" ID="{FCC5DEFD-9665-4709-B356-30485225609C}" ShortID="841686546">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="8"/>
+								<Property Name="FadeTime" Type="Real64" Value="6"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="GameMusic" ID="{0398A01D-3569-4017-B01C-41AABAA8CDC5}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
+									<ObjectRef Name="GameMusicSwitchs" ID="{0398A01D-3569-4017-B01C-41AABAA8CDC5}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -48,7 +52,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="DestroyedGhost" ID="{1BF5738A-E3EB-400A-8C1E-93657A902E82}"/>
+				<Event Name="DestroyedGhost" ID="{1BF5738A-E3EB-400A-8C1E-93657A902E82}">
+					<ChildrenList>
+						<Action Name="" ID="{B8940818-2DAE-4889-8583-4AFFFDCE49BA}" ShortID="611722925">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FinalScream" ID="{C9600DE7-F242-4D58-874D-BB3E2FE43BD2}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="AmbPiano" ID="{D5E4B068-753A-4CB6-86AC-641F833C9A07}">
 					<ChildrenList>
 						<Action Name="" ID="{7AF4B776-9F0D-46BA-8174-DDD1C69DCCEF}" ShortID="71703405">
@@ -66,6 +80,218 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="PianoHit" ID="{7CFD9D2C-0E1B-4F64-92A8-02653799043D}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="PaintCatch" ID="{A658062B-94C0-46E4-AE8D-1507A091C4A3}">
+					<ChildrenList>
+						<Action Name="" ID="{75D0D1EB-321B-4C9D-AE5C-27C8323AABD4}" ShortID="503505829">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFXCuadroStart" ID="{D03E3042-4DA7-4033-B42C-4D743B677607}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0A12D0B1-07E7-48A8-BCB3-ED1FB53CDE1D}" ShortID="561211714">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.67"/>
+								<Property Name="FadeInCurve" Type="int16" Value="6"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.06"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFXCuadroLoop" ID="{0E3287A7-5413-48BE-B6C4-C9D9E7437224}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="PaintRelease" ID="{CF256068-2B55-461D-A36C-8BDD81E90926}">
+					<ChildrenList>
+						<Action Name="" ID="{FA840BA7-962B-4313-AC09-3C6394176818}" ShortID="23486885">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="6"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.06"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFXCuadroLoop" ID="{0E3287A7-5413-48BE-B6C4-C9D9E7437224}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{EA0A041C-594C-4200-92A1-661A0FEDDC0A}" ShortID="575953932">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="6"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.06"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFXCuadroEnd" ID="{01A2FCAC-F1BC-4947-944F-588B4767DE09}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="GhostCatch" ID="{E3607B7E-AD39-45CF-B279-F5D7AE419B68}">
+					<ChildrenList>
+						<Action Name="" ID="{5DF3A2EA-84F0-4C37-A4CD-980CA3065B83}" ShortID="880086474">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GameMusicCatchGhost" ID="{5A9920EF-6D77-49FE-B265-75CCB7535C71}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{44FBA500-E0CC-48B1-ADC0-F9D39B4F1DEC}" ShortID="122792965">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Catching" ID="{A176CAF3-5DBC-41BC-8C69-0AC16A92F0F5}" WorkUnitID="{58280D57-A644-4038-8713-1B41B403A5F4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{830EA527-3A35-46B0-94B8-DF60EACB6557}" ShortID="532333459">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GameMusicStinger" ID="{FE765BAE-73FA-4C51-93EC-E80F747525CC}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A004CDE6-572E-4B44-8122-CD1F044F64C1}" ShortID="805791322">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFXGhostScreamLoop" ID="{B1D48803-5401-459F-8E5A-D0A3D0EE2BF0}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="GhostRelease" ID="{09331732-00DD-42CF-9B9D-08BFF8143F34}">
+					<ChildrenList>
+						<Action Name="" ID="{E8875416-9D8A-4CC7-8054-4EF4C1553132}" ShortID="599716468">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GameMusicCatchGhost" ID="{5A9920EF-6D77-49FE-B265-75CCB7535C71}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7CF65531-F79D-4305-9AE0-D130CCBFCCDB}" ShortID="29022404">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Normal" ID="{E2550AEF-03D6-4FB7-BD5B-3C21B9969686}" WorkUnitID="{58280D57-A644-4038-8713-1B41B403A5F4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{201476F0-02D5-4AA6-BC71-6EE7920588F6}" ShortID="996544874">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="7"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFXGhostScreamLoop" ID="{B1D48803-5401-459F-8E5A-D0A3D0EE2BF0}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="GhostSkillCheckPass" ID="{44095A88-4024-45CE-BCD4-4D0A1F46BEF0}">
+					<ChildrenList>
+						<Action Name="" ID="{E2A6DB80-9810-4166-ABCD-C4AED136BE45}" ShortID="565935802">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFXSkillCheckPass" ID="{D08F1E9A-1C56-453A-B42F-01F515E00808}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="GhostSkillCheckFail" ID="{81C67A8B-4679-4FD3-B571-DAFB77E29F96}">
+					<ChildrenList>
+						<Action Name="" ID="{B37529F2-67CA-4AAB-A585-DDE23F5F25B7}" ShortID="947919114">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFXSkillCheckFail" ID="{3F72BDD1-828C-4CE9-AC92-E348A50502C1}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="AmbGhost" ID="{212909CA-C12E-4715-99C4-5D3CCBED0B2A}">
+					<ChildrenList>
+						<Action Name="" ID="{D854B169-44E4-4647-8ED4-B2DDCBE888BC}" ShortID="156865705">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFXGhostLoop" ID="{754E6CA4-E958-4BA7-B3D5-8C079AC8034E}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="AmbFire" ID="{9FB8795E-A69D-48B5-8FA7-005043F71FB1}">
+					<ChildrenList>
+						<Action Name="" ID="{C506F2A1-D8BC-4A33-91FF-BB6950E895F5}" ShortID="436048586">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFXAmbFireA" ID="{29ED17C6-144F-47E4-A663-581FD58D24A8}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F75EC48B-7413-4919-B759-D2C6D8165D87}" ShortID="735647325">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFXAmbFireB" ID="{CB87E155-0F96-44A5-8F15-B2B2BEB21E50}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ChainGhostOnFlee" ID="{814F4F7B-C683-4080-9655-FD8826426D83}">
+					<ChildrenList>
+						<Action Name="" ID="{5DA7C524-A4B9-4D3E-9C4C-092EC92A7BDF}" ShortID="196669191">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="OnFlee" ID="{6101D454-293C-48D3-99F5-C3594F851AC6}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="EndLevel" ID="{A01DB3E2-5CB1-46F2-A56D-FFB5849FA84C}">
+					<ChildrenList>
+						<Action Name="" ID="{31A9373C-01F1-4CF1-951B-575028843B8F}" ShortID="602736484">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="5"/>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GameMusicSwitchs" ID="{0398A01D-3569-4017-B01C-41AABAA8CDC5}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{665B52E9-019C-4186-A5B7-1C8561E086E5}" ShortID="863112751">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SpookyMusicaFinal" ID="{882801DD-8BBE-488E-A3AD-34F211B9E486}" WorkUnitID="{E12D8095-638E-4930-873C-29356EE1F32D}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

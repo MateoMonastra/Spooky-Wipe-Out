@@ -9,20 +9,50 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{EBD15F84-1061-7D64-535F-29062BB17132}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B262543E-0E63-66D3-2CDA-A4D357C87C1C}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
+				<ShareSets>
+					<Plugin Id="418265525" Name="Gentle_Program_Compressor_Minus_14dB_RMS" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="2150138123" Name="SpookyHall" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
 					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
 				</AudioDevices>
 			</Plugins>
 			<Busses>
-				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="393239870" Name="SFX"/>
+				<Bus Id="3803692087" Name="Master Audio Bus">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="418265525"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
+				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
+			<AuxBusses>
+				<AuxBus Id="15780165" Name="RevSFX">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2150138123"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+				<AuxBus Id="1352299025" Name="RevMusic">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2150138123"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+			</AuxBusses>
 			<GameParameters>
+				<GameParameter Id="543979504" Name="MusicLevel"/>
 				<GameParameter Id="1037543273" Name="Ghosts"/>
+				<GameParameter Id="1873490184" Name="SFXLevel"/>
 			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="4091656514" Name="GameState">
@@ -32,6 +62,13 @@
 						<State Id="2201105581" Name="Credits"/>
 						<State Id="2607556080" Name="Menu"/>
 						<State Id="3092587493" Name="Pause"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="4231158115" Name="GameMusicControl">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="1160234136" Name="Normal"/>
+						<State Id="1210588850" Name="Catching"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
@@ -72,7 +109,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{FE842F6B-2B7A-A132-9975-9B139626A164}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{BA4759FE-62D3-6AEB-53CA-7E7490442C6D}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -84,6 +121,10 @@
 				<File Id="15927765" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Piano-007.wav</ShortName>
 					<CachePath>SFX/SFX_Piano-007_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="20876364" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PasosTile-004.wav</ShortName>
+					<CachePath>SFX/PasosTile-004_8F8B27E2.wem</CachePath>
 				</File>
 				<File Id="22653582" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>SPOOKY 23-060-Basic-Ride B 1 [2024-11-12 182352].wav</ShortName>
@@ -115,32 +156,67 @@
 					<ShortName>Pasos-003.wav</ShortName>
 					<CachePath>SFX/Pasos-003_8F8B27E2.wem</CachePath>
 				</File>
+				<File Id="132242664" Language="SFX" Streaming="true" Location="Memory">
+					<ShortName>SookyMX_CazaFantasmaStinger.wav</ShortName>
+					<Path>Media/132242664.wem</Path>
+					<CachePath>SFX/SookyMX_CazaFantasmaStinger_C4CC260C.wem</CachePath>
+					<PrefetchSize>19296</PrefetchSize>
+				</File>
 				<File Id="134852080" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Piano-013.wav</ShortName>
 					<CachePath>SFX/SFX_Piano-013_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="152160976" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFXSkillCheckPass-003.wav</ShortName>
+					<CachePath>SFX/SFXSkillCheckPass-003_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="201389145" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PasosTile-001.wav</ShortName>
+					<CachePath>SFX/PasosTile-001_8F8B27E2.wem</CachePath>
 				</File>
 				<File Id="204114406" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>SPOOKY Violines-3.wav</ShortName>
 					<Path>Media/204114406.wem</Path>
 					<CachePath>SFX/SPOOKY Violines-3_3CD5CF17.wem</CachePath>
 				</File>
+				<File Id="218681037" Language="SFX" Streaming="true" Location="Loose">
+					<ShortName>SpookyMusicaMenu.wav</ShortName>
+					<Path>Media/218681037.wem</Path>
+					<CachePath>SFX/SpookyMusicaMenu_3CD5CF17.wem</CachePath>
+				</File>
 				<File Id="266973373" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AspiradoraLoop.wav</ShortName>
 					<CachePath>SFX/AspiradoraLoop_C4CC260C.wem</CachePath>
+				</File>
+				<File Id="310227621" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>GhostStep-004.wav</ShortName>
+					<CachePath>SFX/GhostStep-004_8F8B27E2.wem</CachePath>
 				</File>
 				<File Id="312507416" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>SPOOKY Violines_sultasto.wav</ShortName>
 					<Path>Media/312507416.wem</Path>
 					<CachePath>SFX/SPOOKY Violines_sultasto_3CD5CF17.wem</CachePath>
 				</File>
+				<File Id="316292136" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>GhostLoop.wav</ShortName>
+					<CachePath>SFX/GhostLoop_C4CC260C.wem</CachePath>
+				</File>
 				<File Id="319038758" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>SPOOKY 22-060-Basic-Brush 1 [2024-11-12 182352].wav</ShortName>
 					<Path>Media/319038758.wem</Path>
 					<CachePath>SFX/SPOOKY 22-060-Basic-Brush 1 [2024-11-12 182352]_3CD5CF17.wem</CachePath>
 				</File>
+				<File Id="360029543" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>GhostStep-002.wav</ShortName>
+					<CachePath>SFX/GhostStep-002_8F8B27E2.wem</CachePath>
+				</File>
 				<File Id="363842715" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Piano-003.wav</ShortName>
 					<CachePath>SFX/SFX_Piano-003_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="379917419" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>GhostStep-003.wav</ShortName>
+					<CachePath>SFX/GhostStep-003_8F8B27E2.wem</CachePath>
 				</File>
 				<File Id="382905220" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HydroLoop.wav</ShortName>
@@ -155,19 +231,34 @@
 					<ShortName>Pasos-002.wav</ShortName>
 					<CachePath>SFX/Pasos-002_8F8B27E2.wem</CachePath>
 				</File>
-				<File Id="414954598" Language="SFX" Streaming="true" Location="Loose">
-					<ShortName>Keys.wav</ShortName>
-					<Path>Media/414954598.wem</Path>
-					<CachePath>SFX/Keys_3CD5CF17.wem</CachePath>
+				<File Id="415121418" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>CuadroEnd.wav</ShortName>
+					<CachePath>SFX/CuadroEnd_8F8B27E2.wem</CachePath>
 				</File>
 				<File Id="433427925" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Piano-012.wav</ShortName>
 					<CachePath>SFX/SFX_Piano-012_8F8B27E2.wem</CachePath>
 				</File>
+				<File Id="438595445" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AmbFireB.wav</ShortName>
+					<CachePath>SFX/AmbFireB_C4CC260C.wem</CachePath>
+				</File>
+				<File Id="446835699" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PasosTile-002.wav</ShortName>
+					<CachePath>SFX/PasosTile-002_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="449042588" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>GhostStep-001.wav</ShortName>
+					<CachePath>SFX/GhostStep-001_8F8B27E2.wem</CachePath>
+				</File>
 				<File Id="460469863" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>SPOOKY Violines_sul_pont.wav</ShortName>
 					<Path>Media/460469863.wem</Path>
 					<CachePath>SFX/SPOOKY Violines_sul_pont_3CD5CF17.wem</CachePath>
+				</File>
+				<File Id="474414559" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SpookyMusicaFinal.wav</ShortName>
+					<CachePath>SFX/SpookyMusicaFinal_C4CC260C.wem</CachePath>
 				</File>
 				<File Id="487752815" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Piano-002.wav</ShortName>
@@ -177,9 +268,17 @@
 					<ShortName>SFX_Piano-018.wav</ShortName>
 					<CachePath>SFX/SFX_Piano-018_8F8B27E2.wem</CachePath>
 				</File>
+				<File Id="507955851" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AmbFireA.wav</ShortName>
+					<CachePath>SFX/AmbFireA_C4CC260C.wem</CachePath>
+				</File>
 				<File Id="557733357" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Piano-016.wav</ShortName>
 					<CachePath>SFX/SFX_Piano-016_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="571846358" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFXSkillCheckPass-001.wav</ShortName>
+					<CachePath>SFX/SFXSkillCheckPass-001_8F8B27E2.wem</CachePath>
 				</File>
 				<File Id="578776812" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Piano-001.wav</ShortName>
@@ -193,9 +292,27 @@
 					<ShortName>AspiradoraStart.wav</ShortName>
 					<CachePath>SFX/AspiradoraStart_C4CC260C.wem</CachePath>
 				</File>
+				<File Id="626786861" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFXSkillCheckFail.wav</ShortName>
+					<CachePath>SFX/SFXSkillCheckFail_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="628697046" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>GhostStep-005.wav</ShortName>
+					<CachePath>SFX/GhostStep-005_8F8B27E2.wem</CachePath>
+				</File>
 				<File Id="632934482" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Piano-008.wav</ShortName>
 					<CachePath>SFX/SFX_Piano-008_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="656157741" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFXSkillCheckPass-004.wav</ShortName>
+					<CachePath>SFX/SFXSkillCheckPass-004_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="667309658" Language="SFX" Streaming="true" Location="Memory">
+					<ShortName>SpookyMX_CazaFantasma.wav</ShortName>
+					<Path>Media/667309658.wem</Path>
+					<CachePath>SFX/SpookyMX_CazaFantasma_3CD5CF17.wem</CachePath>
+					<PrefetchSize>3495</PrefetchSize>
 				</File>
 				<File Id="723507422" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Piano-006.wav</ShortName>
@@ -204,6 +321,10 @@
 				<File Id="727534871" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Pasos-007.wav</ShortName>
 					<CachePath>SFX/Pasos-007_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="736467420" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PasosTile-006.wav</ShortName>
+					<CachePath>SFX/PasosTile-006_8F8B27E2.wem</CachePath>
 				</File>
 				<File Id="737582803" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>SPOOKY Violines-1.wav</ShortName>
@@ -214,6 +335,14 @@
 					<ShortName>SPOOKY STICK.wav</ShortName>
 					<Path>Media/738044038.wem</Path>
 					<CachePath>SFX/SPOOKY STICK_3CD5CF17.wem</CachePath>
+				</File>
+				<File Id="748120472" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>GhostStep-006.wav</ShortName>
+					<CachePath>SFX/GhostStep-006_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="761940623" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PasosTile-005.wav</ShortName>
+					<CachePath>SFX/PasosTile-005_8F8B27E2.wem</CachePath>
 				</File>
 				<File Id="795406639" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AspiradoraEnd.wav</ShortName>
@@ -227,6 +356,10 @@
 					<ShortName>Pasos-001.wav</ShortName>
 					<CachePath>SFX/Pasos-001_8F8B27E2.wem</CachePath>
 				</File>
+				<File Id="862821522" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PasosTile-003.wav</ShortName>
+					<CachePath>SFX/PasosTile-003_8F8B27E2.wem</CachePath>
+				</File>
 				<File Id="869779343" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Piano-004.wav</ShortName>
 					<CachePath>SFX/SFX_Piano-004_8F8B27E2.wem</CachePath>
@@ -239,10 +372,22 @@
 					<ShortName>SFX_Piano-017.wav</ShortName>
 					<CachePath>SFX/SFX_Piano-017_8F8B27E2.wem</CachePath>
 				</File>
+				<File Id="898858006" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SFXSkillCheckPass-002.wav</ShortName>
+					<CachePath>SFX/SFXSkillCheckPass-002_8F8B27E2.wem</CachePath>
+				</File>
 				<File Id="900404297" Language="SFX" Streaming="true" Location="Loose">
 					<ShortName>SPOOKY Violines-2.wav</ShortName>
 					<Path>Media/900404297.wem</Path>
 					<CachePath>SFX/SPOOKY Violines-2_3CD5CF17.wem</CachePath>
+				</File>
+				<File Id="917263309" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>GhostScreamLoop.wav</ShortName>
+					<CachePath>SFX/GhostScreamLoop_C4CC260C.wem</CachePath>
+				</File>
+				<File Id="948364101" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>CuadroLoop.wav</ShortName>
+					<CachePath>SFX/CuadroLoop_C4CC260C.wem</CachePath>
 				</File>
 				<File Id="1005109668" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Pasos-006.wav</ShortName>
@@ -256,6 +401,10 @@
 				<File Id="1035390792" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Piano-009.wav</ShortName>
 					<CachePath>SFX/SFX_Piano-009_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="1039771655" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>CuadroStart.wav</ShortName>
+					<CachePath>SFX/CuadroStart_8F8B27E2.wem</CachePath>
 				</File>
 				<File Id="1040908074" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Piano-005.wav</ShortName>
@@ -273,18 +422,28 @@
 			</Media>
 			<Plugins>
 				<Custom>
-					<Plugin Id="66754729" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="127524652" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
-					<Plugin Id="186624115" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
-					<Plugin Id="669261569" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
-					<Plugin Id="730053830" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
-					<Plugin Id="854333555" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
-					<Plugin Id="854376344" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="856823274" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
-					<Plugin Id="978075550" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 				</Custom>
 			</Plugins>
 			<Events>
+				<Event Id="857272499" Name="AmbFire" MaxAttenuation="27" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="438595445"/>
+						<MediaRef Id="507955851"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="15780165" Name="RevSFX"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="3755821248" Name="AmbGhost" MaxAttenuation="27" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="316292136"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="15780165" Name="RevSFX"/>
+					</AuxBusRefs>
+				</Event>
 				<Event Id="895127194" Name="AmbPiano" MaxAttenuation="27" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="15927765"/>
@@ -312,9 +471,86 @@
 							<PluginRef Id="856823274"/>
 						</Custom>
 					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="15780165" Name="RevSFX"/>
+					</AuxBusRefs>
 				</Event>
-				<Event Id="3087263383" Name="DestroyedGhost" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="469357355" Name="PianoHit" DurationType="OneShot" DurationMin="1.0738958" DurationMax="9">
+				<Event Id="660301166" Name="ChainGhostOnFlee" MaxAttenuation="27" DurationType="OneShot" DurationMin="6.629979" DurationMax="7.9599376">
+					<MediaRefs>
+						<MediaRef Id="310227621"/>
+						<MediaRef Id="360029543"/>
+						<MediaRef Id="379917419"/>
+						<MediaRef Id="449042588"/>
+						<MediaRef Id="628697046"/>
+						<MediaRef Id="748120472"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="15780165" Name="RevSFX"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="3087263383" Name="DestroyedGhost" DurationType="OneShot" DurationMin="6.629979" DurationMax="7.2517915">
+					<MediaRefs>
+						<MediaRef Id="310227621"/>
+						<MediaRef Id="379917419"/>
+						<MediaRef Id="449042588"/>
+						<MediaRef Id="628697046"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="15780165" Name="RevSFX"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="1054659462" Name="EndLevel" DurationType="OneShot" DurationMin="45.19323" DurationMax="45.19323">
+					<MediaRefs>
+						<MediaRef Id="474414559"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="387592991" Name="GhostCatch" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="132242664"/>
+						<MediaRef Id="667309658"/>
+						<MediaRef Id="917263309"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="15780165" Name="RevSFX"/>
+						<AuxBusRef Id="1352299025" Name="RevMusic"/>
+					</AuxBusRefs>
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="4231158115" Id="1210588850" Name="Catching"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="1202154233" Name="GhostRelease" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<ActionSetState>
+						<ActionSetStateEntry GroupId="4231158115" Id="1160234136" Name="Normal"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="3864087751" Name="GhostSkillCheckFail" DurationType="OneShot" DurationMin="1.8825697" DurationMax="2.0648494">
+					<MediaRefs>
+						<MediaRef Id="626786861"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4233241136" Name="GhostSkillCheckPass" DurationType="OneShot" DurationMin="1.6392539" DurationMax="1.8400447">
+					<MediaRefs>
+						<MediaRef Id="152160976"/>
+						<MediaRef Id="571846358"/>
+						<MediaRef Id="656157741"/>
+						<MediaRef Id="898858006"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="15780165" Name="RevSFX"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="2553231580" Name="PaintCatch" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="948364101"/>
+						<MediaRef Id="1039771655"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3571119522" Name="PaintRelease" DurationType="OneShot" DurationMin="2.1929166" DurationMax="2.1929166">
+					<MediaRefs>
+						<MediaRef Id="415121418"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="469357355" Name="PianoHit" DurationType="OneShot" DurationMin="1.0738958" DurationMax="1.8721875">
 					<MediaRefs>
 						<MediaRef Id="15927765"/>
 						<MediaRef Id="61946966"/>
@@ -335,35 +571,30 @@
 						<MediaRef Id="1035390792"/>
 						<MediaRef Id="1040908074"/>
 					</MediaRefs>
-					<PluginRefs>
-						<Custom>
-							<PluginRef Id="66754729"/>
-							<PluginRef Id="186624115"/>
-							<PluginRef Id="669261569"/>
-							<PluginRef Id="730053830"/>
-							<PluginRef Id="854333555"/>
-							<PluginRef Id="854376344"/>
-							<PluginRef Id="978075550"/>
-						</Custom>
-					</PluginRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="15780165" Name="RevSFX"/>
+					</AuxBusRefs>
 				</Event>
 				<Event Id="1281810935" Name="Start" DurationType="Infinite">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4091656514" Id="2607556080"/>
 							<MediaRefs>
-								<MediaRef Id="414954598"/>
+								<MediaRef Id="218681037"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="4091656514" Id="2201105581"/>
 							<MediaRefs>
-								<MediaRef Id="414954598"/>
+								<MediaRef Id="218681037"/>
 							</MediaRefs>
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
 				<Event Id="1123143573" Name="Start_Lvl1" DurationType="Infinite">
+					<AuxBusRefs>
+						<AuxBusRef Id="1352299025" Name="RevMusic"/>
+					</AuxBusRefs>
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="1533192012" Id="1375774704"/>
@@ -428,7 +659,21 @@
 					</SwitchContainers>
 				</Event>
 				<Event Id="621108255" Name="Step" DurationType="Infinite">
+					<AuxBusRefs>
+						<AuxBusRef Id="15780165" Name="RevSFX"/>
+					</AuxBusRefs>
 					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="1718617278" Id="2637588553"/>
+							<MediaRefs>
+								<MediaRef Id="20876364"/>
+								<MediaRef Id="201389145"/>
+								<MediaRef Id="446835699"/>
+								<MediaRef Id="736467420"/>
+								<MediaRef Id="761940623"/>
+								<MediaRef Id="862821522"/>
+							</MediaRefs>
+						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="1718617278" Id="2058049674" Default="true"/>
 							<MediaRefs>
@@ -449,6 +694,9 @@
 						<MediaRef Id="795406639"/>
 						<MediaRef Id="1071201929"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="15780165" Name="RevSFX"/>
+					</AuxBusRefs>
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="Switch" GroupId="3699816212" Id="2036889338"/>
@@ -478,6 +726,13 @@
 						<State Id="2201105581" Name="Credits"/>
 						<State Id="2607556080" Name="Menu"/>
 						<State Id="3092587493" Name="Pause"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="4231158115" Name="GameMusicControl">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="1160234136" Name="Normal"/>
+						<State Id="1210588850" Name="Catching"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
@@ -513,5 +768,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{894BB6BA-A7A3-7786-FEFB-2A9A157DB261}</FileHash>
+	<FileHash>{9A3229D4-D088-07DE-6A54-F545148E597D}</FileHash>
 </SoundBanksInfo>
