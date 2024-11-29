@@ -29,7 +29,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="TrashVacuumed" ID="{EE656B0A-CDFF-48E9-A259-4EC84CA521AF}"/>
+				<Event Name="TrashVacuumed" ID="{EE656B0A-CDFF-48E9-A259-4EC84CA521AF}">
+					<ChildrenList>
+						<Action Name="" ID="{9B9BC066-A989-43EA-BEC1-2A86A1B8EBC4}" ShortID="191106736">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TrashVacuumed" ID="{E61ED14F-E95A-4A32-924E-48125BE62A1D}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="VacStart" ID="{A0E04EF2-5C9F-4DFD-8CD7-C5C3ED3CCFE2}">
 					<ChildrenList>
 						<Action Name="" ID="{9AD9F1C6-0F5A-4C0D-A8B3-31887A084326}" ShortID="16171368">

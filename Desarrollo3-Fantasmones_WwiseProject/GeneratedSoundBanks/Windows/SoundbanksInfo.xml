@@ -109,7 +109,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{BA4759FE-62D3-6AEB-53CA-7E7490442C6D}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{E0579F75-0318-8346-386E-9DF1670A7493}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -188,6 +188,10 @@
 					<ShortName>AspiradoraLoop.wav</ShortName>
 					<CachePath>SFX/AspiradoraLoop_C4CC260C.wem</CachePath>
 				</File>
+				<File Id="303570035" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TrashVacuumed-002.wav</ShortName>
+					<CachePath>SFX/TrashVacuumed-002_8F8B27E2.wem</CachePath>
+				</File>
 				<File Id="310227621" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>GhostStep-004.wav</ShortName>
 					<CachePath>SFX/GhostStep-004_8F8B27E2.wem</CachePath>
@@ -243,6 +247,10 @@
 					<ShortName>AmbFireB.wav</ShortName>
 					<CachePath>SFX/AmbFireB_C4CC260C.wem</CachePath>
 				</File>
+				<File Id="444968513" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TrashVacuumed-006.wav</ShortName>
+					<CachePath>SFX/TrashVacuumed-006_8F8B27E2.wem</CachePath>
+				</File>
 				<File Id="446835699" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PasosTile-002.wav</ShortName>
 					<CachePath>SFX/PasosTile-002_8F8B27E2.wem</CachePath>
@@ -255,6 +263,10 @@
 					<ShortName>SPOOKY Violines_sul_pont.wav</ShortName>
 					<Path>Media/460469863.wem</Path>
 					<CachePath>SFX/SPOOKY Violines_sul_pont_3CD5CF17.wem</CachePath>
+				</File>
+				<File Id="466852455" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TrashVacuumed-003.wav</ShortName>
+					<CachePath>SFX/TrashVacuumed-003_8F8B27E2.wem</CachePath>
 				</File>
 				<File Id="474414559" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SpookyMusicaFinal.wav</ShortName>
@@ -303,6 +315,10 @@
 				<File Id="632934482" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Piano-008.wav</ShortName>
 					<CachePath>SFX/SFX_Piano-008_8F8B27E2.wem</CachePath>
+				</File>
+				<File Id="643474096" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TrashVacuumed-005.wav</ShortName>
+					<CachePath>SFX/TrashVacuumed-005_8F8B27E2.wem</CachePath>
 				</File>
 				<File Id="656157741" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFXSkillCheckPass-004.wav</ShortName>
@@ -356,6 +372,10 @@
 					<ShortName>Pasos-001.wav</ShortName>
 					<CachePath>SFX/Pasos-001_8F8B27E2.wem</CachePath>
 				</File>
+				<File Id="849731454" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TrashVacuumed-004.wav</ShortName>
+					<CachePath>SFX/TrashVacuumed-004_8F8B27E2.wem</CachePath>
+				</File>
 				<File Id="862821522" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PasosTile-003.wav</ShortName>
 					<CachePath>SFX/PasosTile-003_8F8B27E2.wem</CachePath>
@@ -384,6 +404,10 @@
 				<File Id="917263309" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>GhostScreamLoop.wav</ShortName>
 					<CachePath>SFX/GhostScreamLoop_C4CC260C.wem</CachePath>
+				</File>
+				<File Id="924745071" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TrashVacuumed-001.wav</ShortName>
+					<CachePath>SFX/TrashVacuumed-001_8F8B27E2.wem</CachePath>
 				</File>
 				<File Id="948364101" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>CuadroLoop.wav</ShortName>
@@ -688,7 +712,19 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="2644656531" Name="TrashVacuumed" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2644656531" Name="TrashVacuumed" DurationType="OneShot" DurationMin="1.9892534e-05" DurationMax="0.4601112">
+					<MediaRefs>
+						<MediaRef Id="303570035"/>
+						<MediaRef Id="444968513"/>
+						<MediaRef Id="466852455"/>
+						<MediaRef Id="643474096"/>
+						<MediaRef Id="849731454"/>
+						<MediaRef Id="924745071"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="15780165" Name="RevSFX"/>
+					</AuxBusRefs>
+				</Event>
 				<Event Id="1719412607" Name="VacStart" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="795406639"/>
@@ -768,5 +804,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{9A3229D4-D088-07DE-6A54-F545148E597D}</FileHash>
+	<FileHash>{D86D8A5C-6FF3-AB33-508B-81271FA756DA}</FileHash>
 </SoundBanksInfo>
