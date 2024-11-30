@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B262543E-0E63-66D3-2CDA-A4D357C87C1C}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{C8839158-3DEE-CCA0-866F-B56DB7BCF620}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -109,7 +109,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{E0579F75-0318-8346-386E-9DF1670A7493}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{0020472E-C4D2-33EA-7B6B-83F5B339F630}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -160,7 +160,7 @@
 					<ShortName>SookyMX_CazaFantasmaStinger.wav</ShortName>
 					<Path>Media/132242664.wem</Path>
 					<CachePath>SFX/SookyMX_CazaFantasmaStinger_C4CC260C.wem</CachePath>
-					<PrefetchSize>19296</PrefetchSize>
+					<PrefetchSize>192096</PrefetchSize>
 				</File>
 				<File Id="134852080" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Piano-013.wav</ShortName>
@@ -247,10 +247,6 @@
 					<ShortName>AmbFireB.wav</ShortName>
 					<CachePath>SFX/AmbFireB_C4CC260C.wem</CachePath>
 				</File>
-				<File Id="444968513" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>TrashVacuumed-006.wav</ShortName>
-					<CachePath>SFX/TrashVacuumed-006_8F8B27E2.wem</CachePath>
-				</File>
 				<File Id="446835699" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PasosTile-002.wav</ShortName>
 					<CachePath>SFX/PasosTile-002_8F8B27E2.wem</CachePath>
@@ -328,7 +324,7 @@
 					<ShortName>SpookyMX_CazaFantasma.wav</ShortName>
 					<Path>Media/667309658.wem</Path>
 					<CachePath>SFX/SpookyMX_CazaFantasma_3CD5CF17.wem</CachePath>
-					<PrefetchSize>3495</PrefetchSize>
+					<PrefetchSize>18355</PrefetchSize>
 				</File>
 				<File Id="723507422" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SFX_Piano-006.wav</ShortName>
@@ -712,10 +708,9 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
-				<Event Id="2644656531" Name="TrashVacuumed" DurationType="OneShot" DurationMin="1.9892534e-05" DurationMax="0.4601112">
+				<Event Id="2644656531" Name="TrashVacuumed" DurationType="OneShot" DurationMin="0.41949373" DurationMax="0.4601112">
 					<MediaRefs>
 						<MediaRef Id="303570035"/>
-						<MediaRef Id="444968513"/>
 						<MediaRef Id="466852455"/>
 						<MediaRef Id="643474096"/>
 						<MediaRef Id="849731454"/>
@@ -804,5 +799,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D86D8A5C-6FF3-AB33-508B-81271FA756DA}</FileHash>
+	<FileHash>{B5759AF5-0D79-72CA-8034-0BDA887149DA}</FileHash>
 </SoundBanksInfo>

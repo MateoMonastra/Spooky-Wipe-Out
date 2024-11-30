@@ -15,8 +15,8 @@
 							<PropertyList>
 								<Property Name="AttackTime" Type="Real32" Value="0.19"/>
 								<Property Name="OutputGain" Type="Real32" Value="1"/>
-								<Property Name="Ratio" Type="Real32" Value="2"/>
-								<Property Name="ReleaseTime" Type="Real32" Value="0.28"/>
+								<Property Name="Ratio" Type="Real32" Value="3"/>
+								<Property Name="ReleaseTime" Type="Real32" Value="0.17"/>
 								<Property Name="Threshold" Type="Real32" Value="-21.6"/>
 							</PropertyList>
 						</Effect>

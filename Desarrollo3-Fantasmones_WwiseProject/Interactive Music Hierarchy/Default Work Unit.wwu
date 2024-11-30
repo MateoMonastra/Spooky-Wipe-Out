@@ -1197,6 +1197,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -1318,6 +1323,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -1443,6 +1453,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -1564,6 +1579,11 @@
 														<Property Name="Lowpass" Type="int16">
 															<ValueList>
 																<Value>34</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -1689,6 +1709,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -1810,6 +1835,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -1935,6 +1965,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -2056,6 +2091,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -2181,6 +2221,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -2297,6 +2342,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -2422,6 +2472,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -2545,6 +2600,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -2666,6 +2726,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -2886,6 +2951,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -3007,6 +3077,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -3132,6 +3207,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -3248,6 +3328,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -3373,6 +3458,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -3494,6 +3584,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -3619,6 +3714,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -3740,6 +3840,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -3865,6 +3970,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -3983,6 +4093,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -4099,6 +4214,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -4224,6 +4344,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -4345,6 +4470,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -4505,6 +4635,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -4626,6 +4761,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -4751,6 +4891,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -4867,6 +5012,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -4992,6 +5142,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -5110,6 +5265,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -5226,6 +5386,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -5351,6 +5516,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -5474,6 +5644,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -5590,6 +5765,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -5715,6 +5895,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -5838,6 +6023,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -5959,6 +6149,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -6121,6 +6316,11 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
+												<Property Name="PreFetchLength" Type="int16">
+													<ValueList>
+														<Value>1000</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -6237,6 +6437,11 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="PreFetchLength" Type="int16">
+													<ValueList>
+														<Value>1000</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -6357,6 +6562,11 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
+												<Property Name="PreFetchLength" Type="int16">
+													<ValueList>
+														<Value>1000</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -6473,6 +6683,11 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="PreFetchLength" Type="int16">
+													<ValueList>
+														<Value>1000</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -6593,6 +6808,11 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
+												<Property Name="PreFetchLength" Type="int16">
+													<ValueList>
+														<Value>1000</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -6709,6 +6929,11 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="PreFetchLength" Type="int16">
+													<ValueList>
+														<Value>1000</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -6829,6 +7054,11 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
+												<Property Name="PreFetchLength" Type="int16">
+													<ValueList>
+														<Value>1000</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -6945,6 +7175,11 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="PreFetchLength" Type="int16">
+													<ValueList>
+														<Value>1000</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -7065,6 +7300,11 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
+												<Property Name="PreFetchLength" Type="int16">
+													<ValueList>
+														<Value>1000</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -7181,6 +7421,11 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="PreFetchLength" Type="int16">
+													<ValueList>
+														<Value>1000</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -7301,6 +7546,11 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
+												<Property Name="PreFetchLength" Type="int16">
+													<ValueList>
+														<Value>1000</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -7419,6 +7669,11 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
+												<Property Name="PreFetchLength" Type="int16">
+													<ValueList>
+														<Value>1000</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -7535,6 +7790,11 @@
 												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
 														<Value>True</Value>
+													</ValueList>
+												</Property>
+												<Property Name="PreFetchLength" Type="int16">
+													<ValueList>
+														<Value>1000</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -7742,6 +8002,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -7863,6 +8128,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -7988,6 +8258,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -8104,6 +8379,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -8229,6 +8509,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -8347,6 +8632,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -8463,6 +8753,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -8588,6 +8883,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -8711,6 +9011,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -8829,6 +9134,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -8945,6 +9255,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -9070,6 +9385,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -9191,6 +9511,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -9395,6 +9720,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -9516,6 +9846,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -9641,6 +9976,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -9757,6 +10097,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -9877,6 +10222,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -9993,6 +10343,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -10113,6 +10468,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -10229,6 +10589,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -10354,6 +10719,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -10470,6 +10840,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -10590,6 +10965,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -10708,6 +11088,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -10824,6 +11209,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -11028,6 +11418,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -11144,6 +11539,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -11264,6 +11664,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -11380,6 +11785,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -11500,6 +11910,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -11616,6 +12031,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -11736,6 +12156,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -11852,6 +12277,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -11972,6 +12402,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -12088,6 +12523,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -12208,6 +12648,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -12326,6 +12771,11 @@
 																<Value>True</Value>
 															</ValueList>
 														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
@@ -12442,6 +12892,11 @@
 														<Property Name="IsStreamingEnabled" Type="bool">
 															<ValueList>
 																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PreFetchLength" Type="int16">
+															<ValueList>
+																<Value>1000</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -12824,6 +13279,11 @@
 														<Value>True</Value>
 													</ValueList>
 												</Property>
+												<Property Name="PreFetchLength" Type="int16">
+													<ValueList>
+														<Value>1000</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
@@ -12904,7 +13364,7 @@
 								<Property Name="EndPosition" Type="Real64" Value="5284.49014567266"/>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-7</Value>
+										<Value>-9</Value>
 									</ValueList>
 								</Property>
 								<Property Name="UserAuxSendVolume0" Type="Real64">
@@ -12935,6 +13395,11 @@
 										<Property Name="IsZeroLatency" Type="bool">
 											<ValueList>
 												<Value>True</Value>
+											</ValueList>
+										</Property>
+										<Property Name="PreFetchLength" Type="int16">
+											<ValueList>
+												<Value>1000</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -13024,6 +13489,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<MusicTrack Name="SpookyMusicaFinal" ID="{5DB169C7-4C70-4BB4-A87D-3AC30930E023}" ShortID="170829">
+									<PropertyList>
+										<Property Name="PreFetchLength" Type="int16">
+											<ValueList>
+												<Value>1000</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>

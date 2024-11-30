@@ -37,7 +37,7 @@
 								</Property>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-11</Value>
+										<Value>-9</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -150,7 +150,7 @@
 								</Property>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-4</Value>
+										<Value>-5</Value>
 									</ValueList>
 								</Property>
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
@@ -650,7 +650,7 @@
 							<PropertyList>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-6</Value>
+										<Value>-7</Value>
 									</ValueList>
 								</Property>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
@@ -1211,13 +1211,6 @@
 					</PropertyList>
 					<ChildrenList>
 						<ActorMixer Name="FrameGhost" ID="{7463FE1D-A670-40AD-86EA-01241F62DA96}" ShortID="490090569">
-							<PropertyList>
-								<Property Name="MakeUpGain" Type="Real64">
-									<ValueList>
-										<Value>-2</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
@@ -2173,7 +2166,7 @@
 							<PropertyList>
 								<Property Name="MakeUpGain" Type="Real64">
 									<ValueList>
-										<Value>-3</Value>
+										<Value>-4</Value>
 									</ValueList>
 								</Property>
 								<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
@@ -2508,28 +2501,6 @@
 											</ChildrenList>
 											<ActiveSourceList>
 												<ActiveSource Name="TrashVacuumed-005" ID="{0E3CCED8-2FB4-4CB2-B6C3-ACDC1A583EE2}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="TrashVacuumed-006" ID="{E44A4537-2E22-4F15-91FB-9F459127B237}" ShortID="1060168195">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{5565CCB3-B5B9-4365-9D75-C0A9886308AD}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{36C0DE10-DB87-4618-AA23-B5E2A6510ED9}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="TrashVacuumed-006" ID="{D82F449D-41C6-4C15-B542-D314F383C465}">
-													<Language>SFX</Language>
-													<AudioFile>TrashVacuumed-006.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="444968513"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="TrashVacuumed-006" ID="{D82F449D-41C6-4C15-B542-D314F383C465}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
