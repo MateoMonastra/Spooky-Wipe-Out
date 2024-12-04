@@ -28,7 +28,8 @@ public class AudioControllerChainGhost : MonoBehaviour
     {
         if (_parentAgent != null)
         {
-            _parentAgent.OnFlee += Flee;
+            _parentAgent.OnFlee -= Flee;
+            destroyedGhost.Post(this.gameObject);
         }
     }
 

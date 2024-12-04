@@ -49,7 +49,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Normal" ID="{E2550AEF-03D6-4FB7-BD5B-3C21B9969686}"/>
+						<CurrentStateRef Name="None" ID="{BB498481-9DC5-44B0-B18C-D982338B3B01}"/>
 						<CurrentStateRef Name="Playing" ID="{48BCD43D-3191-4903-B6E8-1FC018F600F2}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">

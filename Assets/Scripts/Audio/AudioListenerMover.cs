@@ -7,8 +7,21 @@ namespace Audio
     {
         [SerializeField] private Transform placeToMove;
         [SerializeField] private AkAudioListener listenerToMove;
-    
+        [SerializeField] private PauseManager pauseManager;
+
         private Transform _placeToReturn;
+
+        private void OnEnable()
+        {
+            pauseManager.onPauseGoMenu.AddListener(ReturnListener);
+            pauseManager.onPauseRestart.AddListener(ReturnListener);
+        }
+
+        private void OnDisable()
+        {
+            pauseManager.onPauseGoMenu.RemoveListener(ReturnListener);
+            pauseManager.onPauseRestart.RemoveListener(ReturnListener);
+        }
 
         private IEnumerator Start()
         {
@@ -23,10 +36,6 @@ namespace Audio
                 listenerToMove.transform.SetParent(placeToMove, false);
             }
 
-        }
-        private void OnDestroy()
-        {
-            ReturnListener();
         }
 
         private void ReturnListener()

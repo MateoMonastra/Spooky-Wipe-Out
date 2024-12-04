@@ -10,7 +10,6 @@ public class AudioGameManager : MonoBehaviour
 {
     [SerializeField] private int destroyedGhostCount = 0;
     [SerializeField] private AK.Wwise.RTPC destroyedGhostRtpc;
-    [SerializeField] private AK.Wwise.Event destroyedGhost;
     [SerializeField] private GameObject gameMusic;
     [SerializeField] private AK.Wwise.Event startLevel;
     [SerializeField] private AK.Wwise.Event endLevel;
@@ -47,7 +46,6 @@ public class AudioGameManager : MonoBehaviour
     {
         destroyedGhostCount++;
         destroyedGhostRtpc.SetValue(gameMusic, destroyedGhostCount);
-        destroyedGhost.Post(gameObject);
     }
 
     void Finish()
