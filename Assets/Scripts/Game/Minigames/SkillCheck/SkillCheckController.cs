@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using Minigames;
 using Player.FSM;
-using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -16,12 +15,14 @@ public class SkillCheckController : Minigame
 {
     public Action OnCheckPass;
     public Action OnCheckFail;
-    
+
     [SerializeField] private InputReader inputReader;
 
     [SerializeField] private float needleSpeed = 100f;
     [SerializeField] private float minNeedleSpeed = 60f;
     [SerializeField] private float maxNeedleSpeed = 600f;
+    [SerializeField] private float needleAcceleration = 5f;
+    [SerializeField] private float needlePenaltyOnFail = 50f;
 
     [SerializeField] private float decreaseRate = 0.1f;
     [SerializeField] private float increaseAmount = 0.15f;
@@ -39,7 +40,6 @@ public class SkillCheckController : Minigame
     [SerializeField] private AnimationCurve decreaseCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
 
     private float progress { get; set; } = 0.0f;
-
     private bool HasPlayerWon => progress >= maxProgress;
     private bool HasPlayerLost;
 
@@ -87,6 +87,7 @@ public class SkillCheckController : Minigame
         StartCoroutine(DecreaseProgressOverTime());
         StartCoroutine(MoveNeedleOverTime());
         RandomizeSafeZoneWidth();
+        needleSpeed = minNeedleSpeed;
         _isActive = true;
     }
 
@@ -103,8 +104,9 @@ public class SkillCheckController : Minigame
             _needleDir = -1;
         }
 
-        transformLocalPosition.x += needleSpeed * _needleDir * Time.deltaTime;
+        needleSpeed = Mathf.Clamp(needleSpeed + needleAcceleration * Time.deltaTime, minNeedleSpeed, maxNeedleSpeed);
 
+        transformLocalPosition.x += needleSpeed * _needleDir * Time.deltaTime;
         skillCheck.needle.transform.localPosition = transformLocalPosition;
     }
 
@@ -117,13 +119,11 @@ public class SkillCheckController : Minigame
         {
             OnCheckPass?.Invoke();
             UpdateProgress(progress + increaseAmount);
-            
+
             RandomizeSafeZoneWidth();
             RandomizeSafeZonePosition();
-            RandomizeNeedleSpeed();
-            
         }
-        else if( progress <= minProgress)
+        else if (progress <= minProgress)
         {
             OnCheckFail?.Invoke();
             HasPlayerLost = true;
@@ -132,6 +132,8 @@ public class SkillCheckController : Minigame
         {
             OnCheckFail?.Invoke();
             UpdateProgress(progress + decreaseAmount);
+            
+            needleSpeed = Mathf.Clamp(needleSpeed - needlePenaltyOnFail, minNeedleSpeed, maxNeedleSpeed);
         }
     }
 
@@ -145,12 +147,6 @@ public class SkillCheckController : Minigame
     {
         float newX = Random.Range(skillCheck.bar.offsetMin.x, skillCheck.bar.offsetMax.x);
         skillCheck.safeZone.transform.localPosition = new Vector2(newX, skillCheck.safeZone.transform.localPosition.y);
-    }
-
-    private void RandomizeNeedleSpeed()
-    {
-        float newSpeed = Random.Range(minNeedleSpeed, maxNeedleSpeed);
-        needleSpeed = newSpeed;
     }
 
     private Rect GetScreenRect(RectTransform rectTransform)

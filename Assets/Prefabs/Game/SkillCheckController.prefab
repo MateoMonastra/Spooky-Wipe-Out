@@ -45,7 +45,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputReader: {fileID: 0}
-  needleSpeed: 600
-  skillCheckToWin: 5
+  needleSpeed: 100
+  minNeedleSpeed: 400
+  maxNeedleSpeed: 1000
+  needleAcceleration: 60
+  needlePenaltyOnFail: 50
+  decreaseRate: 0.1
+  increaseAmount: 0.2
+  decreaseAmount: -0.15
+  maxProgress: 1
+  minProgress: 0
+  maxWidthSafeZone: 90
+  minWidthSafeZone: 70
   skillCheck: {fileID: 0}
   skillCheckState: 0
+  decreaseCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
