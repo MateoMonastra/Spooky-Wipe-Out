@@ -7,6 +7,31 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Eyes_Mat
+    second: {fileID: 2100000, guid: bfd97ad69a7538b408e0504b25b56957, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gold_Mat
+    second: {fileID: 2100000, guid: c9c0bf844429de14d80eaa8dbdbd6b00, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gold_Mat1
+    second: {fileID: 2100000, guid: c9c0bf844429de14d80eaa8dbdbd6b00, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Paint_Mat
+    second: {fileID: 2100000, guid: e4f83c48c4405cc46b21575e745cd877, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Paint_Mat1
+    second: {fileID: 2100000, guid: e4f83c48c4405cc46b21575e745cd877, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: PaintingRig_Eyes_Mat
     second: {fileID: 2100000, guid: bfd97ad69a7538b408e0504b25b56957, type: 2}
   - first:
@@ -18,7 +43,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: PaintingRig_Paint_Mat
-    second: {fileID: 2100000, guid: e4f83c48c4405cc46b21575e745cd877, type: 2}
+    second: {fileID: 2100000, guid: bc6360b2a59031b489d86713f6ce8361, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

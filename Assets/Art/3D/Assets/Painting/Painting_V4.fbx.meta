@@ -3,7 +3,27 @@ guid: d3906f2eb24d44943857f88cd276b7b9
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gold_Mat
+    second: {fileID: 2100000, guid: c9c0bf844429de14d80eaa8dbdbd6b00, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gold_Mat1
+    second: {fileID: 2100000, guid: c9c0bf844429de14d80eaa8dbdbd6b00, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Paint_Mat
+    second: {fileID: 2100000, guid: 60af71947c6bd2741bd3452df03a6169, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Paint_Mat1
+    second: {fileID: 2100000, guid: 60af71947c6bd2741bd3452df03a6169, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

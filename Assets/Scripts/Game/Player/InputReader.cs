@@ -2,6 +2,7 @@ using System;
 using EventSystems.EventSceneManager;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 namespace Player.FSM
 {
@@ -156,6 +157,14 @@ namespace Player.FSM
             else if (context.canceled)
             {
                 OnIntructionsEnd?.Invoke();
+            }
+        }
+
+        public void HandleRestart(InputAction.CallbackContext context)
+        {
+            if (context.started)
+            {
+                SceneManager.LoadScene(sceneBuildIndex:0);
             }
         }
     }
