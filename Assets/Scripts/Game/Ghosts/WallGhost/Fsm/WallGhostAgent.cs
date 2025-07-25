@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using AK.Wwise;
 using Fsm_Mk2;
+using Game.Ghosts.WallGhost;
 using Ghosts.WallGhost;
 using Minigames;
 using UnityEngine;
@@ -15,8 +16,6 @@ namespace Ghosts
         public UnityEvent<bool> OnCatch;
         public UnityEvent<bool> OnDeath;
         public UnityEvent<bool> OnHunt;
-
-        public Action OnRested;
 
         [SerializeField] private Minigame minigame;
         [SerializeField] private Transform trappingPos;
@@ -32,21 +31,23 @@ namespace Ghosts
 
         private WallGhostCollision _wallGhostCollision;
 
-        public void Start()
+        public void OnEnable()
         {
             _wallGhostCollision = GetComponentInChildren<WallGhostCollision>();
 
             _wallGhostCollision.OnPlayerCollision += minigame.StartGame;
             _wallGhostCollision.OnPlayerCollision += SetCatchState;
+        }
 
-            OnRested += SetHuntState;
+        public void Start()
+        {
             State _hunt = new Hunt();
             _states.Add(_hunt);
 
             State _catch = new Catch();
             _states.Add(_catch);
 
-            State _dead = new Dead(restTime, OnRested);
+            State _dead = new Dead();
             _states.Add(_dead);
 
             _huntToCatch = new Transition() { From = _hunt, To = _catch };
@@ -61,11 +62,11 @@ namespace Ghosts
             _fsm = new Fsm(_hunt);
         }
 
-        private void SetHuntState() 
+        public void SetHuntState() 
         {
             OnHunt?.Invoke(true);
             _fsm.ApplyTransition(_deadToHunt);
-            _wallGhostCollision.gameObject.SetActive(true);
+            SetCollisionEnabled(true);
         }
 
         private void SetCatchState()
@@ -77,14 +78,23 @@ namespace Ghosts
             _fsm.ApplyTransition(_huntToCatch);
         }
         
-        private void SetDeadState()
+        public void SetDeadState()
         {
             OnDeath?.Invoke(true);
-            _wallGhostCollision.gameObject.SetActive(false);
+            SetCollisionEnabled(false);
             minigame.OnWin -= SetDeadState;
             minigame.OnLose -= SetDeadState;
             _fsm.ApplyTransition(_catchToDead);
         }
+
+        public void SetCollisionEnabled(bool isEnabled)
+        {
+            if (_wallGhostCollision != null)
+            {
+                _wallGhostCollision.SetActiveCollision(isEnabled);
+            }
+        }
+
 
         private void Update()
         {
