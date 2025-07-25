@@ -2,15 +2,21 @@ using System;
 using Fsm_Mk2;
 using UnityEngine;
 
-namespace Ghosts.WallGhost
+namespace Game.Ghosts.WallGhost
 {
     public class WallGhostCollision : MonoBehaviour
     {
         [SerializeField] private Transform trappingPos;
-        
+
         public Action OnPlayerCollision;
         private GameObject _player;
-        
+        private Collider _collider;
+
+        private void Awake()
+        {
+            _collider = GetComponent<Collider>();
+        }
+
         private void OnTriggerEnter(Collider other)
         {
             if (IsPlayerCollision(other))
@@ -29,6 +35,12 @@ namespace Ghosts.WallGhost
         {
             _player = other.gameObject;
             _player.GetComponentInParent<PlayerAgent>().OnHunted.Invoke(trappingPos);
+        }
+        
+        public void SetActiveCollision(bool active)
+        {
+            if (_collider != null)
+                _collider.enabled = active;
         }
     }
 }

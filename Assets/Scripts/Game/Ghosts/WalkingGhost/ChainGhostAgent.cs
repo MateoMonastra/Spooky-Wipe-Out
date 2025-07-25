@@ -186,7 +186,6 @@ namespace Ghosts
 
             if (args[0] is Type type && actionsByType.TryGetValue(type, out Action action))
             {
-                Debug.Log($"decision found: {type.Name}");
                 action?.Invoke();
             }
         }

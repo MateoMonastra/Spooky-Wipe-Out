@@ -82,7 +82,6 @@ public class GameManager : MonoBehaviour
         trash.OnBeingDestroy -= RemoveTrash;
         garbage.Remove(trash);
         objectivesUI.SetTrashQnty(garbage.Count);
-        Debug.Log("The trash has been destroyed");
 
         GameIsOver();
     }
@@ -92,7 +91,6 @@ public class GameManager : MonoBehaviour
         ghost.OnBeingDestroy -= RemoveGhost;
         ghosts.Remove(ghost);
         objectivesUI.SetGhostQnty(ghosts.Count);
-        Debug.Log("The ghost has been destroyed");
 
         GameIsOver();
     }
@@ -102,7 +100,6 @@ public class GameManager : MonoBehaviour
         ectoplasm.OnBeingDestroy -= RemoveEctoplasm;
         ectoplasms.Remove(ectoplasm);
         objectivesUI.SetEctoplasmQnty(ectoplasms.Count);
-        Debug.Log("The ectoplasm has been destroyed");
 
         GameIsOver();
     }
