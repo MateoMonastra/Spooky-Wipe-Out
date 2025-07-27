@@ -16,6 +16,7 @@ namespace Player.FSM
         public Action OnClickEnd;
         public Action OnSwitchTool;
         public Action OnSpaceInputStart;
+        public Action OnSpaceInputCancel;
         public Action OnPauseStart;
         public Action OnWinCheat;
         public Action OnShowTimer;
@@ -92,6 +93,11 @@ namespace Player.FSM
             {
                 OnSpaceInputStart?.Invoke();
             }
+            else if (context.canceled)
+            {
+                OnSpaceInputCancel?.Invoke();
+            }
+            
 
             OnInputDevice?.Invoke(context.control.device);
         }

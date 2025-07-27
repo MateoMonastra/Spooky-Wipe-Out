@@ -49,8 +49,12 @@ MonoBehaviour:
   ghost: {fileID: 0}
   barArea: {fileID: 0}
   catchingUI: {fileID: 0}
-  riseSpeed: 200
-  gravity: 500
+  initialProgress: 0.2
+  riseSpeed: 400
+  gravity: 400
+  maxRiseSpeed: 300
+  maxFallSpeed: 300
+  gravityResetValue: 50
   updateRate: 0.02
   difficulties:
   - name: Easy

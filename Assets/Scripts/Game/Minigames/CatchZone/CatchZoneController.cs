@@ -9,34 +9,38 @@ namespace Game.Minigames.CatchZone
 {
     public class CatchZoneController : Minigame
     {
-    
         public Action OnCatchProgress;
         public Action OnGhostEscapes;
 
-        [Header("Input")]
-        [SerializeField] private InputReader inputReader;
+        [Header("Input")] [SerializeField] private InputReader inputReader;
 
-        [Header("UI References")]
-        [SerializeField] private RectTransform catchZone;
+        [Header("UI References")] [SerializeField]
+        private RectTransform catchZone;
+
         [SerializeField] private RectTransform ghost;
         [SerializeField] private RectTransform barArea;
         [SerializeField] private CatchingUI catchingUI;
 
-        [Header("Catch Zone Physics")]
+        [Header("Catch Zone Physics")] [SerializeField]
+        private float initialProgress = 0.2f;
+
         [SerializeField] private float riseSpeed;
         [SerializeField] private float gravity;
+        [SerializeField] private float maxRiseSpeed = 300f;
+        [SerializeField] private float maxFallSpeed = 300f;
+        [SerializeField] private float gravityResetValue = 50f;
 
-        [Header("Progress")]
-        [SerializeField] private float updateRate;
+        [Header("Progress")] [SerializeField] private float updateRate;
 
-        [Header("Difficulties")]
-        [SerializeField] private CatchingDifficulty[] difficulties;
+        [Header("Difficulties")] [SerializeField]
+        private CatchingDifficulty[] difficulties;
 
         private CatchingDifficulty _currentDifficulty;
 
         private float _catchZoneVelocity;
         private float _ghostTimer;
         private float _progress;
+        private bool _isInputHeld;
 
         private Coroutine _updateLoop;
 
@@ -47,7 +51,7 @@ namespace Game.Minigames.CatchZone
         {
             OnStart?.Invoke();
             _isActive = true;
-            _progress = 0.2f;
+            _progress = initialProgress;
 
             _currentDifficulty = difficulties[UnityEngine.Random.Range(0, difficulties.Length)];
 
@@ -55,6 +59,7 @@ namespace Game.Minigames.CatchZone
             catchingUI.SetProgress(_progress);
 
             inputReader.OnSpaceInputStart += OnInputPressed;
+            inputReader.OnSpaceInputCancel += OnInputReleased;
 
             _updateLoop = StartCoroutine(UpdateLoop());
         }
@@ -76,6 +81,7 @@ namespace Game.Minigames.CatchZone
             _ghostTimer = 0f;
 
             inputReader.OnSpaceInputStart -= OnInputPressed;
+            inputReader.OnSpaceInputCancel -= OnInputReleased;
 
             if (_updateLoop != null)
                 StopCoroutine(_updateLoop);
@@ -96,7 +102,8 @@ namespace Game.Minigames.CatchZone
             OnLose?.Invoke();
         }
 
-        private void OnInputPressed() => _catchZoneVelocity = riseSpeed;
+        private void OnInputPressed() => _isInputHeld = true;
+        private void OnInputReleased() => _isInputHeld = false;
 
         private IEnumerator UpdateLoop()
         {
@@ -105,13 +112,31 @@ namespace Game.Minigames.CatchZone
                 UpdateCatchZonePosition();
                 UpdateGhostPosition();
                 UpdateProgress();
+                Debug.Log(_catchZoneVelocity);
                 yield return new WaitForSeconds(updateRate);
             }
         }
 
         private void UpdateCatchZonePosition()
         {
-            _catchZoneVelocity -= gravity * updateRate;
+            if (_isInputHeld)
+            {
+                if (_catchZoneVelocity <= 0)
+                {
+                    _catchZoneVelocity = 0;
+                }
+                _catchZoneVelocity += riseSpeed * updateRate;
+            }
+            else
+            {
+                if (_catchZoneVelocity > gravityResetValue)
+                {
+                    _catchZoneVelocity = gravityResetValue;
+                }
+                _catchZoneVelocity -= gravity * updateRate;
+            }
+            
+            _catchZoneVelocity = Mathf.Clamp(_catchZoneVelocity, -maxFallSpeed, maxRiseSpeed);
 
             float newY = catchZone.anchoredPosition.y + _catchZoneVelocity * updateRate;
             float maxY = barArea.rect.height - catchZone.rect.height;
