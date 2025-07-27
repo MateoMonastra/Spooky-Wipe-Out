@@ -2,11 +2,11 @@ using System.Collections.Generic;
 using Ghosts;
 using UnityEngine;
 
-namespace Game.Ghosts.WallGhost
+namespace Game.Ghosts.PaintGhost
 {
     public class PaintGhostManager : MonoBehaviour
     {
-        [SerializeField] private List<WallGhostAgent> allGhosts;
+        [SerializeField] private List<PaintGhostAgent> allGhosts;
         [SerializeField] private int maxActiveGhosts = 1;
 
         private int _lastActivatedIndex = -1;
@@ -45,7 +45,7 @@ namespace Game.Ghosts.WallGhost
             }
         }
 
-        private void OnGhostDeath(WallGhostAgent ghost)
+        private void OnGhostDeath(PaintGhostAgent ghost)
         {
             int index = allGhosts.IndexOf(ghost);
             if (index != -1)

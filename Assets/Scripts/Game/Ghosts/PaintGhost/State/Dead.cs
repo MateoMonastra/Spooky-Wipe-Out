@@ -1,16 +1,15 @@
-using Fsm_Mk2;
-using Minigames;
+using System;
+using FSM;
 using UnityEngine;
 
-namespace Ghosts.WallGhost
+namespace Ghosts.PaintGhost
 {
-    public class Catch : State
+    public class Dead : State
     {
-        public Catch()
+        public Dead()
         {
-            
         }
-        
+
         public override void Enter()
         {
         }
@@ -21,7 +20,6 @@ namespace Ghosts.WallGhost
 
         public override void FixedTick(float delta)
         {
-            
         }
 
         public override void Exit()

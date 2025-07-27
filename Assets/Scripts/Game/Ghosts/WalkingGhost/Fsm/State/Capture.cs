@@ -1,4 +1,5 @@
-using Fsm_Mk2;
+using FSM;
+using Game.Ghosts.WalkingGhost;
 using Minigames;
 using UnityEngine;
 

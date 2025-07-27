@@ -1,7 +1,7 @@
-using System;
+using FSM;
 using UnityEngine;
 
-namespace Fsm_Mk2
+namespace Game.Player
 {
     public class Trapped : State
     {

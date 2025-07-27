@@ -1,8 +1,9 @@
-using Player.FSM;
 using System;
+using FSM;
+using Player.FSM;
 using UnityEngine;
 
-namespace Fsm_Mk2
+namespace Game.Player
 {
     public class WalkIdle : State
     {
@@ -46,7 +47,6 @@ namespace Fsm_Mk2
         public override void Exit()
         {
             _dir = Vector3.zero;
-            //_isClickPressed = false;
         }
 
         private void Move()

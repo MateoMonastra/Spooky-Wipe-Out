@@ -1,17 +1,15 @@
 using System;
 using System.Collections.Generic;
-using AK.Wwise;
-using Fsm_Mk2;
-using Game.Ghosts.WallGhost;
-using Ghosts.WallGhost;
+using FSM;
+using Game.Ghosts.PaintGhost;
+using Ghosts.PaintGhost;
 using Minigames;
 using UnityEngine;
 using UnityEngine.Events;
-using State = Fsm_Mk2.State;
 
 namespace Ghosts
 {
-    public class WallGhostAgent : Ghost
+    public class PaintGhostAgent : Ghost
     {
         public UnityEvent<bool> OnCatch;
         public UnityEvent<bool> OnDeath;
@@ -20,23 +18,24 @@ namespace Ghosts
         [SerializeField] private Minigame minigame;
         [SerializeField] private Transform trappingPos;
         [SerializeField] private float restTime;
-        
+
         private List<State> _states = new List<State>();
 
         private Fsm _fsm;
 
-        private Transition _huntToCatch;
-        private Transition _catchToDead;
-        private Transition _deadToHunt;
+        private PaintGhostCollision _paintGhostCollision;
 
-        private WallGhostCollision _wallGhostCollision;
+        private string _toHuntID = "ToHunt";
+        private string _toDeadID = "ToDead";
+        private string _toCatchID = "ToCatch";
+
 
         public void OnEnable()
         {
-            _wallGhostCollision = GetComponentInChildren<WallGhostCollision>();
+            _paintGhostCollision = GetComponentInChildren<PaintGhostCollision>();
 
-            _wallGhostCollision.OnPlayerCollision += minigame.StartGame;
-            _wallGhostCollision.OnPlayerCollision += SetCatchState;
+            _paintGhostCollision.OnPlayerCollision += minigame.StartGame;
+            _paintGhostCollision.OnPlayerCollision += SetCatchState;
         }
 
         public void Start()
@@ -50,22 +49,19 @@ namespace Ghosts
             State _dead = new Dead();
             _states.Add(_dead);
 
-            _huntToCatch = new Transition() { From = _hunt, To = _catch };
-            _hunt.transitions.Add(_huntToCatch);
+            _hunt.AddTransition(new Transition() { From = _hunt, To = _catch, ID = _toCatchID });
 
-            _catchToDead = new Transition() { From = _catch, To = _dead };
-            _catch.transitions.Add(_catchToDead);
+            _catch.AddTransition(new Transition() { From = _catch, To = _dead, ID = _toDeadID });
 
-            _deadToHunt = new Transition() { From = _dead, To = _hunt };
-            _dead.transitions.Add(_catchToDead);
+            _dead.AddTransition(new Transition() { From = _dead, To = _hunt, ID = _toHuntID });
 
             _fsm = new Fsm(_hunt);
         }
 
-        public void SetHuntState() 
+        public void SetHuntState()
         {
             OnHunt?.Invoke(true);
-            _fsm.ApplyTransition(_deadToHunt);
+            _fsm.TryTransitionTo(_toHuntID);
             SetCollisionEnabled(true);
         }
 
@@ -75,23 +71,23 @@ namespace Ghosts
             GameManager.GetInstance().GetMinigameSkillCheckController().StopGame();
             minigame.OnWin += SetDeadState;
             minigame.OnLose += SetDeadState;
-            _fsm.ApplyTransition(_huntToCatch);
+            _fsm.TryTransitionTo(_toCatchID);
         }
-        
+
         public void SetDeadState()
         {
             OnDeath?.Invoke(true);
             SetCollisionEnabled(false);
             minigame.OnWin -= SetDeadState;
             minigame.OnLose -= SetDeadState;
-            _fsm.ApplyTransition(_catchToDead);
+            _fsm.TryTransitionTo(_toDeadID);
         }
 
         public void SetCollisionEnabled(bool isEnabled)
         {
-            if (_wallGhostCollision != null)
+            if (_paintGhostCollision != null)
             {
-                _wallGhostCollision.SetActiveCollision(isEnabled);
+                _paintGhostCollision.SetActiveCollision(isEnabled);
             }
         }
 

@@ -1,4 +1,4 @@
-using Fsm_Mk2;
+using FSM;
 using UnityEngine;
 
 namespace Ghosts.WalkingGhost

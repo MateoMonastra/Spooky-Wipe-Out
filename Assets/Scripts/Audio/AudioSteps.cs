@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Game.Player;
 using UnityEngine;
-using Fsm_Mk2;
 using Player.FSM;
 
 public class AudioSteps : MonoBehaviour

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Game.Ghosts.WalkingGhost;
+using UnityEngine;
 using Ghosts;
 
 public struct GhostBehaviourData

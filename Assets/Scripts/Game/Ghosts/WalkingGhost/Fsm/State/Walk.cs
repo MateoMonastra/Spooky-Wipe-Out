@@ -1,7 +1,4 @@
-using Fsm_Mk2;
-using Gameplay.GhostMechanics;
-using System;
-using UnityEngine;
+using FSM;
 
 namespace Ghosts.WalkingGhost
 {

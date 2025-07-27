@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Fsm_Mk2
+namespace Game.Player
 {
     [CreateAssetMenu(fileName = "WalkIdleModel", menuName = "Player/FSM/States/WalkIdleModel")]
     public class WalkIdleModel : ScriptableObject

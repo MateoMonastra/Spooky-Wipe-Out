@@ -1,10 +1,10 @@
 using System;
-using Fsm_Mk2;
+using Game.Player;
 using UnityEngine;
 
-namespace Game.Ghosts.WallGhost
+namespace Game.Ghosts.PaintGhost
 {
-    public class WallGhostCollision : MonoBehaviour
+    public class PaintGhostCollision : MonoBehaviour
     {
         [SerializeField] private Transform trappingPos;
 

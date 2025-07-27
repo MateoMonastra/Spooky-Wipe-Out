@@ -1,8 +1,5 @@
-using System;
-using Fsm_Mk2;
-using System.Diagnostics;
+using FSM;
 using Debug = UnityEngine.Debug;
-using UnityEngine.AI;
 
 namespace Ghosts.WalkingGhost
 {

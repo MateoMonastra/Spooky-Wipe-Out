@@ -1,6 +1,7 @@
 using Ghosts;
 using System.Collections;
 using System.Collections.Generic;
+using Game.Ghosts.WalkingGhost;
 using UnityEngine;
 using UnityEngine.Events;
 
