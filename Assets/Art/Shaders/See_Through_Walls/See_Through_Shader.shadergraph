@@ -615,7 +615,7 @@
                 "m_Node": {
                     "m_Id": "fd1a16497bc040f4aa7b79b77a3b6308"
                 },
-                "m_SlotId": 0
+                "m_SlotId": 4
             },
             "m_InputSlot": {
                 "m_Node": {
@@ -629,7 +629,7 @@
                 "m_Node": {
                     "m_Id": "fd1a16497bc040f4aa7b79b77a3b6308"
                 },
-                "m_SlotId": 0
+                "m_SlotId": 7
             },
             "m_InputSlot": {
                 "m_Node": {
@@ -3267,10 +3267,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1021.0,
-            "y": -13.999998092651368,
-            "width": 186.0,
-            "height": 33.999969482421878
+            "x": -1200.0,
+            "y": -47.99998092651367,
+            "width": 185.99993896484376,
+            "height": 34.0000114440918
         }
     },
     "m_Slots": [
@@ -4897,13 +4897,13 @@
     },
     "m_Name": "Sample Texture 2D",
     "m_DrawState": {
-        "m_Expanded": false,
+        "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -818.0,
-            "y": -53.00002670288086,
-            "width": 180.0,
-            "height": 155.0
+            "x": -997.0,
+            "y": -87.00000762939453,
+            "width": 207.99993896484376,
+            "height": 339.0000305175781
         }
     },
     "m_Slots": [
@@ -4936,7 +4936,7 @@
         "tex2d"
     ],
     "m_Precision": 0,
-    "m_PreviewExpanded": false,
+    "m_PreviewExpanded": true,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
     "m_CustomColors": {
