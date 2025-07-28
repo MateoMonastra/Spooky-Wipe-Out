@@ -18,6 +18,7 @@ namespace FSM
         public virtual void FixedTick(float delta) => OnFixedTick?.Invoke();
 
         public virtual void Exit() => OnExit?.Invoke();
+        public virtual void DrawStateGizmos() { }
 
         public bool TryGetTransition(string id, out Transition transition)
         {
