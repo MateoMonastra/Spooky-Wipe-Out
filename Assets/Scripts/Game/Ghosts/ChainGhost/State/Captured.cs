@@ -1,17 +1,16 @@
-using FSM;
 using Game.Ghosts.WalkingGhost;
 using Minigames;
 using UnityEngine;
 
-namespace Ghosts.WalkingGhost
+namespace Game.Ghosts.ChainGhost
 {
-    public class Capture : State
+    public class Captured : FSM.State
     {
         private GameObject _model;
         private ChainGhostAgent _agent;
         private Minigame _minigame;
 
-        public Capture(GameObject model, ChainGhostAgent agent, Minigame minigame)
+        public Captured(GameObject model, ChainGhostAgent agent, Minigame minigame)
         {
             _model = model;
             _agent = agent;
@@ -23,7 +22,7 @@ namespace Ghosts.WalkingGhost
             _agent.OnBeingDestroy?.Invoke(_agent);
             _agent.gameObject.SetActive(false);
             _agent.enabled = false;
-            _minigame.StopGame();
+            _minigame?.StopGame();
         }
 
         public override void Tick(float delta)

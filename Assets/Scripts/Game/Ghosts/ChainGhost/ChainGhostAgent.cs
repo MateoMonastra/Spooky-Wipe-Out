@@ -2,14 +2,14 @@ using System;
 using System.Collections.Generic;
 using AI.DecisionTree.Helpers;
 using FSM;
+using Game.Ghosts.ChainGhost.State;
 using Ghosts;
-using Ghosts.WalkingGhost;
 using Minigames;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
 
-namespace Game.Ghosts.WalkingGhost
+namespace Game.Ghosts.ChainGhost
 {
     public class ChainGhostAgent : Ghost, IVacuumable
     {
@@ -75,13 +75,13 @@ namespace Game.Ghosts.WalkingGhost
 
             GameManager.GetInstance().ghosts.Add(this);
 
-            State _walk = new Walk(_patrollingGhost);
+            State _walk = new Patrolling(_patrollingGhost);
             _states.Add(_walk);
 
             State _struggle = new Struggle(_agent);
             _states.Add(_struggle);
 
-            State _capture = new Capture(model, this, minigame);
+            State _capture = new Captured(model, this, minigame);
 
             _states.Add(_capture);
 

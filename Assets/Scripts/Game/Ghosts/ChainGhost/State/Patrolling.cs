@@ -1,11 +1,10 @@
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
-using FSM;
-using UnityEditor;
 
-namespace Enemies.ChainGhost
+namespace Game.Ghosts.ChainGhost
 {
-    public class Patrolling : State
+    public class Patrolling : FSM.State
     {
         private readonly Transform _enemy;
         private readonly Transform _player;
