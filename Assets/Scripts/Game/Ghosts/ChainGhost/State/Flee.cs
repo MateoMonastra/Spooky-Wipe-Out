@@ -20,7 +20,7 @@ namespace Ghosts.WalkingGhost
         private bool _fleeingToWaypoint;
         private Vector3 _lastTargetPosition;
         private float _stuckTimer;
-        private readonly float _maxStuckTime = 3f;
+        private readonly float _maxStuckTime = 1f;
         private readonly float _waypointArrivalThreshold = 0.3f;
         private System.Action _onEscape;
         private System.Action _onPanic;
