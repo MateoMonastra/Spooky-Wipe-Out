@@ -4935,13 +4935,10 @@ GameObject:
   - component: {fileID: 161826005871552228}
   - component: {fileID: 745596931517258071}
   - component: {fileID: 8968938385445474440}
-  - component: {fileID: 1421820055152367310}
-  - component: {fileID: 6564748177361532084}
-  - component: {fileID: 6523121535161372763}
   - component: {fileID: 2861774883517133326}
   - component: {fileID: 8288229231325126369}
   - component: {fileID: 705575695356465264}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Chains_Ghost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4978,13 +4975,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57777198d7566654883abd12c583ed6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnVacuumed:
+  onVacuum:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 705575695356465264}
-        m_TargetAssemblyTypeName: GhostAnimationController, Assembly-CSharp
-        m_MethodName: SetVacuumedState
-        m_Mode: 0
+        m_TargetAssemblyTypeName: Game.Ghosts.ChainGhost.ChainGhostAnimation, Assembly-CSharp
+        m_MethodName: SetStruggledAnimation
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4993,16 +4990,108 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  minigame: {fileID: 0}
-  model: {fileID: 7241681532952809860}
-  treeAsset: {fileID: 4900000, guid: c8a5fb8aedb139b4c9766fdb78a3d73c, type: 3}
-  <viewHunterDistance>k__BackingField: 8
-  <awareHunterDistance>k__BackingField: 16
-  <currentHunterDistance>k__BackingField: 0
-  <isRested>k__BackingField: 0
-  hunter: {fileID: 0}
-  surprisedVfx: {fileID: 7460502879230320613}
-  logFsmStateChanges: 0
+  onFlee:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 416756993311283653, guid: d6c20553ad13fe741860b5fd6775d231, type: 3}
+        m_TargetAssemblyTypeName: Audio.AudioControllerChainGhost, Assembly-CSharp
+        m_MethodName: Flee
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 705575695356465264}
+        m_TargetAssemblyTypeName: Game.Ghosts.ChainGhost.ChainGhostAnimation, Assembly-CSharp
+        m_MethodName: SetWalkAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7460502879230320613}
+        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onRest:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 705575695356465264}
+        m_TargetAssemblyTypeName: Game.Ghosts.ChainGhost.ChainGhostAnimation, Assembly-CSharp
+        m_MethodName: SetTiredAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCaptured:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 416756993311283653, guid: d6c20553ad13fe741860b5fd6775d231, type: 3}
+        m_TargetAssemblyTypeName: Audio.AudioControllerChainGhost, Assembly-CSharp
+        m_MethodName: DestroyGhost
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onPatroll:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 705575695356465264}
+        m_TargetAssemblyTypeName: Game.Ghosts.ChainGhost.ChainGhostAnimation, Assembly-CSharp
+        m_MethodName: SetWalkAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  player: {fileID: 0}
+  navMeshAgent: {fileID: 8968938385445474440}
+  patrolWaypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  struggleMinigame: {fileID: 0}
+  ghostCollider: {fileID: 8288229231325126369}
+  detectRadius: 8
+  fleeDistance: 10
+  escapeDuration: 3
+  restDuration: 4
+  obstructionMask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!195 &8968938385445474440
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5025,98 +5114,6 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &1421820055152367310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7534280635867931546}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9feda5d697e1caf4eb95e979dad98b59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  _patrolingSpeed: 100
-  stopTired:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 705575695356465264}
-        m_TargetAssemblyTypeName: ChainGhostAnimation, Assembly-CSharp
-        m_MethodName: SetIsTiredState
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &6564748177361532084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7534280635867931546}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ac5fe8f119b4dd499029d4e32bd98f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stopTired:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 705575695356465264}
-        m_TargetAssemblyTypeName: ChainGhostAnimation, Assembly-CSharp
-        m_MethodName: SetIsTiredState
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _player: {fileID: 0}
-  _fleeSpeed: 800
---- !u!114 &6523121535161372763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7534280635867931546}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0db070a9aa0a6b34b852902c5a4f8420, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnTired:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 705575695356465264}
-        m_TargetAssemblyTypeName: ChainGhostAnimation, Assembly-CSharp
-        m_MethodName: SetIsTiredState
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  isRested: 0
-  restDuration: 6
 --- !u!54 &2861774883517133326
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5265,11 +5262,6 @@ Animator:
 --- !u!4 &4198057532393807538 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2303190976650435604, guid: 76fc434e12d05064d887c9b8cade3a46, type: 3}
-  m_PrefabInstance: {fileID: 2717056959908807334}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &7241681532952809860 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4741008465746891554, guid: 76fc434e12d05064d887c9b8cade3a46, type: 3}
   m_PrefabInstance: {fileID: 2717056959908807334}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4492676679520946376

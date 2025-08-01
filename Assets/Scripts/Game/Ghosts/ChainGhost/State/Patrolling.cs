@@ -1,10 +1,12 @@
+using System;
+using FSM;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 
 namespace Game.Ghosts.ChainGhost
 {
-    public class Patrolling : FSM.State
+    public class Patrolling : State
     {
         private readonly Transform _enemy;
         private readonly Transform _player;
@@ -12,7 +14,7 @@ namespace Game.Ghosts.ChainGhost
         private readonly Transform[] _waypoints;
         private readonly float _detectRadius;
         private readonly LayerMask _obstructionMask;
-        private readonly System.Action _onSeePlayer;
+        private readonly Action _onSeePlayer;
         private readonly float _headOffset = 1.5f;
 
         private int _currentWaypointIndex;
@@ -24,7 +26,7 @@ namespace Game.Ghosts.ChainGhost
             Transform[] waypoints,
             float detectRadius,
             LayerMask obstructionMask,
-            System.Action onSeePlayer)
+            Action onSeePlayer)
         {
             _enemy = enemy;
             _player = player;
@@ -56,10 +58,11 @@ namespace Game.Ghosts.ChainGhost
                 }
             }
 
-            if (!_agent.pathPending && _agent.remainingDistance < 0.2f)
+            if (!_agent.pathPending && _agent.remainingDistance < 0.5f && _agent.velocity.magnitude < 0.05f)
             {
                 GoToNextWaypoint();
             }
+
         }
 
         public override void Exit()
@@ -72,30 +75,63 @@ namespace Game.Ghosts.ChainGhost
             if (_waypoints == null || _waypoints.Length == 0)
                 return;
 
-            _agent.SetDestination(_waypoints[_currentWaypointIndex].position);
-            _currentWaypointIndex = (_currentWaypointIndex + 1) % _waypoints.Length;
-        }
-        
-#if UNITY_EDITOR
-        public override void DrawStateGizmos()
-        {
-            if (_enemy == null) return;
-            
-            Handles.color = Color.yellow;
-            Handles.DrawWireDisc(_enemy.position, Vector3.up, _detectRadius);
-            
-            if (_player != null)
+            int safety = 0;
+            float minDistance = 0.5f;
+            float sampleRadius = 2f;
+
+            while (safety < _waypoints.Length)
             {
-                Vector3 rayOrigin = _enemy.position + Vector3.up * _headOffset;
-                Vector3 direction = (_player.position - _enemy.position).normalized;
-                if (!Physics.Raycast(rayOrigin, direction, out RaycastHit hit, _detectRadius, _obstructionMask) &&
-                    Vector3.Distance(_enemy.position, _player.position) < _detectRadius)
+                var target = _waypoints[_currentWaypointIndex];
+                _currentWaypointIndex = (_currentWaypointIndex + 1) % _waypoints.Length;
+                safety++;
+
+                if (target == null)
+                    continue;
+
+                if (NavMesh.SamplePosition(target.position, out NavMeshHit hit, sampleRadius, NavMesh.AllAreas))
                 {
-                    Handles.color = Color.green;
-                    Handles.DrawLine(rayOrigin, _player.position);
+                    float dist = Vector3.Distance(_enemy.position, hit.position);
+                    if (dist > minDistance)
+                    {
+                        _agent.SetDestination(hit.position);
+                        return;
+                    }
                 }
             }
+
+            Debug.LogWarning($"{_enemy.name}: No valid waypoint found on NavMesh.");
         }
+
+        public override void DrawStateGizmos()
+        {
+#if UNITY_EDITOR
+            if (_waypoints != null)
+            {
+                Handles.color = Color.yellow;
+                foreach (var wp in _waypoints)
+                {
+                    if (wp != null)
+                        Handles.DrawSolidDisc(wp.position, Vector3.up, 0.2f);
+                }
+            }
+
+            Handles.color = Color.green;
+            Handles.DrawLine(_enemy.position, _agent.destination);
+
+            if (_waypoints != null)
+                foreach (var wp in _waypoints)
+                {
+                    if (wp != null)
+                    {
+                        Handles.color = NavMesh.SamplePosition(wp.position, out _, 1f, NavMesh.AllAreas)
+                            ? Color.yellow
+                            : Color.red;
+
+                        Handles.DrawSolidDisc(wp.position, Vector3.up, 0.25f);
+                    }
+                }
+
 #endif
+        }
     }
 }

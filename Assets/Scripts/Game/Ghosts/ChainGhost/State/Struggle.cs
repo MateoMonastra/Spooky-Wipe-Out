@@ -1,6 +1,6 @@
+using FSM;
 using UnityEngine;
 using UnityEngine.AI;
-using FSM;
 
 namespace Game.Ghosts.ChainGhost
 {

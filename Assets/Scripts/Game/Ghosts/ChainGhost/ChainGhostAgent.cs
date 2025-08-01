@@ -1,248 +1,165 @@
-using System;
-using System.Collections.Generic;
-using AI.DecisionTree.Helpers;
+
 using FSM;
-using Game.Ghosts.ChainGhost.State;
-using Ghosts;
-using Minigames;
+using Game.Ghosts.ChainGhost;
 using UnityEngine;
 using UnityEngine.AI;
+using Minigames;
 using UnityEngine.Events;
 
-namespace Game.Ghosts.ChainGhost
+namespace Ghosts.WalkingGhost
 {
     public class ChainGhostAgent : Ghost, IVacuumable
     {
-        public Action OnFlee;
-        public UnityEvent<bool> OnVacuumed;
-        private Action<bool> OnRested = delegate { };
+        public UnityEvent onVacuum;
+        public UnityEvent onFlee;
+        public UnityEvent onRest;
+        public UnityEvent onCaptured;
+        public UnityEvent onPatroll;
+        public UnityEvent onPanicked;
 
-        [SerializeField] private Minigame minigame;
-        [SerializeField] private GameObject model;
-        [SerializeField] private TextAsset treeAsset;
 
-        private GhostPatrolling _patrollingGhost;
-        private GhostFlee _fleeGhost;
-        private GhostRest _restGhost;
+        [Header("References")] 
+        [SerializeField] private Transform player;
+        [SerializeField] private NavMeshAgent navMeshAgent;
+        [SerializeField] private Transform[] patrolWaypoints;
+        [SerializeField] private Minigame struggleMinigame;
+        [SerializeField] private Collider ghostCollider;
 
-        [field: SerializeField] public float viewHunterDistance { get; private set; } = 8.0f;
-        [field: SerializeField] public float awareHunterDistance { get; private set; } = 16.0f;
-        [field: SerializeField] public float currentHunterDistance { get; private set; }
-        [field: SerializeField] public bool isRested { get; set; }
-
-        [SerializeField] private Transform hunter;
-        [SerializeField] private ParticleSystem surprisedVfx;
-        [SerializeField] private bool logFsmStateChanges = false;
-
-        private List<State> _states = new List<State>();
-
-        private string _toFleeID = "ToFlee";
-        private string _toPatrollingID = "ToPatrolling";
-        private string _toRestID = "ToRest";
-        private string _toStruggleID = "ToStruggle";
-        private string _toCaptureID = "ToCapture";
+        [Header("Settings")]
+        [SerializeField] private float fleeSpeed = 6f;
+        [SerializeField] private float detectRadius = 8f;
+        [SerializeField] private float fleeDistance = 10f;
+        [SerializeField] private float escapeDuration = 3f;
+        [SerializeField] private float restDuration = 3f;
+        [SerializeField] private float panicDuration = 3f;
+        [SerializeField] private LayerMask obstructionMask;
 
         private Fsm _fsm;
 
-        private Rest _restState;
-        AI.DecisionTree.Tree tree;
+        private Patrolling _patrolling;
+        private Flee _flee;
+        private Rest _rest;
+        private Struggle _struggle;
+        private Captured _captured;
+        private Panicked _panicked;
 
-        private Dictionary<Type, Action> actionsByType = new();
+        private const string ToFleeID = "ToFlee";
+        private const string ToRestID = "ToRest";
+        private const string ToPatrollingID = "ToPatrolling";
+        private const string ToCapturedID = "ToCaptured";
+        private const string ToPanickedID = "ToPanicked";
 
-        private NavMeshAgent _agent;
-
-        private void Awake()
+        private void Start()
         {
-            _patrollingGhost = GetComponent<GhostPatrolling>();
-            _fleeGhost = GetComponent<GhostFlee>();
-            _restGhost = GetComponent<GhostRest>();
-
-            actionsByType.Add(typeof(Action_Patrolling), SetFleeWalkingState);
-            actionsByType.Add(typeof(Action_Flee), SetWalkToFleeState);
-            actionsByType.Add(typeof(Action_Rest), SetFleeRestState);
-
-            isRested = true;
-            currentHunterDistance = viewHunterDistance;
-        }
-
-        public void Start()
-        {
-            _agent = GetComponent<NavMeshAgent>();
-
-            minigame.OnWin += SetCaptureState;
-            minigame.OnLose += SetFleeMinigameState;
-            minigame.OnStop += SetFleeMinigameState;
-
             GameManager.GetInstance().ghosts.Add(this);
 
-            State _walk = new Patrolling(_patrollingGhost);
-            _states.Add(_walk);
+            //Panicked
+            _panicked = new Panicked(
+                transform,
+                panicDuration,
+                ToFleePanicked
+            );
 
-            State _struggle = new Struggle(_agent);
-            _states.Add(_struggle);
 
-            State _capture = new Captured(model, this, minigame);
+            // Captured
+            _captured = new Captured(
+                model: gameObject,
+                agent: this,
+                minigame: struggleMinigame
+            );
 
-            _states.Add(_capture);
+            // Struggle
+            _struggle = new Struggle(
+                transform,
+                player,
+                navMeshAgent,
+                onEnterCaptured: ToCaptured,
+                onStruggleFail: ToFlee
+            );
 
-            State _flee = new Flee(_fleeGhost);
-            _states.Add(_flee);
+            // Patrolling
+            _patrolling = new Patrolling(
+                transform,
+                player,
+                navMeshAgent,
+                patrolWaypoints,
+                detectRadius,
+                obstructionMask,
+                onSeePlayer: ToFlee
+            );
 
-            State _rest = new Rest(_restGhost);
-            _states.Add(_rest);
+            // Flee
+            _flee = new Flee(
+                transform,
+                player,
+                navMeshAgent,
+                patrolWaypoints,
+                escapeDuration,
+                obstructionMask,
+                fleeSpeed,
+                ToRest,
+                ToPanicked
+            );
 
-            _restState = (_rest as Rest);
-            OnRested += _restState.ChangeRest;
 
-            Transition _fleeToStruggle = new Transition() { From = _flee, To = _struggle, ID = _toStruggleID };
-            _flee.AddTransition(_fleeToStruggle);
+            // Rest
+            _rest = new Rest(
+                transform,
+                restDuration,
+                onRestComplete: ToPatrolling
+            );
 
-            Transition _struggleToCapture = new Transition() { From = _struggle, To = _capture, ID = _toCaptureID };
-            _struggle.AddTransition(_struggleToCapture);
+            // Transitions
+            _patrolling.AddTransition(new Transition { From = _patrolling, To = _flee, ID = ToFleeID });
+            _flee.AddTransition(new Transition { From = _flee, To = _rest, ID = ToRestID });
+            _flee.AddTransition(new Transition { From = _flee, To = _panicked, ID = ToPanickedID });
+            _rest.AddTransition(new Transition { From = _rest, To = _patrolling, ID = ToPatrollingID });
+            _struggle.AddTransition(new Transition { From = _struggle, To = _captured, ID = ToCapturedID });
 
-            Transition _struggleToFlee = new Transition() { From = _struggle, To = _flee, ID = _toFleeID };
-
-            _struggleToFlee.OnTransition += () =>
-            {
-                isRested = true;
-                OnRested(isRested);
-            };
-
-            _struggle.AddTransition(_struggleToFlee);
-
-            Transition struggleToWalk = new Transition() { From = _struggle, To = _walk, ID = _toPatrollingID };
-            _struggle.AddTransition(struggleToWalk);
-
-            Transition fleeToWalk = new Transition() { From = _flee, To = _walk, ID = _toPatrollingID };
-            _flee.AddTransition(fleeToWalk);
-
-            Transition walkToFlee = new Transition() { From = _walk, To = _flee, ID = _toFleeID };
-            walkToFlee.OnTransition += surprisedVfx.Play;
-            walkToFlee.OnTransition += () => OnFlee?.Invoke();
-            _walk.AddTransition(walkToFlee);
-
-            Transition startWalk = new Transition() { From = _walk, To = _walk, ID = _toPatrollingID };
-            _walk.AddTransition(startWalk);
-
-            Transition fleeToRest = new Transition() { From = _flee, To = _rest, ID = _toRestID };
-            _flee.AddTransition(fleeToRest);
-
-            Transition walkToRest = new Transition() { From = _walk, To = _rest, ID = _toRestID };
-            _walk.AddTransition(walkToRest);
-
-            Transition restToWalk = new Transition() { From = _rest, To = _walk, ID = _toPatrollingID };
-            _rest.AddTransition(restToWalk);
-
-            Transition restToFlee = new Transition() { From = _rest, To = _flee, ID = _toFleeID };
-            restToFlee.OnTransition += surprisedVfx.Play;
-            restToFlee.OnTransition += () => OnFlee?.Invoke();
-            _rest.AddTransition(restToFlee);
-
-            Transition restToStruggle = new Transition() { From = _rest, To = _struggle, ID = _toStruggleID };
-            _rest.AddTransition(restToStruggle);
-
-            _fsm = new Fsm(_walk);
-
-            if (treeAsset != null)
-            {
-                tree = TreeHelper.LoadTree(treeAsset, GetGhostData);
-                tree.Callback = HandleDecision;
-            }
-            else
-            {
-                Debug.Log("The path is empty");
-            }
-
-            _fleeGhost.SetRestState.AddListener(SetRestedState);
-            _restGhost.SetRestState.AddListener(SetRestedState);
+            _fsm = new Fsm(_patrolling);
         }
 
-        private void OnDisable()
+        private void ToCaptured()
         {
-            _fleeGhost.SetRestState.RemoveListener(SetRestedState);
-            _restGhost.SetRestState.RemoveListener(SetRestedState);
-            OnRested -= _restState.ChangeRest;
+            _fsm.TryTransitionTo(ToCapturedID);
+            onCaptured?.Invoke();
         }
 
-        private void SetRestedState(bool value)
+        private void ToFleePanicked()
         {
-            isRested = value;
+            _flee.SetCameFromPanic(true);
+            _fsm.TryTransitionTo(ToFleeID);
+            onFlee?.Invoke();
         }
 
-        private void HandleDecision(object[] args)
+        private void ToFlee()
         {
-            if (args.Length == 0) return;
-
-            if (args[0] is Type type && actionsByType.TryGetValue(type, out Action action))
-            {
-                action?.Invoke();
-            }
+            _flee.SetCameFromPanic(false);
+            _fsm.TryTransitionTo(ToFleeID);
+            onFlee?.Invoke();
         }
 
-        private object GetGhostData()
+        private void ToRest()
         {
-            return new GhostBehaviourData(this, hunter);
+            _fsm.TryTransitionTo(ToRestID);
+            onRest?.Invoke();
         }
 
-        private void SetStruggleState()
+        private void ToPatrolling()
         {
-            if (minigame.GetActive()) return;
-
-            OnVacuumed?.Invoke(true);
-            gameObject.transform.forward = hunter.forward;
-            _fsm.TryTransitionTo(_toStruggleID);
-
-            minigame.StartGame();
+            _fsm.TryTransitionTo(ToPatrollingID);
+            onPatroll?.Invoke();
         }
 
-        private void SetCaptureState()
+        private void ToPanicked()
         {
-            _fsm.TryTransitionTo(_toCaptureID);
-        }
-
-        private void SetFleeState()
-        {
-            OnVacuumed?.Invoke(false);
-
-            _fsm.TryTransitionTo(_toFleeID);
-        }
-
-        private void SetFleeWalkingState()
-        {
-            currentHunterDistance = viewHunterDistance;
-            _fsm.TryTransitionTo(_toPatrollingID);
-        }
-
-        private void SetWalkToFleeState()
-        {
-            OnVacuumed?.Invoke(false);
-            currentHunterDistance = awareHunterDistance;
-            _fsm.TryTransitionTo(_toFleeID);
-        }
-
-        private void SetFleeMinigameState()
-        {
-            OnVacuumed?.Invoke(false);
-            currentHunterDistance = awareHunterDistance;
-            _fsm.TryTransitionTo(_toFleeID);
-            OnRested?.Invoke(true);
-        }
-
-        private void SetFleeRestState()
-        {
-            currentHunterDistance = viewHunterDistance;
-            isRested = false;
-            OnRested?.Invoke(false);
-            _fsm.TryTransitionTo(_toRestID);
+            _fsm.TryTransitionTo(ToPanickedID);
+            onPanicked?.Invoke();
         }
 
         private void Update()
         {
-            tree.RunTree();
-
             _fsm.Update();
-            if (logFsmStateChanges)
-                Debug.Log(_fsm.GetCurrentState());
         }
 
         private void FixedUpdate()
@@ -250,9 +167,46 @@ namespace Game.Ghosts.ChainGhost
             _fsm.FixedUpdate();
         }
 
+        private void OnDrawGizmos()
+        {
+            _fsm?.GetCurrentState()?.DrawStateGizmos();
+        }
+
+        private void EnterStruggle()
+        {
+            if (_fsm.GetCurrentState() == _struggle)
+                return;
+
+            struggleMinigame.OnWin += HandleStruggleWin;
+            struggleMinigame.OnLose += HandleStruggleLose;
+
+            struggleMinigame.StartGame();
+
+            _fsm.ForceSetCurrentState(_struggle);
+            onVacuum?.Invoke();
+        }
+
+        private void HandleStruggleWin()
+        {
+            CleanupMinigameCallbacks();
+            _struggle.ResolveStruggle(true);
+        }
+
+        private void HandleStruggleLose()
+        {
+            CleanupMinigameCallbacks();
+            _struggle.ResolveStruggle(false);
+        }
+
+        private void CleanupMinigameCallbacks()
+        {
+            struggleMinigame.OnWin -= HandleStruggleWin;
+            struggleMinigame.OnLose -= HandleStruggleLose;
+        }
+
         public void IsBeingVacuumed(params object[] args)
         {
-            SetStruggleState();
+            EnterStruggle();
         }
 
         public State GetCurrentState()

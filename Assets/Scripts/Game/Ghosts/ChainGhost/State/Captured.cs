@@ -1,4 +1,4 @@
-using Game.Ghosts.WalkingGhost;
+using Ghosts.WalkingGhost;
 using Minigames;
 using UnityEngine;
 

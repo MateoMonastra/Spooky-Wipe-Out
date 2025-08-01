@@ -4,18 +4,24 @@ namespace Game.Ghosts.ChainGhost
 {
     public class ChainGhostAnimation : MonoBehaviour
     {
-        private static readonly int IsBeingCaptured = Animator.StringToHash("IsBeingCaptured");
-        private static readonly int IsTired = Animator.StringToHash("IsTired");
+        private static readonly int Struggled = Animator.StringToHash("Struggled");
+        private static readonly int Tired = Animator.StringToHash("Tired");
+        private static readonly int Walk = Animator.StringToHash("Walk");
         [SerializeField] private Animator animator;
 
-        public void SetVacuumedState(bool state)
+        public void SetStruggledAnimation()
         {
-            animator.SetBool(IsBeingCaptured, state);
+            animator.SetTrigger(Struggled);
         }
     
-        public void SetIsTiredState(bool state)
+        public void SetTiredAnimation()
         {
-            animator.SetBool(IsTired, state);
+            animator.SetTrigger(Tired);
+        }
+
+        public void SetWalkAnimation()
+        {
+            animator.SetTrigger(Walk);
         }
     }
 }
