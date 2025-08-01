@@ -1,4 +1,3 @@
-
 using FSM;
 using Game.Ghosts.ChainGhost;
 using UnityEngine;
@@ -18,15 +17,15 @@ namespace Ghosts.WalkingGhost
         public UnityEvent onPanicked;
 
 
-        [Header("References")] 
-        [SerializeField] private Transform player;
+        [Header("References")] [SerializeField]
+        private Transform player;
+
         [SerializeField] private NavMeshAgent navMeshAgent;
         [SerializeField] private Transform[] patrolWaypoints;
         [SerializeField] private Minigame struggleMinigame;
         [SerializeField] private Collider ghostCollider;
 
-        [Header("Settings")]
-        [SerializeField] private float fleeSpeed = 6f;
+        [Header("Settings")] [SerializeField] private float fleeSpeed = 6f;
         [SerializeField] private float detectRadius = 8f;
         [SerializeField] private float fleeDistance = 10f;
         [SerializeField] private float escapeDuration = 3f;
@@ -113,6 +112,7 @@ namespace Ghosts.WalkingGhost
             _patrolling.AddTransition(new Transition { From = _patrolling, To = _flee, ID = ToFleeID });
             _flee.AddTransition(new Transition { From = _flee, To = _rest, ID = ToRestID });
             _flee.AddTransition(new Transition { From = _flee, To = _panicked, ID = ToPanickedID });
+            _panicked.AddTransition(new Transition { From = _panicked, To = _flee, ID = ToFleeID });
             _rest.AddTransition(new Transition { From = _rest, To = _patrolling, ID = ToPatrollingID });
             _struggle.AddTransition(new Transition { From = _struggle, To = _captured, ID = ToCapturedID });
 

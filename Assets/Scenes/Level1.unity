@@ -1018,6 +1018,34 @@ PrefabInstance:
       propertyPath: <viewHunterDistance>k__BackingField
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: onPanicked.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: onPanicked.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: onPanicked.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1836773706}
+    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: onPanicked.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: onPanicked.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetWalkAnimation
+      objectReference: {fileID: 0}
+    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: onPanicked.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Game.Ghosts.ChainGhost.ChainGhostAnimation, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: onPanicked.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1421820055152367310, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: _waypoints.Array.size
       value: 4
@@ -1106,7 +1134,7 @@ PrefabInstance:
     - target: {fileID: 1228824031268626625, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
       propertyPath: listenerToMove
       value: 
-      objectReference: {fileID: 678421156}
+      objectReference: {fileID: 0}
     - target: {fileID: 2472514338396502382, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1312,17 +1340,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6490349011020445676, guid: 4583c1a5853e93c47af94d7621e08ed5, type: 3}
   m_PrefabInstance: {fileID: 643466265}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &678421156 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8631054398572458701, guid: 04ec06ba54f74e5408d7081d3679e017, type: 3}
-  m_PrefabInstance: {fileID: 1563788280}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 126a0efdfd2717541a02e6eb844341f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &681917671
 GameObject:
   m_ObjectHideFlags: 0
@@ -3427,6 +3444,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 161826005871552228, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
   m_PrefabInstance: {fileID: 1810752047}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1836773706 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 705575695356465264, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+  m_PrefabInstance: {fileID: 468326752}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd0b4f758364934489e7f3d5911e49d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1838501080
 GameObject:
   m_ObjectHideFlags: 0

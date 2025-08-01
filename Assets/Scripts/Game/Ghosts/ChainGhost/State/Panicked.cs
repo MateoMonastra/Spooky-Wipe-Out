@@ -25,11 +25,12 @@ namespace Game.Ghosts.ChainGhost
         public override void Tick(float delta)
         {
             _timer += delta;
-            
+
             _enemy.Rotate(Vector3.up * (180f * delta));
 
             if (_timer >= _panicDuration)
             {
+                Debug.Log($"{_enemy.name} Se va del PANICO");
                 _onPanicEnd?.Invoke();
             }
         }
