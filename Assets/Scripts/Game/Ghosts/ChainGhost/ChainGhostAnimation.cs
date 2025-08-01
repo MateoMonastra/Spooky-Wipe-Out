@@ -5,18 +5,19 @@ namespace Game.Ghosts.ChainGhost
     public class ChainGhostAnimation : MonoBehaviour
     {
         private static readonly int Struggled = Animator.StringToHash("Struggled");
-        private static readonly int Tired = Animator.StringToHash("Tired");
         private static readonly int Walk = Animator.StringToHash("Walk");
+        private static readonly int IsTired = Animator.StringToHash("isTired");
+        
         [SerializeField] private Animator animator;
 
         public void SetStruggledAnimation()
         {
             animator.SetTrigger(Struggled);
         }
-    
-        public void SetTiredAnimation()
+
+        public void SetTiredAnimation(bool isTired)
         {
-            animator.SetTrigger(Tired);
+            animator.SetBool(IsTired, isTired);
         }
 
         public void SetWalkAnimation()

@@ -5035,7 +5035,22 @@ MonoBehaviour:
       - m_Target: {fileID: 705575695356465264}
         m_TargetAssemblyTypeName: Game.Ghosts.ChainGhost.ChainGhostAnimation, Assembly-CSharp
         m_MethodName: SetTiredAnimation
-        m_Mode: 1
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  onRestEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 705575695356465264}
+        m_TargetAssemblyTypeName: Game.Ghosts.ChainGhost.ChainGhostAnimation, Assembly-CSharp
+        m_MethodName: SetTiredAnimation
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5074,6 +5089,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onPanicked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 705575695356465264}
+        m_TargetAssemblyTypeName: Game.Ghosts.ChainGhost.ChainGhostAnimation, Assembly-CSharp
+        m_MethodName: SetWalkAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   player: {fileID: 0}
   navMeshAgent: {fileID: 8968938385445474440}
   patrolWaypoints:
@@ -5085,10 +5115,12 @@ MonoBehaviour:
   - {fileID: 0}
   struggleMinigame: {fileID: 0}
   ghostCollider: {fileID: 8288229231325126369}
+  fleeSpeed: 6
   detectRadius: 8
   fleeDistance: 10
   escapeDuration: 3
   restDuration: 4
+  panicDuration: 3
   obstructionMask:
     serializedVersion: 2
     m_Bits: 8

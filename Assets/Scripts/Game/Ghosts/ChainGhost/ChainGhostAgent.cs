@@ -12,6 +12,7 @@ namespace Ghosts.WalkingGhost
         public UnityEvent onVacuum;
         public UnityEvent onFlee;
         public UnityEvent onRest;
+        public UnityEvent onRestEnd;
         public UnityEvent onCaptured;
         public UnityEvent onPatroll;
         public UnityEvent onPanicked;
@@ -105,7 +106,7 @@ namespace Ghosts.WalkingGhost
             _rest = new Rest(
                 transform,
                 restDuration,
-                onRestComplete: ToPatrolling
+                onRestComplete: OnRestCompleted
             );
 
             // Transitions
@@ -157,6 +158,11 @@ namespace Ghosts.WalkingGhost
             onPanicked?.Invoke();
         }
 
+        private void OnRestCompleted()
+        {
+            onRestEnd?.Invoke();
+            ToPatrolling();
+        }
         private void Update()
         {
             _fsm.Update();
