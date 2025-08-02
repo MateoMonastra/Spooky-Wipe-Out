@@ -1,44 +1,28 @@
-using Ghosts;
-using System.Collections;
-using System.Collections.Generic;
-using Game.Ghosts.WalkingGhost;
+using Ghosts.WalkingGhost;
 using UnityEngine;
-using UnityEngine.Events;
+using Event = AK.Wwise.Event;
 
-public class AudioControllerChainGhost : MonoBehaviour
+namespace Audio
 {
-    private ChainGhostAgent _parentAgent;
-    [SerializeField] private AK.Wwise.Event chainGhostOnFlee;
-    [SerializeField] private AK.Wwise.Event destroyedGhost;
-
-    private void Awake()
+    public class AudioControllerChainGhost : MonoBehaviour
     {
-        // Get the parent ChainGhostAgent component
-        _parentAgent = GetComponentInParent<ChainGhostAgent>();
-    }
+        [SerializeField] private Event chainGhostOnFlee;
+        [SerializeField] private Event destroyedGhost;
 
-    private void OnEnable()
-    {
-        if (_parentAgent != null)
+        public void Flee()
         {
-            _parentAgent.OnFlee += Flee;
+            if (AkSoundEngine.IsInitialized() && gameObject.activeInHierarchy)
+            {
+                chainGhostOnFlee.Post(this.gameObject);
+            }
+        }
+
+        public void DestroyGhost()
+        {
+            if (AkSoundEngine.IsInitialized() && gameObject.activeInHierarchy)
+            {
+                destroyedGhost.Post(this.gameObject);
+            }
         }
     }
-
-    private void OnDisable()
-    {
-        if (_parentAgent != null)
-        {
-            _parentAgent.OnFlee += Flee;
-        }
-    }
-
-    
-    private void Flee()
-    {
-        chainGhostOnFlee.Post(this.gameObject);
-    }
-        
 }
-    
-

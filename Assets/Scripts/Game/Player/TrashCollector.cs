@@ -1,5 +1,4 @@
-using Game.Ghosts.WalkingGhost;
-using Ghosts;
+using Ghosts.WalkingGhost;
 using UnityEngine;
 using UnityEngine.Events;
 

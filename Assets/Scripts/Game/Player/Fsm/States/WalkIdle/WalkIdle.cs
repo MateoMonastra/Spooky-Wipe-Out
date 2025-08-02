@@ -51,25 +51,26 @@ namespace Game.Player
 
         private void Move()
         {
-            
             if (_rigidbody)
             {
                 _OnWalk?.Invoke(_dir.normalized != Vector3.zero);
-                
+
                 _rigidbody.AddForce(_dir.normalized * _model.MovementForce + _counterMovement);
 
                 float angle = Vector3.SignedAngle(_gameObject.transform.forward, _dir, _gameObject.transform.up);
 
                 if (!_isClickPressed)
                 {
-                    _counterMovement = new Vector3(-_rigidbody.velocity.x * _model.CounterMovementForce, 0, -_rigidbody.velocity.z * _model.CounterMovementForce);
+                    _counterMovement = new Vector3(-_rigidbody.velocity.x * _model.CounterMovementForce, 0,
+                        -_rigidbody.velocity.z * _model.CounterMovementForce);
 
                     RotateByMovementInput(angle);
                 }
                 else
                 {
-                    _counterMovement = new Vector3(-_rigidbody.velocity.x * _model.CounterMovementForceVacuuming, 0, -_rigidbody.velocity.z * _model.CounterMovementForceVacuuming);
-                    if(InputReader.isUsingController)
+                    _counterMovement = new Vector3(-_rigidbody.velocity.x * _model.CounterMovementForceVacuuming, 0,
+                        -_rigidbody.velocity.z * _model.CounterMovementForceVacuuming);
+                    if (InputReader.isUsingController)
                     {
                         RotateWhileVacuumingStick(angle);
                     }
@@ -113,9 +114,10 @@ namespace Game.Player
 
             var cameraTransform = Camera.main.transform;
             var cameraBasedRotateDirection = cameraTransform.TransformDirection(mousePosition);
-            
+
             Quaternion targetRotation = Quaternion.LookRotation(cameraBasedRotateDirection.IgnoreY());
-            _gameObject.transform.rotation = Quaternion.Slerp(_gameObject.transform.rotation, targetRotation, _stickRotatingSpeed * Time.deltaTime);
+            _gameObject.transform.rotation = Quaternion.Slerp(_gameObject.transform.rotation, targetRotation,
+                _stickRotatingSpeed * Time.deltaTime);
         }
 
         public void SetDir(Vector3 newDir)
@@ -131,6 +133,15 @@ namespace Game.Player
         public void SetMousePosition(Vector3 mousePosition)
         {
             this.mousePosition = mousePosition;
+        }
+    }
+
+    public static class Vector3Extensions
+    {
+        public static Vector3 IgnoreY(this Vector3 self)
+        {
+            var result = new Vector3(self.x, 0, self.z);
+            return result;
         }
     }
 }
