@@ -1,34 +1,30 @@
-using FSM;
 using UnityEngine;
 
 namespace Game.Player
 {
-    public class Trapped : State
+    public class Trapped : PlayerState
     {
         private Transform _trappedPos;
-        private GameObject _player;
 
-        public Trapped(GameObject player)
+        public Trapped(GameObject player) : base(player)
         {
-            _player = player;
         }
+
         public override void Enter()
         {
         }
 
         public override void Tick(float delta)
         {
-            _player.transform.position = _trappedPos.position;
+            player.transform.position = _trappedPos.position;
         }
 
         public override void FixedTick(float delta)
         {
-            
         }
 
         public override void Exit()
         {
-            
         }
 
         public void SetPos(Transform trappedPos)

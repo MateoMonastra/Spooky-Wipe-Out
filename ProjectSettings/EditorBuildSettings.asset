@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Level1.unity
     guid: 55f804d8c021d9948b06d23bae7777a4
   - enabled: 0
-    path: Assets/Scenes/MinigameTest.unity
+    path: Assets/Scenes/CatchZoneMinigameTest.unity
     guid: a2557298d0fa9b040aa758c962ca22da
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: c40554a70a14b7147b48a3215cbef364, type: 2}

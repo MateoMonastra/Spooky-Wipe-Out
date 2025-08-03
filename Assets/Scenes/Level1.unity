@@ -998,7 +998,7 @@ PrefabInstance:
     - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: struggleMinigame
       value: 
-      objectReference: {fileID: 470426147}
+      objectReference: {fileID: 1963394716}
     - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: logFsmStateChanges
       value: 0
@@ -1514,7 +1514,7 @@ PrefabInstance:
     - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: struggleMinigame
       value: 
-      objectReference: {fileID: 470426147}
+      objectReference: {fileID: 1963394716}
     - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: logFsmStateChanges
       value: 0
@@ -3281,7 +3281,7 @@ PrefabInstance:
     - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: struggleMinigame
       value: 
-      objectReference: {fileID: 470426147}
+      objectReference: {fileID: 1963394716}
     - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: patrolWaypoints.Array.size
       value: 5
@@ -3500,7 +3500,7 @@ PrefabInstance:
     - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: struggleMinigame
       value: 
-      objectReference: {fileID: 470426147}
+      objectReference: {fileID: 1963394716}
     - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: logFsmStateChanges
       value: 0
@@ -4378,6 +4378,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2832449313594304365, guid: b467e462884d30144b5bfca22943e075, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2832449313594304365, guid: b467e462884d30144b5bfca22943e075, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3227022994545888080, guid: b467e462884d30144b5bfca22943e075, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -4399,6 +4407,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5241632648519282260, guid: b467e462884d30144b5bfca22943e075, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402648399929064694, guid: b467e462884d30144b5bfca22943e075, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -4446,6 +4458,10 @@ PrefabInstance:
       propertyPath: instructionsToShow.Array.data[1]
       value: 
       objectReference: {fileID: 413841255}
+    - target: {fileID: 6180369395530000374, guid: b467e462884d30144b5bfca22943e075, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6227966761120271006, guid: b467e462884d30144b5bfca22943e075, type: 3}
       propertyPath: m_SizeDelta.x
       value: 467.69
@@ -4571,7 +4587,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2139917822}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6256538691088984707, guid: b467e462884d30144b5bfca22943e075, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2277516787872018775, guid: b467e462884d30144b5bfca22943e075, type: 3}
       insertIndex: 1

@@ -5,10 +5,9 @@ using UnityEngine;
 
 namespace Game.Player
 {
-    public class WalkIdle : State
+    public class WalkIdle : PlayerState
     {
         private Action<bool> _OnWalk;
-        private GameObject _gameObject;
         private Rigidbody _rigidbody;
         private WalkIdleModel _model;
         private LayerMask _layerRaycast;
@@ -22,9 +21,8 @@ namespace Game.Player
 
         private float _stickRotatingSpeed = 5.0f;
 
-        public WalkIdle(GameObject gameObject, WalkIdleModel model, LayerMask layerRaycast, Action<bool> OnWalk)
+        public WalkIdle(GameObject player, WalkIdleModel model, LayerMask layerRaycast, Action<bool> OnWalk) : base(player)
         {
-            _gameObject = gameObject;
             _model = model;
             _layerRaycast = layerRaycast;
             _OnWalk = OnWalk;
@@ -32,7 +30,7 @@ namespace Game.Player
 
         public override void Enter()
         {
-            _rigidbody = _gameObject.GetComponent<Rigidbody>();
+            _rigidbody = player.GetComponent<Rigidbody>();
         }
 
         public override void Tick(float delta)
@@ -57,7 +55,7 @@ namespace Game.Player
 
                 _rigidbody.AddForce(_dir.normalized * _model.MovementForce + _counterMovement);
 
-                float angle = Vector3.SignedAngle(_gameObject.transform.forward, _dir, _gameObject.transform.up);
+                float angle = Vector3.SignedAngle(player.transform.forward, _dir, player.transform.up);
 
                 if (!_isClickPressed)
                 {
@@ -84,7 +82,7 @@ namespace Game.Player
 
         private void RotateByMovementInput(float angle)
         {
-            _gameObject.transform.Rotate(_gameObject.transform.up, angle * Time.deltaTime * _model.RotationSpeed);
+            player.transform.Rotate(player.transform.up, angle * Time.deltaTime * _model.RotationSpeed);
         }
 
         private void RotateWhileVacuuming()
@@ -96,14 +94,14 @@ namespace Game.Player
 
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, _layerRaycast))
             {
-                Vector3 targetPosition = new Vector3(hit.point.x, _gameObject.transform.position.y, hit.point.z);
+                Vector3 targetPosition = new Vector3(hit.point.x, player.transform.position.y, hit.point.z);
 
-                Vector3 direction = targetPosition - _gameObject.transform.position;
-                Quaternion actualRotation = _gameObject.transform.rotation;
+                Vector3 direction = targetPosition - player.transform.position;
+                Quaternion actualRotation = player.transform.rotation;
                 float rotationAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
                 Quaternion targetRotation = Quaternion.Euler(0f, rotationAngle, 0f);
 
-                _gameObject.transform.rotation = targetRotation;
+                player.transform.rotation = targetRotation;
             }
         }
 
@@ -116,7 +114,7 @@ namespace Game.Player
             var cameraBasedRotateDirection = cameraTransform.TransformDirection(mousePosition);
 
             Quaternion targetRotation = Quaternion.LookRotation(cameraBasedRotateDirection.IgnoreY());
-            _gameObject.transform.rotation = Quaternion.Slerp(_gameObject.transform.rotation, targetRotation,
+            player.transform.rotation = Quaternion.Slerp(player.transform.rotation, targetRotation,
                 _stickRotatingSpeed * Time.deltaTime);
         }
 
