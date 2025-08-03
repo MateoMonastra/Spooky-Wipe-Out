@@ -13,31 +13,36 @@ enum SkillCheckState
 
 public class SkillCheckController : Minigame
 {
+    private static readonly int IsScared = Animator.StringToHash("isScared");
     public Action OnCheckPass;
     public Action OnCheckFail;
 
-    [Header("Input")]
-    [SerializeField] private InputReader inputReader;
+    [Header("Input")] [SerializeField] private InputReader inputReader;
 
-    [Header("Needle Settings")]
-    [SerializeField] private float minNeedleSpeed = 60f;
+    [Header("Needle Settings")] [SerializeField]
+    private float minNeedleSpeed = 60f;
+
     [SerializeField] private float maxNeedleSpeed = 600f;
     [SerializeField] private float needleAcceleration = 5f;
     [SerializeField] private float needlePenaltyOnFail = 50f;
 
-    [Header("Progress Settings")]
-    [SerializeField] private float decreaseRate = 0.1f;
+    [Header("Progress Settings")] [SerializeField]
+    private float decreaseRate = 0.1f;
+
     [SerializeField] private float increaseAmount = 0.15f;
     [SerializeField] private float decreaseAmount = -0.15f;
     [SerializeField] private float maxProgress = 1f;
     [SerializeField] private float minProgress = 0f;
+    [SerializeField] private float scaredProgress = 0.7f;
 
-    [Header("Safe Zone Settings")]
-    [SerializeField] private float maxWidthSafeZone = 150f;
+    [Header("Safe Zone Settings")] [SerializeField]
+    private float maxWidthSafeZone = 150f;
+
     [SerializeField] private float minWidthSafeZone = 50f;
 
-    [Header("Skill Check UI")]
-    [SerializeField] private SkillCheck skillCheck;
+    [Header("Skill Check UI")] [SerializeField]
+    private SkillCheck skillCheck;
+
     [SerializeField] private SkillCheckState skillCheckState;
 
     [SerializeField] private AnimationCurve decreaseCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
@@ -128,7 +133,8 @@ public class SkillCheckController : Minigame
     {
         progress = Mathf.Clamp(value, minProgress, maxProgress);
         skillCheck.SetProgressBarFill(progress);
-
+        ChangeScaredAnimation(progress >= scaredProgress);
+        
         if (HasPlayerWon)
             WinGame();
         else if (HasPlayerLost)
@@ -212,5 +218,10 @@ public class SkillCheckController : Minigame
         float yMax = corners[2].y;
 
         return new Rect(xMin, yMin, xMax - xMin, yMax - yMin);
+    }
+
+    private void ChangeScaredAnimation(bool value)
+    {
+        skillCheck.safeZoneAnimator.SetBool(IsScared, value);
     }
 }

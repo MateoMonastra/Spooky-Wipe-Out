@@ -10,6 +10,7 @@ namespace Minigames
         public RectTransform bar;
         public RectTransform safeZone;
         public Image progressPointsBar;
+        public Animator safeZoneAnimator;
         
         public void SetProgressBarFill( float value )
         {
