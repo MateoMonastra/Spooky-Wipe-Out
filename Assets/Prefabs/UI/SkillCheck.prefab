@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 81d82efbbea83584ba9fa1204539d210, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2b986ac7c4c8aed4b82ab221bed5e72c, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -389,6 +389,7 @@ GameObject:
   - component: {fileID: 6720878241688123095}
   - component: {fileID: 1750602096822431295}
   - component: {fileID: 7028587266053099221}
+  - component: {fileID: 5057042730359443393}
   m_Layer: 5
   m_Name: SafeZone
   m_TagString: Untagged
@@ -454,6 +455,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &5057042730359443393
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3253351495608408845}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 859cd798a132bbe468c5e1e7263a49fc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3505373472421872774
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,6 +600,7 @@ GameObject:
   - component: {fileID: 4901756586595053136}
   - component: {fileID: 368820782708015542}
   - component: {fileID: 2444017291957722456}
+  - component: {fileID: 1363677659791740089}
   m_Layer: 5
   m_Name: BarBackGround
   m_TagString: Untagged
@@ -643,6 +666,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &1363677659791740089
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6216587203339264790}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8ff72594d3a865c4c8231e193b5d51c9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6321060809721745945
 GameObject:
   m_ObjectHideFlags: 0
@@ -709,6 +753,7 @@ MonoBehaviour:
   bar: {fileID: 6991379971905707141}
   safeZone: {fileID: 6720878241688123095}
   progressPointsBar: {fileID: 4412067630702505592}
+  safeZoneAnimator: {fileID: 0}
 --- !u!1 &6573439634287998288
 GameObject:
   m_ObjectHideFlags: 0

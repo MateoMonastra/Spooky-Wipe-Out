@@ -45,9 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputReader: {fileID: 0}
-  needleSpeed: 100
   minNeedleSpeed: 400
-  maxNeedleSpeed: 1000
+  maxNeedleSpeed: 800
   needleAcceleration: 60
   needlePenaltyOnFail: 50
   decreaseRate: 0.1
@@ -55,6 +54,7 @@ MonoBehaviour:
   decreaseAmount: -0.15
   maxProgress: 1
   minProgress: 0
+  scaredProgress: 0.7
   maxWidthSafeZone: 90
   minWidthSafeZone: 70
   skillCheck: {fileID: 0}
