@@ -2800,6 +2800,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2444017291957722456, guid: 8bed7d5610a142e45960ac5bf4db9bb7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 807a79211e0d6944db6572a471a20a7a, type: 3}
     - target: {fileID: 6321060809721745945, guid: 8bed7d5610a142e45960ac5bf4db9bb7, type: 3}
       propertyPath: m_Name
       value: SkillCheck
