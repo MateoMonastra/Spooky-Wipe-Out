@@ -4039,10 +4039,6 @@ PrefabInstance:
       propertyPath: SKMinigame
       value: 
       objectReference: {fileID: 1963394716}
-    - target: {fileID: 4245278387632611241, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
-      propertyPath: m_ExcludeLayers.m_Bits
-      value: 1024
-      objectReference: {fileID: 0}
     - target: {fileID: 6237684244673480162, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: inputReader
       value: 

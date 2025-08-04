@@ -16,7 +16,7 @@ namespace VacuumCleaner.Modes
         public event Action OnPowerOn;
         public event Action OnPowerOff;
 
-        [FormerlySerializedAs("vacuumColision")] [SerializeField] private VacuumCollision vacuumCollision;
+        [SerializeField] private VacuumCollision vacuumCollision;
         [SerializeField] private TrashCollector trashCollector;
         [SerializeField] private float maxTimeVFX = 0.5f;
         [SerializeField] private float maxVFXPower = 2.5f;
@@ -25,6 +25,8 @@ namespace VacuumCleaner.Modes
         [SerializeField] private ADController ADMinigame;
 
         [SerializeField] private List<Material> materials = new List<Material>();
+        
+        private bool _isActive;
 
         private void Start()
         {
@@ -41,8 +43,6 @@ namespace VacuumCleaner.Modes
 
             _turnOnVFX = StartCoroutine(TurnOnVFX());
             
-            vacuumCollision.gameObject.SetActive(true);
-            trashCollector.gameObject.SetActive(true);
             OnPowerOn?.Invoke();
         }
 
@@ -60,6 +60,13 @@ namespace VacuumCleaner.Modes
                     material.SetFloat(CuttHeight, VFXPower);
                 }
 
+                if (!_isActive && _timerVFX > maxTimeVFX/2)
+                {
+                    vacuumCollision.gameObject.SetActive(true);
+                    trashCollector.gameObject.SetActive(true);
+                    _isActive = true;
+                }
+
                 yield return null;
             }
 
@@ -75,6 +82,7 @@ namespace VacuumCleaner.Modes
         {
             vacuumCollision.gameObject.SetActive(false);
             trashCollector.gameObject.SetActive(false);
+            _isActive = false;
             OnPowerOff?.Invoke();
         }
     }
