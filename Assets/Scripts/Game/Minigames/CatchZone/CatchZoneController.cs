@@ -49,6 +49,8 @@ namespace Game.Minigames.CatchZone
 
         public override void StartGame()
         {
+            if (_isActive)  return;
+            
             OnStart?.Invoke();
             _isActive = true;
             _progress = initialProgress;

@@ -29,6 +29,7 @@ namespace Player.FSM
         public Action OnIntructionsEnd;
 
         public static bool isUsingController = false;
+        public static bool isClickPressed = false;
 
 
         public void HandleMoveInput(InputAction.CallbackContext context)
@@ -62,6 +63,7 @@ namespace Player.FSM
             if (context.started)
             {
                 OnClickStart?.Invoke();
+                isClickPressed = true;
             }
 
             if (context.performed)
@@ -72,6 +74,7 @@ namespace Player.FSM
             if (context.canceled)
             {
                 OnClickEnd?.Invoke();
+                isClickPressed = false;
             }
 
             OnInputDevice?.Invoke(context.control.device);

@@ -19,9 +19,8 @@ public class SkillCheckController : Minigame
 
     [Header("Input")] [SerializeField] private InputReader inputReader;
 
-    [Header("Needle Settings")] [SerializeField]
-    private float minNeedleSpeed = 60f;
-
+    [Header("Needle Settings")] 
+    [SerializeField] private float minNeedleSpeed = 400f;
     [SerializeField] private float maxNeedleSpeed = 600f;
     [SerializeField] private float needleAcceleration = 5f;
     [SerializeField] private float needlePenaltyOnFail = 50f;
@@ -68,6 +67,8 @@ public class SkillCheckController : Minigame
 
     public override void StartGame()
     {
+        if (_isActive) return;
+        
         OnStart?.Invoke();
         HasPlayerLost = false;
         _isActive = true;
@@ -97,6 +98,7 @@ public class SkillCheckController : Minigame
     {
         _isActive = false;
         inputReader.OnSpaceInputStart -= HandleInput;
+        _needleSpeed = minNeedleSpeed; 
         StopAllCoroutines();
 
         skillCheck.gameObject.SetActive(false);

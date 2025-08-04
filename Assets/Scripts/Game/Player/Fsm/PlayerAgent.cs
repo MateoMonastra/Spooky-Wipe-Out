@@ -5,6 +5,7 @@ using Minigames;
 using Player.FSM;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 using VacuumCleaner;
 
 namespace Game.Player
@@ -17,8 +18,6 @@ namespace Game.Player
         public UnityEvent<bool> OnStruggle;
         public UnityEvent<bool> OnCleaning;
 
-        private List<State> _states = new List<State>();
-
         [SerializeField] private InputReader inputReader;
         [SerializeField] private WalkIdleModel walkIdleModel;
         [SerializeField] private ADController adController;
@@ -26,54 +25,51 @@ namespace Game.Player
         [SerializeField] private CleanerController cleanerController;
         [SerializeField] private LayerMask layerRaycast;
 
+        private readonly List<State> _states = new();
         private Fsm _fsm;
 
-        private string _toTrappedID = "ToTrapped";
-        private string _toWalkIdleID = "ToWalkIdle";
-        private string _toStruggleID = "ToStruggle";
+        private WalkIdle _walkIdle;
+        private Struggle _struggle;
+        private Trapped _trapped;
 
-        private int _currentCleaner;
+        private int _currentCleaner = 1;
+        private Vector3 _lastMousePos;
 
+        private readonly string _toTrappedID = "ToTrapped";
+        private readonly string _toWalkIdleID = "ToWalkIdle";
+        private readonly string _toStruggleID = "ToStruggle";
 
-        public void Start()
+        private void Start()
         {
-            _currentCleaner = 1;
+            SetupInput();
+            SetupFsm();
+        }
 
+        private void SetupInput()
+        {
             inputReader.OnMove += SetMoveStateDirection;
             inputReader.OnAimingVacuum += SetAimingVacuumDirection;
-            inputReader.OnClick += SetIsClickPressed;
-
-            OnHunted += SetTrappedState;
-            adController.OnLose += SetTrappedToMoveState;
-            adController.OnWin += SetTrappedToMoveState;
-
             inputReader.OnClickStart += ActiveCleaner;
             inputReader.OnClickEnd += SetCleanerIdleMode;
-
             inputReader.OnSwitchTool += SwitchTool;
 
             skillCheckController.OnStart += SetWalkIdleToStruggle;
-            skillCheckController.OnWin += SetStruggleToWalkIdle;
-            skillCheckController.OnLose += SetStruggleToWalkIdle;
-            skillCheckController.OnStop += SetStruggleToWalkIdle;
+            OnHunted += SetTrappedState;
+        }
 
-            skillCheckController.OnWin += SetCleanerIdleMode;
-            skillCheckController.OnLose += SetCleanerIdleMode;
-            skillCheckController.OnStop += SetCleanerIdleMode;
+        private void SetupFsm()
+        {
+            _walkIdle = new WalkIdle(gameObject, walkIdleModel, layerRaycast, OnWalkAction);
+            _trapped = new Trapped(gameObject, adController, SetTrappedToMoveState);
+            _struggle = new Struggle(gameObject, cleanerController, skillCheckController, SetStruggleToWalkIdle);
 
-            State _walkIdle = new WalkIdle(this.gameObject, walkIdleModel, layerRaycast, OnWalkAction);
 
-            State _trapped = new Trapped(this.gameObject);
+            _walkIdle.AddTransition(new Transition { From = _walkIdle, To = _trapped, ID = _toTrappedID });
+            _walkIdle.AddTransition(new Transition { From = _walkIdle, To = _walkIdle, ID = _toWalkIdleID });
+            _walkIdle.AddTransition(new Transition { From = _walkIdle, To = _struggle, ID = _toStruggleID });
 
-            State _struggle = new Struggle(this.gameObject, cleanerController);
-
-            _walkIdle.AddTransition(new Transition{ From = _walkIdle, To = _trapped, ID = _toTrappedID });
-            _walkIdle.AddTransition(new Transition{ From = _walkIdle, To = _walkIdle, ID = _toWalkIdleID });
-            _walkIdle.AddTransition(new Transition{ From = _walkIdle, To = _struggle, ID = _toStruggleID });
-            
-            _trapped.AddTransition(new Transition{ From = _trapped, To = _walkIdle, ID = _toWalkIdleID });
-
-            _struggle.AddTransition(new Transition{ From = _struggle, To = _walkIdle, ID = _toWalkIdleID });
+            _trapped.AddTransition(new Transition { From = _trapped, To = _walkIdle, ID = _toWalkIdleID });
+            _struggle.AddTransition(new Transition { From = _struggle, To = _walkIdle, ID = _toWalkIdleID });
 
             _states.Add(_walkIdle);
             _states.Add(_trapped);
@@ -82,131 +78,92 @@ namespace Game.Player
             _fsm = new Fsm(_walkIdle);
         }
 
-        private void OnWalkAction(bool obj)
+
+        private void Update()
         {
-            OnWalk?.Invoke(obj);
+            _fsm.Update();
+
+            if (!InputReader.isClickPressed || InputReader.isUsingController) return;
+            
+            SetAimingVacuumDirection(_lastMousePos);
         }
+
+
+        private void FixedUpdate() => _fsm.FixedUpdate();
+
+        private void OnWalkAction(bool isWalking) => OnWalk?.Invoke(isWalking);
 
         private void SetMoveStateDirection(Vector2 direction)
         {
-            var cameraBasedMoveDirection = CalculateMoveDirection(direction);
-
             _fsm.TryTransitionTo(_toWalkIdleID);
-            
-            foreach (var state in _states)
-            {
-                if (_fsm.GetCurrentState() == state)
-                {
-                    if (state is WalkIdle walkIdle)
-                    {
-                        walkIdle.SetDir(cameraBasedMoveDirection);
-                        break;
-                    }
-                }
-            }
+            var moveDir = CalculateMoveDirection(direction);
+            _walkIdle?.SetDir(moveDir);
         }
 
         private static Vector3 CalculateMoveDirection(Vector2 direction)
         {
-            //Local direction (in relation to the world)
-            Vector3 moveDirection = new Vector3(direction.x, 0, direction.y);
+            Vector3 moveDirection = new(direction.x, 0, direction.y);
             var cameraTransform = Camera.main.transform;
-            
-            //World direction (passed through the camera transform matrix)
-            var cameraBasedMoveDirection = cameraTransform.TransformDirection(moveDirection);
-            cameraBasedMoveDirection.y = 0;
-            return cameraBasedMoveDirection;
+            var worldDirection = cameraTransform.TransformDirection(moveDirection);
+            worldDirection.y = 0;
+            return worldDirection;
         }
 
-        private void SetAimingVacuumDirection(Vector2 position)
+        public void SetAimingVacuumDirection(Vector2 position)
         {
-            Vector3 mousePosition = InputReader.isUsingController
-                ? new Vector3(position.x, 0, position.y)
-                : new Vector3(position.x, position.y);
-            bool stateFound = false;
-
+            if (InputReader.isUsingController)
+            {
+                Vector3 worldPos = new Vector3(position.x, 0f, position.y);
+                _lastMousePos = worldPos;
+            }
+            else
+            {
+                _lastMousePos = position;
+            }
+        
             foreach (var state in _states)
             {
-                if (_fsm.GetCurrentState() == state)
+                if (_fsm.GetCurrentState() == state && state is WalkIdle walkIdle)
                 {
-                    if (state is WalkIdle walkIdle)
-                    {
-                        walkIdle.SetMousePosition(mousePosition);
-                        stateFound = true;
-                        break;
-                    }
+                    walkIdle.SetMousePosition(_lastMousePos);
+                    break;
                 }
-            }
-
-            if (!stateFound)
-            {
-                Debug.Log("Current state not found in the list of states.");
-            }
-        }
-
-        private void SetIsClickPressed(bool isPressed)
-        {
-            bool stateFound = false;
-
-            foreach (var state in _states)
-            {
-                if (_fsm.GetCurrentState() == state)
-                {
-                    if (state is WalkIdle walkIdle)
-                    {
-                        walkIdle.SetIsClickPressedState(isPressed);
-                        stateFound = true;
-                        break;
-                    }
-                }
-            }
-
-            if (!stateFound)
-            {
-                Debug.Log("Current state not found in the list of states.");
             }
         }
 
         private void SetTrappedState(Transform trappedPos)
         {
             _fsm.TryTransitionTo(_toTrappedID);
-            
-            foreach (var state in _states)
-            {
-                if (_fsm.GetCurrentState() == state)
-                {
-                    if (state is Trapped trapped)
-                    {
-                        trapped.SetPos(trappedPos);
-                        break;
-                    }
-                }
-            }
+            _trapped.SetPos(trappedPos);
 
             inputReader.OnClickStart -= ActiveCleaner;
+            inputReader.OnMove -= SetMoveStateDirection;
             SetCleanerIdleMode();
         }
 
         private void SetTrappedToMoveState()
         {
             _fsm.TryTransitionTo(_toWalkIdleID);
-
-            bool stateFound = false;
-
-            foreach (var state in _states)
-            {
-                if (_fsm.GetCurrentState() == state)
-                {
-                    if (state is WalkIdle walkIdle)
-                    {
-                        _fsm.TryTransitionTo(_toWalkIdleID);
-                        walkIdle.SetDir(Vector2.zero);
-                        break;
-                    }
-                }
-            }
-
+            _walkIdle.SetDir(Vector2.zero);
             inputReader.OnClickStart += ActiveCleaner;
+            inputReader.OnMove += SetMoveStateDirection;
+        }
+
+        private void SetWalkIdleToStruggle()
+        {
+            OnStruggle?.Invoke(true);
+            inputReader.OnClickEnd -= SetCleanerIdleMode;
+            inputReader.OnMove -= SetMoveStateDirection;
+            _fsm.TryTransitionTo(_toStruggleID);
+        }
+
+        private void SetStruggleToWalkIdle()
+        {
+            inputReader.OnClickEnd += SetCleanerIdleMode;
+            inputReader.OnMove += SetMoveStateDirection;
+            SetCleanerIdleMode();
+            OnStruggle?.Invoke(false);
+            _fsm.TryTransitionTo(_toWalkIdleID);
         }
 
         private void ActiveCleaner()
@@ -224,22 +181,17 @@ namespace Game.Player
         private void SwitchTool()
         {
             if (cleanerController.GetCurrentToolID() != 0)
-            {
                 return;
-            }
 
-            _currentCleaner += 1;
-
+            _currentCleaner++;
             switch (_currentCleaner)
             {
                 case 1:
                     CleanerSelectionUIControler.GetInstance().PowerOnVacuum();
                     break;
-
                 case 2:
                     CleanerSelectionUIControler.GetInstance().PowerOnWashFloor();
                     break;
-
                 default:
                     _currentCleaner = 1;
                     CleanerSelectionUIControler.GetInstance().PowerOnVacuum();
@@ -247,34 +199,6 @@ namespace Game.Player
             }
         }
 
-        private void SetStruggleToWalkIdle()
-        {
-            OnStruggle?.Invoke(false);
-            inputReader.OnClickEnd += SetCleanerIdleMode;
-            _fsm.TryTransitionTo(_toWalkIdleID);
-            SetIsClickPressed(false);
-        }
-
-        private void SetWalkIdleToStruggle()
-        {
-            OnStruggle?.Invoke(true);
-            inputReader.OnClickEnd -= SetCleanerIdleMode;
-            _fsm.TryTransitionTo(_toStruggleID);
-        }
-
-        private void Update()
-        {
-            _fsm.Update();
-        }
-
-        private void FixedUpdate()
-        {
-            _fsm.FixedUpdate();
-        }
-
-        public CleanerController GetCleanerController()
-        {
-            return cleanerController;
-        }
+        public CleanerController GetCleanerController() => cleanerController;
     }
 }

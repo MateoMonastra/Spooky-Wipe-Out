@@ -19,11 +19,9 @@ namespace Minigames
         [SerializeField] private float minProgress = 0f;
         [SerializeField] private float threshold = 0.8f;
         
-        // [SerializeField] private float maxAfkTime = 5.0f;
         [SerializeField] private AnimationCurve decreaseCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
         private float progress { get; set; } = 0.0f;
         private float _expectedSign = 1.0f;
-        // private float _lastSuccessfulInputTime = -1f;
 
         private bool HasPlayerWon => progress >= maxProgress;
 
@@ -31,10 +29,11 @@ namespace Minigames
 
         public override void StartGame()
         {
+            if (_isActive) return;
+            
             OnStart?.Invoke();
             
             ad.gameObject.SetActive(true);
-            // _lastSuccessfulInputTime = Time.time;
             inputReader.OnMove += HandleInput;
             progress = minProgress;
             StartCoroutine(DecreaseProgressOverTime());
@@ -76,7 +75,6 @@ namespace Minigames
             {
                 UpdateProgress(progress + increaseAmount);
                 _expectedSign *= -1;
-                // _lastSuccessfulInputTime = Time.time;
             }
         }
 
@@ -85,8 +83,6 @@ namespace Minigames
             progress = value;
             if (HasPlayerWon)
                 WinGame();
-            // else if (HasPlayerLost && maxAfkTime <= _lastSuccessfulInputTime - Time.time)
-            //     LoseGame();
 
             ad.SetProgressBarFill(progress);
         }

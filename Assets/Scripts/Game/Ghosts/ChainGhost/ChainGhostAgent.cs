@@ -163,6 +163,7 @@ namespace Ghosts.WalkingGhost
             onRestEnd?.Invoke();
             ToPatrolling();
         }
+
         private void Update()
         {
             _fsm.Update();
@@ -183,6 +184,8 @@ namespace Ghosts.WalkingGhost
             if (_fsm.GetCurrentState() == _struggle)
                 return;
 
+            if (struggleMinigame.GetActive()) return;
+            
             struggleMinigame.OnWin += HandleStruggleWin;
             struggleMinigame.OnLose += HandleStruggleLose;
 
