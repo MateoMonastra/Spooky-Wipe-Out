@@ -1,13 +1,12 @@
-using System;
 using System.Collections.Generic;
 using FSM;
-using Game.Ghosts.PaintGhost;
+using Ghosts;
 using Ghosts.PaintGhost;
 using Minigames;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Ghosts
+namespace Game.Ghosts.PaintGhost
 {
     public class PaintGhostAgent : Ghost
     {
@@ -18,17 +17,25 @@ namespace Ghosts
         [SerializeField] private Minigame minigame;
         [SerializeField] private Transform trappingPos;
         [SerializeField] private float restTime;
+        [SerializeField] private Material[] activatedMaterials;
+        [SerializeField] private Material[] deathMaterials;
 
         private List<State> _states = new List<State>();
 
         private Fsm _fsm;
 
         private PaintGhostCollision _paintGhostCollision;
+        private Renderer[] _renderers;
 
         private string _toHuntID = "ToHunt";
         private string _toDeadID = "ToDead";
         private string _toCatchID = "ToCatch";
 
+
+        public void Awake()
+        {
+            _renderers = GetComponentsInChildren<Renderer>(includeInactive: true);
+        }
 
         public void OnEnable()
         {
@@ -88,9 +95,29 @@ namespace Ghosts
             if (_paintGhostCollision != null)
             {
                 _paintGhostCollision.SetActiveCollision(isEnabled);
+                SwapActiveMaterial(isEnabled);
             }
         }
+        private void SwapActiveMaterial(bool isActive)
+        {
+            ApplyMaterials(isActive ? activatedMaterials : deathMaterials);
+        }
+        
+        private void ApplyMaterials(Material[] targetMaterials)
+        {
+            foreach (var rend in _renderers)
+            {
+                var currentCount = rend.sharedMaterials.Length;
+                var newMats = new Material[currentCount];
+                
+                for (int i = 0; i < currentCount; i++)
+                {
+                    newMats[i] = targetMaterials[i];
+                }
 
+                rend.materials = newMats;
+            }
+        }
 
         private void Update()
         {

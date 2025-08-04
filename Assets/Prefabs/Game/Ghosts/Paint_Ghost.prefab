@@ -148,6 +148,14 @@ MonoBehaviour:
   minigame: {fileID: 0}
   trappingPos: {fileID: 5137264255792386480}
   restTime: 10
+  activatedMaterials:
+  - {fileID: 2100000, guid: bfd97ad69a7538b408e0504b25b56957, type: 2}
+  - {fileID: 2100000, guid: c9c0bf844429de14d80eaa8dbdbd6b00, type: 2}
+  - {fileID: 2100000, guid: e4f83c48c4405cc46b21575e745cd877, type: 2}
+  deathMaterials:
+  - {fileID: 2100000, guid: bfd97ad69a7538b408e0504b25b56957, type: 2}
+  - {fileID: 2100000, guid: c9c0bf844429de14d80eaa8dbdbd6b00, type: 2}
+  - {fileID: 2100000, guid: 6ce89126726ed6b44a60ec919183d3ec, type: 2}
 --- !u!114 &7193247195530548975
 MonoBehaviour:
   m_ObjectHideFlags: 0
