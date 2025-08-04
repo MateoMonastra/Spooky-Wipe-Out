@@ -9859,7 +9859,6 @@ GameObject:
   - component: {fileID: 161826005871552228}
   - component: {fileID: 745596931517258071}
   - component: {fileID: 8968938385445474440}
-  - component: {fileID: 2861774883517133326}
   - component: {fileID: 8288229231325126369}
   - component: {fileID: 705575695356465264}
   m_Layer: 10
@@ -10052,7 +10051,7 @@ MonoBehaviour:
   - {fileID: 0}
   struggleMinigame: {fileID: 0}
   ghostCollider: {fileID: 8288229231325126369}
-  fleeSpeed: 6
+  fleeSpeed: 12
   detectRadius: 8
   fleeDistance: 10
   escapeDuration: 3
@@ -10083,33 +10082,6 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!54 &2861774883517133326
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7534280635867931546}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 1024
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 116
-  m_CollisionDetection: 0
 --- !u!136 &8288229231325126369
 CapsuleCollider:
   m_ObjectHideFlags: 0

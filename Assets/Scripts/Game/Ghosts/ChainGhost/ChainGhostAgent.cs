@@ -105,6 +105,7 @@ namespace Ghosts.WalkingGhost
             // Rest
             _rest = new Rest(
                 transform,
+                navMeshAgent,
                 restDuration,
                 onRestComplete: OnRestCompleted
             );

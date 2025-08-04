@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace Game.Ghosts.ChainGhost
 {
@@ -7,22 +8,28 @@ namespace Game.Ghosts.ChainGhost
         private readonly Transform _enemy;
         private readonly float _restDuration;
         private readonly System.Action _onRestComplete;
+        private readonly Rigidbody _rigidbody;
+        private readonly NavMeshAgent _agent;
 
         private float _timer;
 
         public Rest(
-            Transform enemy,
+            Transform enemy, NavMeshAgent agent,
             float restDuration,
             System.Action onRestComplete)
         {
             _enemy = enemy;
             _restDuration = restDuration;
             _onRestComplete = onRestComplete;
+            _agent = agent;
         }
 
         public override void Enter()
         {
             _timer = 0f;
+            
+            _agent.isStopped = true;
+            _agent.ResetPath();
         }
 
         public override void Tick(float delta)
