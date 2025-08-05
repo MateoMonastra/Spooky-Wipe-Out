@@ -82,6 +82,15 @@ namespace VacuumCleaner.Modes
         {
             vacuumCollision.gameObject.SetActive(false);
             trashCollector.gameObject.SetActive(false);
+            
+            foreach (var material in materials)
+            {
+                material.SetFloat(CuttHeight, 0.0f);
+            }
+
+            if (_turnOnVFX != null)
+                StopCoroutine(_turnOnVFX);
+            
             _isActive = false;
             OnPowerOff?.Invoke();
         }
