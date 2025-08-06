@@ -254,9 +254,41 @@ MonoBehaviour:
     m_ActionId: 58d71a1c-c86b-4775-9c03-d215bc92d4cd
     m_ActionName: Player/OpenTasks[/Keyboard/shift]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4929937290722937582}
+        m_TargetAssemblyTypeName: Player.FSM.InputReader, Assembly-CSharp
+        m_MethodName: HandleWinCheat
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 39afd9f6-411b-45b0-b1e2-5b7c3c221c7e
     m_ActionName: Player/WinCheat[/Keyboard/f12]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4929937290722937582}
+        m_TargetAssemblyTypeName: Player.FSM.InputReader, Assembly-CSharp
+        m_MethodName: HandleShowIntructions
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 2e1dfc49-3187-4daa-a99b-02e12e475ca3
+    m_ActionName: Player/ShowInstructions[/Keyboard/leftCtrl,/XInputControllerWindows/select]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a511b9d9-3c77-44a6-95ce-cc461d604000
+    m_ActionName: Player/Restart[/Keyboard/r]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

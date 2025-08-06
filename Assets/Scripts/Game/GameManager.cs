@@ -46,11 +46,6 @@ namespace Game
                 ghost.OnBeingDestroy += RemoveGhost;
             }
 
-            foreach (Trash trash in garbage)
-            {
-                trash.OnBeingDestroy += RemoveTrash;
-            }
-
             foreach (Ectoplasm ectoplasm in ectoplasms)
             {
                 ectoplasm.OnBeingDestroy += RemoveEctoplasm;
@@ -181,8 +176,10 @@ namespace Game
             return false;
         }
 
-        public void UpdateTrashQnty()
+        public void AddTrash(Trash trash)
         {
+            trash.OnBeingDestroy += RemoveTrash;
+            garbage.Add(trash);
             objectivesUI.SetTrashQnty(garbage.Count);
         }
     }
