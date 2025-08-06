@@ -18,7 +18,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: ChainGhostRigV2_Negro
-    second: {fileID: 2100000, guid: e4f83c48c4405cc46b21575e745cd877, type: 2}
+    second: {fileID: 2100000, guid: b0a7ba48b30b8fe4f9bd8e4716239cbf, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
