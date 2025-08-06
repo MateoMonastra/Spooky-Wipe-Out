@@ -114,7 +114,6 @@ namespace Game.Minigames.CatchZone
                 UpdateCatchZonePosition();
                 UpdateGhostPosition();
                 UpdateProgress();
-                Debug.Log(_catchZoneVelocity);
                 yield return new WaitForSeconds(updateRate);
             }
         }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using FSM;
+using Game.Minigames.CatchZone;
 using Minigames;
 using Player.FSM;
 using UnityEngine;
@@ -22,6 +23,7 @@ namespace Game.Player
         [SerializeField] private WalkIdleModel walkIdleModel;
         [SerializeField] private ADController adController;
         [SerializeField] private SkillCheckController skillCheckController;
+        [SerializeField] private CatchZoneController catchZoneController;
         [SerializeField] private CleanerController cleanerController;
         [SerializeField] private LayerMask layerRaycast;
 
@@ -61,7 +63,7 @@ namespace Game.Player
         {
             _walkIdle = new WalkIdle(gameObject, walkIdleModel, layerRaycast, OnWalkAction);
             _trapped = new Trapped(gameObject, adController, SetTrappedToMoveState);
-            _struggle = new Struggle(gameObject, cleanerController, skillCheckController, SetStruggleToWalkIdle);
+            _struggle = new Struggle(gameObject, cleanerController, catchZoneController, skillCheckController, SetStruggleToWalkIdle);
 
 
             _walkIdle.AddTransition(new Transition { From = _walkIdle, To = _trapped, ID = _toTrappedID });

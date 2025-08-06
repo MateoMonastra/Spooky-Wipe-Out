@@ -154,7 +154,6 @@ namespace Player.FSM
         public void HandleNavigate(InputAction.CallbackContext context)
         {
             OnNavigate?.Invoke();
-            Debug.Log("se invoca evento ui");
         }
 
         public void HandleShowIntructions(InputAction.CallbackContext context)

@@ -19,7 +19,6 @@ namespace Game.Ghosts.ChainGhost
         public override void Enter()
         {
             _timer = 0f;
-            Debug.Log($"{_enemy.name} entró en estado de PÁNICO!");
         }
 
         public override void Tick(float delta)
@@ -30,14 +29,13 @@ namespace Game.Ghosts.ChainGhost
 
             if (_timer >= _panicDuration)
             {
-                Debug.Log($"{_enemy.name} Se va del PANICO");
                 _onPanicEnd?.Invoke();
             }
         }
 
         public override void Exit()
         {
-            Debug.Log($"{_enemy.name} salió del estado de pánico.");
+            base.Exit();
         }
 
         public override void DrawStateGizmos()

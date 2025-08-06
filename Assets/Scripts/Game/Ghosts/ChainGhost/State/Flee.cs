@@ -1,10 +1,9 @@
-using FSM;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Ghosts.WalkingGhost
+namespace Game.Ghosts.ChainGhost
 {
-    public class Flee : State
+    public class Flee : FSM.State
     {
         private Transform _enemy;
         private Transform _player;

@@ -2,15 +2,15 @@ using FSM;
 using Minigames;
 using UnityEngine;
 
-namespace Game.Ghosts.ChainGhost
+namespace Game.Ghosts.MagicGhost
 {
     public class Captured : State
     {
         private GameObject _model;
-        private ChainGhostAgent _agent;
+        private MagicGhostAgent _agent;
         private Minigame _minigame;
 
-        public Captured(GameObject model, ChainGhostAgent agent, Minigame minigame)
+        public Captured(GameObject model, MagicGhostAgent agent, Minigame minigame)
         {
             _model = model;
             _agent = agent;
@@ -20,7 +20,7 @@ namespace Game.Ghosts.ChainGhost
         public override void Enter()
         {
             _agent.OnBeingDestroy?.Invoke(_agent);
-            _agent.gameObject.SetActive(false);
+            _model.SetActive(false);
             _minigame?.StopGame();
         }
 

@@ -1,4 +1,3 @@
-using Ghosts.WalkingGhost;
 using UnityEngine;
 using Event = AK.Wwise.Event;
 

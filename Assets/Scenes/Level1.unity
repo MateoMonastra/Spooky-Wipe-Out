@@ -4025,6 +4025,10 @@ PrefabInstance:
       value: 'Player '
       objectReference: {fileID: 0}
     - target: {fileID: 8743409242914982531, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+      propertyPath: OnGhostCollected.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8743409242914982531, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: OnTrashCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1955681990}

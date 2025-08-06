@@ -1,32 +1,36 @@
 using FSM;
+using Game.Ghosts.ChainGhost;
 using Ghosts;
 using Minigames;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
-namespace Game.Ghosts.ChainGhost
+namespace Game.Ghosts.MagicGhost
 {
-    public class ChainGhostAgent : Ghost, IVacuumable
+    public class MagicGhostAgent : Ghost, IVacuumable 
     {
         public UnityEvent onVacuum;
         public UnityEvent onFlee;
-        public UnityEvent onRest;
-        public UnityEvent onRestEnd;
+        public UnityEvent onDropTrash;
+        public UnityEvent onDropTrashEnd;
         public UnityEvent onCaptured;
         public UnityEvent onPatroll;
         public UnityEvent onPanicked;
 
 
-        [Header("References")] [SerializeField]
-        private Transform player;
-
+        [Header("References")]
+        [SerializeField] private Transform player;
         [SerializeField] private NavMeshAgent navMeshAgent;
         [SerializeField] private Transform[] patrolWaypoints;
         [SerializeField] private Minigame struggleMinigame;
         [SerializeField] private Collider ghostCollider;
+        [SerializeField] private GameObject[] trashPrefabs;
+        [SerializeField] private Transform trashSpawnPoint;
 
-        [Header("Settings")] [SerializeField] private float fleeSpeed = 6f;
+        [Header("Settings")] 
+        [SerializeField] private float fleeSpeed = 6f;
         [SerializeField] private float detectRadius = 8f;
         [SerializeField] private float fleeDistance = 10f;
         [SerializeField] private float escapeDuration = 3f;
@@ -38,16 +42,16 @@ namespace Game.Ghosts.ChainGhost
 
         private Patrolling _patrolling;
         private Flee _flee;
-        private Rest _rest;
+        private DropTrash _dropTrash;
         private Struggle _struggle;
         private Captured _captured;
         private Panicked _panicked;
 
         private const string ToFleeID = "ToFlee";
-        private const string ToRestID = "ToRest";
         private const string ToPatrollingID = "ToPatrolling";
         private const string ToCapturedID = "ToCaptured";
         private const string ToPanickedID = "ToPanicked";
+        private const string ToDropTrashID = "ToDropTrash";
 
         private void Start()
         {
@@ -97,25 +101,26 @@ namespace Game.Ghosts.ChainGhost
                 escapeDuration,
                 obstructionMask,
                 fleeSpeed,
-                ToRest,
+                ToDropTrash,
                 ToPanicked
             );
 
-
-            // Rest
-            _rest = new Rest(
-                transform,
+            //DropTrash
+            _dropTrash = new DropTrash(
                 navMeshAgent,
-                restDuration,
-                onRestComplete: OnRestCompleted
-            );
+                trashPrefabs,
+                trashSpawnPoint,
+                this,
+                OnDropTrashCompleted);
+
+            
 
             // Transitions
             _patrolling.AddTransition(new Transition { From = _patrolling, To = _flee, ID = ToFleeID });
-            _flee.AddTransition(new Transition { From = _flee, To = _rest, ID = ToRestID });
+            _flee.AddTransition(new Transition { From = _flee, To = _dropTrash, ID = ToDropTrashID });
             _flee.AddTransition(new Transition { From = _flee, To = _panicked, ID = ToPanickedID });
             _panicked.AddTransition(new Transition { From = _panicked, To = _flee, ID = ToFleeID });
-            _rest.AddTransition(new Transition { From = _rest, To = _patrolling, ID = ToPatrollingID });
+            _dropTrash.AddTransition(new Transition { From = _dropTrash, To = _patrolling, ID = ToPatrollingID });
             _struggle.AddTransition(new Transition { From = _struggle, To = _captured, ID = ToCapturedID });
 
             _fsm = new Fsm(_patrolling);
@@ -141,10 +146,10 @@ namespace Game.Ghosts.ChainGhost
             onFlee?.Invoke();
         }
 
-        private void ToRest()
+        private void ToDropTrash()
         {
-            _fsm.TryTransitionTo(ToRestID);
-            onRest?.Invoke();
+            _fsm.TryTransitionTo(ToDropTrashID);
+            onDropTrash?.Invoke();
         }
 
         private void ToPatrolling()
@@ -159,9 +164,9 @@ namespace Game.Ghosts.ChainGhost
             onPanicked?.Invoke();
         }
 
-        private void OnRestCompleted()
+        private void OnDropTrashCompleted()
         {
-            onRestEnd?.Invoke();
+            onDropTrashEnd?.Invoke();
             ToPatrolling();
         }
 
