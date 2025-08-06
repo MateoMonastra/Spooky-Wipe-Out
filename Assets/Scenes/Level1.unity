@@ -4064,7 +4064,7 @@ PrefabInstance:
       objectReference: {fileID: 1955681990}
     - target: {fileID: 9143917672334920336, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.19
+      value: -14.59
       objectReference: {fileID: 0}
     - target: {fileID: 9143917672334920336, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4072,7 +4072,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9143917672334920336, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -27.67
+      value: -26.1
       objectReference: {fileID: 0}
     - target: {fileID: 9143917672334920336, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4144,7 +4144,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3876049587090282423, guid: c88dadc901f14e5439fb23b1c82eb3e6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.397719
+      value: -8.79772
       objectReference: {fileID: 0}
     - target: {fileID: 3876049587090282423, guid: c88dadc901f14e5439fb23b1c82eb3e6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4152,7 +4152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3876049587090282423, guid: c88dadc901f14e5439fb23b1c82eb3e6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -33.46228
+      value: -31.89228
       objectReference: {fileID: 0}
     - target: {fileID: 3876049587090282423, guid: c88dadc901f14e5439fb23b1c82eb3e6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4278,7 +4278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5512210931440347349, guid: 4f125d5b5b956f34392e976f90787c55, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.397719
+      value: -8.79772
       objectReference: {fileID: 0}
     - target: {fileID: 5512210931440347349, guid: 4f125d5b5b956f34392e976f90787c55, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4286,7 +4286,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5512210931440347349, guid: 4f125d5b5b956f34392e976f90787c55, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -33.46228
+      value: -31.89228
       objectReference: {fileID: 0}
     - target: {fileID: 5512210931440347349, guid: 4f125d5b5b956f34392e976f90787c55, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4975,6 +4975,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b3cb06693fb9d52419364015e19ec04e, type: 2}
+    - target: {fileID: 5714916544920542309, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.89999986
+      objectReference: {fileID: 0}
+    - target: {fileID: 5714916544920542309, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.000004708767
+      objectReference: {fileID: 0}
     - target: {fileID: 6258075609845878675, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_Name
       value: Game_Scenery
@@ -4983,9 +4991,33 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1647487887}
+    - target: {fileID: 6755583698421460327, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6881474926380644775, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.89999986
+      objectReference: {fileID: 0}
+    - target: {fileID: 6881474926380644775, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.000004708767
+      objectReference: {fileID: 0}
     - target: {fileID: 6921368797078267368, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_Name
       value: Painting_V4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937873316105912795, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.89999986
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937873316105912795, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.000004708767
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608572108944995613, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 24.6
       objectReference: {fileID: 0}
     - target: {fileID: 7683462116155611112, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_LocalPosition.x
