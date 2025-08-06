@@ -4811,6 +4811,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1337506087552256100, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: m_Extents.z
+      value: 2.51
+      objectReference: {fileID: 0}
     - target: {fileID: 1373168026354425179, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -4859,6 +4863,18 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 3325823}
+    - target: {fileID: 3861196922851329644, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: m_Extents.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241590662538602884, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: m_Center.x
+      value: -1.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241590662538602884, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: m_Extents.x
+      value: 1.305
+      objectReference: {fileID: 0}
     - target: {fileID: 4633130851681149250, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_Mesh
       value: 
