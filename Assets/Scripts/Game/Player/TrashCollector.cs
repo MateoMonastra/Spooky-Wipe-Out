@@ -14,8 +14,10 @@ namespace Game.Player
         {
             if (IsVacuumable(other))
             {
-                Trash trash = other.gameObject.transform.parent.GetComponent<Trash>();
+                Trash trash = other.transform.parent?.GetComponent<Trash>();
                 trash?.OnBeingDestroy.Invoke(trash);
+                Debug.Log(trash);
+
             
                 ChainGhostAgent ghost = other.gameObject.transform.parent.GetComponent<ChainGhostAgent>();
                 if (trash)

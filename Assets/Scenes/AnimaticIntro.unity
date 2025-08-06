@@ -1191,7 +1191,7 @@ GameObject:
   - component: {fileID: 1415448671}
   - component: {fileID: 1415448670}
   - component: {fileID: 1415448669}
-  - component: {fileID: 1415448668}
+  - component: {fileID: 1415448672}
   m_Layer: 5
   m_Name: NextButton
   m_TagString: Untagged
@@ -1219,19 +1219,6 @@ RectTransform:
   m_AnchoredPosition: {x: -153, y: 95}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1415448668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1415448666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5682496ae6250dc4485450709eebfbbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonHandler: {fileID: 11400000, guid: 3e76adb865c6dca4d9803b8fabae6a97, type: 2}
 --- !u!114 &1415448669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1276,9 +1263,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415448668}
-        m_TargetAssemblyTypeName: Menu.MenuButton.ButtonAction, Assembly-CSharp
-        m_MethodName: HandleClick
+      - m_Target: {fileID: 1415448672}
+        m_TargetAssemblyTypeName: Menu.Button.ButtonActionRandom, Assembly-CSharp
+        m_MethodName: HandleClickRandom
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1326,6 +1313,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1415448666}
   m_CullTransparentMesh: 1
+--- !u!114 &1415448672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1415448666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4dce6157f9a9a94082d5148c8a1eebc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomHandlers:
+  - {fileID: 11400000, guid: d4490f9887da0134dbe5b805f8c69a91, type: 2}
+  - {fileID: 11400000, guid: 3e76adb865c6dca4d9803b8fabae6a97, type: 2}
 --- !u!114 &1464392173 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1911315130079129012, guid: 0e114f93386c6584fb412aaf40e12cc9, type: 3}

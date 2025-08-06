@@ -10,8 +10,7 @@ namespace Game.Garbage
 
         private void OnEnable()
         {
-            GameManager.GetInstance().garbage.Add(this);
-            GameManager.GetInstance().UpdateTrashQnty();
+            GameManager.GetInstance().AddTrash(this);
         }
 
         public void IsBeingVacuumed(params object[] args)

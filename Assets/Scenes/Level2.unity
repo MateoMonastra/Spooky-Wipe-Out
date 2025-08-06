@@ -18049,6 +18049,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1656073765121728186, guid: b467e462884d30144b5bfca22943e075, type: 3}
+      propertyPath: buttonHandler
+      value: 
+      objectReference: {fileID: 11400000, guid: 29ab4eb265e3ac54e94d9f865249f1dd, type: 2}
     - target: {fileID: 1815361069494275748, guid: b467e462884d30144b5bfca22943e075, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -18137,6 +18141,10 @@ PrefabInstance:
       propertyPath: inputReader
       value: 
       objectReference: {fileID: 1631356185}
+    - target: {fileID: 4061031962573159399, guid: b467e462884d30144b5bfca22943e075, type: 3}
+      propertyPath: buttonHandler
+      value: 
+      objectReference: {fileID: 11400000, guid: 18cc4fefa91547c478c1dccc5cdb7465, type: 2}
     - target: {fileID: 4065636184292914756, guid: b467e462884d30144b5bfca22943e075, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -38052,6 +38060,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd0b4f758364934489e7f3d5911e49d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1807268309 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6421636081491891537, guid: 613b6ba06ae74b6409013525dbbc641a, type: 3}
+  m_PrefabInstance: {fileID: 1600113471}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1812156072
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44359,7 +44372,7 @@ PrefabInstance:
     - target: {fileID: 1682782364746242816, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: AudioPlayer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1807268309}
     - target: {fileID: 3518549469874256120, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
       propertyPath: ADMinigame
       value: 

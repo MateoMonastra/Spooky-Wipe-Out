@@ -5,7 +5,7 @@ namespace Menu.MenuButton
     public class ButtonAction : MonoBehaviour
     {
         [Tooltip("Reference to the button handler")]
-        [SerializeField] private ButtonHandler buttonHandler;
+        [SerializeField] protected ButtonHandler buttonHandler;
 
         private void Start()
         {
