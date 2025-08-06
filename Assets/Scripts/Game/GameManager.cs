@@ -6,6 +6,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Game.Minigames.CatchZone;
 using Minigames;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private SkillCheckController skMinigame;
     [SerializeField] private ADController adMinigame;
+    [SerializeField] private CatchZoneController catchZoneMinigame;
 
 
     [SerializeField] private ObjectivesUI objectivesUI;
@@ -156,5 +158,24 @@ public class GameManager : MonoBehaviour
     public SkillCheckController GetMinigameSkillCheckController()
     {
         return skMinigame;
+    }
+    
+    public CatchZoneController GetMinigameCatchZoneController()
+    {
+        return catchZoneMinigame;
+    }
+
+    public bool IsAnyMinigameActive()
+    {
+        if (catchZoneMinigame != null && catchZoneMinigame.GetActive())
+            return true;
+
+        if (skMinigame != null && skMinigame.GetActive())
+            return true;
+        
+        if(adMinigame != null && adMinigame.GetActive())
+            return true;
+
+        return false;
     }
 }

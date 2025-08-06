@@ -68,6 +68,7 @@ namespace Game.Ghosts.PaintGhost
         public void SetHuntState()
         {
             OnHunt?.Invoke(true);
+            
             _fsm.TryTransitionTo(_toHuntID);
             SetCollisionEnabled(true);
         }
@@ -75,18 +76,21 @@ namespace Game.Ghosts.PaintGhost
         private void SetCatchState()
         {
             OnCatch?.Invoke(true);
-            GameManager.GetInstance().GetMinigameSkillCheckController().StopGame();
+            
             minigame.OnWin += SetDeadState;
             minigame.OnLose += SetDeadState;
+            
             _fsm.TryTransitionTo(_toCatchID);
         }
 
-        public void SetDeadState()
+        private void SetDeadState()
         {
             OnDeath?.Invoke(true);
+            
             SetCollisionEnabled(false);
             minigame.OnWin -= SetDeadState;
             minigame.OnLose -= SetDeadState;
+            
             _fsm.TryTransitionTo(_toDeadID);
         }
 
@@ -95,10 +99,9 @@ namespace Game.Ghosts.PaintGhost
             if (_paintGhostCollision != null)
             {
                 _paintGhostCollision.SetActiveCollision(isEnabled);
-                SwapActiveMaterial(isEnabled);
             }
         }
-        private void SwapActiveMaterial(bool isActive)
+        public void SwapActiveMaterial(bool isActive)
         {
             ApplyMaterials(isActive ? activatedMaterials : deathMaterials);
         }
@@ -119,6 +122,10 @@ namespace Game.Ghosts.PaintGhost
             }
         }
 
+        public void OnDeathAnimationEnd()
+        {
+            SwapActiveMaterial(false);
+        }
         private void Update()
         {
             _fsm.Update();

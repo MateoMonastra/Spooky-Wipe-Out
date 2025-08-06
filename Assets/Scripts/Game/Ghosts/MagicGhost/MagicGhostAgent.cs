@@ -189,8 +189,8 @@ namespace Game.Ghosts.MagicGhost
         {
             if (_fsm.GetCurrentState() == _struggle)
                 return;
-
-            if (struggleMinigame.GetActive()) return;
+            
+            if(GameManager.GetInstance().IsAnyMinigameActive()) return;
             
             struggleMinigame.OnWin += HandleStruggleWin;
             struggleMinigame.OnLose += HandleStruggleLose;

@@ -37,38 +37,30 @@ namespace Game.Player
 
             _cleanerController.SwitchToTool(1);
 
-            _activeMinigame = FindActiveMinigame();
+            _skillCheckController.OnWin += EndStruggle;
+            _skillCheckController.OnLose += EndStruggle;
+            _skillCheckController.OnStop += EndStruggle;
 
-            if (_activeMinigame != null)
-            {
-                _activeMinigame.OnWin += EndStruggle;
-                _activeMinigame.OnLose += EndStruggle;
-                _activeMinigame.OnStop += EndStruggle;
-
-                Debug.Log($"[Struggle] Subscribed to minigame: {_activeMinigame.name}");
-            }
-            else
-            {
-                Debug.LogWarning("[Struggle] No active minigame found.");
-            }
+            _catchZoneController.OnWin += EndStruggle;
+            _catchZoneController.OnLose += EndStruggle;
+            _catchZoneController.OnStop += EndStruggle;
         }
 
         public override void Exit()
         {
             _rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
 
-            if (_activeMinigame != null)
-            {
-                _activeMinigame.OnWin -= EndStruggle;
-                _activeMinigame.OnLose -= EndStruggle;
-                _activeMinigame.OnStop -= EndStruggle;
-                _activeMinigame = null;
-            }
+            _skillCheckController.OnWin -= EndStruggle;
+            _skillCheckController.OnLose -= EndStruggle;
+            _skillCheckController.OnStop -= EndStruggle;
+
+            _catchZoneController.OnWin -= EndStruggle;
+            _catchZoneController.OnLose -= EndStruggle;
+            _catchZoneController.OnStop -= EndStruggle;
         }
 
         private void EndStruggle()
         {
-            Debug.Log("[Struggle] Minigame ended. Cleaning up...");
             _onStruggleEnd?.Invoke();
         }
 

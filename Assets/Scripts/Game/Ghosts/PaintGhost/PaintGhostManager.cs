@@ -23,6 +23,7 @@ namespace Game.Ghosts.PaintGhost
             foreach (var ghost in allGhosts)
             {
                 ghost.SetCollisionEnabled(false);
+                ghost.SwapActiveMaterial(false);
                 ghost.OnDeath.AddListener(_ => OnGhostDeath(ghost));
             }
         }
@@ -39,6 +40,7 @@ namespace Game.Ghosts.PaintGhost
                     _activeIndices.Add(index);
                     _lastActivatedIndex = index;
                     allGhosts[index].SetCollisionEnabled(true);
+                    allGhosts[index].SwapActiveMaterial(true);
                 }
 
                 tries++;
