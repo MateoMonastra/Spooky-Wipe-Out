@@ -45,9 +45,8 @@ public class SkillCheckController : Minigame
     [SerializeField] private SkillCheckState skillCheckState;
 
     [SerializeField] private AnimationCurve decreaseCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
-
-    private float progress { get; set; } = 0f;
-    private bool HasPlayerWon => progress >= maxProgress;
+    
+    private bool HasPlayerWon => Progress >= maxProgress;
     private bool HasPlayerLost;
 
     private float _needleSpeed;
@@ -67,14 +66,14 @@ public class SkillCheckController : Minigame
 
     public override void StartGame()
     {
-        if (_isActive) return;
+        if (IsActive) return;
         
         OnStart?.Invoke();
         HasPlayerLost = false;
-        _isActive = true;
+        IsActive = true;
 
         _needleSpeed = minNeedleSpeed;
-        progress = minProgress;
+        Progress = minProgress;
 
         skillCheck.gameObject.SetActive(true);
         inputReader.OnSpaceInputStart += HandleInput;
@@ -87,7 +86,7 @@ public class SkillCheckController : Minigame
 
     public override void StopGame()
     {
-        if (_isActive)
+        if (IsActive)
         {
             OnStop?.Invoke();
             ResetGame();
@@ -96,7 +95,7 @@ public class SkillCheckController : Minigame
 
     protected override void ResetGame()
     {
-        _isActive = false;
+        IsActive = false;
         inputReader.OnSpaceInputStart -= HandleInput;
         _needleSpeed = minNeedleSpeed; 
         StopAllCoroutines();
@@ -109,9 +108,8 @@ public class SkillCheckController : Minigame
         if (IsColliding(skillCheck.needle, skillCheck.safeZone))
         {
             OnCheckPass?.Invoke();
-            UpdateProgress(progress + increaseAmount);
-
-            //_needleSpeed = Mathf.Clamp(_needleSpeed + needleAcceleration, minNeedleSpeed, maxNeedleSpeed);
+            UpdateProgress(Progress + increaseAmount);
+            
             _needleSpeed = Random.Range(minNeedleSpeed, maxNeedleSpeed);
 
             RandomizeSafeZone();
@@ -120,14 +118,13 @@ public class SkillCheckController : Minigame
         {
             OnCheckFail?.Invoke();
 
-            if (progress <= minProgress)
+            if (Progress <= minProgress)
             {
                 HasPlayerLost = true;
             }
             else
             {
-                UpdateProgress(progress + decreaseAmount);
-                //_needleSpeed = Mathf.Clamp(_needleSpeed - needlePenaltyOnFail, minNeedleSpeed, maxNeedleSpeed);
+                UpdateProgress(Progress + decreaseAmount);
                 _needleSpeed = Random.Range(minNeedleSpeed, maxNeedleSpeed);
             }
         }
@@ -135,9 +132,9 @@ public class SkillCheckController : Minigame
 
     private void UpdateProgress(float value)
     {
-        progress = Mathf.Clamp(value, minProgress, maxProgress);
-        skillCheck.SetProgressBarFill(progress);
-        ChangeScaredAnimation(progress >= scaredProgress);
+        Progress = Mathf.Clamp(value, minProgress, maxProgress);
+        skillCheck.SetProgressBarFill(Progress);
+        ChangeScaredAnimation(Progress >= scaredProgress);
         
         if (HasPlayerWon)
             WinGame();
@@ -174,8 +171,8 @@ public class SkillCheckController : Minigame
     {
         while (skillCheck.gameObject.activeInHierarchy)
         {
-            float curveValue = decreaseCurve.Evaluate(progress);
-            float nextProgress = progress - decreaseRate * Time.deltaTime * curveValue;
+            float curveValue = decreaseCurve.Evaluate(Progress);
+            float nextProgress = Progress - decreaseRate * Time.deltaTime * curveValue;
             UpdateProgress(nextProgress);
             yield return null;
         }
@@ -185,7 +182,7 @@ public class SkillCheckController : Minigame
     {
         float barWidth = skillCheck.bar.rect.width;
         float safeZoneWidth = Random.Range(minWidthSafeZone, maxWidthSafeZone);
-        safeZoneWidth = Mathf.Min(safeZoneWidth, barWidth); // no más grande que la barra
+        safeZoneWidth = Mathf.Min(safeZoneWidth, barWidth);
 
         skillCheck.safeZone.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, safeZoneWidth);
 
@@ -228,4 +225,5 @@ public class SkillCheckController : Minigame
     {
         skillCheck.safeZoneAnimator.SetBool(IsScared, value);
     }
+
 }

@@ -19,8 +19,8 @@ namespace Game.Ghosts.MagicGhost
 
         public override void Enter()
         {
+            _agent.enabled = false;
             _agent.OnBeingDestroy?.Invoke(_agent);
-            _model.SetActive(false);
             _minigame?.StopGame();
         }
 

@@ -73,6 +73,7 @@ namespace Game.Ghosts.MagicGhost
                 transform,
                 player,
                 navMeshAgent,
+                struggleMinigame,
                 onEnterCaptured: ToCaptured,
                 onStruggleFail: ToFlee
             );
@@ -218,6 +219,11 @@ namespace Game.Ghosts.MagicGhost
         public void IsBeingVacuumed(params object[] args)
         {
             EnterStruggle();
+        }
+
+        public void OnDeathAnimationEnd()
+        {
+            gameObject.SetActive(false);
         }
 
         public State GetCurrentState()

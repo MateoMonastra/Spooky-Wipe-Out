@@ -72,6 +72,7 @@ namespace Game.Ghosts.ChainGhost
                 transform,
                 player,
                 navMeshAgent,
+                struggleMinigame,
                 onEnterCaptured: ToCaptured,
                 onStruggleFail: ToFlee
             );

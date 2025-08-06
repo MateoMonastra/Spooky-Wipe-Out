@@ -1,6 +1,7 @@
 using FSM;
 using UnityEngine;
 using UnityEngine.AI;
+using Minigames;
 
 namespace Game.Ghosts.ChainGhost
 {
@@ -9,19 +10,25 @@ namespace Game.Ghosts.ChainGhost
         private readonly Transform _enemy;
         private readonly Transform _player;
         private readonly NavMeshAgent _agent;
+        private readonly Minigame _minigame;
         private readonly System.Action _onEnterCaptured;
         private readonly System.Action _onStruggleFail;
+
+        private float _struggleLerpDistance = 3f;
+        private float _lerpSpeed = 2.5f;
 
         public Struggle(
             Transform enemy,
             Transform player,
             NavMeshAgent agent,
+            Minigame minigame,
             System.Action onEnterCaptured,
             System.Action onStruggleFail)
         {
             _enemy = enemy;
             _player = player;
             _agent = agent;
+            _minigame = minigame;
             _onEnterCaptured = onEnterCaptured;
             _onStruggleFail = onStruggleFail;
         }
@@ -29,17 +36,39 @@ namespace Game.Ghosts.ChainGhost
         public override void Enter()
         {
             base.Enter();
-            
+
             _agent.ResetPath();
             _agent.updatePosition = false;
             _agent.updateRotation = false;
-            
+
             _enemy.forward = _player.forward;
+            
+            InitialGhostPlacement();
+        }
+
+        private void InitialGhostPlacement()
+        {
+            Vector3 inFront = _player.position + _player.forward * _struggleLerpDistance;
+            inFront.y = _enemy.position.y;
+            _enemy.position = inFront;
         }
 
         public override void Tick(float delta)
         {
             base.Tick(delta);
+
+            UpdatePlacementWithProgress(delta);
+        }
+
+        private void UpdatePlacementWithProgress(float delta)
+        {
+            float progress = Mathf.Clamp01(_minigame.GetProgress());
+
+            float dynamicOffset = Mathf.Lerp(_struggleLerpDistance, 0f, progress);
+            Vector3 targetPos = _player.position + _player.forward * dynamicOffset;
+            targetPos.y = _enemy.position.y;
+
+            _enemy.position = Vector3.Lerp(_enemy.position, targetPos, delta * _lerpSpeed);
         }
 
         public override void Exit()
