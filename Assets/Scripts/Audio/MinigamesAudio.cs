@@ -1,3 +1,4 @@
+using Game.Minigames.CatchZone;
 using Minigames;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ namespace Audio
     {
         [SerializeField] private SkillCheckController skillCheckController;
         [SerializeField] private ADController adController;
+        [SerializeField] private CatchZoneController catchZoneController;
 
         private void OnEnable()
         {
@@ -15,7 +17,12 @@ namespace Audio
             skillCheckController.OnWin += OnGhostRelease;
             skillCheckController.OnStop += OnGhostRelease;
             skillCheckController.OnCheckPass += OnGhostSkillCheckPass;
-            skillCheckController.OnCheckFail += OnGhostSkillCheckFail;
+            skillCheckController.OnCheckFail += OnGhostSkillCheckFail; 
+            
+            catchZoneController.OnStart += OnGhostCatch;
+            catchZoneController.OnLose += OnGhostRelease;
+            catchZoneController.OnWin += OnGhostRelease;
+            catchZoneController.OnStop += OnGhostRelease;
 
             adController.OnStart += OnPaintCatch;
             adController.OnLose += OnPaintRelease;
@@ -31,6 +38,11 @@ namespace Audio
             skillCheckController.OnStop -= OnGhostRelease;
             skillCheckController.OnCheckPass -= OnGhostSkillCheckPass;
             skillCheckController.OnCheckFail -= OnGhostSkillCheckFail;
+            
+            catchZoneController.OnStart -= OnGhostCatch;
+            catchZoneController.OnLose -= OnGhostRelease;
+            catchZoneController.OnWin -= OnGhostRelease;
+            catchZoneController.OnStop -= OnGhostRelease;
 
             adController.OnStart -= OnPaintCatch;
             adController.OnLose -= OnPaintRelease;

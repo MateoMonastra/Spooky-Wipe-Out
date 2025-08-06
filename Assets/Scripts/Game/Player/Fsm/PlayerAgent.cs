@@ -56,6 +56,7 @@ namespace Game.Player
             inputReader.OnSwitchTool += SwitchTool;
 
             skillCheckController.OnStart += SetWalkIdleToStruggle;
+            catchZoneController.OnStart += SetWalkIdleToStruggle;
             OnHunted += SetTrappedState;
         }
 
