@@ -117,6 +117,7 @@ namespace Game.Ghosts.ChainGhost
             _panicked.AddTransition(new Transition { From = _panicked, To = _flee, ID = ToFleeID });
             _rest.AddTransition(new Transition { From = _rest, To = _patrolling, ID = ToPatrollingID });
             _struggle.AddTransition(new Transition { From = _struggle, To = _captured, ID = ToCapturedID });
+            _struggle.AddTransition(new Transition { From = _struggle, To = _flee, ID = ToFleeID });
 
             _fsm = new Fsm(_patrolling);
         }
