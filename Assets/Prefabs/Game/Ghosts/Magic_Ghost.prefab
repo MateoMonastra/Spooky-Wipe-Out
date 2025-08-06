@@ -10181,7 +10181,7 @@ MonoBehaviour:
   - {fileID: 8419141999324106417, guid: 83e6ac680dfa3174e96e943ce8ac8dee, type: 3}
   - {fileID: 8419141999324106417, guid: 2e150c724ae6b4247ad6cbb514cac213, type: 3}
   trashSpawnPoint: {fileID: 2177006854781408632}
-  fleeSpeed: 15
+  fleeSpeed: 11
   detectRadius: 8
   panicDuration: 3
   obstructionMask:

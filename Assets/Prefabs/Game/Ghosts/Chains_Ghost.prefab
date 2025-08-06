@@ -10026,7 +10026,7 @@ MonoBehaviour:
   - {fileID: 0}
   struggleMinigame: {fileID: 0}
   ghostCollider: {fileID: 8288229231325126369}
-  fleeSpeed: 12
+  fleeSpeed: 10
   detectRadius: 8
   restDuration: 4
   panicDuration: 3
