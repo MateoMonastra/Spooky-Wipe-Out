@@ -111,7 +111,8 @@ public class SkillCheckController : Minigame
             OnCheckPass?.Invoke();
             UpdateProgress(progress + increaseAmount);
 
-            _needleSpeed = Mathf.Clamp(_needleSpeed + needleAcceleration, minNeedleSpeed, maxNeedleSpeed);
+            //_needleSpeed = Mathf.Clamp(_needleSpeed + needleAcceleration, minNeedleSpeed, maxNeedleSpeed);
+            _needleSpeed = Random.Range(minNeedleSpeed, maxNeedleSpeed);
 
             RandomizeSafeZone();
         }
@@ -126,7 +127,8 @@ public class SkillCheckController : Minigame
             else
             {
                 UpdateProgress(progress + decreaseAmount);
-                _needleSpeed = Mathf.Clamp(_needleSpeed - needlePenaltyOnFail, minNeedleSpeed, maxNeedleSpeed);
+                //_needleSpeed = Mathf.Clamp(_needleSpeed - needlePenaltyOnFail, minNeedleSpeed, maxNeedleSpeed);
+                _needleSpeed = Random.Range(minNeedleSpeed, maxNeedleSpeed);
             }
         }
     }
