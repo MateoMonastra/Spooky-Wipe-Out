@@ -157,7 +157,6 @@ namespace Game.Ghosts.ChainGhost
             }
             else
             {
-                Debug.LogWarning($"{_enemy.name}: No se pudo encontrar dirección opuesta para huir.");
                 FleeToDistantWaypoint();
             }
         }

@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 808812569033100798}
   serializedVersion: 2
   m_LocalRotation: {x: -0.70710677, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 3.75, z: 0}
+  m_LocalPosition: {x: 0, y: 1.89, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4982,7 +4982,7 @@ Transform:
   m_GameObject: {fileID: 2404993799365206142}
   serializedVersion: 2
   m_LocalRotation: {x: -0.70710677, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 3.75, z: 0}
+  m_LocalPosition: {x: 0, y: 1.8899996, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10042,6 +10042,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7460502879230320613}
+        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDropTrash:
     m_PersistentCalls:
       m_Calls:
@@ -10169,11 +10181,8 @@ MonoBehaviour:
   - {fileID: 8419141999324106417, guid: 83e6ac680dfa3174e96e943ce8ac8dee, type: 3}
   - {fileID: 8419141999324106417, guid: 2e150c724ae6b4247ad6cbb514cac213, type: 3}
   trashSpawnPoint: {fileID: 2177006854781408632}
-  fleeSpeed: 6
+  fleeSpeed: 15
   detectRadius: 8
-  fleeDistance: 10
-  escapeDuration: 3
-  restDuration: 3
   panicDuration: 3
   obstructionMask:
     serializedVersion: 2
