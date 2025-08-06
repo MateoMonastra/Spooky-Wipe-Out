@@ -1,25 +1,26 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-public class Trash : MonoBehaviour, IVacuumable
+namespace Game.Garbage
 {
-    [SerializeField] private GameObject model;
-    public Action<Trash> OnBeingDestroy;
-
-    private void Start()
+    public class Trash : MonoBehaviour, IVacuumable
     {
-        GameManager.GetInstance().garbage.Add(this);
-    }
+        [SerializeField] private GameObject model;
+        public Action<Trash> OnBeingDestroy;
 
-    public void IsBeingVacuumed(params object[] args)
-    {
-        var rb = GetComponentInChildren<Rigidbody>();
+        private void OnEnable()
+        {
+            GameManager.GetInstance().garbage.Add(this);
+            GameManager.GetInstance().UpdateTrashQnty();
+        }
 
-        var direction = ((Vector3)args[0] - model.transform.position).normalized;
+        public void IsBeingVacuumed(params object[] args)
+        {
+            var rb = GetComponentInChildren<Rigidbody>();
+
+            var direction = ((Vector3)args[0] - model.transform.position).normalized;
             
-        rb.AddForce(direction * (float)args[1], ForceMode.VelocityChange);
+            rb.AddForce(direction * (float)args[1], ForceMode.VelocityChange);
+        }
     }
 }

@@ -5,7 +5,6 @@ using Minigames;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 
 namespace Game.Ghosts.MagicGhost
 {
@@ -32,9 +31,6 @@ namespace Game.Ghosts.MagicGhost
         [Header("Settings")] 
         [SerializeField] private float fleeSpeed = 6f;
         [SerializeField] private float detectRadius = 8f;
-        [SerializeField] private float fleeDistance = 10f;
-        [SerializeField] private float escapeDuration = 3f;
-        [SerializeField] private float restDuration = 3f;
         [SerializeField] private float panicDuration = 3f;
         [SerializeField] private LayerMask obstructionMask;
 
@@ -98,7 +94,6 @@ namespace Game.Ghosts.MagicGhost
                 player,
                 navMeshAgent,
                 patrolWaypoints,
-                escapeDuration,
                 obstructionMask,
                 fleeSpeed,
                 ToDropTrash,
@@ -122,6 +117,7 @@ namespace Game.Ghosts.MagicGhost
             _panicked.AddTransition(new Transition { From = _panicked, To = _flee, ID = ToFleeID });
             _dropTrash.AddTransition(new Transition { From = _dropTrash, To = _patrolling, ID = ToPatrollingID });
             _struggle.AddTransition(new Transition { From = _struggle, To = _captured, ID = ToCapturedID });
+            _struggle.AddTransition(new Transition { From = _struggle, To = _flee, ID = ToFleeID });
 
             _fsm = new Fsm(_patrolling);
         }

@@ -9905,14 +9905,14 @@ MonoBehaviour:
       - m_Target: {fileID: 705575695356465264}
         m_TargetAssemblyTypeName: Game.Ghosts.ChainGhost.ChainGhostAnimation, Assembly-CSharp
         m_MethodName: SetStruggledAnimation
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
   onFlee:
     m_PersistentCalls:
@@ -9945,6 +9945,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
         m_MethodName: Play
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 705575695356465264}
+        m_TargetAssemblyTypeName: Game.Ghosts.ChainGhost.ChainGhostAnimation, Assembly-CSharp
+        m_MethodName: SetStruggledAnimation
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10043,7 +10055,6 @@ MonoBehaviour:
   player: {fileID: 0}
   navMeshAgent: {fileID: 8968938385445474440}
   patrolWaypoints:
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

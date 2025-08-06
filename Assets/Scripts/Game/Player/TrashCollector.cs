@@ -1,3 +1,4 @@
+using Game.Garbage;
 using Game.Ghosts.ChainGhost;
 using UnityEngine;
 using UnityEngine.Events;

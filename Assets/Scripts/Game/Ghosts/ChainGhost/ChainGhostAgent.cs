@@ -26,10 +26,9 @@ namespace Game.Ghosts.ChainGhost
         [SerializeField] private Minigame struggleMinigame;
         [SerializeField] private Collider ghostCollider;
 
-        [Header("Settings")] [SerializeField] private float fleeSpeed = 6f;
+        [Header("Settings")] 
+        [SerializeField] private float fleeSpeed = 6f;
         [SerializeField] private float detectRadius = 8f;
-        [SerializeField] private float fleeDistance = 10f;
-        [SerializeField] private float escapeDuration = 3f;
         [SerializeField] private float restDuration = 3f;
         [SerializeField] private float panicDuration = 3f;
         [SerializeField] private LayerMask obstructionMask;
@@ -94,7 +93,6 @@ namespace Game.Ghosts.ChainGhost
                 player,
                 navMeshAgent,
                 patrolWaypoints,
-                escapeDuration,
                 obstructionMask,
                 fleeSpeed,
                 ToRest,

@@ -1,28 +1,27 @@
+using System;
+using FSM;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 
 namespace Game.Ghosts.ChainGhost
 {
-    public class Flee : FSM.State
+    public class Flee : State
     {
         private Transform _enemy;
         private Transform _player;
         private NavMeshAgent _agent;
         private Transform[] _waypoints;
         private LayerMask _obstructionMask;
-        private float _escapeDuration;
         private float _fleeDistance = 6f;
         private float _fleeSpeed;
         private float _originalSpeed;
-        private float _timer;
         private bool _cameFromPanic;
-        private bool _fleeingToWaypoint;
         private Vector3 _lastTargetPosition;
         private float _stuckTimer;
         private readonly float _maxStuckTime = 1f;
-        private readonly float _waypointArrivalThreshold = 0.3f;
-        private System.Action _onEscape;
-        private System.Action _onPanic;
+        private Action _onEscape;
+        private Action _onPanic;
         
         private float _timeSinceLastSeen;
         private float _lostSightThreshold = 3f;
@@ -35,17 +34,15 @@ namespace Game.Ghosts.ChainGhost
             Transform player,
             NavMeshAgent agent,
             Transform[] waypoints,
-            float escapeDuration,
             LayerMask obstructionMask,
             float fleeSpeed,
-            System.Action onEscape,
-            System.Action onPanic)
+            Action onEscape,
+            Action onPanic)
         {
             _enemy = enemy;
             _player = player;
             _agent = agent;
             _waypoints = waypoints;
-            _escapeDuration = escapeDuration;
             _obstructionMask = obstructionMask;
             _fleeSpeed = fleeSpeed;
             _onEscape = onEscape;
@@ -55,15 +52,12 @@ namespace Game.Ghosts.ChainGhost
         public void SetCameFromPanic(bool value) => _cameFromPanic = value;
         public override void Enter()
         {
-            _timer = 0f;
             _originalSpeed = _agent.speed;
             _agent.speed = _fleeSpeed;
             _stuckTimer = 0f;
-            _fleeingToWaypoint = false;
 
             if (_cameFromPanic)
             {
-                _fleeingToWaypoint = true;
                 FleeToDistantWaypoint();
                 _cameFromPanic = false;
             }
@@ -164,6 +158,7 @@ namespace Game.Ghosts.ChainGhost
             else
             {
                 Debug.LogWarning($"{_enemy.name}: No se pudo encontrar dirección opuesta para huir.");
+                FleeToDistantWaypoint();
             }
         }
         private void FleeToDistantWaypoint()
@@ -198,17 +193,17 @@ namespace Game.Ghosts.ChainGhost
         public override void DrawStateGizmos()
         {
 #if UNITY_EDITOR
-            UnityEditor.Handles.color = Color.red;
-            UnityEditor.Handles.DrawWireDisc(_enemy.position, Vector3.up, 5f);
-            UnityEditor.Handles.color = Color.magenta;
-            UnityEditor.Handles.DrawDottedLine(_enemy.position, _lastTargetPosition, 3f);
+            Handles.color = Color.red;
+            Handles.DrawWireDisc(_enemy.position, Vector3.up, 5f);
+            Handles.color = Color.magenta;
+            Handles.DrawDottedLine(_enemy.position, _lastTargetPosition, 3f);
 
             if (_waypoints != null)
             {
                 foreach (var wp in _waypoints)
                 {
                     if (wp != null)
-                        UnityEditor.Handles.DrawSolidDisc(wp.position, Vector3.up, 0.2f);
+                        Handles.DrawSolidDisc(wp.position, Vector3.up, 0.2f);
                 }
             }
 #endif

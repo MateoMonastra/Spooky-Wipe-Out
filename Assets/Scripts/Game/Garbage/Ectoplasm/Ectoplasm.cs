@@ -1,4 +1,5 @@
 using System;
+using Game;
 using UnityEngine;
 
 public class Ectoplasm : MonoBehaviour, IWasheable
