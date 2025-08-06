@@ -684,19 +684,7 @@ MonoBehaviour:
         m_CallState: 2
   OnGhostCollected:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &7486537488601482662
 GameObject:
   m_ObjectHideFlags: 0
@@ -914,6 +902,7 @@ MonoBehaviour:
   walkIdleModel: {fileID: 11400000, guid: f6225c811a45c4a4bba52eb64f59c1ea, type: 2}
   adController: {fileID: 0}
   skillCheckController: {fileID: 0}
+  catchZoneController: {fileID: 0}
   cleanerController: {fileID: 7452878416173193616}
   layerRaycast:
     serializedVersion: 2
