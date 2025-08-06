@@ -289,6 +289,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: a511b9d9-3c77-44a6-95ce-cc461d604000
     m_ActionName: Player/Restart[/Keyboard/r]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4929937290722937582}
+        m_TargetAssemblyTypeName: Player.FSM.InputReader, Assembly-CSharp
+        m_MethodName: HandleInteract
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: da8c269f-1265-47c0-92eb-d5dbd6c6f72f
+    m_ActionName: Player/Interact[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -306,6 +322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6222ca3e096618441b792c60698494ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isInteractPressed: 0
 --- !u!114 &3646882031282697881
 MonoBehaviour:
   m_ObjectHideFlags: 0
