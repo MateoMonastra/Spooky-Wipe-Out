@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputReader: {fileID: 0}
   minNeedleSpeed: 400
-  maxNeedleSpeed: 800
+  maxNeedleSpeed: 700
   needleAcceleration: 60
   needlePenaltyOnFail: 50
   decreaseRate: 0.1
