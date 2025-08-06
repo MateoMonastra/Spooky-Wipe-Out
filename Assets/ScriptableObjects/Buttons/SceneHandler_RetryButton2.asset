@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SceneHandler_RetryButton2
   m_EditorClassIdentifier: 
   eventChannel: {fileID: 11400000, guid: db015c9f8b5b83a47ab6053ad151f0d6, type: 2}
-  addingScene: Level1
-  unLoadingScene: Level1
+  addingScene: Level2
+  unLoadingScene: Level2
