@@ -9,6 +9,9 @@ namespace Game.Player
         [SerializeField] private float counterMovementForce = 5;
         [SerializeField] private float counterMovementForceVacuuming = 10;
         [SerializeField] private float rotationSpeed = 5;
+        [SerializeField] private  float maxSpeed = 6f;
+        [SerializeField] private float movementForceVacuuming = 15f;
+
         [SerializeField] private LayerMask layerRaycast;
         
         public float MovementForce
@@ -39,6 +42,16 @@ namespace Game.Player
         {
             get => layerRaycast;
             set => layerRaycast = value;
+        }
+        public float MaxSpeed
+        {
+            get => maxSpeed;
+            set => maxSpeed = value;
+        }
+        public float MovementForceVacuuming
+        {
+            get => movementForceVacuuming;
+            set => movementForceVacuuming = value;
         }
     }
 }

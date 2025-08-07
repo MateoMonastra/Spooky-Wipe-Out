@@ -48,34 +48,68 @@ namespace Game.Player
         private void Move(float delta)
         {
             if (_rigidbody == null) return;
-            
-            var isMoving = _dir.sqrMagnitude > 0.01f;
-            _onWalk?.Invoke(isMoving);
 
-            Vector3 moveForce = _dir.normalized * _model.MovementForce;
+            bool isVacuuming = InputReader.isClickPressed;
+            bool isUsingStick = InputReader.isUsingController;
+            float inputMagnitude = Mathf.Clamp01(_dir.magnitude);
+            
+            _onWalk?.Invoke(inputMagnitude > 0.01f);
+            
+            float movementForce = isVacuuming ? _model.MovementForceVacuuming : _model.MovementForce;
+            Vector3 moveForce = _dir * movementForce;
+            
+            CounterMovement(isVacuuming, inputMagnitude);
+
             _rigidbody.AddForce(moveForce + _counterMovement, ForceMode.Force);
-
-            float angle = Vector3.SignedAngle(player.transform.forward, _dir, Vector3.up);
             
-            if (!InputReader.isClickPressed)
+            float angle = Vector3.SignedAngle(player.transform.forward, _dir, Vector3.up);
+            if (!isVacuuming)
             {
-                _counterMovement = new Vector3(-_rigidbody.velocity.x * _model.CounterMovementForce, 0f, -_rigidbody.velocity.z * _model.CounterMovementForce);
                 RotateByMovementInput(angle, delta);
             }
             else
             {
-                _counterMovement = new Vector3(
-                    -_rigidbody.velocity.x * _model.CounterMovementForceVacuuming,
-                    0f,
-                    -_rigidbody.velocity.z * _model.CounterMovementForceVacuuming
-                );
-
-                if (InputReader.isUsingController)
+                if (isUsingStick)
                     RotateWhileVacuumingStick(angle, delta);
                 else
                     RotateWhileVacuuming();
             }
+            
+            LimitVelocity();
         }
+
+        private void CounterMovement(bool isVacuuming, float inputMagnitude)
+        {
+            float counterForce = isVacuuming ? _model.CounterMovementForceVacuuming : _model.CounterMovementForce;
+
+            if (inputMagnitude < 0.01f)
+            {
+                _counterMovement = new Vector3(
+                    -_rigidbody.velocity.x * counterForce * 1.5f,
+                    0f,
+                    -_rigidbody.velocity.z * counterForce * 1.5f
+                );
+            }
+            else
+            {
+                _counterMovement = new Vector3(
+                    -_rigidbody.velocity.x * counterForce * inputMagnitude,
+                    0f,
+                    -_rigidbody.velocity.z * counterForce * inputMagnitude
+                );
+            }
+        }
+
+        private void LimitVelocity()
+        {
+            Vector3 horizontalVelocity = new Vector3(_rigidbody.velocity.x, 0f, _rigidbody.velocity.z);
+            if (horizontalVelocity.magnitude > _model.MaxSpeed)
+            {
+                Vector3 limitedVelocity = horizontalVelocity.normalized * _model.MaxSpeed;
+                _rigidbody.velocity = new Vector3(limitedVelocity.x, _rigidbody.velocity.y, limitedVelocity.z);
+            }
+        }
+
 
         private void RotateByMovementInput(float angle, float delta)
         {
@@ -102,17 +136,23 @@ namespace Game.Player
         private void RotateWhileVacuumingStick(float angle, float delta)
         {
             if (!Camera.main || _mousePosition == Vector3.zero) return;
-            
-            var cameraTransform = Camera.main.transform;
-            var rotateDirection = cameraTransform.TransformDirection(_mousePosition.IgnoreY());
 
-            Quaternion targetRotation = Quaternion.LookRotation(rotateDirection);
+            var cameraTransform = Camera.main.transform;
+            
+            var rawDirection = cameraTransform.TransformDirection(_mousePosition);
+            rawDirection.y = 0f;
+
+            if (rawDirection.sqrMagnitude < 0.01f)
+                return;
+
+            Quaternion targetRotation = Quaternion.LookRotation(rawDirection);
             player.transform.rotation = Quaternion.Slerp(
                 player.transform.rotation,
                 targetRotation,
                 _stickRotatingSpeed * delta
             );
         }
+
 
         public void SetDir(Vector3 dir) => _dir = dir;
         public void SetMousePosition(Vector3 pos) => _mousePosition = pos;
