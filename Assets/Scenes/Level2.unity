@@ -8332,6 +8332,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Washbasin
       objectReference: {fileID: 0}
+    - target: {fileID: 5494074697529320127, guid: caa5158c6fb0c4940b70860262e431bb, type: 3}
+      propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 5494074697529320127, guid: caa5158c6fb0c4940b70860262e431bb, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 1631356185}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8527,6 +8535,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1818216743481630056, guid: dec5552e48664014fb3217c65b092d2f, type: 3}
   m_PrefabInstance: {fileID: 317703021}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &318433886 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7183520998709181448, guid: b467e462884d30144b5bfca22943e075, type: 3}
+  m_PrefabInstance: {fileID: 841344988}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &320163347
 PrefabInstance:
@@ -9562,6 +9575,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 177424392}
     m_Modifications:
+    - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 1631356185}
     - target: {fileID: 5418009871823184931, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9238798
@@ -12114,10 +12135,54 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1679079543178846395, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7114942
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679079543178846395, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679079543178846395, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.70269203
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679079543178846395, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679079543178846395, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 89.287
+      objectReference: {fileID: 0}
+    - target: {fileID: 2519890453932194316, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
+      propertyPath: m_Size.x
+      value: 7.8975677
+      objectReference: {fileID: 0}
+    - target: {fileID: 2519890453932194316, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
+      propertyPath: m_Size.z
+      value: 1.8361912
+      objectReference: {fileID: 0}
+    - target: {fileID: 2519890453932194316, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
+      propertyPath: m_Center.x
+      value: 0.058989085
+      objectReference: {fileID: 0}
+    - target: {fileID: 2519890453932194316, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
+      propertyPath: m_Center.z
+      value: -0.09535391
+      objectReference: {fileID: 0}
     - target: {fileID: 6690826361815923059, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
       propertyPath: m_Name
       value: Candle (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6844090846778808583, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
+      propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 6844090846778808583, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 1631356185}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13731,6 +13796,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1551052781}
     m_Modifications:
+    - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 1631356185}
     - target: {fileID: 6842417579298364112, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.472
@@ -13774,6 +13847,18 @@ PrefabInstance:
     - target: {fileID: 7206530460042879009, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
       propertyPath: m_Name
       value: Candelabra (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603198911791168148, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603198911791168148, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.00059312576
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603198911791168148, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0.068
       objectReference: {fileID: 0}
     - target: {fileID: 8686035639515527960, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
       propertyPath: m_IsActive
@@ -19213,6 +19298,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1719584692}
     m_Modifications:
+    - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 1631356185}
     - target: {fileID: 6842417579298364112, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.232
@@ -19256,6 +19349,18 @@ PrefabInstance:
     - target: {fileID: 7206530460042879009, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
       propertyPath: m_Name
       value: Candelabra
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603198911791168148, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.0016077755
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603198911791168148, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9999987
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603198911791168148, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 179.816
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21439,6 +21544,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1551052781}
     m_Modifications:
+    - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 1631356185}
     - target: {fileID: 6842417579298364112, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.4343534
@@ -21482,6 +21595,38 @@ PrefabInstance:
     - target: {fileID: 7206530460042879009, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
       propertyPath: m_Name
       value: Candelabra
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603198911791168148, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9999793
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603198911791168148, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.006436406
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603198911791168148, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0.738
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980831137537094601, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: m_Size.x
+      value: 2.9826334
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980831137537094601, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: m_Size.z
+      value: 8.578376
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980831137537094601, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: m_Center.x
+      value: -0.11803118
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980831137537094601, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: m_Center.y
+      value: -0.47578788
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980831137537094601, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: m_Center.z
+      value: -0.13052464
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22928,6 +23073,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Candle (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6844090846778808583, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
+      propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 6844090846778808583, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 1631356185}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23685,6 +23838,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Candle
       objectReference: {fileID: 0}
+    - target: {fileID: 6844090846778808583, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
+      propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 6844090846778808583, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 1631356185}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24729,6 +24890,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Washbasin
       objectReference: {fileID: 0}
+    - target: {fileID: 5494074697529320127, guid: caa5158c6fb0c4940b70860262e431bb, type: 3}
+      propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 5494074697529320127, guid: caa5158c6fb0c4940b70860262e431bb, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 1631356185}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26081,6 +26250,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Washbasin
       objectReference: {fileID: 0}
+    - target: {fileID: 5494074697529320127, guid: caa5158c6fb0c4940b70860262e431bb, type: 3}
+      propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 5494074697529320127, guid: caa5158c6fb0c4940b70860262e431bb, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 1631356185}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -31605,7 +31782,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1776639275516987818, guid: 24209db996e688d4784a30da58a8e1c3, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9999856
       objectReference: {fileID: 0}
     - target: {fileID: 1776639275516987818, guid: 24209db996e688d4784a30da58a8e1c3, type: 3}
       propertyPath: m_LocalRotation.x
@@ -31617,7 +31794,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1776639275516987818, guid: 24209db996e688d4784a30da58a8e1c3, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.00537106
       objectReference: {fileID: 0}
     - target: {fileID: 1776639275516987818, guid: 24209db996e688d4784a30da58a8e1c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -31629,7 +31806,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1776639275516987818, guid: 24209db996e688d4784a30da58a8e1c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -0.615
       objectReference: {fileID: 0}
     - target: {fileID: 4896835602589862665, guid: 24209db996e688d4784a30da58a8e1c3, type: 3}
       propertyPath: m_Center.x
@@ -32371,6 +32548,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1919902994}
     m_Modifications:
+    - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 1631356185}
     - target: {fileID: 6842417579298364112, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.7999744
@@ -32414,6 +32599,18 @@ PrefabInstance:
     - target: {fileID: 7206530460042879009, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
       propertyPath: m_Name
       value: Candelabra
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603198911791168148, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99999714
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603198911791168148, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.002423763
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603198911791168148, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -0.278
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33732,6 +33929,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1719584692}
     m_Modifications:
+    - target: {fileID: 852747610270296779, guid: b05ae32e504134e4cb8ccb247a6f5967, type: 3}
+      propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 852747610270296779, guid: b05ae32e504134e4cb8ccb247a6f5967, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 1631356185}
     - target: {fileID: 2347553182842353476, guid: b05ae32e504134e4cb8ccb247a6f5967, type: 3}
       propertyPath: m_Name
       value: Bathtub
@@ -33934,6 +34139,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 177424392}
     m_Modifications:
+    - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 1631356185}
     - target: {fileID: 5418009871823184931, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9238798
@@ -34772,6 +34985,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 177424392}
     m_Modifications:
+    - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 1631356185}
     - target: {fileID: 6842417579298364112, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.8620005
@@ -34786,7 +35007,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6842417579298364112, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.743977
       objectReference: {fileID: 0}
     - target: {fileID: 6842417579298364112, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
       propertyPath: m_LocalRotation.x
@@ -34794,7 +35015,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6842417579298364112, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 0.66820526
       objectReference: {fileID: 0}
     - target: {fileID: 6842417579298364112, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
       propertyPath: m_LocalRotation.z
@@ -34806,7 +35027,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6842417579298364112, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: 83.857
       objectReference: {fileID: 0}
     - target: {fileID: 6842417579298364112, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -37309,7 +37530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5570601895139665493, guid: 0e114f93386c6584fb412aaf40e12cc9, type: 3}
       propertyPath: m_ActionEvents.Array.size
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 5570601895139665493, guid: 0e114f93386c6584fb412aaf40e12cc9, type: 3}
       propertyPath: m_ActionEvents.Array.data[19].m_ActionId
@@ -37326,6 +37547,26 @@ PrefabInstance:
     - target: {fileID: 5570601895139665493, guid: 0e114f93386c6584fb412aaf40e12cc9, type: 3}
       propertyPath: m_ActionEvents.Array.data[20].m_ActionName
       value: Player/Restart[/Keyboard/r]
+      objectReference: {fileID: 0}
+    - target: {fileID: 5570601895139665493, guid: 0e114f93386c6584fb412aaf40e12cc9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5570601895139665493, guid: 0e114f93386c6584fb412aaf40e12cc9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1631356185}
+    - target: {fileID: 5570601895139665493, guid: 0e114f93386c6584fb412aaf40e12cc9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HandleInteract
+      objectReference: {fileID: 0}
+    - target: {fileID: 5570601895139665493, guid: 0e114f93386c6584fb412aaf40e12cc9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Player.FSM.InputReader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5570601895139665493, guid: 0e114f93386c6584fb412aaf40e12cc9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37406,6 +37647,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5661577317866500605, guid: ee596881d5d2fd0439ff9cabc591d026, type: 3}
+      propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 5661577317866500605, guid: ee596881d5d2fd0439ff9cabc591d026, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 1631356185}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37860,6 +38109,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1889881468}
     m_Modifications:
+    - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 1631356185}
     - target: {fileID: 6842417579298364112, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.3
@@ -37903,6 +38160,18 @@ PrefabInstance:
     - target: {fileID: 7206530460042879009, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
       propertyPath: m_Name
       value: Candelabra
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603198911791168148, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.008478133
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603198911791168148, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.99996406
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603198911791168148, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180.972
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -41005,10 +41274,54 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1679079543178846395, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7042838
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679079543178846395, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679079543178846395, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.70991856
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679079543178846395, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679079543178846395, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90.457
+      objectReference: {fileID: 0}
+    - target: {fileID: 2519890453932194316, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
+      propertyPath: m_Size.x
+      value: 8.459859
+      objectReference: {fileID: 0}
+    - target: {fileID: 2519890453932194316, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
+      propertyPath: m_Size.z
+      value: 2.1321402
+      objectReference: {fileID: 0}
+    - target: {fileID: 2519890453932194316, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
+      propertyPath: m_Center.x
+      value: 0.3519846
+      objectReference: {fileID: 0}
+    - target: {fileID: 2519890453932194316, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
+      propertyPath: m_Center.z
+      value: 0.038617305
+      objectReference: {fileID: 0}
     - target: {fileID: 6690826361815923059, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
       propertyPath: m_Name
       value: Candle
       objectReference: {fileID: 0}
+    - target: {fileID: 6844090846778808583, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
+      propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 6844090846778808583, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 1631356185}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -42858,6 +43171,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1889881468}
     m_Modifications:
+    - target: {fileID: 852747610270296779, guid: b05ae32e504134e4cb8ccb247a6f5967, type: 3}
+      propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 852747610270296779, guid: b05ae32e504134e4cb8ccb247a6f5967, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 1631356185}
     - target: {fileID: 2347553182842353476, guid: b05ae32e504134e4cb8ccb247a6f5967, type: 3}
       propertyPath: m_Name
       value: Bathtub
@@ -44068,6 +44389,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1349748234108355245, guid: da0894eeef8c4cd47885a23c12bc4db5, type: 3}
+      propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 1349748234108355245, guid: da0894eeef8c4cd47885a23c12bc4db5, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 1631356185}
     - target: {fileID: 2981468543236002342, guid: da0894eeef8c4cd47885a23c12bc4db5, type: 3}
       propertyPath: m_Name
       value: Refrigerator
@@ -45666,9 +45995,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2024275989}
     m_Modifications:
+    - target: {fileID: 852747610270296779, guid: b05ae32e504134e4cb8ccb247a6f5967, type: 3}
+      propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 852747610270296779, guid: b05ae32e504134e4cb8ccb247a6f5967, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 1631356185}
     - target: {fileID: 2347553182842353476, guid: b05ae32e504134e4cb8ccb247a6f5967, type: 3}
       propertyPath: m_Name
       value: Bathtub
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352230233092752958, guid: b05ae32e504134e4cb8ccb247a6f5967, type: 3}
+      propertyPath: m_Size.x
+      value: 4.0092025
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352230233092752958, guid: b05ae32e504134e4cb8ccb247a6f5967, type: 3}
+      propertyPath: m_Center.x
+      value: 0.631763
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352230233092752958, guid: b05ae32e504134e4cb8ccb247a6f5967, type: 3}
+      propertyPath: m_Center.z
+      value: 0.25458992
       objectReference: {fileID: 0}
     - target: {fileID: 8742031310703192948, guid: b05ae32e504134e4cb8ccb247a6f5967, type: 3}
       propertyPath: m_LocalScale.z
@@ -47400,6 +47749,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5661577317866500605, guid: ee596881d5d2fd0439ff9cabc591d026, type: 3}
+      propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 5661577317866500605, guid: ee596881d5d2fd0439ff9cabc591d026, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 1631356185}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
