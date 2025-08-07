@@ -16,6 +16,8 @@ MonoBehaviour:
   counterMovementForce: 5
   counterMovementForceVacuuming: 10
   rotationSpeed: 5
+  maxSpeed: 6
+  movementForceVacuuming: 20
   layerRaycast:
     serializedVersion: 2
     m_Bits: 64
