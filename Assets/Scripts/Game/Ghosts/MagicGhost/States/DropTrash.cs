@@ -2,6 +2,7 @@ using System.Collections;
 using FSM;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 namespace Game.Ghosts.MagicGhost
 {
@@ -48,7 +49,9 @@ namespace Game.Ghosts.MagicGhost
 
             if (selectedTrash != null)
             {
-                Object.Instantiate(selectedTrash, _spawnPoint.position, Quaternion.identity);
+                GameObject instance = Object.Instantiate(selectedTrash, _spawnPoint.position, Quaternion.identity);
+
+                SceneManager.MoveGameObjectToScene(instance, _spawnPoint.gameObject.scene);
             }
 
             _hasDropped = true;

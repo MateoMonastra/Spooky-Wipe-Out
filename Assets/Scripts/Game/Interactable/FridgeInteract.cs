@@ -9,14 +9,29 @@ namespace Game.Interactable
         [SerializeField] private Animator animator;
         [SerializeField] private Transform playerPosition;
         [SerializeField] private PlayerAgent player;
-    
+        
+        private bool _isActive = false;
+        private bool _alredyUsed = false;
         public void Interact()
         {
-            player.gameObject.transform.position = playerPosition.position;
-            player.gameObject.transform.rotation = playerPosition.rotation;
+            if (_alredyUsed) return;
+            _isActive = true;
+            _alredyUsed = true;
             player.SetFridgeInteractionState();
             animator.SetTrigger(Open);
-            gameObject.SetActive(false);
+            GetComponent<BoxCollider>().enabled = false;
+        }
+
+        public void Update()
+        {
+            if (!_isActive) return;
+            player.gameObject.transform.position = playerPosition.position;
+            player.gameObject.transform.rotation = playerPosition.rotation;
+        }
+
+        public void Reset()
+        {
+            _isActive = false;
         }
     }
 }

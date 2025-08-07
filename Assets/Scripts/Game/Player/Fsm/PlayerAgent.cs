@@ -70,7 +70,7 @@ namespace Game.Player
             _trapped = new Trapped(gameObject, adController, SetTrappedToMoveState);
             _struggle = new Struggle(gameObject, cleanerController, catchZoneController, skillCheckController,
                 ToStumbleInteraction);
-            _interaction = new Interaction();
+            _interaction = new Interaction(gameObject);
 
 
             _walkIdle.AddTransition(new Transition { From = _walkIdle, To = _trapped, ID = _toTrappedID });
@@ -245,6 +245,7 @@ namespace Game.Player
 
         public void SetFridgeInteractionState()
         {
+            inputReader.OnClickStart -= ActiveCleaner;
             inputReader.OnClickEnd -= SetCleanerIdleMode;
             inputReader.OnMove -= SetMoveStateDirection;
             ToFridgeInteraction();
@@ -255,6 +256,7 @@ namespace Game.Player
             OnFridgeInteraction?.Invoke(false);
             inputReader.OnClickEnd += SetCleanerIdleMode;
             inputReader.OnMove += SetMoveStateDirection;
+            inputReader.OnClickStart += ActiveCleaner;
             ToWalkIdle();
         }
         
