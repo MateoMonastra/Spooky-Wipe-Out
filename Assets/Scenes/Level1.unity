@@ -1869,11 +1869,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 742996208}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &933816700 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7183520998709181448, guid: b467e462884d30144b5bfca22943e075, type: 3}
-  m_PrefabInstance: {fileID: 1894116715244930165}
-  m_PrefabAsset: {fileID: 0}
 --- !u!850595691 &958267718
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -4610,46 +4605,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: InputReader
       objectReference: {fileID: 0}
-    - target: {fileID: 5570601895139665493, guid: 0e114f93386c6584fb412aaf40e12cc9, type: 3}
-      propertyPath: m_ActionEvents.Array.size
-      value: 22
-      objectReference: {fileID: 0}
-    - target: {fileID: 5570601895139665493, guid: 0e114f93386c6584fb412aaf40e12cc9, type: 3}
-      propertyPath: m_ActionEvents.Array.data[21].m_ActionId
-      value: da8c269f-1265-47c0-92eb-d5dbd6c6f72f
-      objectReference: {fileID: 0}
-    - target: {fileID: 5570601895139665493, guid: 0e114f93386c6584fb412aaf40e12cc9, type: 3}
-      propertyPath: m_ActionEvents.Array.data[21].m_ActionName
-      value: Player/Interact[/Keyboard/e]
-      objectReference: {fileID: 0}
-    - target: {fileID: 5570601895139665493, guid: 0e114f93386c6584fb412aaf40e12cc9, type: 3}
-      propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5570601895139665493, guid: 0e114f93386c6584fb412aaf40e12cc9, type: 3}
-      propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5570601895139665493, guid: 0e114f93386c6584fb412aaf40e12cc9, type: 3}
-      propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2139917822}
-    - target: {fileID: 5570601895139665493, guid: 0e114f93386c6584fb412aaf40e12cc9, type: 3}
-      propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5570601895139665493, guid: 0e114f93386c6584fb412aaf40e12cc9, type: 3}
-      propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HandleInteract
-      objectReference: {fileID: 0}
-    - target: {fileID: 5570601895139665493, guid: 0e114f93386c6584fb412aaf40e12cc9, type: 3}
-      propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Player.FSM.InputReader, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5570601895139665493, guid: 0e114f93386c6584fb412aaf40e12cc9, type: 3}
-      propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4856,27 +4811,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< HEAD
     - target: {fileID: 1337506087552256100, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_Extents.z
       value: 2.51
-=======
-    - target: {fileID: 973309324594579863, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: m_Size.x
-      value: 10.819373
-      objectReference: {fileID: 0}
-    - target: {fileID: 973309324594579863, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: m_Size.z
-      value: 6.9646893
-      objectReference: {fileID: 0}
-    - target: {fileID: 973309324594579863, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: m_Center.x
-      value: -0.0029399395
-      objectReference: {fileID: 0}
-    - target: {fileID: 973309324594579863, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: m_Center.z
-      value: 0.10688186
->>>>>>> Interactable-Interface
       objectReference: {fileID: 0}
     - target: {fileID: 1373168026354425179, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_Mesh
@@ -4884,7 +4821,7 @@ PrefabInstance:
       objectReference: {fileID: 2130253650}
     - target: {fileID: 1373168026354425179, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_VersionIndex
-      value: 2432
+      value: 2105
       objectReference: {fileID: 0}
     - target: {fileID: 1576190823091744347, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4904,7 +4841,7 @@ PrefabInstance:
       objectReference: {fileID: 1647487887}
     - target: {fileID: 2385916544845131369, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_VersionIndex
-      value: 3164
+      value: 2837
       objectReference: {fileID: 0}
     - target: {fileID: 2417973772894651386, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_Mesh
@@ -4912,23 +4849,7 @@ PrefabInstance:
       objectReference: {fileID: 998336807}
     - target: {fileID: 2417973772894651386, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_VersionIndex
-      value: 2650
-      objectReference: {fileID: 0}
-    - target: {fileID: 2472618405942746475, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: UIInteract
-      value: 
-      objectReference: {fileID: 933816700}
-    - target: {fileID: 2472618405942746475, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: inputReader
-      value: 
-      objectReference: {fileID: 2139917822}
-    - target: {fileID: 2810977968791108262, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2811288222652858807, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.3
+      value: 2323
       objectReference: {fileID: 0}
     - target: {fileID: 3400200247452739115, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_Mesh
@@ -4936,13 +4857,12 @@ PrefabInstance:
       objectReference: {fileID: 3325823}
     - target: {fileID: 3400200247452739115, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_VersionIndex
-      value: 2870
+      value: 2543
       objectReference: {fileID: 0}
     - target: {fileID: 3435022052005123855, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 3325823}
-<<<<<<< HEAD
     - target: {fileID: 3861196922851329644, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_Extents.z
       value: 2
@@ -4955,24 +4875,6 @@ PrefabInstance:
       propertyPath: m_Extents.x
       value: 1.305
       objectReference: {fileID: 0}
-=======
-    - target: {fileID: 3596127960834076246, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: UIInteract
-      value: 
-      objectReference: {fileID: 933816700}
-    - target: {fileID: 3596127960834076246, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: inputReader
-      value: 
-      objectReference: {fileID: 2139917822}
-    - target: {fileID: 4213075325489790921, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: UIInteract
-      value: 
-      objectReference: {fileID: 933816700}
-    - target: {fileID: 4213075325489790921, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: inputReader
-      value: 
-      objectReference: {fileID: 2139917822}
->>>>>>> Interactable-Interface
     - target: {fileID: 4633130851681149250, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -5001,14 +4903,6 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4899674683840335362, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: UIInteract
-      value: 
-      objectReference: {fileID: 933816700}
-    - target: {fileID: 4899674683840335362, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: inputReader
-      value: 
-      objectReference: {fileID: 2139917822}
     - target: {fileID: 5375513858086244853, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -5025,46 +4919,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.000004708767
       objectReference: {fileID: 0}
-    - target: {fileID: 5786400729180180593, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 5786400729180180593, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 5786400729180180593, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9997726
-      objectReference: {fileID: 0}
-    - target: {fileID: 5786400729180180593, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.021323858
-      objectReference: {fileID: 0}
-    - target: {fileID: 5786400729180180593, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 2.444
-      objectReference: {fileID: 0}
-    - target: {fileID: 5937068644392305105, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: UIInteract
-      value: 
-      objectReference: {fileID: 933816700}
-    - target: {fileID: 5937068644392305105, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: inputReader
-      value: 
-      objectReference: {fileID: 2139917822}
     - target: {fileID: 6258075609845878675, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_Name
       value: Game_Scenery
       objectReference: {fileID: 0}
-    - target: {fileID: 6380496433222648666, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: UIInteract
-      value: 
-      objectReference: {fileID: 933816700}
-    - target: {fileID: 6380496433222648666, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: inputReader
-      value: 
-      objectReference: {fileID: 2139917822}
     - target: {fileID: 6598146647420271157, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -5097,14 +4955,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 24.6
       objectReference: {fileID: 0}
-    - target: {fileID: 7663659730743587880, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: UIInteract
-      value: 
-      objectReference: {fileID: 933816700}
-    - target: {fileID: 7663659730743587880, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: inputReader
-      value: 
-      objectReference: {fileID: 2139917822}
     - target: {fileID: 7683462116155611112, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.64
@@ -5117,30 +4967,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 3325823}
-    - target: {fileID: 8105181042643403427, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: m_Size.x
-      value: 4.313056
-      objectReference: {fileID: 0}
-    - target: {fileID: 8105181042643403427, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: m_Size.z
-      value: 5.8314686
-      objectReference: {fileID: 0}
-    - target: {fileID: 8105181042643403427, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: m_Center.x
-      value: 0.7647932
-      objectReference: {fileID: 0}
-    - target: {fileID: 8105181042643403427, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: m_Center.z
-      value: -0.024791338
-      objectReference: {fileID: 0}
-    - target: {fileID: 8165367450086178539, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: UIInteract
-      value: 
-      objectReference: {fileID: 933816700}
-    - target: {fileID: 8165367450086178539, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: inputReader
-      value: 
-      objectReference: {fileID: 2139917822}
     - target: {fileID: 8181839230907976943, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.57
@@ -5153,14 +4979,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2130253650}
-    - target: {fileID: 8285401547749757581, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: UIInteract
-      value: 
-      objectReference: {fileID: 933816700}
-    - target: {fileID: 8285401547749757581, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
-      propertyPath: inputReader
-      value: 
-      objectReference: {fileID: 2139917822}
     - target: {fileID: 8860194226218473543, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_Shape
       value: 1
