@@ -43490,7 +43490,7 @@ PrefabInstance:
     - target: {fileID: 1228824031268626625, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
       propertyPath: listenerToMove
       value: 
-      objectReference: {fileID: 11400000, guid: 1d96751736f300947ab2668734ab2f4e, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 2143430589895360075, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.5
