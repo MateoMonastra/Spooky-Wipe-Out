@@ -24,28 +24,18 @@ namespace Game.Interactable
 
         }
 
-        private void OnTriggerStay(Collider other)
+        private void OnTriggerEnter(Collider other)
         {
             if(other.CompareTag("Player"))
             {
                 _playerInRange = true;
                 uiInteract.SetActive(true);
             }
-            else
-            {
-                _playerInRange = false;
-                uiInteract.SetActive(false);
-            }
         }
 
         private void OnTriggerExit(Collider other)
         {
             if (other.CompareTag("Player"))
-            {
-                _playerInRange = false;
-                uiInteract.SetActive(false);
-            }
-            else
             {
                 _playerInRange = false;
                 uiInteract.SetActive(false);
@@ -57,6 +47,7 @@ namespace Game.Interactable
             if (_playerInRange && inputReader.isInteractPressed == true)
             {
                 _interactable?.Interact();
+                uiInteract.SetActive(false);
             }
         }
     }

@@ -13,6 +13,7 @@ namespace Game.Interactable
         public void Interact()
         {
             player.gameObject.transform.position = playerPosition.position;
+            player.gameObject.transform.rotation = playerPosition.rotation;
             player.SetFridgeInteractionState();
             animator.SetTrigger(Open);
             gameObject.SetActive(false);
