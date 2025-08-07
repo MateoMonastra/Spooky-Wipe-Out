@@ -176,6 +176,7 @@ namespace Game.Player
             SetCleanerIdleMode();
             _fsm.TryTransitionTo(_toWalkIdleID);
             OnStruggle?.Invoke(false);
+            GameManager.GetInstance().SetMinigamesBloquedStatus(false);
         }
 
         private void ToWalkIdle()
@@ -234,6 +235,7 @@ namespace Game.Player
 
         public void FinishStruggleAnimation()
         {
+            GameManager.GetInstance().SetMinigamesBloquedStatus(true);
             SetStruggledToWalkIdle();
         }
 
