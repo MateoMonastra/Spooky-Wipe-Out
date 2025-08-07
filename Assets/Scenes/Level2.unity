@@ -15660,6 +15660,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1278560795365174059, guid: 0e3912c275b908a4ab2d9041a8d97c11, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1278560795365174059, guid: 0e3912c275b908a4ab2d9041a8d97c11, type: 3}
+      propertyPath: m_Center.z
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2196979955797835530, guid: 0e3912c275b908a4ab2d9041a8d97c11, type: 3}
       propertyPath: m_LocalScale.x
       value: -0.11
@@ -22392,6 +22400,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1699080947}
     m_Modifications:
+    - target: {fileID: 7275074989847612114, guid: 81980af56bacd024181ce7c6db9a5769, type: 3}
+      propertyPath: m_Center.x
+      value: 0.000002861023
+      objectReference: {fileID: 0}
     - target: {fileID: 7484340491454348216, guid: 81980af56bacd024181ce7c6db9a5769, type: 3}
       propertyPath: m_LocalScale.x
       value: -1
