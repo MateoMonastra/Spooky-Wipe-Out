@@ -2,9 +2,9 @@ using FSM;
 
 namespace Game.Player
 {
-    public class Stumble : State
+    public class Interaction : State
     {
-        public Stumble()
+        public Interaction()
         { }
 
         public override void Enter()

@@ -7,6 +7,7 @@ using Player.FSM;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 using VacuumCleaner;
 
 namespace Game.Player
@@ -18,7 +19,8 @@ namespace Game.Player
         public UnityEvent<bool> OnWalk;
         public UnityEvent<bool> OnStruggle;
         public UnityEvent<bool> OnCleaning;
-        public UnityEvent<bool> OnStumble;
+        public UnityEvent<bool> OnStumbleInteraction;
+        public UnityEvent<bool> OnFridgeInteraction;
 
         [SerializeField] private InputReader inputReader;
         [SerializeField] private WalkIdleModel walkIdleModel;
@@ -33,7 +35,7 @@ namespace Game.Player
         private WalkIdle _walkIdle;
         private Struggle _struggle;
         private Trapped _trapped;
-        private Stumble _stumble;
+        private Interaction _interaction;
 
         private int _currentCleaner = 1;
         private Vector3 _lastMousePos;
@@ -41,7 +43,7 @@ namespace Game.Player
         private readonly string _toTrappedID = "ToTrapped";
         private readonly string _toWalkIdleID = "ToWalkIdle";
         private readonly string _toStruggleID = "ToStruggle";
-        private readonly string _toStumbleID = "ToStumble";
+        private readonly string _toInteractionID = "ToInteraction";
 
         private void Start()
         {
@@ -67,8 +69,8 @@ namespace Game.Player
             _walkIdle = new WalkIdle(gameObject, walkIdleModel, layerRaycast, OnWalkAction);
             _trapped = new Trapped(gameObject, adController, SetTrappedToMoveState);
             _struggle = new Struggle(gameObject, cleanerController, catchZoneController, skillCheckController,
-                ToStumble);
-            _stumble = new Stumble();
+                ToStumbleInteraction);
+            _interaction = new Interaction();
 
 
             _walkIdle.AddTransition(new Transition { From = _walkIdle, To = _trapped, ID = _toTrappedID });
@@ -78,9 +80,9 @@ namespace Game.Player
             _trapped.AddTransition(new Transition { From = _trapped, To = _walkIdle, ID = _toWalkIdleID });
 
             _struggle.AddTransition(new Transition { From = _struggle, To = _walkIdle, ID = _toWalkIdleID });
-            _struggle.AddTransition(new Transition { From = _struggle, To = _stumble, ID = _toStumbleID });
+            _struggle.AddTransition(new Transition { From = _struggle, To = _interaction, ID = _toInteractionID });
 
-            _stumble.AddTransition(new Transition { From = _stumble, To = _walkIdle, ID = _toWalkIdleID });
+            _interaction.AddTransition(new Transition { From = _interaction, To = _walkIdle, ID = _toWalkIdleID });
 
             _fsm = new Fsm(_walkIdle);
         }
@@ -176,16 +178,29 @@ namespace Game.Player
             OnStruggle?.Invoke(false);
         }
 
-        private void ToStumble()
+        private void ToWalkIdle()
         {
             SetCleanerIdleMode();
-            _fsm.TryTransitionTo(_toStumbleID);
-            OnStumble?.Invoke(true);
+            _fsm.TryTransitionTo(_toWalkIdleID);
+        }
+
+        private void ToStumbleInteraction()
+        {
+            SetCleanerIdleMode();
+            _fsm.TryTransitionTo(_toInteractionID);
+            OnStumbleInteraction?.Invoke(true);
+        }
+        
+        private void ToFridgeInteraction()
+        {
+            SetCleanerIdleMode();
+            _fsm.TryTransitionTo(_toInteractionID);
+            OnFridgeInteraction?.Invoke(true);
         }
 
         private void ActiveCleaner()
         {
-            if (_fsm.GetCurrentState() == _stumble) return;
+            if (_fsm.GetCurrentState() == _interaction) return;
             OnCleaning?.Invoke(true);
             StartCoroutine(cleanerController.SwitchToTool(_currentCleaner));
         }
@@ -222,11 +237,28 @@ namespace Game.Player
             SetStruggledToWalkIdle();
         }
 
-        public void FinishStumble()
+        public void FinishStumbleInteraction()
         {
             SetStruggledToWalkIdle();
-            OnStumble?.Invoke(false);
+            OnStumbleInteraction?.Invoke(false);
         }
+
+        public void SetFridgeInteractionState()
+        {
+            inputReader.OnClickEnd -= SetCleanerIdleMode;
+            inputReader.OnMove -= SetMoveStateDirection;
+            ToFridgeInteraction();
+        }
+
+        public void FinishFridgeInteraction()
+        {
+            OnFridgeInteraction?.Invoke(false);
+            inputReader.OnClickEnd += SetCleanerIdleMode;
+            inputReader.OnMove += SetMoveStateDirection;
+            ToWalkIdle();
+        }
+        
+        
 
         public CleanerController GetCleanerController() => cleanerController;
     }

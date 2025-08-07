@@ -13,7 +13,12 @@ namespace Game.Player
         
         public void NotifyPlayerStumbleAnimationEnd()
         {
-            playerAgent.FinishStumble();
+            playerAgent.FinishStumbleInteraction();
+        }
+
+        public void NotifyPlayerFridgeInteractionEnd()
+        {
+            playerAgent.FinishFridgeInteraction();
         }
     }
 }

@@ -7,6 +7,7 @@ namespace Game.Player
         private static readonly int IsWalking = Animator.StringToHash("IsWalking");
         private static readonly int IsCleaning = Animator.StringToHash("IsCleaning");
         private static readonly int IsStumbled = Animator.StringToHash("IsStumbled");
+        private static readonly int IsOpeningDoor = Animator.StringToHash("IsOpeningDoor");
 
         [SerializeField] private Animator animator;
     
@@ -23,6 +24,11 @@ namespace Game.Player
         public void SetStumble(bool state)
         {
             animator.SetBool(IsStumbled, state);
+        }
+
+        public void SetOpenDoor(bool state)
+        {
+            animator.SetBool(IsOpeningDoor, state);
         }
     }
 }
