@@ -307,6 +307,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_CandleSound" ID="{79CBEF8C-1A66-4F36-8CDE-67425A3D54C1}">
+					<ChildrenList>
+						<Action Name="" ID="{314CF96A-C54A-4EA4-A26C-6CDC94F2617B}" ShortID="95090262">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CandleSound" ID="{38737AC3-7E22-4E4D-85A9-ED5D27324ACF}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_running_water" ID="{4BC332A8-E18F-4C4B-8579-9BC1D19D4E42}">
+					<ChildrenList>
+						<Action Name="" ID="{E0276C06-C524-4B1E-BC93-AA00967E3503}" ShortID="160930745">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="running_water" ID="{270F0C43-5523-4F3E-916D-F20FAE624C33}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
