@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Game.Minigames;
 using Player.FSM;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -29,7 +30,7 @@ namespace Minigames
 
         public override void StartGame()
         {
-            if (IsActive) return;
+            if (IsActive|| IsBloqued) return;
             
             OnStart?.Invoke();
             

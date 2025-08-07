@@ -64,7 +64,8 @@ namespace Game.Player
         {
             _walkIdle = new WalkIdle(gameObject, walkIdleModel, layerRaycast, OnWalkAction);
             _trapped = new Trapped(gameObject, adController, SetTrappedToMoveState);
-            _struggle = new Struggle(gameObject, cleanerController, catchZoneController, skillCheckController, SetStruggleToWalkIdle);
+            _struggle = new Struggle(gameObject, cleanerController, catchZoneController, skillCheckController,
+                SetStruggleToWalkIdle);
 
 
             _walkIdle.AddTransition(new Transition { From = _walkIdle, To = _trapped, ID = _toTrappedID });
@@ -87,7 +88,7 @@ namespace Game.Player
             _fsm.Update();
 
             if (!InputReader.isClickPressed || InputReader.isUsingController) return;
-            
+
             SetAimingVacuumDirection(_lastMousePos);
         }
 
@@ -123,7 +124,7 @@ namespace Game.Player
             {
                 _lastMousePos = position;
             }
-        
+
             foreach (var state in _states)
             {
                 if (_fsm.GetCurrentState() == state && state is WalkIdle walkIdle)
@@ -154,19 +155,26 @@ namespace Game.Player
 
         private void SetWalkIdleToStruggle()
         {
-            OnStruggle?.Invoke(true);
             inputReader.OnClickEnd -= SetCleanerIdleMode;
             inputReader.OnMove -= SetMoveStateDirection;
+            skillCheckController.OnStart -= SetWalkIdleToStruggle;
+            catchZoneController.OnStart -= SetWalkIdleToStruggle;
+            
             _fsm.TryTransitionTo(_toStruggleID);
+            OnStruggle?.Invoke(true);
         }
 
         private void SetStruggleToWalkIdle()
         {
             inputReader.OnClickEnd += SetCleanerIdleMode;
             inputReader.OnMove += SetMoveStateDirection;
+            skillCheckController.OnStart += SetWalkIdleToStruggle;
+            catchZoneController.OnStart += SetWalkIdleToStruggle;
+            
             SetCleanerIdleMode();
-            OnStruggle?.Invoke(false);
             _fsm.TryTransitionTo(_toWalkIdleID);
+            OnStruggle?.Invoke(false);
+
         }
 
         private void ActiveCleaner()
@@ -200,6 +208,11 @@ namespace Game.Player
                     CleanerSelectionUIControler.GetInstance().PowerOnVacuum();
                     break;
             }
+        }
+
+        public void FinishStruggle()
+        {
+            SetStruggleToWalkIdle();
         }
 
         public CleanerController GetCleanerController() => cleanerController;

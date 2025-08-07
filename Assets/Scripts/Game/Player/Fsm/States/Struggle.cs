@@ -1,5 +1,6 @@
 using UnityEngine;
 using FSM;
+using Game.Minigames;
 using Game.Minigames.CatchZone;
 using Minigames;
 using VacuumCleaner;
@@ -36,12 +37,10 @@ namespace Game.Player
             _rigidbody.constraints = RigidbodyConstraints.FreezeAll;
 
             _cleanerController.SwitchToTool(1);
-
-            _skillCheckController.OnWin += EndStruggle;
+            
             _skillCheckController.OnLose += EndStruggle;
             _skillCheckController.OnStop += EndStruggle;
-
-            _catchZoneController.OnWin += EndStruggle;
+            
             _catchZoneController.OnLose += EndStruggle;
             _catchZoneController.OnStop += EndStruggle;
         }
@@ -49,12 +48,10 @@ namespace Game.Player
         public override void Exit()
         {
             _rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
-
-            _skillCheckController.OnWin -= EndStruggle;
+            
             _skillCheckController.OnLose -= EndStruggle;
             _skillCheckController.OnStop -= EndStruggle;
-
-            _catchZoneController.OnWin -= EndStruggle;
+            
             _catchZoneController.OnLose -= EndStruggle;
             _catchZoneController.OnStop -= EndStruggle;
         }

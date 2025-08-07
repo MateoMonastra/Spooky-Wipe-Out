@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using FSM;
+using Game.Minigames;
 using Ghosts;
 using Ghosts.PaintGhost;
 using Minigames;

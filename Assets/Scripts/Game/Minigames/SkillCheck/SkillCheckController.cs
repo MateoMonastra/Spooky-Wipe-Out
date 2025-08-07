@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Game.Minigames;
 using Minigames;
 using Player.FSM;
 using UnityEngine;
@@ -66,7 +67,7 @@ public class SkillCheckController : Minigame
 
     public override void StartGame()
     {
-        if (IsActive) return;
+        if (IsActive || IsBloqued) return;
         
         OnStart?.Invoke();
         HasPlayerLost = false;

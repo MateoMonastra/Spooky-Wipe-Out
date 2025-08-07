@@ -1,9 +1,12 @@
+using System.Collections;
 using FSM;
+using Game.Minigames;
 using Ghosts;
 using Minigames;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 namespace Game.Ghosts.ChainGhost
 {
@@ -26,12 +29,13 @@ namespace Game.Ghosts.ChainGhost
         [SerializeField] private Minigame struggleMinigame;
         [SerializeField] private Collider ghostCollider;
 
-        [Header("Settings")] 
-        [SerializeField] private float fleeSpeed = 6f;
+        [Header("Settings")] [SerializeField] private float fleeSpeed = 6f;
         [SerializeField] private float detectRadius = 8f;
         [SerializeField] private float restDuration = 3f;
         [SerializeField] private float panicDuration = 3f;
         [SerializeField] private LayerMask obstructionMask;
+        [SerializeField] private float minScale = 0.1f;
+        [SerializeField] private float reductionSpeed = 3f;
 
         private Fsm _fsm;
 
@@ -41,6 +45,8 @@ namespace Game.Ghosts.ChainGhost
         private Struggle _struggle;
         private Captured _captured;
         private Panicked _panicked;
+        
+        private Coroutine _scaleCoroutine;
 
         private const string ToFleeID = "ToFlee";
         private const string ToRestID = "ToRest";
@@ -64,6 +70,7 @@ namespace Game.Ghosts.ChainGhost
             _captured = new Captured(
                 model: gameObject,
                 agent: this,
+                ghostCollider,
                 minigame: struggleMinigame
             );
 
@@ -185,8 +192,8 @@ namespace Game.Ghosts.ChainGhost
             if (_fsm.GetCurrentState() == _struggle)
                 return;
 
-            if(GameManager.GetInstance().IsAnyMinigameActive()) return;
-            
+            if (GameManager.GetInstance().IsAnyMinigameActive()) return;
+
             struggleMinigame.OnWin += HandleStruggleWin;
             struggleMinigame.OnLose += HandleStruggleLose;
 
@@ -217,6 +224,35 @@ namespace Game.Ghosts.ChainGhost
         public void IsBeingVacuumed(params object[] args)
         {
             EnterStruggle();
+        }
+
+        public void OnDeathAnimationScaling()
+        {
+            _scaleCoroutine = StartCoroutine(DeathAnimationCoroutine());
+        }
+
+        private IEnumerator DeathAnimationCoroutine()
+        {
+            GameManager.GetInstance().SetMinigamesBloquedStatus(true);
+            while (transform.localScale.x > minScale ||
+                   transform.localScale.y > minScale ||
+                   transform.localScale.z > minScale)
+            {
+                Vector3 newScale = transform.localScale - Vector3.one * (reductionSpeed * Time.deltaTime);
+
+                newScale = new Vector3(
+                    Mathf.Max(newScale.x, minScale),
+                    Mathf.Max(newScale.y, minScale),
+                    Mathf.Max(newScale.z, minScale)
+                );
+
+                transform.localScale = newScale;
+
+                yield return null;
+            }
+
+            GameManager.GetInstance().SetMinigamesBloquedStatus(false);
+            gameObject.SetActive(false);
         }
 
         public State GetCurrentState()

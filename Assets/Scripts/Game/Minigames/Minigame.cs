@@ -1,8 +1,7 @@
 using System;
 using UnityEngine;
-using UnityEngine.Events;
 
-namespace Minigames
+namespace Game.Minigames
 {
     public abstract class Minigame: MonoBehaviour
     {
@@ -12,6 +11,7 @@ namespace Minigames
         public Action OnStop;
 
         protected bool IsActive;
+        protected bool IsBloqued;
         protected float Progress;
 
         public bool GetActive() => IsActive;
@@ -23,5 +23,6 @@ namespace Minigames
         public abstract void StopGame();
         
         public float GetProgress() => Progress;
+        public void SetBloqued(bool isbloqued) => IsBloqued = isbloqued;
     }
 }

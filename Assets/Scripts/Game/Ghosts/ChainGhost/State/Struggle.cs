@@ -1,4 +1,5 @@
 using FSM;
+using Game.Minigames;
 using UnityEngine;
 using UnityEngine.AI;
 using Minigames;
@@ -14,8 +15,9 @@ namespace Game.Ghosts.ChainGhost
         private readonly System.Action _onEnterCaptured;
         private readonly System.Action _onStruggleFail;
 
-        private float _struggleLerpDistance = 3f;
-        private float _lerpSpeed = 2.5f;
+        private float _struggleLerpDistance = 3f; // Distancia inicial
+        private float _finalOffsetDistance = 1f; // Distancia mínima al jugador al terminar
+        private float _lerpSpeed = 1.5f;
 
         public Struggle(
             Transform enemy,
@@ -40,9 +42,10 @@ namespace Game.Ghosts.ChainGhost
             _agent.ResetPath();
             _agent.updatePosition = false;
             _agent.updateRotation = false;
+            _agent.enabled = false;
 
             _enemy.forward = _player.forward;
-            
+
             InitialGhostPlacement();
         }
 
@@ -52,6 +55,7 @@ namespace Game.Ghosts.ChainGhost
             inFront.y = _enemy.position.y;
             _enemy.position = inFront;
         }
+
 
         public override void Tick(float delta)
         {
@@ -64,12 +68,14 @@ namespace Game.Ghosts.ChainGhost
         {
             float progress = Mathf.Clamp01(_minigame.GetProgress());
 
-            float dynamicOffset = Mathf.Lerp(_struggleLerpDistance, 0f, progress);
+            float dynamicOffset = Mathf.Lerp(_struggleLerpDistance, _finalOffsetDistance, progress);
+
             Vector3 targetPos = _player.position + _player.forward * dynamicOffset;
             targetPos.y = _enemy.position.y;
 
             _enemy.position = Vector3.Lerp(_enemy.position, targetPos, delta * _lerpSpeed);
         }
+
 
         public override void Exit()
         {
@@ -80,9 +86,16 @@ namespace Game.Ghosts.ChainGhost
         public void ResolveStruggle(bool playerWon)
         {
             if (playerWon)
+            {
                 _onEnterCaptured?.Invoke();
+            }
             else
+            {
                 _onStruggleFail?.Invoke();
+                _agent.updatePosition = true;
+                _agent.updateRotation = true;
+                _agent.enabled = true;
+            }
         }
 
         public override void DrawStateGizmos()

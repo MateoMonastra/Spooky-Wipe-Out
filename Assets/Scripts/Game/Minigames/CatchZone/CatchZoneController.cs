@@ -48,7 +48,7 @@ namespace Game.Minigames.CatchZone
 
         public override void StartGame()
         {
-            if (IsActive)  return;
+            if (IsActive|| IsBloqued)  return;
             
             OnStart?.Invoke();
             IsActive = true;
