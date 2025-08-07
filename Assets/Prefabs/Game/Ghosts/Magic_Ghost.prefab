@@ -10172,6 +10172,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
   struggleMinigame: {fileID: 0}
   ghostCollider: {fileID: 8288229231325126369}
   trashPrefabs:
@@ -10306,6 +10307,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0d9d5157f17de294cb4f21315a1b6ce3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1392611326550415409}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0d9d5157f17de294cb4f21315a1b6ce3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6537487265899387299}
   m_SourcePrefab: {fileID: 100100000, guid: 0d9d5157f17de294cb4f21315a1b6ce3, type: 3}
 --- !u!1 &322812016848869436 stripped
 GameObject:
@@ -10346,6 +10350,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magicGhostAgent: {fileID: 2994765429017566634}
+--- !u!114 &6537487265899387299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322812016848869436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36c4d9fe04d0d27469b3413b234b7b19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAgent: {fileID: 0}
 --- !u!4 &1094668816785425030 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0d9d5157f17de294cb4f21315a1b6ce3, type: 3}
