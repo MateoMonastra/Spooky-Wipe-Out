@@ -15,6 +15,7 @@ namespace Game.Interactable
             player.gameObject.transform.position = playerPosition.position;
             player.SetFridgeInteractionState();
             animator.SetTrigger(Open);
+            gameObject.SetActive(false);
         }
     }
 }

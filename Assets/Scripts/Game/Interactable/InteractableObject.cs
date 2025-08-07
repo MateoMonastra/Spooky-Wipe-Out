@@ -1,51 +1,63 @@
 using Player.FSM;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class InteractableObject : MonoBehaviour
+namespace Game.Interactable
 {
-    private bool playerInRange = false;
-    private IInteractable interactable;
-
-    [SerializeField] private GameObject UIInteract;
-
-    [SerializeField] private InputReader inputReader;
-
-    private void Start()
+    public class InteractableObject : MonoBehaviour
     {
-        interactable = GetComponent<IInteractable>();
+        private bool _playerInRange = false;
+        private IInteractable _interactable;
 
-        if(interactable == null )
+        [SerializeField] private GameObject uiInteract;
+
+        [SerializeField] private InputReader inputReader;
+
+        private void Start()
         {
-            Debug.Log($"El objeto {gameObject.name} no tiene IInteractable");
+            _interactable = GetComponent<IInteractable>();
+
+            if(_interactable == null )
+            {
+                Debug.Log($"El objeto {gameObject.name} no tiene IInteractable");
+            }
+
         }
 
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.CompareTag("Player"))
+        private void OnTriggerStay(Collider other)
         {
-            playerInRange = true;
-            UIInteract.SetActive(true);
+            if(other.CompareTag("Player"))
+            {
+                _playerInRange = true;
+                uiInteract.SetActive(true);
+            }
+            else
+            {
+                _playerInRange = false;
+                uiInteract.SetActive(false);
+            }
         }
-    }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
+        private void OnTriggerExit(Collider other)
         {
-            playerInRange = false;
-            UIInteract.SetActive(false);
+            if (other.CompareTag("Player"))
+            {
+                _playerInRange = false;
+                uiInteract.SetActive(false);
+            }
+            else
+            {
+                _playerInRange = false;
+                uiInteract.SetActive(false);
+            }
         }
-    }
 
-    private void Update()
-    {
-        if (playerInRange && inputReader.isInteractPressed == true)
+        private void Update()
         {
-            interactable?.Interact();
+            if (_playerInRange && inputReader.isInteractPressed == true)
+            {
+                _interactable?.Interact();
+            }
         }
     }
 }

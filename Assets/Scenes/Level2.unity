@@ -8478,6 +8478,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 318433886}
     - target: {fileID: 5494074697529320127, guid: caa5158c6fb0c4940b70860262e431bb, type: 3}
+      propertyPath: uiInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 5494074697529320127, guid: caa5158c6fb0c4940b70860262e431bb, type: 3}
       propertyPath: inputReader
       value: 
       objectReference: {fileID: 1631356185}
@@ -9718,6 +9722,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
       propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: uiInteract
       value: 
       objectReference: {fileID: 318433886}
     - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
@@ -12321,6 +12329,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 318433886}
     - target: {fileID: 6844090846778808583, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
+      propertyPath: uiInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 6844090846778808583, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
       propertyPath: inputReader
       value: 
       objectReference: {fileID: 1631356185}
@@ -13939,6 +13951,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
       propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: uiInteract
       value: 
       objectReference: {fileID: 318433886}
     - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
@@ -19662,6 +19678,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 318433886}
     - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: uiInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
       propertyPath: inputReader
       value: 
       objectReference: {fileID: 1631356185}
@@ -21914,6 +21934,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 318433886}
     - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: uiInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
       propertyPath: inputReader
       value: 
       objectReference: {fileID: 1631356185}
@@ -23443,6 +23467,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 318433886}
     - target: {fileID: 6844090846778808583, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
+      propertyPath: uiInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 6844090846778808583, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
       propertyPath: inputReader
       value: 
       objectReference: {fileID: 1631356185}
@@ -24207,6 +24235,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6844090846778808583, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
       propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 6844090846778808583, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
+      propertyPath: uiInteract
       value: 
       objectReference: {fileID: 318433886}
     - target: {fileID: 6844090846778808583, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
@@ -25259,6 +25291,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5494074697529320127, guid: caa5158c6fb0c4940b70860262e431bb, type: 3}
       propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 5494074697529320127, guid: caa5158c6fb0c4940b70860262e431bb, type: 3}
+      propertyPath: uiInteract
       value: 
       objectReference: {fileID: 318433886}
     - target: {fileID: 5494074697529320127, guid: caa5158c6fb0c4940b70860262e431bb, type: 3}
@@ -26619,6 +26655,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5494074697529320127, guid: caa5158c6fb0c4940b70860262e431bb, type: 3}
       propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 5494074697529320127, guid: caa5158c6fb0c4940b70860262e431bb, type: 3}
+      propertyPath: uiInteract
       value: 
       objectReference: {fileID: 318433886}
     - target: {fileID: 5494074697529320127, guid: caa5158c6fb0c4940b70860262e431bb, type: 3}
@@ -32924,6 +32964,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 318433886}
     - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: uiInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
       propertyPath: inputReader
       value: 
       objectReference: {fileID: 1631356185}
@@ -34305,6 +34349,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 318433886}
     - target: {fileID: 852747610270296779, guid: b05ae32e504134e4cb8ccb247a6f5967, type: 3}
+      propertyPath: uiInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 852747610270296779, guid: b05ae32e504134e4cb8ccb247a6f5967, type: 3}
       propertyPath: inputReader
       value: 
       objectReference: {fileID: 1631356185}
@@ -34512,6 +34560,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
       propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: uiInteract
       value: 
       objectReference: {fileID: 318433886}
     - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
@@ -35433,6 +35485,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
       propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: uiInteract
       value: 
       objectReference: {fileID: 318433886}
     - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
@@ -38107,6 +38163,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 318433886}
     - target: {fileID: 5661577317866500605, guid: ee596881d5d2fd0439ff9cabc591d026, type: 3}
+      propertyPath: uiInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 5661577317866500605, guid: ee596881d5d2fd0439ff9cabc591d026, type: 3}
       propertyPath: inputReader
       value: 
       objectReference: {fileID: 1631356185}
@@ -38566,6 +38626,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
       propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
+      propertyPath: uiInteract
       value: 
       objectReference: {fileID: 318433886}
     - target: {fileID: 679241147519264551, guid: 7379d888d20b0f34abc96b6c7a870f37, type: 3}
@@ -41945,6 +42009,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 318433886}
     - target: {fileID: 6844090846778808583, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
+      propertyPath: uiInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 6844090846778808583, guid: 4f8d4857bf1d25b46a0df08fa568a94b, type: 3}
       propertyPath: inputReader
       value: 
       objectReference: {fileID: 1631356185}
@@ -43816,6 +43884,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 318433886}
     - target: {fileID: 852747610270296779, guid: b05ae32e504134e4cb8ccb247a6f5967, type: 3}
+      propertyPath: uiInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 852747610270296779, guid: b05ae32e504134e4cb8ccb247a6f5967, type: 3}
       propertyPath: inputReader
       value: 
       objectReference: {fileID: 1631356185}
@@ -44989,6 +45061,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1699080947}
     m_Modifications:
+    - target: {fileID: 234241042779957232, guid: da0894eeef8c4cd47885a23c12bc4db5, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1665960200}
     - target: {fileID: 1258361580250121112, guid: da0894eeef8c4cd47885a23c12bc4db5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.03999901
@@ -45031,6 +45107,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1349748234108355245, guid: da0894eeef8c4cd47885a23c12bc4db5, type: 3}
       propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 1349748234108355245, guid: da0894eeef8c4cd47885a23c12bc4db5, type: 3}
+      propertyPath: uiInteract
       value: 
       objectReference: {fileID: 318433886}
     - target: {fileID: 1349748234108355245, guid: da0894eeef8c4cd47885a23c12bc4db5, type: 3}
@@ -46637,6 +46717,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 852747610270296779, guid: b05ae32e504134e4cb8ccb247a6f5967, type: 3}
       propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 852747610270296779, guid: b05ae32e504134e4cb8ccb247a6f5967, type: 3}
+      propertyPath: uiInteract
       value: 
       objectReference: {fileID: 318433886}
     - target: {fileID: 852747610270296779, guid: b05ae32e504134e4cb8ccb247a6f5967, type: 3}
@@ -48395,6 +48479,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5661577317866500605, guid: ee596881d5d2fd0439ff9cabc591d026, type: 3}
       propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 318433886}
+    - target: {fileID: 5661577317866500605, guid: ee596881d5d2fd0439ff9cabc591d026, type: 3}
+      propertyPath: uiInteract
       value: 
       objectReference: {fileID: 318433886}
     - target: {fileID: 5661577317866500605, guid: ee596881d5d2fd0439ff9cabc591d026, type: 3}
