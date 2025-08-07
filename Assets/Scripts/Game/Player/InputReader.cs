@@ -30,7 +30,7 @@ namespace Player.FSM
 
         public static bool isUsingController = false;
         public static bool isClickPressed = false;
-
+        public bool isInteractPressed = false;
 
         public void HandleMoveInput(InputAction.CallbackContext context)
         {
@@ -174,6 +174,23 @@ namespace Player.FSM
             {
                 SceneManager.LoadScene(sceneBuildIndex:0);
             }
+        }
+
+        public void HandleInteract(InputAction.CallbackContext context)
+        {
+            if (context.started)
+            {
+                isInteractPressed = true;
+            }
+            //if(context.canceled)
+            //{
+            //    isInteractPressed = false;
+            //}
+        }
+
+        private void LateUpdate()
+        {
+            isInteractPressed = false;
         }
     }
 }
