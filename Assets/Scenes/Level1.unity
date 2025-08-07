@@ -716,6 +716,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1665960199}
     - target: {fileID: 2994765429017566634, guid: a6034e9f2cc6253419384470f0f0b487, type: 3}
+      propertyPath: fleeSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2994765429017566634, guid: a6034e9f2cc6253419384470f0f0b487, type: 3}
       propertyPath: struggleMinigame
       value: 
       objectReference: {fileID: 1812227831}
@@ -886,6 +890,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1665960199}
+    - target: {fileID: 2994765429017566634, guid: a6034e9f2cc6253419384470f0f0b487, type: 3}
+      propertyPath: fleeSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2994765429017566634, guid: a6034e9f2cc6253419384470f0f0b487, type: 3}
       propertyPath: struggleMinigame
       value: 
@@ -3108,6 +3116,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1665960199}
     - target: {fileID: 2994765429017566634, guid: a6034e9f2cc6253419384470f0f0b487, type: 3}
+      propertyPath: fleeSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2994765429017566634, guid: a6034e9f2cc6253419384470f0f0b487, type: 3}
       propertyPath: struggleMinigame
       value: 
       objectReference: {fileID: 1812227831}
@@ -4788,6 +4800,10 @@ PrefabInstance:
       propertyPath: washFloorNuzzle
       value: 
       objectReference: {fileID: 1372276634}
+    - target: {fileID: 1656073765121728186, guid: b467e462884d30144b5bfca22943e075, type: 3}
+      propertyPath: buttonHandler
+      value: 
+      objectReference: {fileID: 11400000, guid: b0f14e1bb18ed484ca33199b6bfa634f, type: 2}
     - target: {fileID: 2833426617071955894, guid: b467e462884d30144b5bfca22943e075, type: 3}
       propertyPath: m_SizeDelta.y
       value: 25.387257
@@ -4808,6 +4824,10 @@ PrefabInstance:
       propertyPath: inputReader
       value: 
       objectReference: {fileID: 2139917822}
+    - target: {fileID: 4061031962573159399, guid: b467e462884d30144b5bfca22943e075, type: 3}
+      propertyPath: buttonHandler
+      value: 
+      objectReference: {fileID: 11400000, guid: 0833e327f151a7047851f45f42896a47, type: 2}
     - target: {fileID: 4500448987862764478, guid: b467e462884d30144b5bfca22943e075, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -5366,7 +5386,7 @@ PrefabInstance:
       objectReference: {fileID: 2130253650}
     - target: {fileID: 1373168026354425179, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_VersionIndex
-      value: 2129
+      value: 2132
       objectReference: {fileID: 0}
     - target: {fileID: 2210938879325693374, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_Mesh
@@ -5378,7 +5398,7 @@ PrefabInstance:
       objectReference: {fileID: 1647487887}
     - target: {fileID: 2385916544845131369, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_VersionIndex
-      value: 2861
+      value: 2864
       objectReference: {fileID: 0}
     - target: {fileID: 2417973772894651386, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_Mesh
@@ -5386,7 +5406,7 @@ PrefabInstance:
       objectReference: {fileID: 998336807}
     - target: {fileID: 2417973772894651386, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_VersionIndex
-      value: 2347
+      value: 2350
       objectReference: {fileID: 0}
     - target: {fileID: 2472618405942746475, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: UIInteract
@@ -5414,7 +5434,7 @@ PrefabInstance:
       objectReference: {fileID: 3325823}
     - target: {fileID: 3400200247452739115, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_VersionIndex
-      value: 2567
+      value: 2570
       objectReference: {fileID: 0}
     - target: {fileID: 3435022052005123855, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_Mesh

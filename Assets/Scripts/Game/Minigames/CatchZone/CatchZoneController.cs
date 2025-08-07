@@ -80,6 +80,8 @@ namespace Game.Minigames.CatchZone
             Progress = 0f;
             _catchZoneVelocity = 0f;
             _ghostTimer = 0f;
+            catchZone.anchoredPosition = new Vector2(catchZone.anchoredPosition.x, 0f);
+            _isInputHeld = false;
 
             inputReader.OnSpaceInputStart -= OnInputPressed;
             inputReader.OnSpaceInputCancel -= OnInputReleased;

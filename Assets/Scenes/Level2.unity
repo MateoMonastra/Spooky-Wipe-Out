@@ -38007,7 +38007,7 @@ PrefabInstance:
       objectReference: {fileID: 1665960199}
     - target: {fileID: 2994765429017566634, guid: a6034e9f2cc6253419384470f0f0b487, type: 3}
       propertyPath: fleeSpeed
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2994765429017566634, guid: a6034e9f2cc6253419384470f0f0b487, type: 3}
       propertyPath: struggleMinigame
@@ -47367,7 +47367,7 @@ PrefabInstance:
       objectReference: {fileID: 1665960199}
     - target: {fileID: 2994765429017566634, guid: a6034e9f2cc6253419384470f0f0b487, type: 3}
       propertyPath: fleeSpeed
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2994765429017566634, guid: a6034e9f2cc6253419384470f0f0b487, type: 3}
       propertyPath: struggleMinigame

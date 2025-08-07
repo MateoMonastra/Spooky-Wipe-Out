@@ -47,6 +47,10 @@ public class AudioGameManager : MonoBehaviour
     void GhostDestroyed(Ghost ghost)
     {
         destroyedGhostCount++;
+        if (destroyedGhostCount > 4)
+        {
+            destroyedGhostCount = 4;
+        }
         destroyedGhostRtpc.SetValue(gameMusic, destroyedGhostCount);
         destroyedGhost.Post(gameObject);
     }
