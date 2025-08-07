@@ -1,14 +1,18 @@
-
-
-using UnityEngine;
+using FSM;
 
 namespace Game.Player
 {
-    public class Stumble : PlayerState
+    public class Stumble : State
     {
-        protected Stumble(GameObject player) : base(player)
+        public Stumble()
+        { }
+
+        public override void Enter()
         {
-            
+        }
+
+        public override void Tick(float delta)
+        {
         }
     }
 }

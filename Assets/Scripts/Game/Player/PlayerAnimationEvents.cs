@@ -8,8 +8,12 @@ namespace Game.Player
 
         public void NotifyGhostAnimationEnd()
         {
-            Debug.LogWarning("GhostAnimationEnd");
-            playerAgent.FinishStruggle();
+            playerAgent.FinishStruggleAnimation();
+        }
+        
+        public void NotifyPlayerStumbleAnimationEnd()
+        {
+            playerAgent.FinishStumble();
         }
     }
 }

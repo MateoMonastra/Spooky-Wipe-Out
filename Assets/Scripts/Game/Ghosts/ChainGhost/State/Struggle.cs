@@ -15,8 +15,8 @@ namespace Game.Ghosts.ChainGhost
         private readonly System.Action _onEnterCaptured;
         private readonly System.Action _onStruggleFail;
 
-        private float _struggleLerpDistance = 3f; // Distancia inicial
-        private float _finalOffsetDistance = 1f; // Distancia mínima al jugador al terminar
+        private float _struggleLerpDistance = 3f; 
+        private float _finalOffsetDistance = 1f; 
         private float _lerpSpeed = 1.5f;
 
         public Struggle(
