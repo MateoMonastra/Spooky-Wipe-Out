@@ -1057,6 +1057,10 @@ PrefabInstance:
       propertyPath: <viewHunterDistance>k__BackingField
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 857873524217158293, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: playerAgent
+      value: 
+      objectReference: {fileID: 112671403817669795}
     - target: {fileID: 1421820055152367310, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: _waypoints.Array.size
       value: 4
@@ -1687,6 +1691,10 @@ PrefabInstance:
       propertyPath: <viewHunterDistance>k__BackingField
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 857873524217158293, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: playerAgent
+      value: 
+      objectReference: {fileID: 112671403817669795}
     - target: {fileID: 1421820055152367310, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: _waypoints.Array.size
       value: 4
@@ -1776,6 +1784,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1198058169}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &809497353 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7183520998709181448, guid: b467e462884d30144b5bfca22943e075, type: 3}
+  m_PrefabInstance: {fileID: 1894116715244930165}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &819156193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2726,6 +2739,10 @@ PrefabInstance:
       propertyPath: patrolWaypoints.Array.data[4]
       value: 
       objectReference: {fileID: 784889854}
+    - target: {fileID: 6537487265899387299, guid: a6034e9f2cc6253419384470f0f0b487, type: 3}
+      propertyPath: playerAgent
+      value: 
+      objectReference: {fileID: 112671403817669795}
     - target: {fileID: 7534280635867931546, guid: a6034e9f2cc6253419384470f0f0b487, type: 3}
       propertyPath: m_Name
       value: Magic_Ghost
@@ -3294,6 +3311,10 @@ PrefabInstance:
       propertyPath: patrolWaypoints.Array.data[4]
       value: 
       objectReference: {fileID: 926558230}
+    - target: {fileID: 857873524217158293, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: playerAgent
+      value: 
+      objectReference: {fileID: 112671403817669795}
     - target: {fileID: 7534280635867931546, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: m_Name
       value: Chains_Ghost0
@@ -3481,6 +3502,10 @@ PrefabInstance:
       propertyPath: <viewHunterDistance>k__BackingField
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 857873524217158293, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
+      propertyPath: playerAgent
+      value: 
+      objectReference: {fileID: 112671403817669795}
     - target: {fileID: 1421820055152367310, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: _waypoints.Array.size
       value: 6
@@ -4042,6 +4067,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8260102735222170896, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
   m_PrefabInstance: {fileID: 112671403817669789}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &112671403817669795 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6237684244673480162, guid: 6af45ee71d3f1734cb0662c7b7457870, type: 3}
+  m_PrefabInstance: {fileID: 112671403817669789}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112671403817669793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aed8e863af645c4daeaeb636caa5567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &586924384716346028
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4657,6 +4693,10 @@ PrefabInstance:
       propertyPath: objectivesUI
       value: 
       objectReference: {fileID: 1876919276}
+    - target: {fileID: 572071240587630559, guid: 922fdc117707e194fad2edde03c4749a, type: 3}
+      propertyPath: catchZoneMinigame
+      value: 
+      objectReference: {fileID: 1812227831}
     - target: {fileID: 1283798937360103901, guid: 922fdc117707e194fad2edde03c4749a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4855,6 +4895,14 @@ PrefabInstance:
       propertyPath: m_VersionIndex
       value: 2326
       objectReference: {fileID: 0}
+    - target: {fileID: 2472618405942746475, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 809497353}
+    - target: {fileID: 2472618405942746475, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 2139917822}
     - target: {fileID: 3400200247452739115, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -4867,10 +4915,26 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 3325823}
+    - target: {fileID: 3596127960834076246, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 809497353}
+    - target: {fileID: 3596127960834076246, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 2139917822}
     - target: {fileID: 3861196922851329644, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_Extents.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4213075325489790921, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 809497353}
+    - target: {fileID: 4213075325489790921, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 2139917822}
     - target: {fileID: 4241590662538602884, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_Center.x
       value: -1.49
@@ -4907,6 +4971,14 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4899674683840335362, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 809497353}
+    - target: {fileID: 4899674683840335362, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 2139917822}
     - target: {fileID: 5375513858086244853, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -4923,10 +4995,38 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.000004708767
       objectReference: {fileID: 0}
+    - target: {fileID: 5786400729180180593, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.016
+      objectReference: {fileID: 0}
+    - target: {fileID: 5786400729180180593, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.071
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937068644392305105, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 809497353}
+    - target: {fileID: 5937068644392305105, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 2139917822}
+    - target: {fileID: 6176046444621878634, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6258075609845878675, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_Name
       value: Game_Scenery
       objectReference: {fileID: 0}
+    - target: {fileID: 6380496433222648666, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 809497353}
+    - target: {fileID: 6380496433222648666, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 2139917822}
     - target: {fileID: 6598146647420271157, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -4959,6 +5059,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 24.6
       objectReference: {fileID: 0}
+    - target: {fileID: 7663659730743587880, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 809497353}
+    - target: {fileID: 7663659730743587880, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 2139917822}
     - target: {fileID: 7683462116155611112, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.64
@@ -4971,6 +5079,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 3325823}
+    - target: {fileID: 8165367450086178539, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 809497353}
+    - target: {fileID: 8165367450086178539, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 2139917822}
     - target: {fileID: 8181839230907976943, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.57
@@ -4979,10 +5095,34 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 8221910532496914792, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: m_Size.x
+      value: 4.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221910532496914792, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: m_Size.z
+      value: 7.22
+      objectReference: {fileID: 0}
     - target: {fileID: 8236782204677710561, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2130253650}
+    - target: {fileID: 8285401547749757581, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: UIInteract
+      value: 
+      objectReference: {fileID: 809497353}
+    - target: {fileID: 8285401547749757581, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 2139917822}
+    - target: {fileID: 8781167783380119605, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 8781167783380119605, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.84
+      objectReference: {fileID: 0}
     - target: {fileID: 8860194226218473543, guid: 6b1467c684cba2149b30e4e2a808991f, type: 3}
       propertyPath: m_Shape
       value: 1
