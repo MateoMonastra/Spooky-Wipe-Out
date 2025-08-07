@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Game.Minigames;
 using Player.FSM;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -20,22 +21,22 @@ namespace Minigames
         [SerializeField] private float threshold = 0.8f;
         
         [SerializeField] private AnimationCurve decreaseCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
-        private float progress { get; set; } = 0.0f;
+        
         private float _expectedSign = 1.0f;
 
-        private bool HasPlayerWon => progress >= maxProgress;
+        private bool HasPlayerWon => Progress >= maxProgress;
 
-        private bool HasPlayerLost => progress <= minProgress;
+        private bool HasPlayerLost => Progress <= minProgress;
 
         public override void StartGame()
         {
-            if (_isActive) return;
+            if (IsActive|| IsBloqued) return;
             
             OnStart?.Invoke();
             
             ad.gameObject.SetActive(true);
             inputReader.OnMove += HandleInput;
-            progress = minProgress;
+            Progress = minProgress;
             StartCoroutine(DecreaseProgressOverTime());
         }
 
@@ -62,7 +63,7 @@ namespace Minigames
             inputReader.OnMove -= HandleInput;
             StopCoroutine(DecreaseProgressOverTime());
 
-            progress = minProgress;
+            Progress = minProgress;
             ad.gameObject.SetActive(false);
         }
 
@@ -73,18 +74,18 @@ namespace Minigames
 
             if (Mathf.Approximately(directionSign, _expectedSign) && absDirection >= threshold)
             {
-                UpdateProgress(progress + increaseAmount);
+                UpdateProgress(Progress + increaseAmount);
                 _expectedSign *= -1;
             }
         }
 
         private void UpdateProgress(float value)
         {
-            progress = value;
+            Progress = value;
             if (HasPlayerWon)
                 WinGame();
 
-            ad.SetProgressBarFill(progress);
+            ad.SetProgressBarFill(Progress);
         }
 
         private IEnumerator DecreaseProgressOverTime()
@@ -98,10 +99,10 @@ namespace Minigames
 
         private void DecreaseProgress()
         {
-            float curveValue = decreaseCurve.Evaluate(progress);
+            float curveValue = decreaseCurve.Evaluate(Progress);
             
             var decreaseAmount = Mathf.Clamp(
-                progress - decreaseRate * Time.deltaTime * curveValue,
+                Progress - decreaseRate * Time.deltaTime * curveValue,
                 minProgress, maxProgress);
 
             UpdateProgress(decreaseAmount);

@@ -182,5 +182,12 @@ namespace Game
             garbage.Add(trash);
             objectivesUI.SetTrashQnty(garbage.Count);
         }
+
+        public void SetMinigamesBloquedStatus(bool status)
+        {
+            skMinigame.SetBloqued(status);
+            adMinigame.SetBloqued(status);
+            catchZoneMinigame.SetBloqued(status);
+        }
     }
 }

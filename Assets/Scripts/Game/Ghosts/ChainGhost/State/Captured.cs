@@ -1,4 +1,5 @@
 using FSM;
+using Game.Minigames;
 using Minigames;
 using UnityEngine;
 
@@ -9,19 +10,23 @@ namespace Game.Ghosts.ChainGhost
         private GameObject _model;
         private ChainGhostAgent _agent;
         private Minigame _minigame;
+        private Collider _collider;
 
-        public Captured(GameObject model, ChainGhostAgent agent, Minigame minigame)
+
+        public Captured(GameObject model, ChainGhostAgent agent, Collider collider, Minigame minigame)
         {
             _model = model;
             _agent = agent;
             _minigame = minigame;
+            _collider = collider;
         }
 
         public override void Enter()
         {
-            _agent.OnBeingDestroy?.Invoke(_agent);
-            _agent.gameObject.SetActive(false);
+            _collider.enabled = false;
             _minigame?.StopGame();
+            _agent.OnBeingDestroy?.Invoke(_agent);
+            _agent.enabled = false;
         }
 
         public override void Tick(float delta)

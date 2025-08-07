@@ -52,6 +52,7 @@ namespace Game.Ghosts.ChainGhost
         public void SetCameFromPanic(bool value) => _cameFromPanic = value;
         public override void Enter()
         {
+            _agent.enabled = true;
             _originalSpeed = _agent.speed;
             _agent.speed = _fleeSpeed;
             _stuckTimer = 0f;

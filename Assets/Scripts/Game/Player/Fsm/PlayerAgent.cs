@@ -18,6 +18,7 @@ namespace Game.Player
         public UnityEvent<bool> OnWalk;
         public UnityEvent<bool> OnStruggle;
         public UnityEvent<bool> OnCleaning;
+        public UnityEvent<bool> OnStumble;
 
         [SerializeField] private InputReader inputReader;
         [SerializeField] private WalkIdleModel walkIdleModel;
@@ -27,12 +28,12 @@ namespace Game.Player
         [SerializeField] private CleanerController cleanerController;
         [SerializeField] private LayerMask layerRaycast;
 
-        private readonly List<State> _states = new();
         private Fsm _fsm;
 
         private WalkIdle _walkIdle;
         private Struggle _struggle;
         private Trapped _trapped;
+        private Stumble _stumble;
 
         private int _currentCleaner = 1;
         private Vector3 _lastMousePos;
@@ -40,6 +41,7 @@ namespace Game.Player
         private readonly string _toTrappedID = "ToTrapped";
         private readonly string _toWalkIdleID = "ToWalkIdle";
         private readonly string _toStruggleID = "ToStruggle";
+        private readonly string _toStumbleID = "ToStumble";
 
         private void Start()
         {
@@ -55,8 +57,8 @@ namespace Game.Player
             inputReader.OnClickEnd += SetCleanerIdleMode;
             inputReader.OnSwitchTool += SwitchTool;
 
-            skillCheckController.OnStart += SetWalkIdleToStruggle;
-            catchZoneController.OnStart += SetWalkIdleToStruggle;
+            skillCheckController.OnStart += ToStruggle;
+            catchZoneController.OnStart += ToStruggle;
             OnHunted += SetTrappedState;
         }
 
@@ -64,7 +66,9 @@ namespace Game.Player
         {
             _walkIdle = new WalkIdle(gameObject, walkIdleModel, layerRaycast, OnWalkAction);
             _trapped = new Trapped(gameObject, adController, SetTrappedToMoveState);
-            _struggle = new Struggle(gameObject, cleanerController, catchZoneController, skillCheckController, SetStruggleToWalkIdle);
+            _struggle = new Struggle(gameObject, cleanerController, catchZoneController, skillCheckController,
+                ToStumble);
+            _stumble = new Stumble();
 
 
             _walkIdle.AddTransition(new Transition { From = _walkIdle, To = _trapped, ID = _toTrappedID });
@@ -72,11 +76,11 @@ namespace Game.Player
             _walkIdle.AddTransition(new Transition { From = _walkIdle, To = _struggle, ID = _toStruggleID });
 
             _trapped.AddTransition(new Transition { From = _trapped, To = _walkIdle, ID = _toWalkIdleID });
-            _struggle.AddTransition(new Transition { From = _struggle, To = _walkIdle, ID = _toWalkIdleID });
 
-            _states.Add(_walkIdle);
-            _states.Add(_trapped);
-            _states.Add(_struggle);
+            _struggle.AddTransition(new Transition { From = _struggle, To = _walkIdle, ID = _toWalkIdleID });
+            _struggle.AddTransition(new Transition { From = _struggle, To = _stumble, ID = _toStumbleID });
+
+            _stumble.AddTransition(new Transition { From = _stumble, To = _walkIdle, ID = _toWalkIdleID });
 
             _fsm = new Fsm(_walkIdle);
         }
@@ -87,7 +91,7 @@ namespace Game.Player
             _fsm.Update();
 
             if (!InputReader.isClickPressed || InputReader.isUsingController) return;
-            
+
             SetAimingVacuumDirection(_lastMousePos);
         }
 
@@ -123,14 +127,11 @@ namespace Game.Player
             {
                 _lastMousePos = position;
             }
-        
-            foreach (var state in _states)
+
+
+            if (_fsm.GetCurrentState() == _walkIdle)
             {
-                if (_fsm.GetCurrentState() == state && state is WalkIdle walkIdle)
-                {
-                    walkIdle.SetMousePosition(_lastMousePos);
-                    break;
-                }
+                _walkIdle.SetMousePosition(_lastMousePos);
             }
         }
 
@@ -152,25 +153,39 @@ namespace Game.Player
             inputReader.OnMove += SetMoveStateDirection;
         }
 
-        private void SetWalkIdleToStruggle()
+        private void ToStruggle()
         {
-            OnStruggle?.Invoke(true);
             inputReader.OnClickEnd -= SetCleanerIdleMode;
             inputReader.OnMove -= SetMoveStateDirection;
+            skillCheckController.OnStart -= ToStruggle;
+            catchZoneController.OnStart -= ToStruggle;
+
             _fsm.TryTransitionTo(_toStruggleID);
+            OnStruggle?.Invoke(true);
         }
 
-        private void SetStruggleToWalkIdle()
+        private void SetStruggledToWalkIdle()
         {
             inputReader.OnClickEnd += SetCleanerIdleMode;
             inputReader.OnMove += SetMoveStateDirection;
+            skillCheckController.OnStart += ToStruggle;
+            catchZoneController.OnStart += ToStruggle;
+
             SetCleanerIdleMode();
-            OnStruggle?.Invoke(false);
             _fsm.TryTransitionTo(_toWalkIdleID);
+            OnStruggle?.Invoke(false);
+        }
+
+        private void ToStumble()
+        {
+            SetCleanerIdleMode();
+            _fsm.TryTransitionTo(_toStumbleID);
+            OnStumble?.Invoke(true);
         }
 
         private void ActiveCleaner()
         {
+            if (_fsm.GetCurrentState() == _stumble) return;
             OnCleaning?.Invoke(true);
             StartCoroutine(cleanerController.SwitchToTool(_currentCleaner));
         }
@@ -200,6 +215,17 @@ namespace Game.Player
                     CleanerSelectionUIControler.GetInstance().PowerOnVacuum();
                     break;
             }
+        }
+
+        public void FinishStruggleAnimation()
+        {
+            SetStruggledToWalkIdle();
+        }
+
+        public void FinishStumble()
+        {
+            SetStruggledToWalkIdle();
+            OnStumble?.Invoke(false);
         }
 
         public CleanerController GetCleanerController() => cleanerController;

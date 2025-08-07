@@ -1,5 +1,6 @@
 using FSM;
 using Game.Ghosts.ChainGhost;
+using Game.Minigames;
 using Ghosts;
 using Minigames;
 using UnityEngine;
@@ -65,6 +66,7 @@ namespace Game.Ghosts.MagicGhost
             _captured = new Captured(
                 model: gameObject,
                 agent: this,
+                collider: ghostCollider,
                 minigame: struggleMinigame
             );
 
@@ -73,6 +75,7 @@ namespace Game.Ghosts.MagicGhost
                 transform,
                 player,
                 navMeshAgent,
+                struggleMinigame,
                 onEnterCaptured: ToCaptured,
                 onStruggleFail: ToFlee
             );
@@ -218,6 +221,11 @@ namespace Game.Ghosts.MagicGhost
         public void IsBeingVacuumed(params object[] args)
         {
             EnterStruggle();
+        }
+
+        public void OnDeathAnimationEnd()
+        {
+            gameObject.SetActive(false);
         }
 
         public State GetCurrentState()

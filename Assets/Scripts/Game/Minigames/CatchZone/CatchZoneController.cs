@@ -39,26 +39,25 @@ namespace Game.Minigames.CatchZone
 
         private float _catchZoneVelocity;
         private float _ghostTimer;
-        private float _progress;
         private bool _isInputHeld;
 
         private Coroutine _updateLoop;
 
-        private bool HasPlayerWon => _progress >= 1f;
-        private bool HasPlayerLost => _progress <= 0f;
+        private bool HasPlayerWon => Progress >= 1f;
+        private bool HasPlayerLost => Progress <= 0f;
 
         public override void StartGame()
         {
-            if (_isActive)  return;
+            if (IsActive|| IsBloqued)  return;
             
             OnStart?.Invoke();
-            _isActive = true;
-            _progress = initialProgress;
+            IsActive = true;
+            Progress = initialProgress;
 
             _currentDifficulty = difficulties[UnityEngine.Random.Range(0, difficulties.Length)];
 
             catchingUI.gameObject.SetActive(true);
-            catchingUI.SetProgress(_progress);
+            catchingUI.SetProgress(Progress);
 
             inputReader.OnSpaceInputStart += OnInputPressed;
             inputReader.OnSpaceInputCancel += OnInputReleased;
@@ -68,7 +67,7 @@ namespace Game.Minigames.CatchZone
 
         public override void StopGame()
         {
-            if (_isActive)
+            if (IsActive)
             {
                 OnStop?.Invoke();
                 ResetGame();
@@ -77,8 +76,8 @@ namespace Game.Minigames.CatchZone
 
         protected override void ResetGame()
         {
-            _isActive = false;
-            _progress = 0f;
+            IsActive = false;
+            Progress = 0f;
             _catchZoneVelocity = 0f;
             _ghostTimer = 0f;
 
@@ -109,7 +108,7 @@ namespace Game.Minigames.CatchZone
 
         private IEnumerator UpdateLoop()
         {
-            while (_isActive)
+            while (IsActive)
             {
                 UpdateCatchZonePosition();
                 UpdateGhostPosition();
@@ -159,15 +158,15 @@ namespace Game.Minigames.CatchZone
         {
             bool isInside = IsGhostInsideCatchZone();
 
-            _progress += (isInside ? _currentDifficulty.increaseRate : -_currentDifficulty.decreaseRate) * updateRate;
-            _progress = Mathf.Clamp01(_progress);
+            Progress += (isInside ? _currentDifficulty.increaseRate : -_currentDifficulty.decreaseRate) * updateRate;
+            Progress = Mathf.Clamp01(Progress);
 
             if (isInside)
                 OnCatchProgress?.Invoke();
             else
                 OnGhostEscapes?.Invoke();
 
-            catchingUI.SetProgress(_progress);
+            catchingUI.SetProgress(Progress);
 
             if (HasPlayerWon)
                 WinGame();

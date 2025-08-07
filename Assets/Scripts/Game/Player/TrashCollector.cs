@@ -16,8 +16,6 @@ namespace Game.Player
             {
                 Trash trash = other.transform.parent?.GetComponent<Trash>();
                 trash?.OnBeingDestroy.Invoke(trash);
-                Debug.Log(trash);
-
             
                 ChainGhostAgent ghost = other.gameObject.transform.parent.GetComponent<ChainGhostAgent>();
                 if (trash)
@@ -33,8 +31,6 @@ namespace Game.Player
                         OnGhostCollected?.Invoke();
                     }
                 }
-            
-                Debug.Log("Trash was Collected");
             }
         }
 
