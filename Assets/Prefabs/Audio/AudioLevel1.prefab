@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseManager: {fileID: 0}
+  audioListenerMover: {fileID: 1228824031268626625}
 --- !u!1 &1742772505977130948
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,6 +378,10 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 1ba98c383c46eae49a41c00b75e1bfdb, type: 2}
+  endLevel:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!1 &7099494880108724263
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,6 +573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillCheckController: {fileID: 0}
   adController: {fileID: 0}
+  catchZoneController: {fileID: 0}
 --- !u!1001 &51304675403930955
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -707,6 +713,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d3ca2f5662a4a742806b4c193d62310, type: 3}
+--- !u!114 &1228824031268626625 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5846409818462984061, guid: 0d3ca2f5662a4a742806b4c193d62310, type: 3}
+  m_PrefabInstance: {fileID: 4624974936009439164}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dec3d59ed0aeae94bb4a69678661ce5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &3349280389973595120 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7950048476054922316, guid: 0d3ca2f5662a4a742806b4c193d62310, type: 3}

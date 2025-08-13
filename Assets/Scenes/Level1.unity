@@ -1425,6 +1425,10 @@ PrefabInstance:
       propertyPath: pauseManager
       value: 
       objectReference: {fileID: 1894116715244930166}
+    - target: {fileID: 2811679228247775147, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
+      propertyPath: audioListenerMover
+      value: 
+      objectReference: {fileID: 475300884}
     - target: {fileID: 4398705322590383978, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
       propertyPath: adController
       value: 
@@ -1478,6 +1482,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1521039420}
   m_SourcePrefab: {fileID: 100100000, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
+--- !u!114 &475300884 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1228824031268626625, guid: 1d4f6a4b283bc4e4e9070d7a71176ee5, type: 3}
+  m_PrefabInstance: {fileID: 475300883}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dec3d59ed0aeae94bb4a69678661ce5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &492893944
 GameObject:
   m_ObjectHideFlags: 0

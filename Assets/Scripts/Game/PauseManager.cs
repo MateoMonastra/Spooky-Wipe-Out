@@ -43,8 +43,8 @@ public class PauseManager : MonoBehaviour
     public void Restart()
     {
         Time.timeScale = 1f;
-        pauseMenu.SetActive(false);
         onPauseRestart?.Invoke();
+        pauseMenu.SetActive(false);
         eventChannelSceneManager.OnRemoveScene(gameObject.scene.name);
         eventChannelSceneManager.OnAddScene(gameObject.scene.name);
     }

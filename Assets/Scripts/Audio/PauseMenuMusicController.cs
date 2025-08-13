@@ -1,3 +1,4 @@
+using Audio;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -8,7 +9,8 @@ public class PauseMenuMusicController : MonoBehaviour
 {
     
     [SerializeField] private PauseManager pauseManager;
-    
+    [SerializeField] private AudioListenerMover audioListenerMover;
+
     void Start()
     {
         pauseManager.onPauseStarted.AddListener(Pause);
@@ -31,13 +33,14 @@ public class PauseMenuMusicController : MonoBehaviour
 
     private void PauseRestart()
     {
+        audioListenerMover.ReturnListener();
         AkSoundEngine.SetState("GameState", "None");
         AkSoundEngine.SetState("GameState", "Playing");
     }
 
     private void GoMenu()
     {
-
+        audioListenerMover.ReturnListener();
     }
 
 }
