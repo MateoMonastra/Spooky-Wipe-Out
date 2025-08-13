@@ -26,6 +26,8 @@ namespace AK
         static const AkUniqueID PAINTCATCH = 2553231580U;
         static const AkUniqueID PAINTRELEASE = 3571119522U;
         static const AkUniqueID PIANOHIT = 469357355U;
+        static const AkUniqueID PLAY_CANDLESOUND = 3063965390U;
+        static const AkUniqueID PLAY_RUNNING_WATER = 2285491747U;
         static const AkUniqueID START = 1281810935U;
         static const AkUniqueID START_LVL1 = 1123143573U;
         static const AkUniqueID STEP = 621108255U;

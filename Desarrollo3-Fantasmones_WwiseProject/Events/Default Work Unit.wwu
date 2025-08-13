@@ -71,6 +71,16 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{B140B2E0-2814-422B-8F01-8C50535A32C1}" ShortID="376551576">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFXGhostLoop" ID="{754E6CA4-E958-4BA7-B3D5-8C079AC8034E}" WorkUnitID="{3C248A58-6566-4DB4-AD50-76632301869B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="AmbPiano" ID="{D5E4B068-753A-4CB6-86AC-641F833C9A07}">
