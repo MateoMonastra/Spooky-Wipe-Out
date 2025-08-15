@@ -9986,7 +9986,7 @@ MonoBehaviour:
   onCaptured:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 416756993311283653, guid: d6c20553ad13fe741860b5fd6775d231, type: 3}
+      - m_Target: {fileID: 4292405322145698061}
         m_TargetAssemblyTypeName: Audio.AudioControllerChainGhost, Assembly-CSharp
         m_MethodName: DestroyGhost
         m_Mode: 1

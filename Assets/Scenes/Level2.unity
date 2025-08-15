@@ -6641,11 +6641,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3842716563012591815, guid: d559a76e7fba54a41a7efb2a149f7309, type: 3}
   m_PrefabInstance: {fileID: 235973413}
   m_PrefabAsset: {fileID: 0}
---- !u!198 &238785924 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 7460502879230320613, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
-  m_PrefabInstance: {fileID: 1379061529}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &239284597 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 28276268676792185, guid: 9e0a3253916f1054e90f151571a54a86, type: 3}
@@ -25938,11 +25933,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5738579221985815272, guid: 33f331dae59442b419ffba58409f01ac, type: 3}
   m_PrefabInstance: {fileID: 1142518756}
   m_PrefabAsset: {fileID: 0}
---- !u!198 &1143187023 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 7812601847830351839, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
-  m_PrefabInstance: {fileID: 1379061529}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1144273597 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 28276268676792185, guid: 9e0a3253916f1054e90f151571a54a86, type: 3}
@@ -31934,14 +31924,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
-      propertyPath: onFlee.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 238785924}
-    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
-      propertyPath: onFlee.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 1797634797}
-    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: onPatroll.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 0
       objectReference: {fileID: 0}
@@ -31954,36 +31936,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
-      propertyPath: onFlee.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Play
-      objectReference: {fileID: 0}
-    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
-      propertyPath: onFlee.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: SetStruggledAnimation
-      objectReference: {fileID: 0}
-    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: onFlee.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
       value: SetWalkAnimation
       objectReference: {fileID: 0}
-    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
-      propertyPath: onPanicked.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1143187023}
     - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: onPatroll.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
-      propertyPath: onPanicked.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: onPatroll.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
-      propertyPath: onPanicked.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 745596931517258071, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
       propertyPath: onFlee.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -34891,11 +34853,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7484340491454348216, guid: 81980af56bacd024181ce7c6db9a5769, type: 3}
   m_PrefabInstance: {fileID: 1522771238}
   m_PrefabAsset: {fileID: 0}
---- !u!198 &1526228314 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 7460502879230320613, guid: a6034e9f2cc6253419384470f0f0b487, type: 3}
-  m_PrefabInstance: {fileID: 2117247686}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1526593135
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37025,11 +36982,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5738579221985815272, guid: 33f331dae59442b419ffba58409f01ac, type: 3}
   m_PrefabInstance: {fileID: 1608539127}
   m_PrefabAsset: {fileID: 0}
---- !u!198 &1609820343 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 7460502879230320613, guid: a6034e9f2cc6253419384470f0f0b487, type: 3}
-  m_PrefabInstance: {fileID: 1646850019}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1617387560
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38073,18 +38025,6 @@ PrefabInstance:
     - target: {fileID: 2994765429017566634, guid: a6034e9f2cc6253419384470f0f0b487, type: 3}
       propertyPath: onFlee.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2994765429017566634, guid: a6034e9f2cc6253419384470f0f0b487, type: 3}
-      propertyPath: onFlee.m_PersistentCalls.m_Calls.Array.data[3].m_Target
-      value: 
-      objectReference: {fileID: 1609820343}
-    - target: {fileID: 2994765429017566634, guid: a6034e9f2cc6253419384470f0f0b487, type: 3}
-      propertyPath: onFlee.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2994765429017566634, guid: a6034e9f2cc6253419384470f0f0b487, type: 3}
-      propertyPath: onFlee.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 2994765429017566634, guid: a6034e9f2cc6253419384470f0f0b487, type: 3}
       propertyPath: onFlee.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
@@ -40946,17 +40886,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5738579221985815272, guid: 33f331dae59442b419ffba58409f01ac, type: 3}
   m_PrefabInstance: {fileID: 1794361471}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1797634797 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 705575695356465264, guid: ac2b91cb216d6c04ca6989e3da1a6777, type: 3}
-  m_PrefabInstance: {fileID: 1379061529}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd0b4f758364934489e7f3d5911e49d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1807268309 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6421636081491891537, guid: 613b6ba06ae74b6409013525dbbc641a, type: 3}
@@ -47444,18 +47373,6 @@ PrefabInstance:
     - target: {fileID: 2994765429017566634, guid: a6034e9f2cc6253419384470f0f0b487, type: 3}
       propertyPath: onFlee.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2994765429017566634, guid: a6034e9f2cc6253419384470f0f0b487, type: 3}
-      propertyPath: onFlee.m_PersistentCalls.m_Calls.Array.data[3].m_Target
-      value: 
-      objectReference: {fileID: 1526228314}
-    - target: {fileID: 2994765429017566634, guid: a6034e9f2cc6253419384470f0f0b487, type: 3}
-      propertyPath: onFlee.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2994765429017566634, guid: a6034e9f2cc6253419384470f0f0b487, type: 3}
-      propertyPath: onFlee.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 2994765429017566634, guid: a6034e9f2cc6253419384470f0f0b487, type: 3}
       propertyPath: onFlee.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
