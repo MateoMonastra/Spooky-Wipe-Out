@@ -9917,7 +9917,7 @@ MonoBehaviour:
   onFlee:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 416756993311283653, guid: d6c20553ad13fe741860b5fd6775d231, type: 3}
+      - m_Target: {fileID: 4292405322145698061}
         m_TargetAssemblyTypeName: Audio.AudioControllerChainGhost, Assembly-CSharp
         m_MethodName: Flee
         m_Mode: 1
@@ -9928,7 +9928,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
       - m_Target: {fileID: 7460502879230320613}
         m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
         m_MethodName: Play
@@ -11428,3 +11428,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3697175068515729083, guid: d6c20553ad13fe741860b5fd6775d231, type: 3}
   m_PrefabInstance: {fileID: 4492676679520946376}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4292405322145698061 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 416756993311283653, guid: d6c20553ad13fe741860b5fd6775d231, type: 3}
+  m_PrefabInstance: {fileID: 4492676679520946376}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fb1b93b311fb0442850dcef9f3826af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
