@@ -497,6 +497,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2472514338396502382}
+  - component: {fileID: 6653119883304250653}
   m_Layer: 12
   m_Name: AudioLevel1
   m_TagString: Untagged
@@ -527,6 +528,18 @@ Transform:
   - {fileID: 7166953124009385083}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6653119883304250653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8256526463127946821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa49315d2d37bd144945694e3be1381d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8892264715352362803
 GameObject:
   m_ObjectHideFlags: 0
