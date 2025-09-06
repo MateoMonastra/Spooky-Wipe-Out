@@ -23,5 +23,12 @@ namespace Audio
                 destroyedGhost.Post(this.gameObject);
             }
         }
+
+        void OnDestroy()
+        {
+            AkSoundEngine.UnregisterGameObj(this.gameObject);
+        }
+
+
     }
 }
